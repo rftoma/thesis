@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.6)  21 APR 2016 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.6)  21 APR 2016 17:32
 entering extended mode
 **./Chapter4.tex
 (Chapter4.tex
@@ -798,10 +798,11 @@ Overfull \hbox (9.62306pt too wide) in paragraph at lines 1096--1096
 
  []
 
-File: "cpt2".jpg Graphic file (type jpg)
-<use "cpt2".jpg>
-Package pdftex.def Info: "cpt2".jpg used on input line 1144.
-(pdftex.def)             Requested size: 341.43436pt x 243.31451pt.
+<"tresca".jpg, id=217, 457.71pt x 198.7425pt>
+File: "tresca".jpg Graphic file (type jpg)
+ <use "tresca".jpg>
+Package pdftex.def Info: "tresca".jpg used on input line 1144.
+(pdftex.def)             Requested size: 341.43436pt x 148.25893pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -812,7 +813,7 @@ Overfull \hbox (2.07045pt too wide) in paragraph at lines 1149--1150
 s a smooth ver-sion of the Mohr-Coulomb
  []
 
-<"Mises".jpg, id=217, 405.76593pt x 346.29375pt>
+<"Mises".jpg, id=218, 405.76593pt x 346.29375pt>
 File: "Mises".jpg Graphic file (type jpg)
  <use "Mises".jpg>
 Package pdftex.def Info: "Mises".jpg used on input line 1155.
@@ -821,16 +822,62 @@ Package pdftex.def Info: "Mises".jpg used on input line 1155.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[46] [47 <./Mises.jpg>] [48] [49] (Chapter4.aux)
+[46] [47 <./tresca.jpg> <./Mises.jpg>] [48]
+<"masing".jpg, id=229, 327.47343pt x 252.945pt>
+File: "masing".jpg Graphic file (type jpg)
+ <use "masing".jpg>
+Package pdftex.def Info: "masing".jpg used on input line 1242.
+(pdftex.def)             Requested size: 213.39566pt x 164.82913pt.
+File: "loop".jpg Graphic file (type jpg)
+
+<use "loop".jpg>
+Package pdftex.def Info: "loop".jpg used on input line 1251.
+(pdftex.def)             Requested size: 213.39566pt x 121.89214pt.
+ [49 <./masing.jpg>] [50] [51]
+<"SuMC".jpg, id=239, 743.02594pt x 351.56343pt>
+File: "SuMC".jpg Graphic file (type jpg)
+ <use "SuMC".jpg>
+Package pdftex.def Info: "SuMC".jpg used on input line 1348.
+(pdftex.def)             Requested size: 213.39566pt x 100.96909pt.
+
+Overfull \hbox (14.53815pt too wide) in paragraph at lines 1369--1378
+ [][] 
+ []
+
+[52 <./SuMC.jpg>]
+File: "Su".jpg Graphic file (type jpg)
+ <use "Su".jpg>
+Package pdftex.def Info: "Su".jpg used on input line 1407.
+(pdftex.def)             Requested size: 192.0548pt x 106.56372pt.
+ [53]
+<"empirical".jpg, id=247, 620.3175pt x 408.02437pt>
+File: "empirical".jpg Graphic file (type jpg)
+ <use "empirical".jpg>
+Package pdftex.def Info: "empirical".jpg used on input line 1417.
+(pdftex.def)             Requested size: 426.79134pt x 280.72775pt.
+
+<"measurements".jpg, id=248, 628.59843pt x 405.01312pt>
+File: "measurements".jpg Graphic file (type jpg)
+
+<use "measurements".jpg>
+Package pdftex.def Info: "measurements".jpg used on input line 1424.
+(pdftex.def)             Requested size: 426.79134pt x 274.98503pt.
+ [54 <./empirical.jpg> <./measurements.jpg>]
+<"flowABQ".jpg, id=252, 378.66469pt x 404.26031pt>
+File: "flowABQ".jpg Graphic file (type jpg)
+ <use "flowABQ".jpg>
+Package pdftex.def Info: "flowABQ".jpg used on input line 1436.
+(pdftex.def)             Requested size: 426.79134pt x 455.64299pt.
+ [55 <./flowABQ.jpg>] [56] [57] (Chapter4.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5058 strings out of 493634
- 65311 string characters out of 3131976
- 126017 words of memory out of 3000000
- 8347 multiletter control sequences out of 15000+200000
+ 5107 strings out of 493634
+ 66034 string characters out of 3131976
+ 126257 words of memory out of 3000000
+ 8390 multiletter control sequences out of 15000+200000
  12463 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,10n,24p,1413b,487s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -855,9 +902,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Administrator/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/
 Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmti10.pfb>
-Output written on Chapter4.pdf (51 pages, 2147620 bytes).
+Output written on Chapter4.pdf (59 pages, 2576084 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
+ 314 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

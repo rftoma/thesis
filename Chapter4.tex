@@ -483,7 +483,7 @@ Given the supposition of no volume changes specific to the undrained conditions,
 \end{equation}
 
 \paragraph{\underline{Undrained shear strength}}
-The value of the undrained shear strength can be determined with the use of multiple parameters as well as methods. Appendix 5 shows a collection of methods applied for obtaining the undrained shear strength of the soil based on both empirical and measurements data and the plot containing all the values can be seen in Figure22%. In order to summarize the features in the calculations, the undrained shear strength can be a function of plasticity index (PI), stress history within the soil (more importantly the effective  vertical stress), pore pressure, mode of testing et cetera.
+The value of the undrained shear strength can be determined with the use of multiple parameters as well as methods. \ref{App:AppendixE} shows a collection of methods applied for obtaining the undrained shear strength of the soil based on both empirical and measurements data and the plot containing all the values can be seen in Figure22%. In order to summarize the features in the calculations, the undrained shear strength can be a function of plasticity index (PI), stress history within the soil (more importantly the effective  vertical stress), pore pressure, mode of testing et cetera.
 %referinta
 One important method to mention is represented by the study of Den Haan (2011) as he treats the current situation (of Groningen soils) in his article "Ongedraineerde sterkte van slappe Nederlandse grond" developing new equations for obtaining undrained shear strength of clayey soils. Crux Engineering develops a Plaxis model to validate the equation leading to a set of formulae as a function of the normalized stress given in Table 1.
 
@@ -495,7 +495,7 @@ For the current situation, considering the normalized shear stress to be 40kPa a
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|l|c|r|}
-		\hline Classificatie       &      Normalized undrained shear strength   &  Undrained shear strength\\
+		\hline Classification       &      Normalized undrained shear strength   &  Undrained shear strength\\
 		\hline [-]  &  [kPa]  & [kPa]   \\ 
 		\hline Organic clay (medium)    & 25 &  $c_{u,ref} =s_u=2.8+0.22\sigma^`_v$ \\ 
 		\hline Clay, slightly sandy(weak)  & 40  &   $c_{u,ref} =s_u=2.8+0.37\sigma^`_v$   \\ 
@@ -1141,7 +1141,7 @@ F(s,\theta)=0, Tresca failure criterion
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{"cpt2"}
+	\includegraphics[width=0.8\linewidth]{"tresca"}
 	\caption{Tresca and Von mises failure criterion in stress space}
 	\label{tresca}
 \end{figure}
@@ -1226,5 +1226,305 @@ Therefore, the dissipation potential or backstress, as it is referred in other s
 
 The equations incorporate the term C which refers to Young's modulus for very small strains describing the elastic stiffness when low-amplitudes are encountered and it can be computed using Roberston method based on shear wave velocity or through empirical correlations (Roberston and Campanella, 1983, Seed et al, 1986). 
 
-** In order to avoid the confusion between the hardening parameter (here noted with $\gamma$) and the shear strain (also $\gamma$), the notation of the hardening parameter is changed to $K$
+** In order to avoid the confusion between the hardening parameter (here noted with $\gamma$) and the shear strain (also $\gamma$), the notation of the hardening parameter is changed to $K$.
+
+newpage
+\section{\\Description of Darendeli hyperbolic model} \label{App:AppendixC}
+
+The study presents a modified hyperbolic model which describes the normalized modulus reduction curve; the model starts from the example created by \textbf{Hardin and Drnevich} being adjusted through a curvature coefficient, a. The role of the coefficient is given by its name as it influences the curvature of the outcome. The hyperbolic model is expressed using the following equation:
+\begin{equation}
+	\frac{G}{G_{max}}=\frac{1}{1+(\frac{\gamma}{\gamma_ref})^a}
+\end{equation}
+
+The material damping curves consider \textit{Masing behaviour} which proves that the stress-strain path associated to a cyclic loading can be related to the monotonic loading path, also known as the backbone curve. \textbf{Masing(1926)} states that the backbone curve serves to the creation of the hysteresis loop; the curve is scaled by a factor of two and flipped with respect to both horizontal and vertical axis to simulate the unloading path. The assumption is valid for an uniform cyclic loading, unlike the real earthquake signals; however it has its own limitations in modelling nonlinear soil behaviour. A schematization of Masing behaviour assumption can be seen in Figure \ref{Masing}; the dashed line represents the monotonic loading response which coincides with the initial path of the cyclic loading. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"masing"}
+	\caption{Hysteresis loop estimated by modelling stress-strain reversals for two-way cyclic loading according to Mass behaviour}
+	\label{Masing}
+\end{figure}
+
+The material damping ratio is expressed as the ratio of the dissipated energy to stored strain energy during a loading cycle; combining this concept together with Masing behaviour, the area inside the hysteresis loop ($A_L$) can be determined through the integration of the stress-strain curve described during one loading cycle. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"loop"}
+	\caption{Calculation of damping ratio using a hysteresis loop}
+	\label{loop2}
+\end{figure}
+
+\begin{equation}
+	A_L=8(\int \tau d\gamma)-\frac{1}{2}\tau \gamma)
+\end{equation}
+\begin{equation}
+A_T=\frac{1}{2}\tau \gamma)
+\end{equation}
+\begin{equation}
+D_eq=\frac{A_L}{4\pi A_T}
+\end{equation}
+
+Combining all the equations previously presented, Masing-behaviour damping ratio can be expressed:
+\begin{equation}
+	D_{masing}=\frac{4}{\pi}\frac{\int \frac{\gamma}{1+(\frac{\gamma}{\gamma_ref})^a}d\gamma-\frac{1}{2}(\frac{\gamma^2}{\gamma_ref})^a}{1+(\frac{\gamma}{\gamma_ref})^a}
+\end{equation}
+
+For the final formulation of the material damping ratio, Darendeli uses fitting parameters and functions for a better matching with the experimental observations. The equation of the material damping curve is then expressed as a function of two main parameters ($b$ and $D_min$):
+\begin{equation}
+D=b(\frac{G}{G_{max}})^{0.1}*D_{masing}+D_{min}
+\end{equation}
+
+Parameter b represents a scaling factor whilst $D_{min}$ comprises the impact on the damping curve caused by confining pressure, loading frequency and soil plasticity. The influence of $D_{min}$ is most visible through the shift within small-strain damping ratio area; the curve does not touch the horizontal axis of the plot - this means that no matter how small the strain level is, the soil will experience damping. 
+
+In conclusion, the modified hyperbolic model described by Darendeli for the normalized modulus reduction curve and material damping curve relies on four parameters: \textbf{$a, b, \gamma_{ref} $}and \textbf{$D_{min}$}.
+
+\newpage
+\section{\\Input parameter - Stresses calculation} \label{App:AppendixD}
+The total vertical stress is calculated both in terms of soil density (\ref{eq:1}), in [$Mg/m^3$] and soil unit weight (\ref{eq:2}), in [$kN/m^2$], at a depth z as it follows:
+\begin{equation}
+	p(z)=p_0 + \int_{0}^{z}\rho(z)dz
+	\label{eq:1}
+\end{equation}
+
+\begin{equation}
+\sigma_v=\gamma_{soil}*z
+\label{eq:2}
+\end{equation}
+
+The water level is considered at 1 m below surface level, hence the pore pressure equation is:
+\begin{equation}
+u=\gamma_{water}*z_{water}
+\end{equation}
+The effective vertical stress can now be determined based on Terzaghi's principle:
+\begin{equation}
+	\sigma_v= \sigma^`_v + u
+\end{equation}
+
+The determination of the horizontal stress is a subject still uncertain, however empirical relations can be used to approximate the value; according to Jaky (1948) it yields that for normally consolidated clays:
+\begin{equation}
+	K_o=1-\sin\phi^`
+\end{equation}
+
+This coefficient is expressed in terms of effective stresses as well because it depends on the material and the geological history. The assumption of a typical Dutch clay soil leads to certain parameters such as:
+\begin{itemize}
+	\item density: $\rho = 1750 kg/m^3$
+	\item cohesion $c=2kPa$
+	\item friction angle $\phi=22.5 \deg$
+	\item lateral pressure coefficient $K_0=1-\sin \phi^` = 0.617$ 
+\end{itemize}
+
+Even though there are empirical relations which directly calculate the total coefficient of lateral pressure, it is preferable to use effective stresses since water is isotropic and it can be easily added to obtain the total horizontal stress; hence:
+
+\begin{equation}
+	\sigma^`_h = K_0*\sigma^`_v
+\end{equation}
+
+\begin{equation}
+\sigma_h = \sigma^`_h+u
+\end{equation}
+
+Given the supposition of no volume changes specific to the undrained conditions, the isotropic effective stresses remain constant which means that the mean effective stress remains constant as well:
+\begin{equation}
+	\sigma^`_o=\frac{1}{3}(\sigma^`_z+2\sigma^`_x)
+\end{equation}
+
+\newpage
+\section{\\Determination of undrained shear strength value} \label{App:AppendixE}
+The calculations continue in terms of effective stresses and head to the estimation of the stiffness parameters, mainly Young's modulus and undrained shear strength. Mohr-Coulomb failure criterion will serve for the estimation of the strength parameters; the straight line represents the failure envelope within the plot of the shear strength against normal effective stress and it is described by the following equation:
+\begin{equation}
+	\tau^`=c+ \sigma^` \tan \phi
+\end{equation}
+
+The undrained shear strength can be determined considering that drainage does not occur while loading the sample with a confining pressure. This way, the failure envelope for total stress becomes a straight horizontal line. For instance, in the figure below, circle P represents the stress conditions at failure for consolidated sample at pressure $\sigma_3$ then sheared to failure where:
+\begin{equation}
+	\sigma^`_1=[\sigma_3+(\Delta d)_f]-(\Delta u_d)_f = \sigma_1-(\Delta u_d)_f
+\end{equation}
+\begin{equation}
+\sigma^`_3= \sigma_3-(\Delta u_d)_f
+\end{equation}
+where $(\Delta u_d)_f$ is the pore pressure of the specimen at failure.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"SuMC"}
+	\caption{Mohr's circles according to undrained conditions}
+	\label{SuMC}
+\end{figure}
+
+Finally, the undrained shear strength is calculated as:
+\begin{equation}
+	S_u=\frac{\sigma^`_1-\sigma^`_3}{2}
+\end{equation}
+
+Scientific literature exposes several formulae used to determine the value of the undrained shear strength. In the order displayed on the graph the values were calculated as it follows:
+\begin{enumerate}
+	\item \textit{Measurements (CRUX}) - Den Haan (2011) treats the problem in his article   - based on this article, Crux Engineering develops a Plaxis model to validate the equation for the shear strength leading to a set of formulae as a function of the normalized stress given in \ref{DenHaan_param}:
+	
+		For the current situation, considering the normalized shear stress to be 40kPa as characteristic, the undrained shear strength equation becomes:
+\begin{equation}
+	S_u=2.8+0.37*\sigma^`_v
+\end{equation}
+
+			\begin{table}[h!]
+				\centering
+				\begin{tabular}{|l|c|r|}
+					\hline Classification       &      Normalized undrained shear strength   &  Undrained shear strength\\
+					\hline [-]  &  [kPa]  & [kPa]   \\ 
+					\hline Organic clay (medium)    & 25 &  $c_{u,ref} =s_u=2.8+0.22\sigma^`_v$ \\ 
+					\hline Clay, slightly sandy(weak)  & 40  &   $c_{u,ref} =s_u=2.8+0.37\sigma^`_v$   \\ 
+					\hline Clay,slightly sandy (medium) &  55  &  $c_{u,ref} =s_u=2.8+0.52\sigma^`_v$     \\ 
+					\hline Clay, slighlty sandy (dense) & 80  &  $c_{u,ref} =s_u=2.8+0.77\sigma^`_v$     \\ 
+					\hline
+				\end{tabular}
+				
+				\caption{Undrained shear strength equations according to Den Haan}
+				\label{DenHaan_param_app}
+			\end{table}
+		\item \textit{Measurements (Mesri)} - Many researchers focused on the determination of the undrained shear strength based on the CPT results. Numerous equations relate the strength to the plasticity index of the clays. However, Mesri (1975, 1989) found that the undrained shear strength of normally consolidated and lightly overconsolidated clays (overconsolidation ratio less than 2) could be expressed practically independent of plasticity by combining Bjerrum’s (1973) proposed relationship between $S_u/\sigma^`_p$ and plasticity with Bjerrum’s correction factor $\mu$. This relationship led to the following equation: 
+		\begin{equation}
+			S_u=0.22*\sigma^`_v
+		\end{equation}
+		\item \textit{Measurements (MC)} - Another way of determining the undrained shear strength value takes into account the Mohr-Coulomb failure criterion, as it was established previously:
+	\begin{equation}
+	S_u=\frac{\sigma^`_v-\sigma^`_h}{2}
+	\end{equation}
+	\item \textit{Empirical Mesri} - the same formulae presented above, only applied to the parameters determined empirical.
+	\item \textit{Empirical (Den Haan formula)} - same formulae used by Crux Engineering, again, applied to the empirical parameters.
+	\item \textit{Empirical [PI]} - The CPT results represent important data to derive many soil parameters. Various equations were developed to better capture the link between the undrained shear strength and soil properties. A part of the equations express su as a function of the plasticity index. The typical Dutch clay soil is considered to have a plasticity index PI=25\% - 30\% leading to the following formulae:
+\begin{equation}
+		S_u=(0.11+0.01*PI)*\sigma^`_v
+\end{equation}
+	\item \textit{CPT - Mayne(2014)} gathers many equations for the interpretation of seismic piezocone tests. It is common to relate the shear strength to characteristics such as: plasticity index, pore pressure, stress history, mode of testing and so on. The net cone resistance may be used to profile the peak undrained shear strength as well as the measured excess pore pressures; these two being the most frequent methods of determination also known as direct expressions.
+\begin{equation}
+S_u=\frac{q_t-u_2}{N_{kt}}
+\end{equation}
+\begin{equation}
+S_u=\frac{u_2-u_T}{N_{\Delta u}}
+\end{equation}
+where $q_t$ - net cone resistance, $u_2$ - penetration pore water pressure, $u_0$ - water pressure behind the cone tip, $N_{kt}$ - factor depending on the mode of testing (vane test, triaxial compression/extension, etc) with an usual value of $N_{kt}=13.6\pm1.9$ for soft clays (Low et al, 2010), $N_{\Delta u}$ - factor depending on the pore pressures, approximated for soft clays as $N_{\Delta u}=6.8\pm2.2$ (Low et al, 2010).
+\end{enumerate}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.45\linewidth]{"Su"}
+	\caption{Various values of the undrained shear strength Su}
+	\label{Su_2}
+\end{figure}
+	
+\newpage
+\section{\\Abaqus Input parameters - Empirical and Measurements} \label{App:AppendixF}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"empirical"}
+	\caption{Input parameters empirically determined}
+	\label{empirical}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"measurements"}
+	\caption{Input parameters determined from field measurements}
+	\label{measurements}
+\end{figure}
+
+
+\newpage
+\section{\\Flow chart - Abaqus subroutines} \label{App:AppendixG}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"flowABQ"}
+	\label{ABQ}
+\end{figure}
+
+\vspace*{3cm}
+Note: The squared-boxes represent an action taken during the analysis. The round-shaped boxes represent a decision in the code or at a specific state (i.e. beginning of the increment) during the analysis.
+
+\newpage
+\section{\\Newmark integration schemes} \label{App:AppendixH}
+
+For this particular analysis, an implicit direct integration scheme was selected - this means that the set of equations concerning the set of nonlinear equations of motion are solved at each time step $\Delta t$ involving both the current and the later state of the system. On the other hand, an explicit analysis finds the solution for the later state of the system starting from the current one. The method is appropriate for this specific application as it successfully solves problems involving nonlinearity, both material and geometric, contact and moderate energy dissipation. 
+
+A significant aspect when performing such analyses relates to the stability of the calculation which translates into the size of the time increment. An implicit direct integration scheme is unconditionally stable; it means that there is no limitation in defining the time step size thus, the user can adjust the accuracy of the analysis according to the application. However, care must be paid when establishing the size of the time increment because it influences the energy dissipation as well as the transmission of high frequencies throughout the model.
+
+Abaqus/Standard uses the Hilbert-Hughes-Taylor time integration method which is an extension of the Newmark $\beta$ method. It basically controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types (for instance, backward Euler operator is more dissipative than second-order Hilbert-Hughes-Taylor). The general equation for the integration method is:
+\begin{equation}
+	\beta=0.25(1-\alpha)^2
+\end{equation}
+\begin{equation}
+	\gamma= 0.5-\alpha
+\end{equation}
+where $\alpha$ is the time integrator parameter [$-0.5<\alpha<0$] , $\beta$ and $\gamma$ are Newmark's method parameters.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{2cm}|p{10cm}|}
+		\hline $\alpha=0$       &      No artificial damping; energy preserving;
+		Leads to trapezoidal rule/Newmark's method \\
+		\hline $\alpha=-0.05$ & Negative damping; it produces enough artificial damping to ensure the automatic time step procedure to work smoothly; \\
+		\hline
+	\end{tabular}
+	\caption{Time integrator parameter}
+\end{table}
+
+This control parameter was set to zero to obtain the Newmark's- $\beta$ method characteristics leading to the parameters $\beta≥1/4$ and $\gamma ≥1/2$ and an unconditionally stable analysis - thus the implicit integration scheme does not encounter any numerical damping. This way, the user can define the time step instead of opting for an automatic time increment associated with an artificial damping - the accuracy can be manipulated manually.
+
+\newpage
+\section{\\FEM stability in dynamic calculations} \label{App:AppendixI}
+The accuracy of such nonlinear problem dealing with wave propagation is controlled by two factors - node spacing in the FE model $\Delta h$ and the time step $\Delta t$. The spacing is directly related to the wavelength whilst the time step depends on the fundamental period of the system. 
+The first condition can be expressed as:
+\begin{equation}
+\Delta h\leq\frac{\lambda_{min}}{10}=\frac{1}{10} \frac{v}{f_{max}}
+\end{equation}
+
+where $\Delta h$ - maximum spatial grid, $\lambda_{min}$ - smallest wavelength; $v$ - average shear wave velocity (usually of the softer soil); $f_{max}$ - maximum appropriate frequency (which can be considered 10Hz for a seismic analysis). This equation assumes that 10 nodes/wavelength should suffice, otherwise high frequencies might be overlooked leading to numerical damping. Soils that might encounter stiffness degradation need a smaller element size in order to better capture the behaviour. Table \ref{table:Deltah} shows the values used in calculation.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline Parameter      &     Value  & Unit  \\
+		\hline v      &      132  & m/s  \\
+		\hline f & 10 & Hz \\
+		\hline $\lambda_{min} $ & 13.2 & m\\
+		\hline $\Delta h$ & 1.32 & m \\
+		\hline $\Delta h_{final}$ & 1 & m \\
+		\hline
+	\end{tabular}
+	\caption{Calculation of final mesh size}
+	\label{table:Deltah}
+\end{table}
+
+The second condition has its own two criterion as it follows: stability in terms of time integration and stability related to the FEM. Within an implicit time integration scheme, the time step size decreases as the analysis diverges or the convergence rate is slow. The first criterion suggests the introduction of an upper bound applied to the frequencies that relates to the smallest fundamental period of the system and it is written:
+\begin{equation}
+\Delta t=\frac{T_n}{10}
+\end{equation}
+
+The second criteria is connected to the FE method that states that during an analysis the nodes are covered in a successive order. If the time step is too large, two nodes can be reached concomitantly - this violates the fundamental wave propagation condition leading to instability. Thus:
+\begin{equation}
+	\Delta t = \frac{\Delta h}{v}
+\end{equation}
+
+here $v$ - highest shear wave velocity. The final time step size is 0.005 sec according to Table \ref{table:DeltaT}:
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline Parameter      &     Value  & Unit  \\
+		\hline Vs & 132 & m/s \\
+		\hline H & 30  & m\\
+		\hline $T_n$ & 0.91 & s \\
+		\hline $\Delta t_1$ & 0.091 & sec \\
+		\hline $V_{max}$  & 180  & m/s \\
+		\hline $\Delta h$  & 1 & m\\
+		\hline $\Delta t_2$ & 0.0056 & s\\
+		\hline $\Delta t_{final}$ & 0.005 & s\\
+		\hline
+	\end{tabular}
+	\caption{Calculation of final time step}
+	\label{table:DeltaT}
+\end{table}
+
+For the mesh elements, four-node quad elements (CPE4) are used to model the soil using the plane strain formulation of the quad-element. The element connectivity uses a counterclockwise pattern for the previously-described node numbering scheme (see Figure \ref{Soilcolumn}). The soil elements in each layer are assigned the material tag of the material object corresponding to that layer. A unit thickness is used in all examples for simulating the 1D condition. The self-weight of the soil is considered as a body force acting on each element. The body force is set as the unit weight of the soil in each layer, which is determined from the respective mass density input value.
+
+
 \end{document}          
