@@ -5,6 +5,8 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage[toc,page,header]{appendix}
+\usepackage{minitoc}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 	
 \begin{document}
@@ -105,6 +107,7 @@
 	Isaac Newton
 	\end{dedication}
 
+\tableofcontents
 	
 \chapter{Introduction}
 \section{Current situation - an overview}
@@ -147,7 +150,14 @@ Given the complexity of the current application, several limitations are require
 \end{itemize}
 
 \section{Research outline}
+A schematic outline regarding the processes conducted during the thesis project are presented below. 
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"outline"}
+	\caption{Overview of thesis outline}
+	\label{outline}
+\end{figure}
 
 \chapter{Literature survey}
 \section{A new design philosophy}
@@ -467,13 +477,13 @@ Abaqus offers several methods for performing dynamic analysis of problems in whi
 \section{Material description}
 For the current situation, Abaqus requires the definition of several behaviour components such as: density, elastic, plastic, damping and, eventually, a subroutine which introduces the distribution of the ultimate shear strength along the depth and the correlation between the stiffness and the strength parameters ($E$ and $S_u$).
 
-\subsection{\underline{Input parameters}}
-As mentioned before, the analysis considers several parameters that are characteristic to the soil in Groningen area – a silty clay, weak to medium weak. In addition, a homogeneous clay layer of 20m is considered – for the ease of the calculation, the soil is converted in a one-layered soil column such that the strength and stiffness parameter distribution  along the depth is linear. This chapter presents parameters derived from both measurements and empirical equations, the analysis of one element subjected to a strain-controlled shear test and the results in terms of stiffness degradation and damping. The more detailed equations and methods of obtaining the parameters can be found in \textbf{Appendix5555}
+\subsection{Input parameters}
+As mentioned before, the analysis considers several parameters that are characteristic to the soil in Groningen area – a silty clay, weak to medium weak. In addition, a homogeneous clay layer of 20m is considered – for the ease of the calculation, the soil is converted in a one-layered soil column such that the strength and stiffness parameter distribution  along the depth is linear. This chapter presents parameters derived from both measurements and empirical equations, the analysis of one element subjected to a strain-controlled shear test and the results in terms of stiffness degradation and damping. The more detailed equations and methods of obtaining the parameters can be found in Appendix \ref{App:AppendixF}.	
 
 \paragraph{\underline{Stresses}}
 Total vertical stress represents the starting value for the evaluation of the stresses in each soil segment; assuming vertical equilibrium and neglecting the surcharge, the vertical stresses can be determined. In addition, the shear stresses on the vertical planes are assumed zero hence, no stress transformation is needed.
 
-Conform Terzaghi's principle, total stress comprises the \textit{effective stress} - which acts on the contact surfaces between the soil grains - and the \textit{pore pressure} - which is considered isotropic and it is in the form of water and air. Due to the isotropic character of the water, the shear stresses are transmitted to and through the skeleton grains exclusively. The case of pure shear suggests change in shape at constant volume and deformations of the granular material are determined by change in effective stresses. That is the reason why the initial parameters are expressed as functions of effective stresses. The equations leading to the definition of the stress state are described in \textbf{Appendix 2332}
+Conform Terzaghi's principle, total stress comprises the \textit{effective stress} - which acts on the contact surfaces between the soil grains - and the \textit{pore pressure} - which is considered isotropic and it is in the form of water and air. Due to the isotropic character of the water, the shear stresses are transmitted to and through the skeleton grains exclusively. The case of pure shear suggests change in shape at constant volume and deformations of the granular material are determined by change in effective stresses. That is the reason why the initial parameters are expressed as functions of effective stresses. The equations leading to the definition of the stress state are described in Appendix \ref{App:AppendixD}.
 
 The current analysis case deals with undrained conditions within a total stress analysis; for a foundation slab subjected to permanent load, pore pressure will initially develop decreasing the effective stresses and, since water drainage does not occur immediately, the soil underneath will behave in an undrained fashion.  Subsequently, consolidation occurs with dissipation of the excess pore pressure - from this moment onward the foundation is gaining more stability as it passed the critical situation. Moreover, during earthquake, due to the dynamic loading, the undrained behaviour is displayed; hence, the calculation will take this assumption into consideration. 
 
@@ -483,7 +493,7 @@ Given the supposition of no volume changes specific to the undrained conditions,
 \end{equation}
 
 \paragraph{\underline{Undrained shear strength}}
-The value of the undrained shear strength can be determined with the use of multiple parameters as well as methods. \ref{App:AppendixE} shows a collection of methods applied for obtaining the undrained shear strength of the soil based on both empirical and measurements data and the plot containing all the values can be seen in Figure22%. In order to summarize the features in the calculations, the undrained shear strength can be a function of plasticity index (PI), stress history within the soil (more importantly the effective  vertical stress), pore pressure, mode of testing et cetera.
+The value of the undrained shear strength can be determined with the use of multiple parameters as well as methods. \ref{App:AppendixE} shows a collection of methods applied for obtaining the undrained shear strength of the soil based on both empirical and measurements data and the plot containing all the values can be seen in Figure22\%. In order to summarize the features in the calculations, the undrained shear strength can be a function of plasticity index (PI), stress history within the soil (more importantly the effective  vertical stress), pore pressure, mode of testing et cetera.
 %referinta
 One important method to mention is represented by the study of Den Haan (2011) as he treats the current situation (of Groningen soils) in his article "Ongedraineerde sterkte van slappe Nederlandse grond" developing new equations for obtaining undrained shear strength of clayey soils. Crux Engineering develops a Plaxis model to validate the equation leading to a set of formulae as a function of the normalized stress given in Table 1.
 
@@ -508,7 +518,7 @@ For the current situation, considering the normalized shear stress to be 40kPa a
 	\label{DenHaan_param}
 \end{table}
 
-The graph shows the agreement between all the methods aforementioned; the decision of continuing the calculations with Den Haan (1) formulae is due to its applicability for the soft Dutch soils - which is the current case - and the measurements consistency. \textbf{Appendix 1 } shows the table of values characteristic for the soil including the associated stiffness parameters. The analysis relies on this set of parameters representing the soil sub-layer located at a depth of 10m below surface.
+The graph shows the agreement between all the methods aforementioned; the decision of continuing the calculations with Den Haan (1) formulae is due to its applicability for the soft Dutch soils - which is the current case - and the measurements consistency. Appendix \ref{App:AppendixF} shows the table of values characteristic for the soil including the associated stiffness parameters. The analysis relies on this set of parameters representing the soil sub-layer located at a depth of 10m below surface.
 
 \begin{figure}[h!]
 	\centering
@@ -559,7 +569,7 @@ $V_{s,30}$ is calculated as the time for a shear wave to travel from a depth of 
 	\label{EC8}
 \end{figure}
 
-The current case deals with soft soil, henceforth the Vs,30 is considered to be 180m/s –the real values determined from CPT tests and processed using Robertson’s method seem to match to table previously presented. \textbf{Appendix 2 }shows the measurements in terms of CPT results as well as Vs,30. [add THE CPT].
+The current case deals with soft soil, henceforth the Vs,30 is considered to be 180m/s –the real values determined from CPT tests and processed using Robertson’s method seem to match to table previously presented. Appendix \ref{App:AppendixA} shows the measurements in terms of CPT results as well as Vs,30. 
 
 The $G_0$ is further derived from Vs as previously explained. The elastic moduli is related to the shear modulus through the Poisson ratio:
 \begin{equation}
@@ -595,7 +605,7 @@ where $C$ - initial hardening Young's modulus and $\sigma_y$ corresponds to von 
 	E=a*S_u;   a=[300-1800]
 \end{equation}
 
-\textbf{Appendix 1} presents both the tables containing the input parameters - from in-situ measurements and empirically determined. Nonetheless, differences appear due to several causes and assumptions taken into account but also because of the calculation methods. Few of the sources of dissimilarity are presented below:
+Appendix \ref{App:AppendixD} presents both the tables containing the input parameters - from in-situ measurements and empirically determined. Nonetheless, differences appear due to several causes and assumptions taken into account but also because of the calculation methods. Few of the sources of dissimilarity are presented below:
 \begin{enumerate}
 	\item measurements data presents a heterogeneous soil stratification consisting in silty clay at the upper part of the layer and potklei in the lower one whilst the empirical data accounts for a completely homogeneous layer.
 	\item he measurement related properties do not vary linearly along the depth in reality as it can be seen in figure \ref{youngss} while empirical equations lead to a linearity between parameters; for instance, empirically determined stiffness $G_0$ is calculated combining the factor and the mean effective stress - which varies linearly with depth - thus the stiffness will result in a linearly distribution as well. Measurements do not display the same fashion given the Vs variation with depth.
@@ -645,7 +655,7 @@ The yield stress at zero plastic strain $\sigma_0$ controls the initiation of in
 	\sigma_0=\frac{G_{max}}{\gamma_{el}}
 \end{equation}
 
-The shear modulus was derived previously from the Vs values measured by CPT, as well as all other stiffness parameters. The elastic limit strain represents the point in which the plasticity is triggered - here was taken into calculation as 10-4. Hence all the kinematic parameters are further obtained based on this value and it can be seen in \textbf{Appendix 1.}
+The shear modulus was derived previously from the Vs values measured by CPT, as well as all other stiffness parameters. The elastic limit strain represents the point in which the plasticity is triggered - here was taken into calculation as 10-4. Hence all the kinematic parameters are further obtained based on this value and it can be seen in Appendix \ref{App:AppendixF}.
 
 
 \section{Results}
@@ -788,9 +798,9 @@ The material parameters can be divided into several categories the software requ
 	\item \textit{Damping -}\quad the software offers many damping options [from numerical to material damping]; however, for this example the Rayleigh damping parameters $\alpha$ and $\beta$ are sufficient for the scope of analysis. This matter will be discussed later on.
 \end{enumerate}
 
-In addition, the model contains a subroutine which introduces the values of undrained shear strength as a function of the vertical effective stress as well as the correlation of this parameter with Young's modulus using field variables located at integration points of the elements. The field variable values can be functions of element variables such as stress or strain. $Appendix 111$ shows the flow chart of Abaqus user defined subroutine together with the subroutine introduced in the calculation.
+In addition, the model contains a subroutine which introduces the values of undrained shear strength as a function of the vertical effective stress as well as the correlation of this parameter with Young's modulus using field variables located at integration points of the elements. The field variable values can be functions of element variables such as stress or strain. Appendix \ref{App:AppendixG} shows the flow chart of Abaqus user defined subroutine together with the subroutine introduced in the calculation.
 
-The parameters are calculated as presented in the previous chapter (see 3.2.1.4. and $Appendix 12123$). One important matter to mention is the change in the calculation of Young's modulus - for the ease of calculation, this value was determined as a function of the undrained shear strength value. Anastasopoulos et al (2011) use an empirical formulae (based on e.g., Hardin and Richart 1963; Robertson and Campanella1983; Seed et al. 1986; Mayne and Rix 1993) for calculating the value of the small-strain Young's modulus as a function of the overburden stress $\sigma_y$. $C=a{\sigma }_{y}$ with a ranging from 150 to 10.000 (for clays). Accounting for von Mises failure criterion and one of its defining equations ${\sigma}_{y}=a*S_u$ it finally yields:
+The parameters are calculated as presented in the previous chapter (see 3.4.1.  and Appendix \ref{App:AppendixF}). One important matter to mention is the change in the calculation of Young's modulus - for the ease of calculation, this value was determined as a function of the undrained shear strength value. Anastasopoulos et al (2011) use an empirical formulae (based on e.g., Hardin and Richart 1963; Robertson and Campanella1983; Seed et al. 1986; Mayne and Rix 1993) for calculating the value of the small-strain Young's modulus as a function of the overburden stress $\sigma_y$. $C=a{\sigma }_{y}$ with a ranging from 150 to 10.000 (for clays). Accounting for von Mises failure criterion and one of its defining equations ${\sigma}_{y}=a*S_u$ it finally yields:
 \begin{equation}
 	E=a*S_u
 \end{equation}
@@ -867,7 +877,8 @@ And finally, Rayleigh $\beta$ damping parameter becomes:
 \subsection{Integration scheme}
 It is important to understand the type of nonlinear analysis the software was opted to perform and its influence of the results. For this particular analysis, an implicit direct integration scheme was selected - this means that the set of equations concerning the set of nonlinear equations of motion are solved at each time step $\Delta t$ involving both the current and the later state of the system.
 
-Abaqus/Standard uses the Hilbert-Hughes-Taylor time integration method which is an extension of the Newmark $\beta$ method. Basically it controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types.
+Abaqus/Standard uses the Hilbert-Hughes-Taylor time integration method which is an extension of the Newmark $\beta$ method. Basically it controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types. More details related to Newmark integration method are presented in Appendix \ref{App:AppendixH}.
+
 \subsection{FEM stability}
 The accuracy of such nonlinear problem dealing with wave propagation is controlled by two factors - node spacing in the FE model $\delta h$ and the time step $\delta t$. The spacing is directly related to the wavelength whilst the time step depends on the fundamental period of the system. 
 \begin{equation}
@@ -877,7 +888,7 @@ The accuracy of such nonlinear problem dealing with wave propagation is controll
 \begin{equation}
 	\Delta t=\frac{T_n}{10}
 \end{equation}
-More details regarding the calculation of the two stability criterion are presented within $Appendix 23141$.
+More details regarding the calculation of the two stability criterion are presented within Appendix \ref{App:AppendixI}
 
 \subsection{Mesh}
 For the mesh elements, four-node quad elements ($CPE4$) are used to model the soil using the plane strain formulation of the quad-element. The element connectivity uses a counterclockwise pattern for the previously-described node numbering scheme (see \ref{Figure 1}). The soil elements in each layer are assigned the material tag of the material object corresponding to that layer. A unit thickness is used in all examples for simulating the 1D condition. The self-weight of the soil is considered as a body force acting on each element. The body force is set as the unit weight of the soil in each layer, which is determined from the respective mass density input value.
@@ -1079,7 +1090,9 @@ It can be concluded that for the Groningen sites, low PGA input ($a_g=0.1g$) the
 
 \newpage
 \appendix
-\section{\\Cone penetration test results} \label{App:AppendixA}
+\addcontentsline{toc}{section}{Appendix}
+\part{Appendix}
+\chapter{Cone penetration test results} \label{App:AppendixA}
 % the \\ insures the section title is centered below the phrase: AppendixA
 
 \begin{figure}[h!]
@@ -1093,9 +1106,9 @@ It can be concluded that for the Groningen sites, low PGA input ($a_g=0.1g$) the
 \end{figure}
 
 \newpage
-\section{\\Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion} \label{App:AppendixB}
+\chapter{Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion} \label{App:AppendixB}
 % the \\ insures the section title is centered below the phrase: Appendix B
-\subsection{Von Mises failure criterion. A definition}
+\section{Von Mises failure criterion. A definition}
 The plasticity characteristics correspond to a Von Mises failure criterion -\textit{a total stress analysis } is performed. The reason behind this option relates, on one hand, to the pore pressure dissipation - due to the load rate the volumetric strain is almost zero because the excess pore pressure does not have the chance to dissipate.  The chosen criterion suits the goal as it is independent on the hydrostatic pressure and mean stress invariant $s$.
 
 When considering a point P in stress space representing a vector describing the stress state, it can be projected on the hydrostatic axis with the use of two components: the parallel vector representing the hydrostatic component - which is function of the mean stress invariant $I_1$ and the perpendicular component, the deviatoric one as a function of the second deviatoric stress invariant $J_2$.
@@ -1157,7 +1170,7 @@ Furthermore, Von Mises only considers the \textbf{second invariant being indepen
 	\label{Mises}
 \end{figure}
 
-\subsection{Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }
+\section{Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }
 
 The formulation for plasticity criterion is always expressed in the following form and it is important to mention that the\textit{ plasticity function is linear} and depends exclusively on the second invariant $J_2$ as it follows:
 
@@ -1229,7 +1242,7 @@ The equations incorporate the term C which refers to Young's modulus for very sm
 ** In order to avoid the confusion between the hardening parameter (here noted with $\gamma$) and the shear strain (also $\gamma$), the notation of the hardening parameter is changed to $K$.
 
 newpage
-\section{\\Description of Darendeli hyperbolic model} \label{App:AppendixC}
+\chapter{Description of Darendeli hyperbolic model} \label{App:AppendixC}
 
 The study presents a modified hyperbolic model which describes the normalized modulus reduction curve; the model starts from the example created by \textbf{Hardin and Drnevich} being adjusted through a curvature coefficient, a. The role of the coefficient is given by its name as it influences the curvature of the outcome. The hyperbolic model is expressed using the following equation:
 \begin{equation}
@@ -1278,7 +1291,7 @@ Parameter b represents a scaling factor whilst $D_{min}$ comprises the impact on
 In conclusion, the modified hyperbolic model described by Darendeli for the normalized modulus reduction curve and material damping curve relies on four parameters: \textbf{$a, b, \gamma_{ref} $}and \textbf{$D_{min}$}.
 
 \newpage
-\section{\\Input parameter - Stresses calculation} \label{App:AppendixD}
+\chapter{Input parameter - Stresses calculation} \label{App:AppendixD}
 The total vertical stress is calculated both in terms of soil density (\ref{eq:1}), in [$Mg/m^3$] and soil unit weight (\ref{eq:2}), in [$kN/m^2$], at a depth z as it follows:
 \begin{equation}
 	p(z)=p_0 + \int_{0}^{z}\rho(z)dz
@@ -1328,7 +1341,7 @@ Given the supposition of no volume changes specific to the undrained conditions,
 \end{equation}
 
 \newpage
-\section{\\Determination of undrained shear strength value} \label{App:AppendixE}
+\chapter{Determination of undrained shear strength value} \label{App:AppendixE}
 The calculations continue in terms of effective stresses and head to the estimation of the stiffness parameters, mainly Young's modulus and undrained shear strength. Mohr-Coulomb failure criterion will serve for the estimation of the strength parameters; the straight line represents the failure envelope within the plot of the shear strength against normal effective stress and it is described by the following equation:
 \begin{equation}
 	\tau^`=c+ \sigma^` \tan \phi
@@ -1410,7 +1423,7 @@ where $q_t$ - net cone resistance, $u_2$ - penetration pore water pressure, $u_0
 \end{figure}
 	
 \newpage
-\section{\\Abaqus Input parameters - Empirical and Measurements} \label{App:AppendixF}
+\chapter{Abaqus Input parameters - Empirical and Measurements} \label{App:AppendixF}
 
 \begin{figure}[h!]
 	\centering
@@ -1428,7 +1441,7 @@ where $q_t$ - net cone resistance, $u_2$ - penetration pore water pressure, $u_0
 
 
 \newpage
-\section{\\Flow chart - Abaqus subroutines} \label{App:AppendixG}
+\chapter{Flow chart - Abaqus subroutines} \label{App:AppendixG}
 
 
 \begin{figure}[h!]
@@ -1441,7 +1454,7 @@ where $q_t$ - net cone resistance, $u_2$ - penetration pore water pressure, $u_0
 Note: The squared-boxes represent an action taken during the analysis. The round-shaped boxes represent a decision in the code or at a specific state (i.e. beginning of the increment) during the analysis.
 
 \newpage
-\section{\\Newmark integration schemes} \label{App:AppendixH}
+\chapter{Newmark integration schemes} \label{App:AppendixH}
 
 For this particular analysis, an implicit direct integration scheme was selected - this means that the set of equations concerning the set of nonlinear equations of motion are solved at each time step $\Delta t$ involving both the current and the later state of the system. On the other hand, an explicit analysis finds the solution for the later state of the system starting from the current one. The method is appropriate for this specific application as it successfully solves problems involving nonlinearity, both material and geometric, contact and moderate energy dissipation. 
 
@@ -1470,7 +1483,7 @@ where $\alpha$ is the time integrator parameter [$-0.5<\alpha<0$] , $\beta$ and 
 This control parameter was set to zero to obtain the Newmark's- $\beta$ method characteristics leading to the parameters $\beta≥1/4$ and $\gamma ≥1/2$ and an unconditionally stable analysis - thus the implicit integration scheme does not encounter any numerical damping. This way, the user can define the time step instead of opting for an automatic time increment associated with an artificial damping - the accuracy can be manipulated manually.
 
 \newpage
-\section{\\FEM stability in dynamic calculations} \label{App:AppendixI}
+\chapter{FEM stability in dynamic calculations} \label{App:AppendixI}
 The accuracy of such nonlinear problem dealing with wave propagation is controlled by two factors - node spacing in the FE model $\Delta h$ and the time step $\Delta t$. The spacing is directly related to the wavelength whilst the time step depends on the fundamental period of the system. 
 The first condition can be expressed as:
 \begin{equation}

@@ -1,0 +1,66 @@
+\contentsline {chapter}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {1.1}Current situation - an overview}{4}
+\contentsline {section}{\numberline {1.2}Research objectives}{6}
+\contentsline {section}{\numberline {1.3}Research outline}{6}
+\contentsline {chapter}{\numberline {2}Literature survey}{8}
+\contentsline {section}{\numberline {2.1}A new design philosophy}{8}
+\contentsline {section}{\numberline {2.2}Effects of nonlinearity}{9}
+\contentsline {section}{\numberline {2.3}Uplifting}{10}
+\contentsline {section}{\numberline {2.4}Soil yielding}{10}
+\contentsline {section}{\numberline {2.5}Numerical analyses}{10}
+\contentsline {section}{\numberline {2.6}Soil condition}{12}
+\contentsline {subsection}{\numberline {2.6.1}Problem statement}{12}
+\contentsline {subsection}{\numberline {2.6.2}Constitutive model}{12}
+\contentsline {section}{\numberline {2.7}Numerical tools}{13}
+\contentsline {section}{\numberline {2.8}Expected results}{14}
+\contentsline {chapter}{\numberline {3}Material calibration using one mesh element}{17}
+\contentsline {section}{\numberline {3.1}General}{17}
+\contentsline {section}{\numberline {3.2}Normalized stiffness degradation and material damping curves}{18}
+\contentsline {subsection}{\numberline {3.2.1}${G/G_{max}}$ curves}{18}
+\contentsline {subsection}{\numberline {3.2.2}Darendeli results}{20}
+\contentsline {section}{\numberline {3.3}Modelling}{21}
+\contentsline {subsection}{\numberline {3.3.1}Steps}{22}
+\contentsline {paragraph}{First step}{22}
+\contentsline {paragraph}{Second step}{22}
+\contentsline {section}{\numberline {3.4}Material description}{23}
+\contentsline {subsection}{\numberline {3.4.1}Input parameters}{23}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Stresses}}\mathsurround \z@ $\relax }{24}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Undrained shear strength}}\mathsurround \z@ $\relax }{24}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Stiffness}}\mathsurround \z@ $\relax }{25}
+\contentsline {subparagraph}{Shear modulus determined empirically}{25}
+\contentsline {subparagraph}{Shear modulus determined based on available measurements }{26}
+\contentsline {subsection}{\numberline {3.4.2}Non-linear parameters (kinematic hardening model with Von Mises failure criterion)}{27}
+\contentsline {section}{\numberline {3.5}Results}{29}
+\contentsline {subsection}{\numberline {3.5.1}General}{29}
+\contentsline {subsection}{\numberline {3.5.2}Parameters that influence the soil response}{30}
+\contentsline {subsection}{\numberline {3.5.3}Validation - Comparison with Darendeli curves}{31}
+\contentsline {section}{\numberline {3.6}Conclusions}{33}
+\contentsline {chapter}{\numberline {4}Site Response Analysis}{34}
+\contentsline {section}{\numberline {4.1}Introduction}{34}
+\contentsline {section}{\numberline {4.2}Model description}{34}
+\contentsline {subsection}{\numberline {4.2.1}Steps of analysis}{34}
+\contentsline {subsection}{\numberline {4.2.2}Input parameters}{35}
+\contentsline {subsection}{\numberline {4.2.3}Rayleigh coefficients}{37}
+\contentsline {subsection}{\numberline {4.2.4}Integration scheme}{38}
+\contentsline {subsection}{\numberline {4.2.5}FEM stability}{38}
+\contentsline {subsection}{\numberline {4.2.6}Mesh}{38}
+\contentsline {section}{\numberline {4.3}NERA - Non-linear Earthquake Site Response}{38}
+\contentsline {section}{\numberline {4.4}Results}{39}
+\contentsline {section}{\numberline {4.5}Comparison Abaqus vs NERA}{42}
+\contentsline {subsection}{\numberline {4.5.1}Remarks}{42}
+\contentsline {subsection}{\numberline {4.5.2}Additional investigation}{45}
+\contentsline {section}{\numberline {4.6}Conclusions}{47}
+\contentsline {section}{Appendix}{48}
+\contentsline {part}{I\hspace {1em}Appendix}{48}
+\contentsline {xpart}{Appendix}{49}
+\contentsline {chapter}{\numberline {A}Cone penetration test results}{49}
+\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{51}
+\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{51}
+\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{52}
+\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{55}
+\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{57}
+\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{58}
+\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{61}
+\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{63}
+\contentsline {chapter}{\numberline {H}Newmark integration schemes}{65}
+\contentsline {chapter}{\numberline {I}FEM stability in dynamic calculations}{66}
