@@ -1,0 +1,863 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.6)  21 APR 2016 14:19
+entering extended mode
+**./Chapter4.tex
+(Chapter4.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\repor
+t.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size1
+0.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\input
+enc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\utf8x.
+def"
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucs.st
+y"
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-gl
+obal.def"
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count88
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+smath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+stext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+sgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen103
+))
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+sbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+sopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks20
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks21
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks22
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\a
+msfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\a
+mssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\g
+raphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\k
+eyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\g
+raphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\t
+rig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\g
+raphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def
+\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek
+\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek
+\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count101
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\g
+eometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek
+\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek
+\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\
+ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count102
+\Gm@cntv=\count103
+\c@Gm@tempcnt=\count104
+\Gm@bindingoffset=\dimen114
+\Gm@wd@mp=\dimen115
+\Gm@odd@mp=\dimen116
+\Gm@even@mp=\dimen117
+\Gm@layoutwidth=\dimen118
+\Gm@layoutheight=\dimen119
+\Gm@layouthoffset=\dimen120
+\Gm@layoutvoffset=\dimen121
+\Gm@dimlist=\toks25
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\g
+eometry.cfg")) (Chapter4.aux)
+\openout1 = `Chapter4.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsenc
+s.def"
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\sup
+p-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen122
+\scratchbox=\box28
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen123
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks27
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79134pt, 85.35828pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79134pt
+* \textheight=702.78308pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+[1
+
+{C:/Users/Administrator/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<"TUDLogo".png, id=8, 19.39246pt x 5.42026pt>
+File: "TUDLogo".png Graphic file (type png)
+ <use "TUDLogo".png>
+Package pdftex.def Info: "TUDLogo".png used on input line 52.
+(pdftex.def)             Requested size: 258.86047pt x 72.26999pt.
+
+<"CRUXlogo".jpg, id=10, 36.135pt x 48.18pt>
+File: "CRUXlogo".jpg Graphic file (type jpg)
+ <use "CRUXlogo".jpg>
+Package pdftex.def Info: "CRUXlogo".jpg used on input line 54.
+(pdftex.def)             Requested size: 54.20233pt x 72.26999pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\u
+msa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\u
+msb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscm
+r.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
+ [2
+
+ <./TUDLogo.png> <./CRUXlogo.jpg>] [1
+
+]
+Chapter 1.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32
+.def"
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+) [2
+
+
+] <"Pwaves".jpg, id=25, 548.80031pt x 301.8778pt>
+File: "Pwaves".jpg Graphic file (type jpg)
+ <use "Pwaves".jpg>
+Package pdftex.def Info: "Pwaves".jpg used on input line 122.
+(pdftex.def)             Requested size: 298.75262pt x 164.33818pt.
+
+<"spectrum_code".jpg, id=26, 380.17032pt x 274.02374pt>
+File: "spectrum_code".jpg Graphic file (type jpg)
+
+<use "spectrum_code".jpg>
+Package pdftex.def Info: "spectrum_code".jpg used on input line 131.
+(pdftex.def)             Requested size: 179.25157pt x 129.20511pt.
+ [3 <./Pwaves.jpg> <./spectrum_code.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+[4]
+Chapter 2.
+[5
+
+] <"new_phil".jpg, id=37, 549.55313pt x 225.84375pt>
+File: "new_phil".jpg Graphic file (type jpg)
+ <use "new_phil".jpg>
+Package pdftex.def Info: "new_phil".jpg used on input line 167.
+(pdftex.def)             Requested size: 298.75262pt x 122.77742pt.
+
+<"nonlin".jpg, id=38, 569.87906pt x 153.57375pt>
+File: "nonlin".jpg Graphic file (type jpg)
+ <use "nonlin".jpg>
+Package pdftex.def Info: "nonlin".jpg used on input line 178.
+(pdftex.def)             Requested size: 298.75262pt x 80.5079pt.
+ [6 <./new_phil.jpg> <./nonlin.jpg>] <"uplift".jpg, id=42, 335.75438pt x 241.65
+282pt>
+File: "uplift".jpg Graphic file (type jpg)
+
+<use "uplift".jpg>
+Package pdftex.def Info: "uplift".jpg used on input line 202.
+(pdftex.def)             Requested size: 341.43436pt x 245.74146pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7] [8 <./uplift.jpg>] [9] [10] <"fbc".jpg, id=58, 457.71pt x 196.48407pt>
+File: "fbc".jpg Graphic file (type jpg)
+
+<use "fbc".jpg>
+Package pdftex.def Info: "fbc".jpg used on input line 287.
+(pdftex.def)             Requested size: 341.43436pt x 146.57417pt.
+ [11 <./fbc.jpg>] <"MQN".jpg, id=63, 471.26062pt x 356.0803pt>
+File: "MQN".jpg Graphic file (type jpg)
+
+<use "MQN".jpg>
+Package pdftex.def Info: "MQN".jpg used on input line 304.
+(pdftex.def)             Requested size: 341.43436pt x 257.98589pt.
+ [12 <./MQN.jpg>] [13]
+Chapter 3.
+<"scheme2D".jpg, id=70, 700.86844pt x 353.82187pt>
+File: "scheme2D".jpg Graphic file (type jpg)
+ <use "scheme2D".jpg>
+Package pdftex.def Info: "scheme2D".jpg used on input line 327.
+(pdftex.def)             Requested size: 341.43436pt x 172.37004pt.
+
+[14
+
+ <./scheme2D.jpg>]
+<"shear_strain_detail".jpg, id=74, 295.1025pt x 196.48407pt>
+File: "shear_strain_detail".jpg Graphic file (type jpg)
+
+<use "shear_strain_detail".jpg>
+Package pdftex.def Info: "shear_strain_detail".jpg used on input line 338.
+(pdftex.def)             Requested size: 341.43436pt x 227.33704pt.
+
+<"soildeposit".jpg, id=75, 324.46219pt x 206.27063pt>
+File: "soildeposit".jpg Graphic file (type jpg)
+ <use "soildeposit".jpg>
+Package pdftex.def Info: "soildeposit".jpg used on input line 348.
+(pdftex.def)             Requested size: 341.43436pt x 217.07524pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15 <./shear_strain_detail.jpg>]
+<"normalized".jpg, id=81, 529.22719pt x 288.3272pt>
+File: "normalized".jpg Graphic file (type jpg)
+ <use "normalized".jpg>
+Package pdftex.def Info: "normalized".jpg used on input line 371.
+(pdftex.def)             Requested size: 341.43436pt x 186.0158pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16 <./soildeposit.jpg>]
+
+LaTeX Warning: Reference `table' on page 17 undefined on input line 381.
+
+[17 <./normalized.jpg>] <"1dmodel".jpg, id=89, 252.945pt x 208.52907pt>
+File: "1dmodel".jpg Graphic file (type jpg)
+
+<use "1dmodel".jpg>
+Package pdftex.def Info: "1dmodel".jpg used on input line 426.
+(pdftex.def)             Requested size: 298.75262pt x 246.2976pt.
+ [18 <./1dmodel.jpg>]
+<"bc1d".jpg, id=93, 725.71124pt x 194.22563pt>
+File: "bc1d".jpg Graphic file (type jpg)
+ <use "bc1d".jpg>
+Package pdftex.def Info: "bc1d".jpg used on input line 439.
+(pdftex.def)             Requested size: 298.75262pt x 79.95901pt.
+
+<"deformed".jpg, id=94, 255.20343pt x 221.32687pt>
+File: "deformed".jpg Graphic file (type jpg)
+ <use "deformed".jpg>
+Package pdftex.def Info: "deformed".jpg used on input line 450.
+(pdftex.def)             Requested size: 140.84192pt x 122.15228pt.
+
+[19 <./bc1d.jpg> <./deformed.jpg>]
+<"bc1d2".jpg, id=98, 618.81187pt x 398.99063pt>
+File: "bc1d2".jpg Graphic file (type jpg)
+ <use "bc1d2".jpg>
+Package pdftex.def Info: "bc1d2".jpg used on input line 460.
+(pdftex.def)             Requested size: 298.75262pt x 192.63353pt.
+ [20 <./bc1d2.jpg>]
+Overfull \hbox (14.53815pt too wide) in paragraph at lines 497--506
+ [][] 
+ []
+
+<"Su".jpg, id=102, 603.75563pt x 335.00156pt>
+File: "Su".jpg Graphic file (type jpg)
+ <use "Su".jpg>
+Package pdftex.def Info: "Su".jpg used on input line 515.
+(pdftex.def)             Requested size: 298.75262pt x 165.76749pt.
+ [21] [22 <./Su.jpg>] <"EC8".jpg, id=109, 310.15875pt x 301.8778pt>
+File: "EC8".jpg Graphic file (type jpg)
+ <use "EC8".jpg>
+Package pdftex.def Info: "EC8".jpg used on input line 557.
+(pdftex.def)             Requested size: 298.75262pt x 290.77592pt.
+ [23 <./EC8.jpg>] <"youngss1".jpg, id=115, 605.26125pt x 327.47343pt>
+File: "youngss1".jpg Graphic file (type jpg)
+ <use "youngss1".jpg>
+Package pdftex.def Info: "youngss1".jpg used on input line 609.
+(pdftex.def)             Requested size: 298.75262pt x 161.63763pt.
+
+<"su2".jpg, id=116, 603.0028pt x 332.74312pt>
+File: "su2".jpg Graphic file (type jpg)
+ <use "su2".jpg>
+Package pdftex.def Info: "su2".jpg used on input line 616.
+(pdftex.def)             Requested size: 298.75262pt x 164.85304pt.
+
+Overfull \hbox (3.85039pt too wide) in paragraph at lines 621--621
+[]\OT1/cmr/bx/n/12 Non-linear pa-ram-e-ters (kine-matic hard-en-ing model with 
+Von Mises
+ []
+
+[24] [25 <./youngss1.jpg> <./su2.jpg>]
+<"cyclicampl".jpg, id=124, 485.56406pt x 226.59656pt>
+File: "cyclicampl".jpg Graphic file (type jpg)
+ <use "cyclicampl".jpg>
+Package pdftex.def Info: "cyclicampl".jpg used on input line 668.
+(pdftex.def)             Requested size: 298.75262pt x 139.41655pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[26] <"loop".jpg, id=128, 486.31688pt x 277.78781pt>
+File: "loop".jpg Graphic file (type jpg)
+ <use "loop".jpg>
+Package pdftex.def Info: "loop".jpg used on input line 686.
+(pdftex.def)             Requested size: 170.71393pt x 97.51117pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--697
+[]\OT1/cmr/m/n/10 Sample
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--697
+[]\OT1/cmr/m/n/10 Confinement
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--697
+[]\OT1/cmr/m/n/10 Young's
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--697
+[]\OT1/cmr/m/n/10 Undrained shear
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
+[]\OT1/cmr/m/n/10 Hardening
+ []
+
+
+Overfull \hbox (15.09444pt too wide) in paragraph at lines 696--706
+ [][] 
+ []
+
+<"oneElem1".jpg, id=129, 441.90094pt x 273.27094pt>
+File: "oneElem1".jpg Graphic file (type jpg)
+ <use "oneElem1".jpg>
+Package pdftex.def Info: "oneElem1".jpg used on input line 712.
+(pdftex.def)             Requested size: 341.43436pt x 211.15314pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[27 <./cyclicampl.jpg> <./loop.jpg>]
+<"ggmax".jpg, id=133, 487.8225pt x 313.17pt>
+File: "ggmax".jpg Graphic file (type jpg)
+ <use "ggmax".jpg>
+Package pdftex.def Info: "ggmax".jpg used on input line 723.
+(pdftex.def)             Requested size: 298.75262pt x 191.7932pt.
+ [28 <./oneElem1.jpg> <./ggmax.jpg>] <"ggmax2".jpg, id=138, 516.42938pt x 370.3
+8374pt>
+File: "ggmax2".jpg Graphic file (type jpg)
+
+<use "ggmax2".jpg>
+Package pdftex.def Info: "ggmax2".jpg used on input line 737.
+(pdftex.def)             Requested size: 320.09349pt x 229.57903pt.
+ <"dampiing".jpg, id=139, 507.39563pt x 322.95656pt>
+File: "dampiing".jpg Graphic file (type jpg)
+
+<use "dampiing".jpg>
+Package pdftex.def Info: "dampiing".jpg used on input line 744.
+(pdftex.def)             Requested size: 298.75262pt x 190.15834pt.
+ [29 <./ggmax2.jpg> <./dampiing.jpg>] [30]
+Chapter 4.
+[31
+
+] <"Soil column".jpg, id=150, 281.55188pt x 313.17pt>
+File: "Soil column".jpg Graphic file (type jpg)
+
+<use "Soil column".jpg>
+Package pdftex.def Info: "Soil column".jpg used on input line 766.
+(pdftex.def)             Requested size: 298.75262pt x 332.32178pt.
+ <"Acc input".jpg, id=151, 731.73375pt x 380.17032pt>
+File: "Acc input".jpg Graphic file (type jpg)
+
+<use "Acc input".jpg>
+Package pdftex.def Info: "Acc input".jpg used on input line 776.
+(pdftex.def)             Requested size: 298.75262pt x 155.21533pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[32 <./Soil column.jpg>]
+Overfull \hbox (21.7031pt too wide) in paragraph at lines 793--794
+[]\OT1/cmr/m/n/10 The pa-ram-e-ters are cal-cu-lated as pre-sented in the pre-v
+i-ous chap-ter (see 3.2.1.4. and $\OML/cmm/m/it/10 Appendix\OT1/cmr/m/n/10 1212
+3$).
+ []
+
+<"Young's modulus".jpg, id=155, 486.31688pt x 354.57469pt>
+File: "Young's modulus".jpg Graphic file (type jpg)
+
+<use "Young's modulus".jpg>
+Package pdftex.def Info: "Young's modulus".jpg used on input line 802.
+(pdftex.def)             Requested size: 298.75262pt x 217.82138pt.
+ [33 <./Acc input.jpg> <./Young's modulus.jpg>]
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.
+def"
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-1.
+def"
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34]
+Overfull \hbox (18.1013pt too wide) in paragraph at lines 879--881
+\OT1/cmr/m/n/10 More de-tails re-gard-ing the cal-cu-la-tion of the two sta-bil
+-ity cri-te-rion are pre-sented within $\OML/cmm/m/it/10 Appendix\OT1/cmr/m/n/1
+0 23141$. 
+ []
+
+<"Mroz".jpg, id=162, 539.01375pt x 198.7425pt>
+File: "Mroz".jpg Graphic file (type jpg)
+ <use "Mroz".jpg>
+Package pdftex.def Info: "Mroz".jpg used on input line 890.
+(pdftex.def)             Requested size: 298.75262pt x 110.15479pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[35] <"response1".jpg, id=167, 488.57532pt x 289.83281pt>
+File: "response1".jpg Graphic file (type jpg)
+
+<use "response1".jpg>
+Package pdftex.def Info: "response1".jpg used on input line 914.
+(pdftex.def)             Requested size: 298.75262pt x 177.22673pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"response2".jpg, id=168, 448.67625pt x 277.035pt>
+File: "response2".jpg Graphic file (type jpg)
+ <use "response2".jpg>
+Package pdftex.def Info: "response2".jpg used on input line 921.
+(pdftex.def)             Requested size: 298.75262pt x 184.47113pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"acc_response1".jpg, id=169, 399.74344pt x 194.97844pt>
+File: "acc_response1".jpg Graphic file (type jpg)
+
+<use "acc_response1".jpg>
+Package pdftex.def Info: "acc_response1".jpg used on input line 928.
+(pdftex.def)             Requested size: 298.75262pt x 145.72768pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"response3".jpg, id=170, 341.02406pt x 225.84375pt>
+File: "response3".jpg Graphic file (type jpg)
+ <use "response3".jpg>
+Package pdftex.def Info: "response3".jpg used on input line 936.
+(pdftex.def)             Requested size: 298.75262pt x 197.8609pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"acc_response2".jpg, id=171, 437.38406pt x 190.46156pt>
+File: "acc_response2".jpg Graphic file (type jpg)
+
+<use "acc_response2".jpg>
+Package pdftex.def Info: "acc_response2".jpg used on input line 943.
+(pdftex.def)             Requested size: 298.75262pt x 130.09337pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[36 <./Mroz.jpg>] [37 <./response1.jpg> <./response2.jpg> <./acc_response1.jpg>
+]
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-34
+.def"
+File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
+) <"Fourier".jpg, id=178, 499.8675pt x 262.73157pt>
+File: "Fourier".jpg Graphic file (type jpg)
+ <use "Fourier".jpg>
+Package pdftex.def Info: "Fourier".jpg used on input line 960.
+(pdftex.def)             Requested size: 298.75262pt x 157.03078pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[38 <./response3.jpg> <./acc_response2.jpg>]
+File: "acc_response2".jpg Graphic file (type jpg)
+ <use "acc_response2".jpg>
+Package pdftex.def Info: "acc_response2".jpg used on input line 976.
+(pdftex.def)             Requested size: 298.75262pt x 130.09337pt.
+
+<"spectral2".jpg, id=182, 630.10406pt x 380.92313pt>
+File: "spectral2".jpg Graphic file (type jpg)
+ <use "spectral2".jpg>
+Package pdftex.def Info: "spectral2".jpg used on input line 983.
+(pdftex.def)             Requested size: 298.75262pt x 180.60904pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"tau_gamma1".jpg, id=183, 615.80063pt x 406.51875pt>
+File: "tau_gamma1".jpg Graphic file (type jpg)
+ <use "tau_gamma1".jpg>
+Package pdftex.def Info: "tau_gamma1".jpg used on input line 990.
+(pdftex.def)             Requested size: 298.75262pt x 197.22337pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"tau_gamma2".jpg, id=184, 718.93594pt x 216.05719pt>
+File: "tau_gamma2".jpg Graphic file (type jpg)
+ <use "tau_gamma2".jpg>
+Package pdftex.def Info: "tau_gamma2".jpg used on input line 997.
+(pdftex.def)             Requested size: 298.75262pt x 89.78403pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[39 <./Fourier.jpg>] <"yield_srf".jpg, id=188, 651.18282pt x 268.00125pt>
+File: "yield_srf".jpg Graphic file (type jpg)
+
+<use "yield_srf".jpg>
+Package pdftex.def Info: "yield_srf".jpg used on input line 1013.
+(pdftex.def)             Requested size: 298.75262pt x 122.959pt.
+ [40 <./spectral2.jpg> <./tau_gamma1.jpg> <./tau_gamma2.jpg>] <"shear".jpg, id=
+192, 456.20438pt x 280.04625pt>
+File: "shear".jpg Graphic file (type jpg)
+ <use "shear".jpg>
+Package pdftex.def Info: "shear".jpg used on input line 1020.
+(pdftex.def)             Requested size: 298.75262pt x 183.3953pt.
+ [41 <./yield_srf.jpg> <./shear.jpg>]
+<"acc_low".jpg, id=198, 802.49812pt x 341.02406pt>
+File: "acc_low".jpg Graphic file (type jpg)
+ <use "acc_low".jpg>
+Package pdftex.def Info: "acc_low".jpg used on input line 1034.
+(pdftex.def)             Requested size: 298.75262pt x 126.95746pt.
+
+<"hysteresis_low_bot".jpg, id=199, 604.50844pt x 402.00188pt>
+File: "hysteresis_low_bot".jpg Graphic file (type jpg)
+
+<use "hysteresis_low_bot".jpg>
+Package pdftex.def Info: "hysteresis_low_bot".jpg used on input line 1041.
+(pdftex.def)             Requested size: 298.75262pt x 198.6695pt.
+
+<"hysteresis_low_surf".jpg, id=200, 561.59813pt x 383.18156pt>
+File: "hysteresis_low_surf".jpg Graphic file (type jpg)
+
+<use "hysteresis_low_surf".jpg>
+Package pdftex.def Info: "hysteresis_low_surf".jpg used on input line 1048.
+(pdftex.def)             Requested size: 298.75262pt x 203.8395pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"spectral_low".jpg, id=201, 617.30624pt x 371.13657pt>
+File: "spectral_low".jpg Graphic file (type jpg)
+
+<use "spectral_low".jpg>
+Package pdftex.def Info: "spectral_low".jpg used on input line 1055.
+(pdftex.def)             Requested size: 298.75262pt x 179.62158pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: "spectral2".jpg Graphic file (type jpg)
+<use "spectral2".jpg>
+Package pdftex.def Info: "spectral2".jpg used on input line 1062.
+(pdftex.def)             Requested size: 298.75262pt x 180.60904pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"ARUP".jpg, id=202, 408.02437pt x 383.18156pt>
+File: "ARUP".jpg Graphic file (type jpg)
+ <use "ARUP".jpg>
+Package pdftex.def Info: "ARUP".jpg used on input line 1068.
+(pdftex.def)             Requested size: 298.75262pt x 280.57385pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[42 <./acc_low.jpg> <./hysteresis_low_bot.jpg>]
+Overfull \vbox (13.02312pt too high) has occurred while \output is active []
+
+
+[43 <./hysteresis_low_surf.jpg> <./spectral_low.jpg>]
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 1078.
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 1078
+.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omlcm
+r.fd"
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1078.
+
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 1078.
+
+[44 <./ARUP.jpg>] <"cpt".jpg, id=212, 454.69875pt x 407.27156pt>
+File: "cpt".jpg Graphic file (type jpg)
+
+<use "cpt".jpg>
+Package pdftex.def Info: "cpt".jpg used on input line 1087.
+(pdftex.def)             Requested size: 362.77524pt x 324.94144pt.
+ <"cpt2".jpg, id=213, 447.92343pt x 319.1925pt>
+File: "cpt2".jpg Graphic file (type jpg)
+
+<use "cpt2".jpg>
+Package pdftex.def Info: "cpt2".jpg used on input line 1092.
+(pdftex.def)             Requested size: 341.43436pt x 243.31451pt.
+ [45 <./cpt.jpg> <./cpt2.jpg>]
+Overfull \hbox (9.62306pt too wide) in paragraph at lines 1096--1096
+\OT1/cmr/bx/n/14.4 Constitutive model: Non-lin-ear kine-matic hard-en-ing model
+
+ []
+
+File: "cpt2".jpg Graphic file (type jpg)
+<use "cpt2".jpg>
+Package pdftex.def Info: "cpt2".jpg used on input line 1144.
+(pdftex.def)             Requested size: 341.43436pt x 243.31451pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (2.07045pt too wide) in paragraph at lines 1149--1150
+[]\OT1/cmr/m/n/10 Consequently, Drucker-Prager fail-ure cri-te-rion rep-re-sent
+s a smooth ver-sion of the Mohr-Coulomb
+ []
+
+<"Mises".jpg, id=217, 405.76593pt x 346.29375pt>
+File: "Mises".jpg Graphic file (type jpg)
+ <use "Mises".jpg>
+Package pdftex.def Info: "Mises".jpg used on input line 1155.
+(pdftex.def)             Requested size: 341.43436pt x 291.39731pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[46] [47 <./Mises.jpg>] [48] [49] (Chapter4.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5058 strings out of 493634
+ 65311 string characters out of 3131976
+ 126017 words of memory out of 3000000
+ 8347 multiletter control sequences out of 15000+200000
+ 12463 words of font info for 48 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 27i,10n,24p,1413b,487s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Administrator/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admi
+nistrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Administrator/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/A
+dministrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Administrator/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/A
+dministrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Administrator/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/
+Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmti10.pfb>
+Output written on Chapter4.pdf (51 pages, 2147620 bytes).
+PDF statistics:
+ 283 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+
