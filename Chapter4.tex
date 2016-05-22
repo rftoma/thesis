@@ -152,9 +152,19 @@ Given the complexity of the current application, several limitations are require
 \section{Research outline}
 A schematic outline regarding the processes conducted during the thesis project are presented below. 
 
+The study starts with an overview of the new design philosophy to be used in the analyses - a new method that promotes the idea of seismic response going beyond certain thresholds that are commonly associated with system failure. 
+
+A first step towards the main goal is made through the calibration of the material model and it is described in Chapter \ref{ch3}. A strain-controlled shear test is simulated through one (mesh) element;  by applying several strain levels to the shear box it is possible to obtain the non-linear soil response and represent it using normalized stiffness degradation together with material damping curves. The validation consists in comparing the achieved results with the ones existing in the scientific literature.
+
+Chapter 4 extends the previous analysis to a one dimensional soil column subjected to both uniform harmonic as well as real acceleration time history. A site response analysis is performed with emphasis on the inelastic soil outcome in frequency domain together with the site amplification factor. A comparison is performed between Abaqus software ouput and NERA (Non-Linear Earthquake Site Response Analysis) software - in order to validate the model which will assist the future investigation. Despite various differences that can emerge from distinctions in calculation algorithms, the results display a quite satisfying match. In addition, two acceleration time history records  are examined characterised by a higher PGA value and a lower, respectively. Thus, the results can sustain a comparison with the general response assigned for Groningen area expressed in soil amplification hence the validation relates to the context.
+
+In Chapter 5, a finite-element model describes the soil-structure interaction capturing the new design philosophy features (a) soil uplift and (b) mobilization of bearing capacity type of failure. One of the most important aspects of such analysis relates to the boundary conditions associated with wave propagation phenomena. Since the need of reducing the computational expense of the numerical investigation, solutions must offer a good balance between model dimensions and accurate outcome - hence, various boundary condition options were explored and their effect on the overall inelastic soil outcome. Moreover, the nonlinear ground response is highlighted through interaction curves produced under static conditions and compared to the existing literature. Considering the geometrical nonlinearity associated with the out-rival of the soil-footing interface tensile strength and thus with the uplifting, parametric studies focus on the influence of structural mass dividing the analysis between (a) lightly-loaded and (b) heavily-loaded footings. In addition, to accentuate the differences between the conventional and the new design philosophy together with the uplifting effect, two other distinctions in terms of soil-footing contact are formulated as (a) Fully Bonded Contact \textit{FBC} and (b) Tensionless Sliding Interface \textit{TSI}.
+
+
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{"outline"}
+	\includegraphics[width=0.7\linewidth]{"outline"}
 	\caption{Overview of thesis outline}
 	\label{outline}
 \end{figure}
@@ -326,7 +336,7 @@ The herewith figure corresponds to the second type of interface - tensionless sl
 Furthermore, a comparison between a FBC and a tensionless sliding interface (TSI) type of foundation was made in terms of normalised bending moment $M$ and shear force $Q$ - again using the failure envelopes as reference. This study introduces the influence of the axial force $N$ and, more important, it relates the ultimate capacity of the foundation subjected to cyclic loadings under undrained conditions to the vertical safety factor $(FS_v = N/Nult$). The footing non-linear response is captured throughout models that vary this safety factor, making the distinction between lightly-loaded and heavily-loaded foundations. 
 
 
-\chapter{Material calibration using one mesh element}
+\chapter{Material calibration using one mesh element}\label{ch3}
 This chapter presents the analysis corresponding to the simulation of a simple shear test in the interest of validating the available soil parameters, its inelastic behaviour and, in the same time, calibrating the FEM model for future and more complicated analysis. The procedure works on a one-mesh element - this way, the material properties can be easily calibrated reducing the computational expenses. 
 
 \section{General}
@@ -1087,6 +1097,8 @@ The results confirm the expectation regarding the amplification effect of the so
 The differences between the software were investigated and speculated; given the fact that the study deals with a non-linear kinematic hardening process, it becomes quite difficult to point exactly the main cause that leads to dissimilarity. However, reasons can be examined and despite the analyses run according to separate models and integration schemes, overall they display a reasonably agreement.
 
 It can be concluded that for the Groningen sites, low PGA input ($a_g=0.1g$) the surface acceleration response amplified whereas when dealing with a high PGA input ($a_g\textgreater0.15g$) the top PGA is de-amplified. Both the strength properties of the homogeneous medium and the earthquake motion characteristics influence the seismic wave propagation though the soil; for this particular case, the inelastic response depends on the limited capability of the soft layers to transmit seismic signals to the surface because of the low strength and on the high hysteretic damping observed at large strains. At low PGA values, the soil displays elastic behaviour as it reaches the surface, the frequencies do not experience considerable damping whereas at high PGA levels, the soil shifts towards its natural frequency, damping the higher ones and non-linear constitutive model plays a more important role than the viscous damping effect.
+
+
 
 \newpage
 \appendix
