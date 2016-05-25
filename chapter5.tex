@@ -14,21 +14,21 @@
 	\include{B-content}
 	\chapter{Soil Structure Interaction analysis} \label{ch6}
 	
-	The current chapter presents the analysis performed in 2D plane stress domain of the soil-footing(-structure) interaction considering a shallow foundation subjected to a recorded acceleration-time history. The input signal exerting the structural assembly gets defined over sets of methods considering various boundary condition assumptions - this representing one type of parametric studies. Moreover, the effect of the loads on the entire phenomena is investigated together with...
+	The current chapter presents the analysis performed in 2D plane stress domain of the soil-footing(-structure) interaction considering a shallow foundation subjected to a recorded acceleration-time history. Various methods of seismic implementation are carried out to examine aspects such as load effects on soil response, effectiveness of energy dissipation mechanisms and soil detachment occurrence.
 	
 	\section{New design philosophy}
-	As previously presented, the new design philosophy suggests a different perspective on the induced non-linearity over the soil-structure assembly. Researchers involved within this study showed several effects associated with soil "failure" as acting beneficially in case of seismic ground motion. The interest in the current essay is to apply such approach on a different setting: soft soils, lack of bedrock, induced, not tectonic, earthquakes together with shallow foundations. In order to summarize the goals, it is utmost important to define the characteristic non-linear effects:
+	As previously presented, the new design philosophy suggests a different perspective on the induced non-linearity over the soil-structure assembly. Researchers involved within this study showed \mbox{several} effects associated with soil "failure" as acting beneficially in case of seismic ground motion. The interest in the current essay is to apply such approach on a different setting: soft soils, lack of bedrock, induced, and not tectonic, earthquakes together with shallow foundations. In order to summarize the goals, it is utmost important to define the characteristic non-linear effects:
 	\begin{itemize}
-		\item separation at soil-footing surface under rocking vibration originating from the soil layer also known as \textit{uplifting} that occurs when negligible tensile capacity is considered.
-		\item mobilisation of the bearing capacity type of failure surface mechanism arises when experiencing large cyclic overturning moments \textit{soil failure}.
-		\item plastification of the underlying ground in the proximity of the edges of the foundation described by large vertical stresses.
+		\item separation at soil-footing surface under rocking vibration originating from the soil layer also known as \textit{uplifting} that occurs when negligible interface tensile capacity is considered.
+		\item mobilisation of the bearing capacity type of failure surface mechanism arises when experiencing large cyclic overturning moments - \textit{soil failure}.
+		\item plastification of the underlying ground in the proximity of the edges of the foundation \mbox{described} by large vertical stresses.
 	\end{itemize} 
 	
 	\section{Problem definition}
-	The former chapter gets extended towards a 2D plane stress problem involving a homogeneous soil layer supporting a shallow foundation and the entire structure subjected to a seismic input motion. The study aims at inspecting the inelastic soil response, the proposed method accuracy and its limitations. The final goal is to be able to acknowledge the new design philosophy suitability for this specific set of features.
+	The former chapter gets extended towards a 2D plane stress problem involving a homogeneous soil layer supporting a shallow foundation and the entire structure is subjected to a seismic input motion. The study aims at inspecting the inelastic soil response, the proposed method accuracy and its limitations. The final goal is to be able to acknowledge the new design philosophy suitability for this specific earthquake in Groningen area.
 	
 	\section{Model description}
-	As expected, the soil properties do not change drastically, for all the work that was previously conducted proves their validity. The preceding model (1D soil column) is expanded into a larger soil layer supporting a shallow foundation. The resting building relates to a chimney located in the north of Netherlands and it was chosen for is relatively simple geometry together with available structural properties and it can be seen in Figure \ref{chimney}.
+	As expected, the soil properties do not change drastically, for all the work that was previously conducted proves the parameters validity. The preceding model (1D soil column) is expanded into a larger soil layer supporting a shallow foundation. The resting building relates to a chimney located in the north of Netherlands and it was chosen for its relatively simple geometry together with available structural properties and it can be seen in Figure \ref{chimney}.
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"chimney"}
@@ -36,39 +36,80 @@
 		\label{chimney}
 	\end{figure} 
 	
-	The chimney is represented by a rectangular footing with a lumped mass on top of a slender, infinitely rigid pier. Moreover, th footing is also considered to behave in a stiff fashion when seismically loaded. The main emphasis is on the soil response rather than on the structural one, thus the simplification.
+	The chimney is represented by a rectangular footing with a lumped mass on top of a slender, infinitely rigid pier. Moreover, the footing is also considered to behave in a stiff fashion when seismically loaded. The main emphasis is on the soil response rather than on the structural one, thus the simplification.
 	
 \section{Method of analysis}
-Inelastic soil response investigation is implemented numerically with a finite element method considering two-dimensional plane strain assumptions ; both the soil medium and the footing are modelled as deformable solids using quadrilateral, continuum elements, the superstructure simplified to a pier is assigned with a beam element section whilst the lumped mass is represented by a mass element. A state-of-art contact algorithm defines the soil-structure interface incorporating uplifting and sliding features whereas purely elastic impact assumption is adopted. Every analysis starts with a static step - the geostatic step in which initial stress conditions are achieved.  
+Inelastic soil response investigation is implemented numerically with a finite element method considering two-dimensional plane strain assumptions; both the soil medium and the footing are modelled as deformable solids using quadrilateral, continuum elements, the superstructure simplified to a pier is assigned with a beam element section whilst the lumped mass is represented by a mass element. A state-of-art contact algorithm defines the soil-structure interface incorporating uplifting and sliding features whereas purely elastic impact assumption is adopted. Every analysis starts with a static step - the geostatic step in which initial stress conditions are established.  
 
 The dynamic analyses operate through an implicit direct-integration algorithm - global equations of motion are integrated in time domain via implicit Hilber-Hughes-Taylor operator. Newton's method includes the $\alpha$ and $\beta$ parameters with the values explained in the previous chapter. The numerical stability is achieved by calibrating both the mesh size and the time-step increment - such way elastic wave propagation laws are not violated. A schematization of the FE model can be seen in Figure\ref{ff} followed by a detailed description of the model.
 
 \subsection{Analysis procedure - Steps}
 Every analysis begins with the calculation of the in-situ stresses to establish the geostatic conditions. Gravity load is applied all over the soil medium, simulating the real status when no foundation is resting on the ground. 
 
-Further, the footing presence is reproduced using a point load applied at the centre of the mass. This method relates to the mechanics of the software as well - as the foundation is declared as a rigid boundary, the program requires the definition of a reference point which will become the simplified representation of the section: every load or boundary condition imposed to the footing is prescribed to this very point only. Thus, the available structural uniform load distribution was converted into a point load and applied to the reference point in discussion. This way, the foundation self weight is reproduced together with the activation of the soil-footing interface. 
+Further, the footing presence is reproduced using a point load applied at its centre of the mass. This method relates to the mechanics of the software as well - as the foundation is declared as a rigid body, the program requires the definition of a reference point which will become the simplified representation of the section: every load or boundary condition imposed to the footing is prescribed to this very point only. Thus, the available structural uniform load distribution was converted into a point load and applied to the reference point in discussion. This way, the foundation self weight is reproduced together with the activation of the soil-footing interface. 
 
-Lastly, the seismic excitation must be integrated within the model. Many approaches are formulated in the scientific literature regarding the simulation of the earthquake action for obtaining an accurate results. Numerous methods relate to the implementation of boundary conditions as the problem becomes non-linear and it is subjected to wave propagation. Stability, computational expenses and model dimensions play an important role for the accuracy of the input and require most attention.  Henceforth, different types of boundary conditions were imposed that mimic the acceleration time history in distinct manners. Important to keep in mind that some methods do not necessarily require dynamic algorithms, a quasi-static analysis is preferable for such cases - this aspects will be explained in detail later in this chapter.
+Lastly, the seismic excitation must be integrated within the model. Many approaches are formulated in the scientific literature regarding the simulation of the earthquake action for obtaining an accurate results. Numerous methods relate to the implementation of boundary conditions as the problem becomes non-linear and it is subjected to wave propagation. Stability, computational expenses and model dimensions play an important role for the accuracy of the output and require most attention.  Henceforth, different types of boundary conditions were imposed that mimic the acceleration time history in distinct manners. Important to keep in mind that some methods do not necessarily require dynamic algorithms, a quasi-static analysis is preferable for such cases - this aspects will be explained in detail later in this chapter.
 
 Thus, there are three main steps conducted within all analyses:
 \begin{enumerate}
-	\item \textbf{Geostatic} - for establishing the initial stress conditions of a free-field;
-	\item \textbf{Self weight application} - the perturbation on the surface stresses due to the presence of the footing;
+	\item \textbf{Geostatic} - for introducing the initial stress conditions of a free-field;
+	\item \textbf{Self weight application} - the perturbation on the stresses close to the surface due to the presence of the footing;
 	\item \textbf{Dynamic/ Quasi-static} - applying the seismic input in various manners to simulate the earthquake motion.
 \end{enumerate}
 
 \subsection{Contact definition}
-\paragraph{Ce e} - 1. abaqus ofera posibilitatea sa creezi interfata intre elemente si sa customizezi tipul de interfata dupa aplicatia dorita. 2 asta vine in ajutor pentru ca oricum trebuia sa permit uplift asadar optiunea de custom ma ajuta.  
+An important role in uplifting triggering is played by the contact definition - the user can create and customize the interface properties accordingly to the desired application. In finite element analysis, contact conditions describe a particular category of discontinuities, enabling forces to be transmitted from one part to another. The model must recognize and distinguish when the parts are in contact and when separation occurs in order to apply the constraints properly.
+
+Abaqus offers the possibility of defining contact pairs or contact elements; the former is recommended and it is based on the master-slave approach. In addition, it allows the definition of these entities as surfaces or a collection of nodes - the differences refer to methods of discretization and calculation. In order to define a contact, its interaction properties have to be formulated - again, Abaqus allows the user to customize these feature in correspondence with the model in use. For this particular case, only mechanical properties were formulated. An advanced contact algorithm is applied in order to permit uplifting and sliding and, additionally, to control their development during the seismic excitation.
+
+\paragraph{Mechanical properties}   
+The contact is described for both normal and tangential direction, more precisely a pressure-overclosure relationship illustrates the normal behaviour whereas a frictional interaction deals with the tangential behaviour. 
+By default, Abaqus implements a "hard-contact" relationship consisting of:
+\begin{itemize}
+	\item no penetration of master surface into the slave;
+	\item no upper bound for the transmitted contact pressure;
+	\item no stress transfer between surfaces when there is no contact detected.
+\end{itemize}
+
+Nonetheless, the current study indicates another type of normal contact, a softened one involving a pressure-overclosure relationship. According to Abaqus documentation, the softened contact can be introduced as linear or exponential, the latter being preferred. In an exponential (soft) contact pressure-overclosure relationship the surfaces begin to transmit contact pressure once the clearance between them, measured in the contact (normal) direction, reduces to . The contact pressure transmitted between the surfaces then increases exponentially as the clearance continues to diminish. The schematization of the relationship can be visualized in Figure \ref{pressure}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.45 \linewidth]{"pressure"}
+	\caption{Exponential “softened” pressure-overclosure relationship in Abaqus/Standard}
+	\label{pressure}
+\end{figure} 
+
+For the tangential behaviour, the software provides the following options:
+\begin{itemize}
+	\item frictionless - default;
+	\item rough - no slip is allowed;
+	\item penalty friction which allows for:
+		\begin{itemize}
+			\item Coulomb friction law $T=\mu N$;
+			\item constant shear limit at surface;
+			\item friction coefficient as a function of the slip rate and contact pressure;
+		\end{itemize}
+\end{itemize}
+
+Considering the cohesive character of the soil, the Coulomb friction law might not be the appropriate solution, thus the second option was chosen. This shear stress limit is typically introduced in cases when the contact pressure stress may become very largecausing the Coulomb theory to provide a critical shear stress at the interface that exceeds the yield stress in the material beneath the contact surface. A reasonable upper bound estimate for $\tau_{max}$ is $\sigma_y/\sqrt{3}$, where $\sigma_y$ is the Mises yield stress of the material adjacent to the surface. In some cases some incremental slip may occur even though the friction model determines that the current frictional state is “sticking.” In other words, the slope of the shear (frictional) stress versus total slip relationship may be finite while in the “sticking” state, as shown in Figure \ref*{stick}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"stick"}
+	\caption{Elastic slip versus shear traction relationship for sticking and slipping friction}
+	\label{stick}
+\end{figure} 
+
 \paragraph{de ce} de ce  folosesc asa ceva. cauta in teza aia.
 \paragraph {cum implementez} definesc proprietatea interactiunii; master-slave; cum procedeaza abaqus sa faca asta; S-S sau N-S. tot in teza
 cum rezolva iteratia
 
 \subsection{Boundary conditions}
 For this type of application, it becomes necessary to define two sets of boundary conditions: the \textit{global} and the \textit{local} ones. The first set assumes the top surface as being constraint-free, whilst rigid bottom is initially defined. The lateral boundaries are both vertically and horizontally constrained.
-Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium - however, the calculation can become quite time and computational space consuming, thus the need of another concepts. Many researchers proposed methods of tackling the problem, here highlighting the work of  \textbf{Zienkiewicz et al (1989), Lysmer and Kuhlemeyer} and many more.
+Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium - however, the calculation can become quite time and space consuming, thus the need of another concepts. Many researchers proposed methods of tackling the problem, here highlighting the work of  \textbf{Zienkiewicz et al (1989), Lysmer and Kuhlemeyer} and many more.
 
 \paragraph{Theory of wave propagation}
-For the simplicity of the problem, vertically propagating waves were considered exclusively - it is also well known that both the body waves - P waves and S waves - are independent of each other. According to Love(1944), the wave equation for an isotropic elastic medium is:
+For the simplicity of the problem, vertically propagating waves were considered exclusively; it is also well known that both the body waves - P waves and S waves - are independent of each other. According to Love(1944), the wave equation for an isotropic elastic medium is:
 
 \begin{equation}
 c_p^2\bigtriangledown(\bigtriangledown\cdot u) - c_s^2\bigtriangledown \times \bigtriangledown \times u = \frac{\partial^2 u}{\partial t^2}
@@ -76,7 +117,7 @@ c_p^2\bigtriangledown(\bigtriangledown\cdot u) - c_s^2\bigtriangledown \times \b
 
 where, according to D'Alembert equation solution, $c_p$ is the P-wave velocity ($c_p=\sqrt{\frac{\lambda + 2 \mu}{\rho}}$) and $c_s$ is the S-wave velocity ($c_s=\sqrt{\frac{\mu}{\rho}}$) with $\lambda$ and $\mu$ as Lamé constants and $\rho$ the density of the medium.
 
-It becomes clear that when working with seismically propagating waves, the real challenge lies in the a correct artificial boundaries construction rather than defining the propagating medium. Important to mention are the two conditions required by a surface of a wave front:
+It becomes clear that when working with seismically propagating waves, the real challenge lies in the a correct implementation of artificial boundaries construction rather than defining the propagating medium. Important to mention are the two conditions required by a surface of a wave front:
 \begin{enumerate}
 	\item \textbf{kinematical} which can be written under the form:
 	\begin{equation}
@@ -109,11 +150,11 @@ There are a couple of methods that are well known in literature and are tested w
 	
 	Transmitting boundaries or absorbing boundaries (\textit{ABC}) were first proposed by Lysmer and Kuhlemeyer (1969), followed by Zienkiewicz. As the name also hints, these types of boundaries are used in the form of viscous boundary tractions or dashpots in order to absorb the normal incident waves. They can be declared both globally or locally, the later proving more appealing from the numerical implementation point of view.
 	
-	The reason why these types of boundaries are adopted for the FE model expresses the necessity of preventing the occurence of reflected waves whilst capturing correctly the incoming waves at the boundaries. It translates into infinite elements at the lateral sides of the FE model simulating the "infinity" of a real soil layer. It proves well-suited when associated with an internal source of excitation, however it requires improvements when the input signal originates from external source. The development relates to the theory proposed by Zienkiewicz, also known as \textit{free-field boundary conditions} which introduces the combination between viscous boundaries and a free-field soil column.
+	The reason why these types of boundaries are adopted for the FE model expresses the necessity of preventing the occurence of reflected waves whilst capturing correctly the incoming waves at the boundaries. It can be regarded as a simulation of the "horizontal infinity" of a real soil layer. It proves well-suited when associated with an internal source of excitation, however it requires improvements when the input signal originates from external sources. The solution upgrade relates to the theory proposed by Zienkiewicz, also known as \textit{free-field boundary conditions} which introduces the combination between viscous boundaries and a free-field soil column.
 	
 	Having in mind that for a simple one dimensional, homogeneous, elastic, isotropic wave propagation problem, the free surface displacement wave equals the double of the incoming waves, it can be deducted that the input signal can be extracted from the recorded total signal on the undeformed surface. The free-field soil column allows the user to obtain sets of incoming waves parameters (displacement, velocity, acceleration) in time domain at a known position and correlate them with the viscous boundaries located at the sides of the model. As a consequence, outside the boundaries, the elastic and isotropic conditions pertain.
 	 
-	The theoretical background of the free-field boundary element was proposed in an efficient manner by Lysmer and Kuhlemeyer that associate the vertical free-field soil column with viscous boundary tractions, this way the incoming wave takes the form of equivalent forces, rather than accelerations. The traction consists of two terms as it follows:
+	The theoretical background of the free-field boundary element was proposed in an efficient manner by Lysmer and Kuhlemeyer that associates the vertical free-field soil column with viscous boundary tractions. This way, the incoming wave takes the form of equivalent forces, rather than accelerations. The traction consists of two terms as it follows:
 	\begin{enumerate}
 		\item viscous dashpots absorb incoming waves;
 		\item free-field motion simulating the undisturbed soil layer;
@@ -127,7 +168,7 @@ f_s=\rho c_s (\frac{\partial v_`}{\partial t}-\frac{\partial v}{\partial t})+l_x
 \end{equation}
 where prime quantities relate to the free-field output values, lx =-1 or lx=1 for outward normal points either negative or positive direction. First term of the equations represents the Lysmer and Kuhlemeyer traction due to the presence of dashpots whereas the second term represents the stress resulting from free-field wave propagation, including eventual static reaction forces.
 
-Gathering all information, the modelling scheme should consist of two, perhaps three calculations as it yields and can be seen in Figure \ref{ff} :
+Gathering all information, the modelling scheme should consist of two, perhaps three calculations as it can be seen in Figure \ref{ff} :
 \begin{enumerate}
 	\item one model for each column generating the free-field soil response;
 	\item one main model representing the soil - footing interaction including viscous dampers at the lateral boundaries;
@@ -145,10 +186,10 @@ The aforementioned features of the free-field boundary conditions are detailed b
 	\paragraph{Free-field soil column}
 	The free-field soil column performs similar to a vertical soil medium located far enough from the actual foundation for the vibrations not to perturb its state stress. This can be simply implemented as the one-dimensional column subjected to seismic excitation, identical to the model created for the site response analysis. Its advantages involve the option of extracting the results at any desired node, converting them into input for further calculations. Moreover, these results aid reducing the size of the main model domain and this saves the procedure considerable time. Thus, the previous analysis becomes essential as it ticks all the boxes. 
 	
-	It is worth to acknowledge the constraints connecting pair of lateral nodes in order to maintain equal horizontal and vertical displacements along the seismic test. Then, it suffices extracting the outcome from one set of lateral nodes, left or right displaying equal results. The output yields displacement, velocity and acceleration time histories for each lateral node - allowing a further implementation into the main model.
+	It is worth to acknowledge the constraints linking pairs of lateral nodes in order to maintain equal horizontal displacements along the seismic test. Then, it suffices extracting the outcome from one set of lateral nodes, left or right displaying equal results. The output yields displacement, velocity and acceleration time histories for each lateral node - allowing a further implementation into the main model.
 	
 	\textbf{A series of results are presented below:}
-	 cum e schematizat; ce rezultate sunt scoase
+	 Introdu o imagine cu rezultatele obtinute
 	\paragraph{Main model}
 	The main model, as it can be seen in Figure \ref{mainM}, consists in few features such as:
 	\begin{enumerate}
@@ -161,12 +202,12 @@ The aforementioned features of the free-field boundary conditions are detailed b
 	
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[width=0.7\linewidth]{"mainmodel"}
+			\includegraphics[width=0.9\linewidth]{"mainmodel"}
 			\caption{Schematization of the main FE model}
 			\label{mainM}
 		\end{figure}
 		
-	The steps were presented before, the boundary conditions change appropriately to each method of implementation.The absorbing boundaries proposed by Lysmer and Kuhlemeyer - which can be efficiently implemented as viscous dampers or dashpots assigned to lateral boundaries of the soil medium are evaluated performance-wise in correlation with seismic loading procedures. These dampers indicate a local boundary that absorb the incoming wave - their accuracy increase with distance between the area of interest(footing) and the lateral sides and if they are defined as frequency independent. Abaqus allows the user to specify dashpots connecting them to the ground, requiring a definition of the local DOF direction and the dashpot coefficient. In dynamic analysis the velocities are obtained as part of the integration operator; in quasi-static analysis in Abaqus/Standard the velocities are obtained by dividing the displacement increments by the time increment. Additionally, it can model relative velocity-dependent force and provide a energy dissipation mechanism. The dashpot coefficient is calculated:
+	The steps were presented before, the boundary conditions change accordingly to each method of implementation.The absorbing boundaries proposed by Lysmer and Kuhlemeyer - which can be efficiently implemented as viscous dampers or dashpots assigned to lateral boundaries of the soil medium - are evaluated performance-wise in correlation with seismic loading procedures. These dampers indicate a local boundary that absorb the incoming wave - their accuracy increase proportionally with distance from the area of interest(footing) and if they are defined as frequency independent. Abaqus allows the user to specify dashpots connected to the ground - an option requiring the definition of the local DOF direction and the dashpot coefficient. In dynamic analysis the velocities are obtained as part of the integration operator; in quasi-static analysis in Abaqus/Standard the velocities are obtained by dividing the displacement increments by the time step. Additionally, it can model relative velocity-dependent force and provide a energy dissipation mechanism. The dashpot coefficient is calculated:
 	
 	\begin{equation}
 		C_1=\rho V_p A
@@ -178,7 +219,7 @@ The aforementioned features of the free-field boundary conditions are detailed b
 	
 	It is worth mentioning few assumptions related to wave propagation which simplify the problem without suffering from loss of accuracy:
 	\begin{itemize}
-		\item only vertically propagating seismic waves were taken into account; first, because a distinctive feature of this specific induced earthquake are the dominant shear waves. Secondly, because the free-field soil was also subjected to S-waves exclusively. Thus, the compressive waves do not influence the soil-structure behaviour for now.
+		\item only vertically propagating seismic waves were taken into account; firstly, because a distinctive feature of this specific induced earthquake are the dominant shear waves. Secondly, because the free-field soil was also subjected to S-waves exclusively. And thirdly, because the two body waves are independent of each other. Thus, the compressive waves do not influence the soil-structure behaviour for now.
 		\item the body waves travel towards the lateral boundaries under an incidence angle of $\theta = 0$. Basically, there are no \textit{evanescent waves} within the deformable body, waves that occur due to combinations of boundary conditions and, unlike the P and S-waves, are frequency dependent.
 	\end{itemize}
 	
