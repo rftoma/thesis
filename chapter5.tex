@@ -1,17 +1,3 @@
-\documentclass[10pt,a4paper]{report}
-\usepackage[utf8x]{inputenc}
-\usepackage{ucs}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage[toc,page,header]{appendix}
-\usepackage{minitoc}
-\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
-\usepackage[usenames, dvipsnames]{color}
-
-\begin{document}
-	\include{B-content}
 	\chapter{Soil Structure Interaction analysis} \label{ch6}
 	
 	The current chapter presents the analysis performed in 2D plane stress domain of the soil-footing(-structure) interaction considering a shallow foundation subjected to a recorded acceleration-time history. Various methods of seismic implementation are carried out to examine aspects such as load effects on soil response, effectiveness of energy dissipation mechanisms and soil detachment occurrence.
@@ -31,7 +17,7 @@
 	As expected, the soil properties do not change drastically, for all the work that was previously conducted proves the parameters validity. The preceding model (1D soil column) is expanded into a larger soil layer supporting a shallow foundation. The resting building relates to a chimney located in the north of Netherlands and it was chosen for its relatively simple geometry together with available structural properties and it can be seen in Figure \ref{chimney}.
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.7\linewidth]{"chimney"}
+		\includegraphics[width=0.7 \linewidth]{"chimney"}
 		\caption{Real structure objected to study}
 		\label{chimney}
 	\end{figure} 
@@ -58,26 +44,34 @@ Thus, there are three main steps conducted within all analyses:
 \end{enumerate}
 
 \subsection{Contact definition}
-An important role in uplifting triggering is played by the contact definition - the user can create and customize the interface properties accordingly to the desired application. In finite element analysis, contact conditions describe a particular category of discontinuities, enabling forces to be transmitted from one part to another. The model must recognize and distinguish when the parts are in contact and when separation occurs in order to apply the constraints properly.
+An important role in uplifting triggering is played by the contact definition - the user can create and customize the interface properties accordingly to the desired application. In finite element analysis, contact conditions describe a particular category of discontinuities, enabling forces to be transmitted from one part to another. The model must recognize and distinguish when the parts are in contact and when separation occurs in order to apply the constraints properly. 
 
-Abaqus offers the possibility of defining contact pairs or contact elements; the former is recommended and it is based on the master-slave approach. In addition, it allows the definition of these entities as surfaces or a collection of nodes - the differences refer to methods of discretization and calculation. In order to define a contact, its interaction properties have to be formulated - again, Abaqus allows the user to customize these feature in correspondence with the model in use. For this particular case, only mechanical properties were formulated. An advanced contact algorithm is applied in order to permit uplifting and sliding and, additionally, to control their development during the seismic excitation.
+Abaqus offers the possibility of defining contact pairs or contact elements; the former is recommended and it is based on the master-slave approach. In addition, it allows the definition of these entities as surfaces or a collection of nodes - the differences refer to methods of discretization and calculation. In order to define a contact, its interaction properties have to be formulated - again, Abaqus allows the user to customize these features in correspondence with the model in use. For this particular case, only mechanical properties were created. An advanced contact algorithm is applied in order to permit uplifting and sliding and, additionally, to control their development during the seismic excitation. 
 
+As previously mentioned, the study investigates two types of soil-footing contact: \textit{fully bonded} and \textit{tensionless sliding interface}. The advanced algorithm referes to the sliding interface whilst the fully bonded contact is effortlessly depicted through a \textbf{Tie constraint} - using the same master-slave formulation, it provides a simple way of bounding the two surfaces permanently, preventing sliding/separation.
+
+However, the tensionless sliding interface requires much more attention and research as it incorporates various features that will be detailed further on.
+ 
 \paragraph{Mechanical properties}   
 The contact is described for both normal and tangential direction, more precisely a pressure-overclosure relationship illustrates the normal behaviour whereas a frictional interaction deals with the tangential behaviour. 
-By default, Abaqus implements a "hard-contact" relationship consisting of:
+
+For normal direction, Abaqus implements a "hard-contact" relationship by default which consists of:
 \begin{itemize}
 	\item no penetration of master surface into the slave;
 	\item no upper bound for the transmitted contact pressure;
 	\item no stress transfer between surfaces when there is no contact detected.
 \end{itemize}
 
-Nonetheless, the current study indicates another type of normal contact, a softened one involving a pressure-overclosure relationship. According to Abaqus documentation, the softened contact can be introduced as linear or exponential, the latter being preferred. In an exponential (soft) contact pressure-overclosure relationship the surfaces begin to transmit contact pressure once the clearance between them, measured in the contact (normal) direction, reduces to . The contact pressure transmitted between the surfaces then increases exponentially as the clearance continues to diminish. The schematization of the relationship can be visualized in Figure \ref{pressure}.
+Nonetheless, the current study indicates another type of normal contact, a softened one involving a pressure-overclosure relationship. According to Abaqus documentation, the softened contact can be introduced as linear or exponential, the latter being preferred. In an exponential (soft) contact pressure-overclosure relationship the surfaces begin to transmit contact pressure once the clearance between them, measured in the contact (normal) direction, reduces to $c_0$. The contact pressure transmitted between the surfaces then increases exponentially as the clearance continues to diminish. The schematization of the relationship can be visualized in Figure \ref{pressure}.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.45 \linewidth]{"pressure"}
 	\caption{Exponential “softened” pressure-overclosure relationship in Abaqus/Standard}
 	\label{pressure}
 \end{figure} 
+
+where $p_0$ is the contact pressure at zero distance, $ c_0$ is the distance from the master surface at which the pressure is decreased to 1 \% of $ p_0$. The behaviour in between is exponential. A large value of $ c_0$ leads to soft contact, a small value to hard contact. It is difficult to know a priori which values are suitable, however literature studies suggest for $p_0=10 kPA$ correlated with a clearance $c_0=10E^{-5} m$.
+
 
 For the tangential behaviour, the software provides the following options:
 \begin{itemize}
@@ -91,7 +85,7 @@ For the tangential behaviour, the software provides the following options:
 		\end{itemize}
 \end{itemize}
 
-Considering the cohesive character of the soil, the Coulomb friction law might not be the appropriate solution, thus the second option was chosen. This shear stress limit is typically introduced in cases when the contact pressure stress may become very largecausing the Coulomb theory to provide a critical shear stress at the interface that exceeds the yield stress in the material beneath the contact surface. A reasonable upper bound estimate for $\tau_{max}$ is $\sigma_y/\sqrt{3}$, where $\sigma_y$ is the Mises yield stress of the material adjacent to the surface. In some cases some incremental slip may occur even though the friction model determines that the current frictional state is “sticking.” In other words, the slope of the shear (frictional) stress versus total slip relationship may be finite while in the “sticking” state, as shown in Figure \ref*{stick}.
+Considering the cohesive character of the soil, the Coulomb friction law might not be the appropriate solution, thus the second option was chosen. Thus, the frictional behaviour is actually a cohesive one. This shear stress limit is typically introduced in cases when the contact pressure stress may become very large causing the Coulomb theory to provide a critical shear stress at the interface that exceeds the yield stress in the material beneath the contact surface. A reasonable upper bound estimate for $\tau_{max}$ is $\sigma_y/\sqrt{3}$, where $\sigma_y$ is the Mises yield stress of the material adjacent to the surface. In some cases some incremental slip may occur even though the friction model determines that the current frictional state is “sticking.” In other words, the slope of the shear (frictional) stress versus total slip relationship may be finite while in the “sticking” state, as shown in Figure \ref{stick}.
 
 \begin{figure}[!h]
 	\centering
@@ -100,9 +94,15 @@ Considering the cohesive character of the soil, the Coulomb friction law might n
 	\label{stick}
 \end{figure} 
 
-\paragraph{de ce} de ce  folosesc asa ceva. cauta in teza aia.
-\paragraph {cum implementez} definesc proprietatea interactiunii; master-slave; cum procedeaza abaqus sa faca asta; S-S sau N-S. tot in teza
-cum rezolva iteratia
+The relationship shown in this figure is analogous to elastic-plastic material behavior without hardening: K corresponds to Young's modulus, and $\tau_{crit}$ corresponds to yield stress; sticking friction is associated with the elastic regime, and slipping friction to the plastic one. A typical average value recommended in the literature for the elastic slip is 0.1mm and it seems appropriate for this case as well.
+
+\paragraph{Contact interface discretization}
+Having all interaction properties defined, the contact itself must be formulated; the most suitable interaction option Abaqus/Standard offers is \textit{Surface-to-surface}; the contact discretization can be chosen node-to-surface (N-S) or surface-to-surface (S-S), the latter being preferable. Firstly, because the conditions will be enforced based on an average region instead of strictly node-wise. The averaging regions are approximately centered on slave nodes, so each contact constraint will predominantly consider one slave node but will also consider adjacent slave nodes. Secondly, this option does not include spikes in the pressure distribution along the surface, as it happens in the N-S case. Lastly, large and unintended penetration of master nodes into slave does not occur leading to a smoothing effect.
+
+The sliding formulation require for the interaction implementation also has two options: finite sliding or small sliding. The second alternative is more convenient, as the footing will not slide considerable. Additionally, coupling of slave nodes with their projections on master surface
+is calculated at the beginning of the analysis and does not change throughout the analysis,
+whereas for finite sliding approach, this coupling is checked and recalculated throughout the
+analysis.
 
 \subsection{Boundary conditions}
 For this type of application, it becomes necessary to define two sets of boundary conditions: the \textit{global} and the \textit{local} ones. The first set assumes the top surface as being constraint-free, whilst rigid bottom is initially defined. The lateral boundaries are both vertically and horizontally constrained.
@@ -223,7 +223,8 @@ The aforementioned features of the free-field boundary conditions are detailed b
 		\item the body waves travel towards the lateral boundaries under an incidence angle of $\theta = 0$. Basically, there are no \textit{evanescent waves} within the deformable body, waves that occur due to combinations of boundary conditions and, unlike the P and S-waves, are frequency dependent.
 	\end{itemize}
 	
-	With these being said, the 
+	With these being said, the main model consists of:
+
 	BC; explica feature din abaqus si cum rezolva.
 	\paragraph{Equivalent forces}
 	\paragraph{Displacements}
@@ -236,6 +237,4 @@ The aforementioned features of the free-field boundary conditions are detailed b
 
 \section{Limitations and recommendations}
 \section{Conclusions}
-	 
-	
-\end{document}
+
