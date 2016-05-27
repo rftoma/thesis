@@ -106,10 +106,10 @@ analysis.
 
 \subsection{Boundary conditions}
 For this type of application, it becomes necessary to define two sets of boundary conditions: the \textit{global} and the \textit{local} ones. The first set assumes the top surface as being constraint-free, whilst rigid bottom is initially defined. The lateral boundaries are both vertically and horizontally constrained.
-Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium - however, the calculation can become quite time and space consuming, thus the need of another concepts. Many researchers proposed methods of tackling the problem, here highlighting the work of  \textbf{Zienkiewicz et al (1989), Lysmer and Kuhlemeyer} and many more.
+Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium - however, the calculation can become quite time and space consuming, thus the need of another concepts. Many researchers proposed methods of tackling the problem, here highlighting the work of  \textbf{Zienkiewicz et al (1989) \cite{zienkiewicz1989earthquake}, Lysmer and Kuhlemeyer} \cite{zienkiewicz1989earthquake} and many more ()
 
 \paragraph{Theory of wave propagation}
-For the simplicity of the problem, vertically propagating waves were considered exclusively; it is also well known that both the body waves - P waves and S waves - are independent of each other. According to Love(1944), the wave equation for an isotropic elastic medium is:
+For the simplicity of the problem, vertically propagating waves were considered exclusively; it is also well known that both the body waves - P waves and S waves - are independent of each other. According to Love(1944) \cite{love1944h}, the wave equation for an isotropic elastic medium is:
 
 \begin{equation}
 c_p^2\bigtriangledown(\bigtriangledown\cdot u) - c_s^2\bigtriangledown \times \bigtriangledown \times u = \frac{\partial^2 u}{\partial t^2}
@@ -117,7 +117,7 @@ c_p^2\bigtriangledown(\bigtriangledown\cdot u) - c_s^2\bigtriangledown \times \b
 
 where, according to D'Alembert equation solution, $c_p$ is the P-wave velocity ($c_p=\sqrt{\frac{\lambda + 2 \mu}{\rho}}$) and $c_s$ is the S-wave velocity ($c_s=\sqrt{\frac{\mu}{\rho}}$) with $\lambda$ and $\mu$ as Lamé constants and $\rho$ the density of the medium.
 
-It becomes clear that when working with seismically propagating waves, the real challenge lies in the a correct implementation of artificial boundaries construction rather than defining the propagating medium. Important to mention are the two conditions required by a surface of a wave front:
+It becomes clear that when working with seismically propagating waves, the real challenge lies in the a correct implementation of artificial boundaries construction rather than defining the propagating medium. Important to mention are the two conditions required by a surface of a wave front as Nielsen, 2006 \cite{nielsen2006absorbing} states in his research:
 \begin{enumerate}
 	\item \textbf{kinematical} which can be written under the form:
 	\begin{equation}
@@ -148,7 +148,7 @@ There are a couple of methods that are well known in literature and are tested w
 	\paragraph{Transmitting boundaries}
 	Given the flaws of the aforementioned concept, it becomes necessary to incorporate features as radiation boundaries that guarantee the outgoing waves are not reflected at the boundary surfaces. 
 	
-	Transmitting boundaries or absorbing boundaries (\textit{ABC}) were first proposed by Lysmer and Kuhlemeyer (1969), followed by Zienkiewicz. As the name also hints, these types of boundaries are used in the form of viscous boundary tractions or dashpots in order to absorb the normal incident waves. They can be declared both globally or locally, the later proving more appealing from the numerical implementation point of view.
+	Transmitting boundaries or absorbing boundaries (\textit{ABC}) were first proposed by Lysmer and Kuhlemeyer (1969) \cite{lysmer1969finite}, followed by Zienkiewicz (1989) \cite{zienkiewicz1989earthquake}. As the name also hints, these types of boundaries are used in the form of viscous boundary tractions or dashpots in order to absorb the normal incident waves. They can be declared both globally or locally, the later proving more appealing from the numerical implementation point of view.
 	
 	The reason why these types of boundaries are adopted for the FE model expresses the necessity of preventing the occurence of reflected waves whilst capturing correctly the incoming waves at the boundaries. It can be regarded as a simulation of the "horizontal infinity" of a real soil layer. It proves well-suited when associated with an internal source of excitation, however it requires improvements when the input signal originates from external sources. The solution upgrade relates to the theory proposed by Zienkiewicz, also known as \textit{free-field boundary conditions} which introduces the combination between viscous boundaries and a free-field soil column.
 	
@@ -188,8 +188,29 @@ The aforementioned features of the free-field boundary conditions are detailed b
 	
 	It is worth to acknowledge the constraints linking pairs of lateral nodes in order to maintain equal horizontal displacements along the seismic test. Then, it suffices extracting the outcome from one set of lateral nodes, left or right displaying equal results. The output yields displacement, velocity and acceleration time histories for each lateral node - allowing a further implementation into the main model.
 	
-	\textbf{A series of results are presented below:}
-	 Introdu o imagine cu rezultatele obtinute
+	A series of results are presented below:
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.7\linewidth]{"acc_FF"}
+			\caption{Acceleration time history output at base and surface level}
+			\label{Acc_ff}
+		\end{figure} 
+		
+		\begin{figure}[h!]
+				\centering
+				\includegraphics[width=0.7\linewidth]{"velocity_FF"}
+				\caption{Velocity time history output from Free field soil column}
+				\label{velo}
+			\end{figure} 
+			
+		\begin{figure}[!h]
+					\centering
+					\includegraphics[width=0.7\linewidth]{"DIsp_ff"}
+					\caption{Horizontal displacement time history}
+					\label{disp_ff}
+				\end{figure} 
+				
+	\newpage
 	\paragraph{Main model}
 	The main model, as it can be seen in Figure \ref{mainM}, consists in few features such as:
 	\begin{enumerate}

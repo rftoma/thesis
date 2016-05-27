@@ -173,14 +173,14 @@ In Chapter 5, a finite-element model describes the soil-structure interaction ca
 
 \chapter{Literature survey}
 \section{A new design philosophy}
-Earthquake effects on building have been studied for over a century. Since the civil engineering community realized that guaranteeing great bearing capacity to the structures does not necessarily translate into enhanced safety, it adopted a \textit{fail-safe} design concept. The aim included a better control over the load path and energy dissipation throughout the structure, reliable solutions in case of unforeseen collapse of an element. A number of requirements arise from the concept such as: structural elements are able to withstand exceeding dynamic loads avoiding collapse - acknowledged as \textit{ductility design}; the building encloses specific elements that are designed to fail in order to maintain overall integrity; and bending type of failure is preferable instead of shear failure - \textit{capacity design }(Park and Pauley, 1975). 
-%referinta
+Earthquake effects on building have been studied for over a century. Since the civil engineering community realized that guaranteeing great bearing capacity to the structures does not necessarily translate into enhanced safety, it adopted a \textit{fail-safe} design concept. The aim included a better control over the load path and energy dissipation throughout the structure, reliable solutions in case of unforeseen collapse of an element. A number of requirements arise from the concept such as: structural elements are able to withstand exceeding dynamic loads avoiding collapse - acknowledged as \textit{ductility design}; the building encloses specific elements that are designed to fail in order to maintain overall integrity; and bending type of failure is preferable instead of shear failure - \textit{capacity design }(Park and Pauley, 1975 \cite{park2004soil}). 
+
 All the requirements also include that the soil should avoid reaching a yielding state, behaving completely elastic. Moreover, the calculations relied on the hypothesis of a linear viscoelastic soil performance and a fully-bonded contact between the foundation block and underground. The adopted capacity design permits plastic deformation within structural elements but avoids reaching plastic state below the ground level. In other words, the foundation continues to behave elastically avoiding passive or shear failure along the sides or base, the ground shaking does not mobilizes the soil strength, and uplifting remains limited to 1/4 of the total area whilst sliding at the soil-structure contact surface is restricted.  In addition, it seemed that using factors of safety larger than 1 imposes restrictions in exploiting the non-linearly energy dissipation mechanism that, in reality, would improve structural response. Also, several phenomena may become neglected for instance, sliding or uplifting.
 
 Following the late records of several of the strongest earthquakes, it becomes clearly that uncertainties govern assessing the maximum credible seismic loading and the characteristic parameters (PGA, PGV, etc). Larger values are observed every earthquake, the structures behave differently within limited area whilst detailed seismic monitoring of large regions seems rather impracticable; for the earthquake in Kobe (1995) the accelerograms revealed a ground acceleration of 0.85g compared to the 0.30 g value used within the design. Evaluating the buildings after the earthquake in Bucharest (1977), records showed different PGA values for structures located approximately same distance from the fault which means that PGA does not govern exclusively but there are various other factors that dictate structural behaviour (frequency content, pulse). Henceforth, the necessity of a new design concept that permits the structure to bear larger earthquakes without collapsing or to avoid substantial deformation within the structural elements. This can be translated into a lesser structural ductility demand as the subsoil mobilizes its bearing capacity.
 Secondly, the economical aspect plays an important role in design as the current trend suggests stronger and larger structures equipped with reinforcement that withstand great earthquakes once or twice during operation stages. What if assuming the opposite of the actual situation - under-design the foundation while limiting the accelerations transmitted to the superstructure? In this way, the ductility demand decreases in the case of the structure due to the yielding capacity of the soil failure mechanism that ensures improved safety margins, as it shall be proved further.
 
-Recent researches focused on the behaviour of shallow foundations subjected to strong seismic loading and proved that the bearing capacity of the underlying soil is a reliable element that helps the structure to withstand such excitation and, further, the nonlinear foundation response acts rather beneficial in case of strong ground shakes.  The concept of “rocking isolation” has thereby emerged as an alternative to the conservative – yet not safer – design of foundations against strong seismic shaking (Pecker, 1998, 2003; Martin \& Lam, 2000; Faccioli et al., 2001; Kutter et al., 2003; Gazetas et al., 2004; Gajan et al., 2005; Kawashima et al., 2007; Paolucci et al., 2008; Gajan \& Kutter, 2008, Anastasopoulos et al., 2010, 2012; Kourkoulis et al 2012; Gazetas 2014). 
+Recent researches focused on the behaviour of shallow foundations subjected to strong seismic loading and proved that the bearing capacity of the underlying soil is a reliable element that helps the structure to withstand such excitation and, further, the nonlinear foundation response acts rather beneficial in case of strong ground shakes.  The concept of “rocking isolation” has thereby emerged as an alternative to the conservative – yet not safer – design of foundations against strong seismic shaking ( Pecker, 1998, 2003 \cite{correia2012nonlinear}; Martin \& Lam, 2000; Faccioli et al., 2001 \cite{faccioli2001investigation}; Kutter et al., 2003; Gazetas et al., 2004 \cite{gazetas2013nonlinear}; Gajan et al., 2005 \cite{gajan2009effects}; Anastasopoulos et al., 2010 \cite{anastasopoulos2010soil}, 2012; Kourkoulis et al 2012 \cite{kourkoulis2012rocking}; Gazetas 2013 \cite{gazetas2013nonlinear}). 
 
 The current chapter presents the particularities of the new approach together with a summary of results and conclusions yielding from numerical models compared to experimental tests (centrifuge tests). The design seems appealing mainly because of current soil conditions Groningen area displays - mostly silty clay layers carrying strip foundations - if the method proves to be successful, it might mark the beginning of a new trend in seismic design research.
 
@@ -210,14 +210,14 @@ Scientific literature describes several types of possibilities of nonlinear soil
 \end{itemize}
 
 \section{Uplifting}
-New philosophy not only allows one of the nonlinearity behaviour to develop within the soil but also encourages that design should apply a safety factor against uplifting and soil failure lower than unity. This way, the structure ductility demand will decrease considerably, optimizing the energy dissipation path throughout the building. Various studies focused on the rocking response simulating the soil in different manners; for example, the first models included tensionless spring-dashpot elements that described the soil (Chopra \& Yim 1985, Koh et al, 1986) followed by a single macro-element which includes constitutive law that accounts for the uplift mechanism in a soil-foundation system. Ultimately, the dynamic analysis is performed in finite-element based software ( Hibbit et al, 2001, Gazetas et al, 2010) - the model combines a rigid foundation footing, elasto-plastic soil and an advanced contact algorithm that inserts the potential sliding and uplifting.
+New philosophy not only allows one of the nonlinearity behaviour to develop within the soil but also encourages that design should apply a safety factor against uplifting and soil failure lower than unity. This way, the structure ductility demand will decrease considerably, optimizing the energy dissipation path throughout the building. Various studies focused on the rocking response simulating the soil in different manners; for example, the first models included tensionless spring-dashpot elements that described the soil (Chopra \& Yim 1985, Koh et al, 1986) followed by a single macro-element which includes constitutive law that accounts for the uplift mechanism in a soil-foundation system. Ultimately, the dynamic analysis is performed in finite-element based software ( Hibbit et al, 2001 \cite{hibbett1998abaqus}, Gazetas et al, 2010 \cite{anastasopoulos2010soil}) - the model combines a rigid foundation footing, elasto-plastic soil and an advanced contact algorithm that inserts the potential sliding and uplifting.
 
 The uplifting behaviour acts beneficial in dynamic conditions because the foundation can withstand higher values of bending moments compared to the ultimate capacity, Mult. The key in this rocking behaviour is the relatively short time period in which the stresses surpass the limiting values. The ground acceleration displays a rapid change in trend which makes the foundation block to decelerate, stop and rock in the opposite direction. Researchers showed the correlation between the natural period of the foundation footing and rocking potential - high frequency seismic motion lead to a somehow "safer" rocking response preventing collapse or toppling of the superstructure. Scientific literature confirms that the nature of the seismic excitations along with the fundamental period of the structure dictate the response of the soil-foundation system.
 
 \section{Soil yielding}
 The nonlinearity observed in the soil response mainly depends on the shear strains which develop within the material when the foundation experiences large angles of rotation. An important parameter arises when the foundation is subjected to large rotations - vertical safety factor $FS_v$ defined as the ratio between the ultimate bearing capacity under pure vertical static load $N_u$ and the currently applied axial force $N$ - $FS_v = \frac{N_u}{N}$. Furthermore, the rotational capacity expressed in terms of ultimate moment resistance of the footing relates to both the axial force N, and the shear force Q acting on the foundation. Recent research emphasize on elaborating ultimate limit states defined by combinations of N, Q and M loads - the graphical representation is known as failure envelope. 
 
-Another of the new concept goals stands in defining this failure locus - based on load combinations and their position regarding this envelope, one can state whether the foundation acts stable or not. Many experiments based on model-scale shallow footing support this theory along with theoretical and numerical failure equations (Murff, 1994, Bransby and Randolf, 1998, Butterfield and Gottardi, 1994). Experiments (Gajan et al, 2005) highlight the influence of two parameters governing the load displacement and energy dissipation aspects of the soil-foundation interface during cyclic loading: static factor of safety regarding vertical force exclusively (FSv) and moment-to-shear ratio - together describing the load path. Henceforth, a challenge in assessing seismic loading impact represents the correct evaluation of loading combination (shear force Q and overturning moment M) that will lead to failure for a given vertical force, N, acting on the superstructure.
+Another of the new concept goals stands in defining this failure locus - based on load combinations and their position regarding this envelope, one can state whether the foundation acts stable or not. Many experiments based on model-scale shallow footing support this theory along with theoretical and numerical failure equations (Murff, 1994, Bransby and Randolf, 1998, Butterfield and Gottardi, 1994). Experiments (Gajan et al, 2005 \cite{gajan2005centrifuge}) highlight the influence of two parameters governing the load displacement and energy dissipation aspects of the soil-foundation interface during cyclic loading: static factor of safety regarding vertical force exclusively (FSv) and moment-to-shear ratio - together describing the load path. Henceforth, a challenge in assessing seismic loading impact represents the correct evaluation of loading combination (shear force Q and overturning moment M) that will lead to failure for a given vertical force, N, acting on the superstructure.
 
 \begin{figure}[h!]
 	\centering
@@ -241,7 +241,7 @@ Overall, numerical analyses provides satisfactory results compared to experiment
 
 As discussed before, the static vertical safety factor strongly influences the rocking effectiveness and it relates to soil properties. One of the greatest challenges remains the soil parameterization, especially strength wise, due to consequences of an overestimation - large rotations at foundation level along with intolerable settlements. Varying the value of the safety factor in order to capture the differences between actual and overestimated soil characteristics, several conclusions can be drawn. Firstly, a lower FSv, translated into a lower soil strength, leads to an improved performance in contrast with the conventional design even though it records larger permanent displacements. Further, when the system is subjected to strong seismic loading, the expected response differs considerably from the actual one - uplifting governs the ideal case (FSv=5) whilst a rather sinking-dominated response yields from reality (FSv=3) leading to large accumulative settlements and foundation rotation. However, the system still reacts in an favourable manner; same situation was recorded for moderate seismic excitations -distinct responses for various FSv whose settlement level does not alter structural stability. 
 
-Secondly, even the studies successfully describe the response of 1 dof oscillator using the new philosophy design, complex structures introduce deformation compatibility requirements which prove to be vital. After Hucklebridge [1977] followed by Midorikawa et al.[2006] established the beneficial effects of introducing a rocking-column capacity into structural design, Roh and Reinhorn [2010] stress on the disadvantages of this method - one element relaxations induces overstress in another leading to unbearable deformations within the superstructure. Extensive uplifting induced by asymmetric loading distribution leads to increased rotation demand of the structural elements and further in residual irreversible deformations. Yet, the system performs in a satisfactory style for strong seismic loadings, here Takatori earthquake recorded in Kobe, 1995. In addition, the presence of beams connecting the columns might limit the drift at top level dictating, more or less, the same displacement.
+Secondly, even the studies successfully describe the response of 1 dof oscillator using the new philosophy design, complex structures introduce deformation compatibility requirements which prove to be vital. After Hucklebridge [1977] followed by Midorikawa et al.,2006 \cite{kanno2006new} established the beneficial effects of introducing a rocking-column capacity into structural design, Roh and Reinhorn,2010 \cite{roh2010modeling} stress on the disadvantages of this method - one element relaxations induces overstress in another leading to unbearable deformations within the superstructure. Extensive uplifting induced by asymmetric loading distribution leads to increased rotation demand of the structural elements and further in residual irreversible deformations. Yet, the system performs in a satisfactory style for strong seismic loadings, here Takatori earthquake recorded in Kobe, 1995. In addition, the presence of beams connecting the columns might limit the drift at top level dictating, more or less, the same displacement.
 
 \section{Soil condition}
 \subsection{Problem statement}
@@ -252,7 +252,7 @@ Probably the most important aspect within the current problem it is represented 
 \subsection{Constitutive model}
 Given the problem statement and the proposed solution, the means of obtaining a reliable design method mainly relate to the underlying soil. The material will govern the overall behaviour - considering the nonlinear response that is required to be displayed in order to prove the theory. Care must be paid when choosing the material model used in the numerical analysis for it will largely dictate the outcome. A first step in deciding the implementation of the material model is understanding the application to be investigated - what phenomena happens, what are the effects, what mitigations does it require. This study in progress deals with earthquake motions, hence dynamic actions that induce a nonlinear response; therefore, the material model should enclose features that are able to describe mechanically the phenomena. 
 
-Several models were developed along the time which tried to best capture the soil inelastic response due to cyclic loadings - recent studies [Kremer and Pecker, 2002] include the uplifting effect as well as soil failure within an elastic or elasto-plastic material applied on a single macro-element. Nowadays, research trend relies on nonlinear kinematic hardening model characterized by a von Mises failure criterion along with an associated flow rule. The description of the model is rather accessible as it requires only Young's modulus $E$, soil yield stress $\sigma_y$ and strength $\sigma$. Lemaitre and Chaboche (1990)\cite{lemaitre1994mechanics} developed the model discussing the behaviour of both sand and undrained clay soils. Dynamic analyses performed using the software ABAQUS incorporate the model and yield satisfying results. One of the model limitations stands in its incapacity of acquiring pore pressure build-up nor dissipation effects. Yet, it proves safe to assume an undrained behaviour given the short duration of seismic loading applied on the system.   
+Several models were developed along the time which tried to best capture the soil inelastic response due to cyclic loadings - recent studies [Kremer and Pecker, 2012 \cite{correia2012nonlinear}] include the uplifting effect as well as soil failure within an elastic or elasto-plastic material applied on a single macro-element. Nowadays, research trend relies on nonlinear kinematic hardening model characterized by a von Mises failure criterion along with an associated flow rule. The description of the model is rather accessible as it requires only Young's modulus $E$, soil yield stress $\sigma_y$ and strength $\sigma$. Lemaitre and Chaboche (1990)\cite{lemaitre1994mechanics} developed the model discussing the behaviour of both sand and undrained clay soils. Dynamic analyses performed using the software ABAQUS incorporate the model and yield satisfying results. One of the model limitations stands in its incapacity of acquiring pore pressure build-up nor dissipation effects. Yet, it proves safe to assume an undrained behaviour given the short duration of seismic loading applied on the system.   
 
 Materials experience irreversible deformations when elastic limit is reached but loading persists. Theory of the elasticity explains the occurrence of slip surfaces caused by instabilities making use of the time-independent irreversible deformations. In addition, determines the permanent deformations that lead to collapse preventing them while investigating stability of the system. 
 In order to create a plasticity model, there is the need of few features such as:
@@ -287,7 +287,8 @@ K=\frac{C}{\sqrt{3}S_u-\sigma_0}
 where C is the initial kinematic hardening parameter, K is the parameter characterizing the rate of reduction of the kinematic hardening with increasing plastic deformation, $\sigma_y$ is the maximum yield stress, $\sigma_0$represents the yield stress at zero plastic strain and $S_u$ is the undrained shear strength. A more detailed description of the constitutive model can be found in \textbf{Appendix}in terms of stress state, failure criterion development and mathematical formulas.
 
 \section{Numerical tools}
-Abaqus offers a wide range of elements and features that help achieving a nonlinear analysis regardless the domain or simulation expertise - it's attractiveness stands in the possibility of customization, making the software extremely flexible yet meticulous. It serves well the geotechnical engineering goals as it provides soil and structural elements, total and effective stress analysis, consolidation, static and dynamic analysis and many more. Several types of analysis are available - the main interest relates to Abaqus/Standard.
+Abaqus \cite{hibbett1998abaqus} offers a wide range of elements and features that help achieving a nonlinear analysis regardless the domain or simulation expertise - it's attractiveness stands in the possibility of customization, making the software extremely flexible yet meticulous. It serves well the geotechnical engineering goals as it provides soil and structural elements, total and effective stress analysis, consolidation, static and dynamic analysis and many more. Several types of analysis are available - the main interest relates to Abaqus/Standard.
+
 Abaqus/Standard represents a model database appropriate for both linear and nonlinear static, linear and/or low-speed nonlinear dynamic situations in which stress solutions have a great significance. The current information determines the unknown values at the current time requiring convergence and iteration - it becomes computationally expensive when it does not reach the equilibrium. Two types of behaviour are selected from the available list of analysis techniques - Static, General and Dynamic, Implicit. The first method is a static stress procedure which neglects the inertia forces and time-dependent material effects such as creep of viscoelasticity and can be both linear and nonlinear. It does account for small-displacements performing a geometrically linear analysis during that specific step while ignoring the large-displacements (represented by geometric nonlinearity).
 
 General nonlinear dynamic analysis in Abaqus/Standard uses implicit time integration to calculate the transient dynamic or quasi-static response of a system. Quasi-static applications are primarily interested in determining a final static response. These problems typically show monotonic behavior, and inertia effects are introduced primarily to regularize unstable behavior. For example, the statically unstable behavior may be due to temporarily unconstrained rigid body modes or “snap-through” phenomena. Large time increments are taken when possible to obtain the final solution at minimal computational cost. Considerable numerical dissipation may be required to obtain convergence during certain stages of the loading history.
@@ -298,7 +299,7 @@ The following sections describe the current input accordingly to the step sequen
 \section{Expected results}
 Having inclusively formulated both the problem and the means by achieving the scope, close investigations can face various directions regarding the outcome each of them being equally relevant. The current study should decide on few aspects to emphasize on, as the time does not suffice for an extensive examination. However, for the little features subjected to investigation, parametric studies are required to be able to make statements, express limitations and recommendations.
 
-The current dissertation narrows on few aspects from the vast possibilities that come along with the new approach as Nitros et al, 2015 describe. One feature relates to the types of interface available for the analysis and two conditions are taken into consideration as it follows:
+The current dissertation narrows on few aspects from the vast possibilities that come along with the new approach as Nitros et al, 2015 \cite{ntritsos2015static} describe. One feature relates to the types of interface available for the analysis and two conditions are taken into consideration as it follows:
 \begin{enumerate}
 	\item Fully bonded contact [FBC] - the foundation remains in perfect contact throughout the entire analysis; this condition prevents sliding and separation of the foundation from the surrounding soil because of the infinite tensional and shear capacities of the interface.
 	\item Tensionless sliding interface [TSI] - allows sliding at the contact surface as well as separation of the foundation; the interface follows Coulomb's friction law in total stress depending on the adhesion coefficient $\alpha$.
@@ -310,7 +311,7 @@ The current dissertation narrows on few aspects from the vast possibilities that
 	\caption{Types of boundary conditions; FBC (left) and TSI(right)}
 	\label{FBC}
 \end{figure}
-Furthermore, several studies focused on the importance of the combined NQM loading and the effect of every of the three forces susceptible to act on the foundation at certain points. Yun \& Brandy (2007) and Gouvernec (2008) formerly examined the undrained bearing capacity of rigid embedded strip foundations under combined $NQM$ loading using a fully bonded contact, followed by Ntritsos et al (2015) who extended the studies to three-dimensional problem of squared foundations adding the option of a tensionless sliding interface.
+Furthermore, several studies focused on the importance of the combined NQM loading and the effect of every of the three forces susceptible to act on the foundation at certain points. Yun \& Brandy (2007) and Gouvernec (2008) \cite{randolph2011offshore} formerly examined the undrained bearing capacity of rigid embedded strip foundations under combined $NQM$ loading using a fully bonded contact, followed by Ntritsos et al (2015) who extended the studies to three-dimensional problem of squared foundations adding the option of a tensionless sliding interface.
 
 Nevertheless, the two maximum values - horizontal load Qmax and overturning moment Mmax do not solely represent the failure mechanism; infinite combinations of $Q$ and $M$ are comprised within a failure envelope plotted against normalized values. Additionally, the effect of the vertical load which influences the $QM$ interaction was set to $N=0$. The figure beneath displays the four main points on the envelope that represent different loading conditions together with significant output at carefully selected points. Both the fully bonded contact (FBC) and tensionless sliding interface (TSI) conditions were investigated and presented for comparison. Important to mention is that the authors preferred to normalize the $Q$ and $M$ values in accordance to the foundation width $B$, area $A$ and undrained shear strength $S_u$ - the plot contains on the x direction $Q/AS_u$ whilst for the y direction it has $M/BAS_u$. 
 The main points have specific characteristics as it follows:
@@ -400,7 +401,7 @@ Many authors treated this subject of the degradation curves, the most acknowledg
 %referinte
 M.Darendeli proposes a new empirical framework able to generate normalized modulus reduction and material damping curves. The author investigates the influence of several parameters (for instance soil plasticity or confining pressure) on the dynamic soil response using pre-existent data from University of Texas which has been collected over the past decades. The work of Darendeli is regarded as valuable because the results include the uncertainty in inelastic soil response within the probabilistic seismic hazard analysis.
  
-As other many authors, Darendeli was inspired by the work of Hardin and Drnevich (1972) that represented a step forward in evaluating the dynamic soil behaviour. His study focuses initially on finding strengths and weaknesses in other studies in order to counteract them in his following experiments. The first observation highlights a feature common to all the previous generic curves: the confining pressure takes a relatively "fixed" value of approximately 1 atm and the curves do not incorporate the effect of the confining pressure on the inelastic soil behaviour. Ishibashi and Zhang (1993) consider soil plasticity and confining pressure but lead to unrealistic values at pressure higher than 10 atm. Darendeli proposes a four-parameter soil model which will account for the effects of the soil type, confining pressure, loading frequency and number of cycles in generating the normalized stiffness degradation and material damping curves. In addition, Table \ref{table} presents in detail other factors that might influence the inelastic soil behaviour according to Darendeli study.
+As other many authors, Darendeli was inspired by the work of Hardin and Drnevich (1972)\cite{hardin1972shear} that represented a step forward in evaluating the dynamic soil behaviour. His study focuses initially on finding strengths and weaknesses in other studies in order to counteract them in his following experiments. The first observation highlights a feature common to all the previous generic curves: the confining pressure takes a relatively "fixed" value of approximately 1 atm and the curves do not incorporate the effect of the confining pressure on the inelastic soil behaviour. Ishibashi and Zhang (1993) \cite{ishibashi1993unified} consider soil plasticity and confining pressure but lead to unrealistic values at pressure higher than 10 atm. Darendeli proposes a four-parameter soil model which will account for the effects of the soil type, confining pressure, loading frequency and number of cycles in generating the normalized stiffness degradation and material damping curves. In addition, Table \ref{table} presents in detail other factors that might influence the inelastic soil behaviour according to Darendeli study.
 
 \begin{table}[h!]
 \centering
@@ -437,7 +438,7 @@ The equation of the material damping curve is then expressed as a function of tw
 A more detail description of Darendeli's material model can be found in \textbf{Appendix}.
 
 
-The current study works with the recommended reduction curves presented by Darendeli within his PhD thesis. The collection of data used by the author for investigation display a good match with the parameters of the ongoing study. A selection of matching data was extracted from Darendeli's work - tables containing values for the normalized modulus reduction and damping curves; data corresponds to a soil with a plasticity index of PI=25\% and a confining pressure of 1 atmosphere which also matches current conditions. \textbf{Appendix 3} shows the values used for comparison and validation of the present analysis.
+The current study works with the recommended reduction curves presented by Darendeli within his PhD thesis \cite{darendeli2001development}. The collection of data used by the author for investigation display a good match with the parameters of the ongoing study. A selection of matching data was extracted from Darendeli's work - tables containing values for the normalized modulus reduction and damping curves; data corresponds to a soil with a plasticity index of PI=25\% and a confining pressure of 1 atmosphere which also matches current conditions. \textbf{Appendix 3} shows the values used for comparison and validation of the present analysis.
 
 \section{Modelling}
 
@@ -507,7 +508,7 @@ Given the supposition of no volume changes specific to the undrained conditions,
 \paragraph{\underline{Undrained shear strength}}
 The value of the undrained shear strength can be determined with the use of multiple parameters as well as methods. \ref{App:AppendixE} shows a collection of methods applied for obtaining the undrained shear strength of the soil based on both empirical and measurements data and the plot containing all the values can be seen in Figure22\%. In order to summarize the features in the calculations, the undrained shear strength can be a function of plasticity index (PI), stress history within the soil (more importantly the effective  vertical stress), pore pressure, mode of testing et cetera.
 %referinta
-One important method to mention is represented by the study of Den Haan (2011) as he treats the current situation (of Groningen soils) in his article "Ongedraineerde sterkte van slappe Nederlandse grond" developing new equations for obtaining undrained shear strength of clayey soils. Crux Engineering develops a Plaxis model to validate the equation leading to a set of formulae as a function of the normalized stress given in Table 1.
+One important method to mention is represented by the study of Den Haan (2011) \cite{den2011ongedraineerde} as he treats the current situation (of Groningen soils) in his article "Ongedraineerde sterkte van slappe Nederlandse grond" developing new equations for obtaining undrained shear strength of clayey soils. Crux Engineering develops a Plaxis model to validate the equation leading to a set of formulae as a function of the normalized stress given in Table 1.
 
 For the current situation, considering the normalized shear stress to be 40kPa as characteristic, the undrained shear strength equation becomes:
 \begin{equation}
@@ -530,7 +531,7 @@ For the current situation, considering the normalized shear stress to be 40kPa a
 	\label{DenHaan_param}
 \end{table}
 
-The graph shows the agreement between all the methods aforementioned; the decision of continuing the calculations with Den Haan (1) formulae is due to its applicability for the soft Dutch soils - which is the current case - and the measurements consistency. Appendix \ref{App:AppendixF} shows the table of values characteristic for the soil including the associated stiffness parameters. The analysis relies on this set of parameters representing the soil sub-layer located at a depth of 10m below surface.
+The graph shows the agreement between all the methods aforementioned; the decision of continuing the calculations with Den Haan \cite{den2011ongedraineerde} formulae is due to its applicability for the soft Dutch soils - which is the current case - and the measurements consistency. Appendix \ref{App:AppendixF} shows the table of values characteristic for the soil including the associated stiffness parameters. The analysis relies on this set of parameters representing the soil sub-layer located at a depth of 10m below surface.
 
 \begin{figure}[h!]
 	\centering
@@ -543,7 +544,7 @@ The graph shows the agreement between all the methods aforementioned; the decisi
 Stiffness plays an important role in dynamic analysis hence the correct determination becomes significant for evaluating the non-linear soil response. This sub-chapter presents two different methods of calculating the shear modulus - empirical and based on measurements - this way one can compare and validate the results.
 
 \subparagraph{Shear modulus determined empirically}
-For the empirical determination of the stiffness $G_{max}$, a simple equation was used based on studies performed by Hardin and Black (1968). The expression contains a void-ratio function together with a confining-stress function and it was developed mainly based on laboratory test results. The first function accounts for the plasticity index as well as the void ratio as an alternative to the overconsolidation ratio whilst the later considers the stresses developed within the soil. The equation described by the two authors can be written as:
+For the empirical determination of the stiffness $G_{max}$, a simple equation was used based on studies performed by Hardin and Black (1968) \cite{hardin1972shear}. The expression contains a void-ratio function together with a confining-stress function and it was developed mainly based on laboratory test results. The first function accounts for the plasticity index as well as the void ratio as an alternative to the overconsolidation ratio whilst the later considers the stresses developed within the soil. The equation described by the two authors can be written as:
 \begin{equation}
 	G_{max}=C \frac{(2.973-e)^2}{1+e}OCR^K(p^`)^{0.5}
 \end{equation}
@@ -554,12 +555,12 @@ $p^`$ - initial mean effective stress (kPa)
 K - coefficient which directly relates to the plasticity index Ip;
 C - constant = 3.23 1/2 
 
-Thirty years later, after several refinements of the previous equation, Shibuya et al. (1997) performed several tests in order to introduce a simplified void-ratio function using the specific volume. They avoided the sharp reduction of stiffness observed in Hardin \& Black equation introducing a sounder physical parameter equivalent to the dry density; consequently, the formula becomes:
+Thirty years later, after several refinements of the previous equation, Shibuya et al., 1997 \cite{shibuya1997elastic} performed several tests in order to introduce a simplified void-ratio function using the specific volume. They avoided the sharp reduction of stiffness observed in Hardin \& Black equation introducing a sounder physical parameter equivalent to the dry density; consequently, the formula becomes:
 \begin{equation}
 \frac{G_{max}}{p^`_r}=\frac{B}{(1+e)^{2.4}}(\frac{p^`}{p^`_r})^{0.5}
 \end{equation}
 where $p^`_r$ - is the reference pressure, considered 1kPa; $e$ - void ratio,$p^`$- mean effective stress, factor $B$ for soft clays ranged between [18000 - 30000 ] with an average of 24000, as it is proved in Shibuya et al (1997) study.
-Current soil investigation and laboratory tests aimed to determine several specific values, among them the void ratio; for a silty clay, medium weak, the results yield values between $e=0.8-0.9$, while the plasticity index was proved to have values Ip=25\%-30\%. Given the fact that the reference pressure is 1kPa the ratio $p^`/p^`_r$ turns into the value of the mean effective stress; this is calculated based on the equations described previously and varies along the depth. Therefore, performing the calculation with the corresponding parameters, it results the equation for the Gmax as it is shown:
+Current soil investigation and laboratory tests aimed to determine several specific values, among them the void ratio; for a silty clay, medium weak, the results yield values between $e=0.8-0.9$, while the plasticity index was proved to have values Ip=25\%-30\%. Given the fact that the reference pressure is 1kPa the ratio $p^`/p^`_r$ turns into the value of the mean effective stress; this is calculated based on the equations described previously and varies along the depth. Therefore, performing the calculation with the corresponding parameters, it results the equation for the $G_max$ as it is shown:
 \begin{equation}
 	G_{max}=[5400-5800](\sigma^`_0)^{0.5}
 \end{equation}
@@ -607,7 +608,7 @@ The Poisson ratio for silty-clay in drained/effective analysis was considered $\
 	\frac{E_u}{2(1+\nu_u)}=\frac{E^`}{2(1+\nu^`); E_u=\frac{3E^`}{2(1+\nu^`)}}
 \end{equation}
 
-In addition, from empirical correlation (Hardin and Richart 1963; Robertson and Campanella 1983a,b; Seed et al 1986; Mayne and Rix, 1993) the elastic moduli can also be expressed as a function of the overburden stress $\sigma_y$.
+In addition, from empirical correlation (Hardin and Richart 1963 \cite{hardin1963elastic}; Robertson and Campanella 1983 \cite{robertson1983interpretation}; Seed et al 1986 \cite{seed1986use}; Mayne and Rix, 1993 \cite{mayne2014interpretation}) the elastic moduli can also be expressed as a function of the overburden stress $\sigma_y$.
 \begin{equation}
 	C=a\sigma_y
 \end{equation} 
@@ -770,335 +771,8 @@ Given these, it can be concluded that the current results match to a certain ext
 
 \section{Conclusions}
 
-	\chapter {Site Response Analysis}
-		\section{Introduction}
-The seismic waves generated at the bedrock suffer variation until they reach the surface; both the characteristics of the ground shaking as well as the material parameters influence the ground response that can be expressed in terms of amplitude, duration and frequency content. The importance of the ground response analysis relates to the overall dynamic study of the superstructure; the seismic waves can experience amplification or de-amplification at surface level as a function of soil damping properties together with encountered frequencies. In the case of matching frequencies between the maximum amplification of ground motion and natural frequency of the structure, the two elements (soil and construction) resonate one with the other. This translates into high oscillating amplitudes and thus considerable damage. In conclusion, performing a site response analysis enables the engineers to predict the site frequency content, the spectral acceleration alongside to peak ground acceleration and thus to create a reliable seismic design. \label{Figure 1}presents the schematization of the entire site response analysis.
-	
-		
-		\section{Model description}
-The model represents an extrapolation of the previous analysis step; the soil sample becomes a homogeneous layer with properties increasing linearly with depth and it is subjected to two steps: the gravity and the seismic excitation. The height of the layer is assumed 30 meters, this way it follows the prescriptions found in standards thus the possibility of a further meaningful results comparison. In order to simulate a one dimensional analysis, the problem is analyzed in a 2D space with the thickness of the soil relatively small compared to the height; \label{fig:Soilcolumn} shows the schematization of the problem, the blue numbers representing the nodes, the red numbers the elements, respectively. The 1D soil column represents the typical model for a site response analysis as the shear wave propagation direction is assumed to be vertical - thus the main interest stands in the interaction between the soil profile and the vertically travelling seismic wave. 
 
-The validation of the model will consists of a result comparison between the analysis performed in Abaqus and the ones obtained from NERA together with the Groningen SRA performed by ARUP - the latter only offers a rough guide. The differences between the means of analysis will be investigated, the results will be expressed in terms of acceleration response in frequency domain together with stiffness degradation. 
-
-\subsection{Steps of analysis}
-The first step of the analysis simulates the natural stress state within the soil using a gravity load spread all over the layer and it is declared as static, general. The self weight of the elements provide the loads, therefore no need of extra loading conditions. The definition of the gravity load involves the software in updating several parameters to account for the confining pressure. As the schematization shows, the model contains elements and nodes - the nodes will be assigned with boundary conditions reproducing the one dimensional vertical propagation of the shear waves. The base nodes are constrained in both directions in accordance with the assumption of the bedrock presence underneath the soil layer whilst each pair of nodes horizontally displayed are linked using a feature called multi-point constraint - this provides a pinned joint between the nodes making the global displacements be equal leaving the rotations independent. 
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{"Soil column"}
-	\caption[]{Schematization of soil column}
-	\label{Soilcolumn}
-\end{figure}
-
-
-The second step represents the soil layer subjected to the earthquake motion; it is defined as a dynamic step calculated using an implicit integration scheme. During the step, the user propagates the boundary conditions aforementioned with the exception of the horizontal base constraint; it is replaced by an acceleration type of boundary condition that is assigned with an amplitude curve - this allows the user to define an arbitrary variation in time (or frequency) of any quantity or can be defined as a mathematical function (e.g. sinusoidal), series of values in time (acceleration history) and many more. For the current study, the amplitude curve contained the acceleration-time record for a period of 10 seconds as \ref{Acceleration} shows. By assigning the amplitude curve to the boundary condition on X direction together with a restraint in Y direction, the software applies this acceleration input to the base of the sample simulating the earthquake motion.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"Acc input"}
-	\caption{Acceleration input}
-	\label{Acceleration}
-\end{figure}
-
-
-	\subsection{Input parameters}
-The material parameters can be divided into several categories the software requires:
-\begin{enumerate}
-	\item \textit{Elastic}\quad again, Young's modulus together with Poisson's ratio becomes sufficient for the definition of elastic domain.
-	\item \textit{Plastic}\quad the nonlinear isotropic/kinematic model applies von Mises failure criterion for which three parameters are required: yield stress at zero plastic strain $\sigma_0$, small-strain Young's modulus $C$ and hardening parameter $K$.
-	\item\textit{Density -}\quad the soil layer is considered to be homogeneous, thus one single material is define. So density for a silty-clay medium weak was considered 1.8kg/m3
-	\item \textit{Damping -}\quad the software offers many damping options [from numerical to material damping]; however, for this example the Rayleigh damping parameters $\alpha$ and $\beta$ are sufficient for the scope of analysis. This matter will be discussed later on.
-\end{enumerate}
-
-In addition, the model contains a subroutine which introduces the values of undrained shear strength as a function of the vertical effective stress as well as the correlation of this parameter with Young's modulus using field variables located at integration points of the elements. The field variable values can be functions of element variables such as stress or strain. Appendix \ref{App:AppendixG} shows the flow chart of Abaqus user defined subroutine together with the subroutine introduced in the calculation.
-
-The parameters are calculated as presented in the previous chapter (see 3.4.1.  and Appendix \ref{App:AppendixF}). One important matter to mention is the change in the calculation of Young's modulus - for the ease of calculation, this value was determined as a function of the undrained shear strength value. Anastasopoulos et al (2011) use an empirical formulae (based on e.g., Hardin and Richart 1963; Robertson and Campanella1983; Seed et al. 1986; Mayne and Rix 1993) for calculating the value of the small-strain Young's modulus as a function of the overburden stress $\sigma_y$. $C=a{\sigma }_{y}$ with a ranging from 150 to 10.000 (for clays). Accounting for von Mises failure criterion and one of its defining equations ${\sigma}_{y}=a*S_u$ it finally yields:
-\begin{equation}
-	E=a*S_u
-\end{equation}
-
-For this application, the value of a was considered to be a=2000 and the correlation between the measurements and empirically determined Young's modulus can be visualized in \ref{Young}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.7\linewidth]{"Young's modulus"}
-\caption[]{Young's modulus distribution along depth}
-\label{Young}
-\end{figure}
-
-\subsection{Rayleigh coefficients}
-The dissipative character of the elasto-plastic material can be better enhanced by introducing a viscous damping mechanism. The overall stress state of the soil skeleton can be separated into two parts: 
-		\begin{itemize}
-	\item \textit{frictional component}- relating to the elasto-plastic behaviour, being displacement proportional
-	\item \textit{viscous component} - relating to the Rayleigh damping coefficients, being velocity proportional. 
-\end{itemize}
-
-The advantage of coupling these two terms refers to the smoothing of the shear stress-strain cycles as well as a higher material damping. The viscous component has a favourable effect on the damping curves for small-strain domain; whilst it leads to an overestimation for large-strains. 
-As mentioned previously, the second step of the analysis, and the most important, is declared as dynamic, implicit. In nonlinear analysis, the dynamic equation of motion is:
-\begin{equation}
-\left[M\right]{\ddot{u}}+\left[C\right]{\dot{u}}+\left[K\right]{u}=-\left[M\right]{I}\ddot{u}_g
-\end{equation}
-
-where [M] - mass matrix, [C] - viscous damping matrix, [K] - stiffness matrix, {ü},{ů} and {u} - vectors of nodal relative acceleration, velocity and displacement, üg - acceleration at the base and {I} - unit vector. The matrices are compiled based on the incremental response recorded within the software analysis. The equation is solved at every incremental time step using the Newmark method.
-
-The viscous damping matrix follows Rayleigh and Lindsay equation that relates the small strain damping to both mass and stiffness matrices. Thus, the equation for the viscous damping is:
-\begin{equation}
-	\left[C\right]=\alpha\left[M\right]+\beta\left[K\right]
-\end{equation}
-where
-\begin{equation}
-		\beta = 2\frac{\xi}{\omega_1}
-\end{equation}
-
-
-$\xi$ is the damping ratio at small strain; for this application $\xi$=1.2 corresponding to Darendeli's results; while $\omega_1$ is the natural circular frequency at first natural mode;
-
-The assumption of short layer leads to the simplification of the problem because the contribution of higher modes are relatively negligible. Despite that the experimental results prove that the damping matrix [C] is frequency independent and it has a constant value, Park and Hashash show the correlation between the stiffness [K] and the damping [C]. Since the stiffness depends on the strain level, then it can be concluded that the damping is also strain dependent, including the natural frequency. Thus, the viscous damping matrix [C] is updated at each time increment as well as the stiffness. Kramer proposes an equation for the calculation of the period of vibration that corresponds to the fundamental frequency of the selected mode as it follows:
-\begin{equation}
-	T_n=(2n-1)\frac{\stackrel{-}{{V}_{s}}}{4H}\longrightarrow T_n=\frac{V_s}{4H}.
-\end{equation}
-
-where $\stackrel{-}{{V}_{s}}$ average shear wave velocity and H = layer height.
-
-Further, the natural circular frequency is obtained through the following transformation:
-	\begin{equation}
-\omega_n=\frac{2\pi}{T_n} \rightarrow \omega_1=\pi\frac{V_s}{2H}
-	\end{equation}
-
-And finally, Rayleigh $\beta$ damping parameter becomes:
-\begin{equation}
-	\beta=\frac{2H\xi}{V_s\pi}
-\end{equation}
- 
- \begin{table}[h!]
- 	\centering
- 	\begin{tabular}{|c|c|c|c|c|}
- 		\hline $\xi$         &       $1.2$    &  \%    &  Darendeli damping ratio      \\ 
- 		\hline $T_n$    & $4H/V_s$ &  sec &  Fundamental period\\ 
- 		\hline $V_s$  & 132  &  m/s &  Average shear wave velocity\\ 
- 		\hline $H$ & 30 &  meters &  Layer depth\\
- 		\hline $\omega$ & 6.91 & $Hz (sec^-1)$ & Fundamental frequency\\
- 		\hline $\beta$ & 0.001736 & sec & Rayleigh $\beta$ coefficient\\
- 		\hline
- 	\end{tabular} 
- 	\caption{Calculation of Rayleigh $\beta$ parameter}
- 	\label{beta_param}
- \end{table}
-
-\subsection{Integration scheme}
-It is important to understand the type of nonlinear analysis the software was opted to perform and its influence of the results. For this particular analysis, an implicit direct integration scheme was selected - this means that the set of equations concerning the set of nonlinear equations of motion are solved at each time step $\Delta t$ involving both the current and the later state of the system.
-
-Abaqus/Standard uses the Hilbert-Hughes-Taylor time integration method which is an extension of the Newmark $\beta$ method. Basically it controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types. More details related to Newmark integration method are presented in Appendix \ref{App:AppendixH}.
-
-\subsection{FEM stability}
-The accuracy of such nonlinear problem dealing with wave propagation is controlled by two factors - node spacing in the FE model $\delta h$ and the time step $\delta t$. The spacing is directly related to the wavelength whilst the time step depends on the fundamental period of the system. 
-\begin{equation}
-	\Delta h\leq\frac{\lambda_{min}}{10}=\frac{1}{10} \frac{v}{f_{max}}
-\end{equation}
-
-\begin{equation}
-	\Delta t=\frac{T_n}{10}
-\end{equation}
-More details regarding the calculation of the two stability criterion are presented within Appendix \ref{App:AppendixI}
-
-\subsection{Mesh}
-For the mesh elements, four-node quad elements ($CPE4$) are used to model the soil using the plane strain formulation of the quad-element. The element connectivity uses a counterclockwise pattern for the previously-described node numbering scheme (see \ref{Figure 1}). The soil elements in each layer are assigned the material tag of the material object corresponding to that layer. A unit thickness is used in all examples for simulating the 1D condition. The self-weight of the soil is considered as a body force acting on each element. The body force is set as the unit weight of the soil in each layer, which is determined from the respective mass density input value.
-
-
-\section{NERA - Non-linear Earthquake Site Response}
-An additional analysis was performed using NERA (Nonlinear Earthquake site Response Analyses) computer program in order to have a better grasp of the whole concept as well as a meaningful comparison. It derives from EERA that uses an equivalent linear model to investigate the same problem; the constitutive material model is proposed by Iwan and Mroz (1967) and it describes the nonlinear kinematic model as a series of n mechanical elements, each displaying different stiffness ki and sliding resistance $R_i$ as it is shown in \ref{Mroz}.
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"Mroz"}
-	\caption[]{Plastic description of Iwan and Mroz nonlinear model}
-	\label{Mroz}
-\end{figure}
-
-NERA is composed by a FORTRAN 90 code together with a Excel plug-in that capture the nonlinear site response of a layered soil column subjected to an earthquake signal. As input, it requires the acceleration-time record, material properties with emphasis on the stiffness parameters. 
-The material properties introduced within the software require a general description of the soil column as well as an individual material classification (in case the user is dealing with a multi-layered ground). The general input portrays the column with its sub-layers and unit weights, shear wave velocities and the ground water table followed by an automatic assessment of the maximum shear modulus, effective stresses and fundamental period. 
-The software allows for multiple layer definition by introducing the normalized shear modulus degradation curves and material damping curves. For this particular case, Darendeli's results presented previously were used in order to obtain a consequent comparison. However, the software does not account for data corresponding to damping curves as it is calculating its own set of values. This is because the nonlinear model proposed by Iwan and Mroz uses a different scheme for determining the damping characteristics.
-
-NERA starts the analysis by processing the earthquake input signal and material properties followed by step-by-step determination of the relative velocity and displacement at a selected sub-layer. The integration scheme NERA uses is the central difference which, contrary to Abaqus analysis, it is conditionally stable (the time step size is limited). This calculation method is a particular type of Newmark method in which the predicted velocity is:
-
-\begin{equation}
-	\tilde{v}_{i,n+1}=v_{i,n}+\frac{1}{2}a_{i,n}\Delta t
-\end{equation}
-
-The stress and strains are calculated at each node from nodal displacements, next step calculates the velocity from the input acceleration history. Subsequently, the predicted values for velocities at time $t_{n+1}$ yield from those determined at time $t_n$ and finally the nodal displacements, velocities and accelerations are update at each node i. In addition, the output includes spectral response based on Fourier transform calculation for any selected sub-layer.
-
-\section{Results}
-This subchapter presents the results obtained from the site response analysis performed in Abaqus, followed by a comparison with NERA outcome; several plots are used as mean of verification and the main interest lies on the $G/G_{max}$ and damping curves, acceleration response as well as the amplification ratio in frequency domain.
-After performing a dynamic, implicit type of analysis to the assembly described previously, the output was investigated with an initial emphasis on the stiffness degradation. To check the validity of the overall model, an uniform cyclic signal served as acceleration amplitude; a circular frequency $f=1 Hz$ was applied at the bottom of the model for a period of 10 seconds in a sinusoidal fashion. The results can be visualized in \ref{response1}, \ref{response2} and \ref{acc1}. The same remarks can be made as for the preceding analysis \textbf{see previous analysis One mesh element}; however, this model includes an additional Rayleigh damping parameter together with the subroutine that updates the values of the Young's modulus. The acceleration response highlights a de-amplification of the bottom signal together with damping effects visible in the irregularities of the curves.
-
-%introduce the soil column picture
-\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.7\linewidth]{"response1"}
-		\caption[]{Hysteresis loops on the lower half of the soil layer}
-		\label{response1}
-	\end{figure}
-	
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.7\linewidth]{"response2"}
-		\caption[]{Hysteresis loops for lower half of the soil layer}
-		\label{response2}
-	\end{figure}
-	
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.7\linewidth]{"acc_response1"}
-		\caption{Acceleration response (surface and bottom)}
-		\label{acc1}
-	\end{figure}
-	
-Going forward with the results, the real acceleration-time history was applied to the boundary condition at the bottom nodes for the same period of 10 seconds. The records correspond to the measurements from WSE station, Huizinge, Groningen - even though the earthquake signal lasts for 35 seconds, it was trimmed to analyse the most unfavourable 10 seconds [with the highest acceleration peak]. The obtained values in terms of shear stress and strain can be seen in \ref{resp3} whilst the top and bottom acceleration outcome is represented in \ref{acc_resp2}. Important to mention is that the boundary condition applied at the bottom of the model represents the bedrock presence, therefore the waves are incident and not reflective - the discussion about the boundary conditions influence on the wave propagation shall be presented shortly after. [As a sign convention, element 1 represents the bottom one whilst element 30 is the surface].
-\begin{figure} [h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"response3"}
-	\caption{Hysteresis loops for upper half of the layer when real acceleration is applied}
-	\label{resp3}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"acc_response2"}
-	\caption{Acceleration response - surface and bottom}
-	\label{acc_resp2}
-\end{figure}
-%introdu citat
-Once the bottom and top acceleration outcome is extracted from the software, a Fast Fourier transform is applied with the scope of converting the current data from time domain to a representation in frequency domain. As Kristeková et al., 2006 stated "the most complete and informative characterization of a signal can be obtained by its decomposition in the time-frequency plane". However, FFT is used as a digital signal processing tool that aids other operation, rather than providing a final result itself. For example, the transfer function or a site amplification factor allows the calculation of the motion of any layer $i$ based on other motion (of any layer $j$). This transfer function relates the displacement at position $i$ to that at position $j$ as it follows:
-\begin{equation}
-	F_{ij}=\frac{|u_i|}{|u_j|}
-\end{equation}
-
-The Fourier spectrum represents the distribution of energy in the ground motion for a frequency interval $[0 ≤ f ≤ 1/2\delta t]$. The amplification factor can also be written as:
-\begin{equation}
-	A(f)=\frac{F_{a,site}(f)}{F_{a,bedrock}(f)}
-\end{equation}
-where $A(f)$ - site amplification factor; $F_a,site(f)$ and $F_a,berock(f)$ - Fourier amplitudes of ground acceleration at surface and bedrock, respectively calculated as the vector sum of the two horizontal components. The importance of the site amplification factor relates to the structural damage pattern (rather than the PGA amplification) due to site effects. If the natural period of the structure matches the soil natural period, the structure will be more vulnerable to earthquakes. 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"Fourier"}
-	\caption{Fourier amplitude spectra - surface and bottom}
-	\label{fourier}
-\end{figure}
-%alta referinta Zienkiewicz
-It is important to discuss the boundary conditions and their influence on the wave transmission throughout the layer. The current model created in Abaqus includes tied boundaries, also described by Zienkiewicz et al. (1989)\cite and it assumes that all displacements on the left side of the column correspond to the ones at the right side, simulating a free field boundaries, whereas the bottom nodes do not absorb the oscillating waves. The software offers the baseline correction option for the acceleration input for time domain analysis; the practice is proposed by Newmark and it introduces an additional correction to the acceleration such that the mean square velocity over the event time is minimized. The use of more correction intervals provides tighter control over any “drift” in the displacement at the expense of more modification of the given acceleration trace. However, in acceleration history it does not show large difference between the responses.
-Because the boundary only transmits the waves upwards, an additional analysis was performed with a bottom acceleration record manually reduced by half. Physically, the waves within a soil have both downwards and upwards motion (incident and reflective). The decision of applying half of the signal also relates to NERA calculation in order to obtain a coherence between the two software; NERA assumes that the velocity at base is the sum of both incident and reflected waves and since at bedrock level shear force is zero it yields that the velocity becomes:
-\begin{equation}
-	v_{base}=2v_{incident}
-\end{equation} 
-
-\section{Comparison Abaqus vs NERA}
-The comparison between the two analyses were formulated in terms of acceleration response, shear stress-strain response together with the spectral ratio and the plots can be visualized below.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"acc_response2"}
-	\caption{Acceleration comparison Abaqus vs. NERA}
-	\label{comp1}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"spectral2"}
-	\caption{Fourier amplitude spectra comparison}
-	\label{fourier2}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"tau_gamma1"}
-	\caption{Hysteresis loops comparison for surface level}
-	\label{tau_gamma1}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"tau_gamma2"}
-	\caption{Hysteresis loops comparison for z=20m(left) and bottom level(right)}
-	\label{tau_gamma2}
-\end{figure}
-
-\subsection{Remarks}
-Overall, the results show a quite satisfying math; nonetheless, differences appear due to several factors as it follows:
-\begin{enumerate}
-	\item Abaqus works with a dynamic implicit integration scheme with an Euler backwards theory that is unconditionally stable whereas NERA solves the system of equation through a central-difference which is conditionally stable; thus on one software, user has the option of manually adjusting the time step while on the other he cannot. The equation of motion for the system in dynamic domain it is basically the same:
-	\begin{equation}
-		f=F-\rho\ddot{u}
-	\end{equation}
-where f - body force, F - external body force, $\rho$ - soil unit weight and $\ddot{u}$ - relative nodal acceleration. Thus, the difference is \textit{numerical} and cannot be adjusted in detail.
-\item Both the models are based on the concept of a yield surface which means that there is a surface defined in stress space within which no plastic deformation takes place. The nonlinear kinematic hardening model used in Abaqus is based on the Lemaitre and Chaboche model that considers two yield surfaces and a varying hardening modulus whilst NERA works according to Iwan and Mroz multi-linear kinematic hardening model that has a multiple surface plasticity. First model includes a 'fading memory' term whereas the second model does not and preserves the memory width. Thus, the difference is related to the plastic domain and how the model behaves when irreversible deformations are encountered. 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{"yield_srf"}
-	\caption{Non-linear kinematic hardening model according to Lemaitre,Chaboche [left] and Iwan,Mroz[right]}
-	\label{Yield}
-\end{figure}
-\item NERA computes the shear stress and strain increments according to the sliding resistance and tangent modulus of each slider that are derived from the $G_i-\gamma_i$ points introduced as input. The tangential shear modulus is related to the secant shear modulus by $H_i=G_{max}\frac{G'_{i+1}\gamma_{i+1}-G'_i\gamma_i}{\gamma_{i+1}-\gamma_i}$ where $G_i=\frac{G_i}{G_{max}}$ . The stiffness of each component of the system is related to the tangent modulus while the shear stress is associated with the sliding resistance. On the other hand, Abaqus does not work with the tangent modulus, but with maximum shear modulus Gmax and the undrained shear strength. Also, in NERA there is no option for introducing the values corresponding to the undrained shear strength or its correlation with any other parameter. Figure 14 shows the distribution of the shear modulus with depth in both the software - these values are calculated from the input parameter - Abaqus extracts it based on the Young's modulus together with Poisson's ratio whilst NERA does it based on the soil unit weight and shear wave velocity. The values are exactly the same, it can be noticed also from the slope the hysteresis loops presented in the stress-strain plots; the width also resembles as well as the unloading-reloading areas. However, the tangent shear modulus differs from one software to the other.
-\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.7\linewidth]{"shear"}
-		\caption{Shear modulus $G_{max}$ comparison}
-		\label{shear1}
-\end{figure}
-\item Abaqus results are extracted in two different locations: the stresses and strains are obtained from Gauss integration points and the accelerations are obtained at nodal positions which are situated at the interface of each two element. NERA performs the analysis according to the middle of each sub-layer, so both the top and bottom outcome are actually 0.25m below the surface or above the bottom. However, not much difference should rise from this aspect.
-\item Another difference relates to the viscous part of the model and it is more apparent in the acceleration response in time domain, especially in the initial period. Abaqus works with the viscous term defined exclusively as a function of Rayleigh damping parameter $\beta$ meaning that the system damping depends on the stiffness, whilst NERA requires the critical damping ratio value, incorporating both $\alpha$ and $\beta$ Rayleigh factors. Moreover, the energy dissipation mechanism accounts for both viscous damping and plasticity terms which, as described previously, differ from NERA to Abaqus. When working with a high PGA value, the contribution of the non-linear model and hysteretic damping becomes greater compared to the viscous damping component.
-\item Noise can be experienced in both the signals of the different computer programs. This can distort the final results; filtering is possible, however it is time demanding and does not represent the main interest in this study.
-\end{enumerate}
-
-\subsection{Additional investigation}
-An additional investigation was performed in order to check the soil response when closer to elastic domain - as in, a lower PGA was applied at the bottom boundary. The first analysis contained a PGA value of approximately 0.5g whilst the second one scaled down the value to 0.1g. The results can be seen in the following figures.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"acc_low"}
-	\caption{Acceleration response comparison for PGA=0.1g}
-	\label{acc_low}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"hysteresis_low_bot"}
-	\caption{Hysteresis loops comparison for bottom level}
-	\label{hyst_bot}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"hysteresis_low_surf"}
-	\caption{Hysteresis loops comparison for surface level}
-	\label{hyst_top}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"spectral_low"}
-	\caption{Fourier amplitude spectra for PGA=0.1 - logarithmic scale}
-	\label{fourier3}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"spectral2"}
-	\caption{Site amplification factor comparison for PGA=0.1g}
-	\label{SAF}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"ARUP"}
-	\caption{Groningen site non-linear ground response, input vs surface PGA according to ARUP report}
-	\label{ARUP}
-\end{figure}
-
-The results confirm the expectation regarding the amplification effect of the soil combined with the PGA level, also they are in accordance with ARUP report regarding the site response analysis performed for the specific location in discussion. The acceleration responses at surface produced in both the computational software present the same maximum value, of course, with differences that were exposed previously, the elastic response seems to match together with the stiffness degradation effect. 
-
-\section{Conclusions}
-The differences between the software were investigated and speculated; given the fact that the study deals with a non-linear kinematic hardening process, it becomes quite difficult to point exactly the main cause that leads to dissimilarity. However, reasons can be examined and despite the analyses run according to separate models and integration schemes, overall they display a reasonably agreement.
-
-It can be concluded that for the Groningen sites, low PGA input ($a_g=0.1g$) the surface acceleration response amplified whereas when dealing with a high PGA input ($a_g\textgreater0.15g$) the top PGA is de-amplified. Both the strength properties of the homogeneous medium and the earthquake motion characteristics influence the seismic wave propagation though the soil; for this particular case, the inelastic response depends on the limited capability of the soft layers to transmit seismic signals to the surface because of the low strength and on the high hysteretic damping observed at large strains. At low PGA values, the soil displays elastic behaviour as it reaches the surface, the frequencies do not experience considerable damping whereas at high PGA levels, the soil shifts towards its natural frequency, damping the higher ones and non-linear constitutive model plays a more important role than the viscous damping effect.
-
+\input{chapter3}
 \input{chapter5}
 
 \newpage
@@ -1473,7 +1147,7 @@ For this particular analysis, an implicit direct integration scheme was selected
 
 A significant aspect when performing such analyses relates to the stability of the calculation which translates into the size of the time increment. An implicit direct integration scheme is unconditionally stable; it means that there is no limitation in defining the time step size thus, the user can adjust the accuracy of the analysis according to the application. However, care must be paid when establishing the size of the time increment because it influences the energy dissipation as well as the transmission of high frequencies throughout the model.
 
-Abaqus/Standard uses the Hilbert-Hughes-Taylor time integration method which is an extension of the Newmark $\beta$ method. It basically controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types (for instance, backward Euler operator is more dissipative than second-order Hilbert-Hughes-Taylor). The general equation for the integration method is:
+Abaqus/Standard uses the Hilbert-Hughes-Taylor time integration method which is an extension of the Newmark $\beta$ method \cite{newmark1959method}. It basically controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types (for instance, backward Euler operator is more dissipative than second-order Hilbert-Hughes-Taylor). The general equation for the integration method is:
 \begin{equation}
 	\beta=0.25(1-\alpha)^2
 \end{equation}

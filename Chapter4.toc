@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {2.6}Soil condition}{12}
 \contentsline {subsection}{\numberline {2.6.1}Problem statement}{12}
 \contentsline {subsection}{\numberline {2.6.2}Constitutive model}{12}
-\contentsline {section}{\numberline {2.7}Numerical tools}{13}
+\contentsline {section}{\numberline {2.7}Numerical tools}{14}
 \contentsline {section}{\numberline {2.8}Expected results}{14}
 \contentsline {chapter}{\numberline {3}Material calibration using one mesh element}{17}
 \contentsline {section}{\numberline {3.1}General}{17}
@@ -65,27 +65,27 @@
 \contentsline {paragraph}{Transmitting boundaries}{53}
 \contentsline {section}{\numberline {5.5}Implementation of ABC}{54}
 \contentsline {paragraph}{Free-field soil column}{54}
-\contentsline {paragraph}{Main model}{54}
+\contentsline {paragraph}{Main model}{55}
 \contentsline {paragraph}{Equivalent forces}{56}
-\contentsline {paragraph}{Displacements}{56}
-\contentsline {section}{\numberline {5.6}Results}{56}
-\contentsline {subsection}{\numberline {5.6.1}Effects of applied boundary conditions}{56}
-\contentsline {subsection}{\numberline {5.6.2}Effects of loads}{56}
-\contentsline {subsection}{\numberline {5.6.3}FBC vs TSI}{56}
-\contentsline {section}{\numberline {5.7}Limitations and recommendations}{56}
-\contentsline {section}{\numberline {5.8}Conclusions}{56}
-\contentsline {section}{Appendix}{57}
-\contentsline {part}{I\hspace {1em}Appendix}{57}
-\contentsline {xpart}{Appendix}{58}
-\contentsline {chapter}{\numberline {A}Cone penetration test results}{58}
-\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{60}
-\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{60}
-\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{61}
-\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{64}
-\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{66}
-\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{67}
-\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{70}
-\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{72}
-\contentsline {chapter}{\numberline {H}Newmark integration schemes}{74}
-\contentsline {chapter}{\numberline {I}FEM stability in dynamic calculations}{75}
-\contentsline {chapter}{Bibliography}{77}
+\contentsline {paragraph}{Displacements}{57}
+\contentsline {section}{\numberline {5.6}Results}{57}
+\contentsline {subsection}{\numberline {5.6.1}Effects of applied boundary conditions}{57}
+\contentsline {subsection}{\numberline {5.6.2}Effects of loads}{57}
+\contentsline {subsection}{\numberline {5.6.3}FBC vs TSI}{57}
+\contentsline {section}{\numberline {5.7}Limitations and recommendations}{57}
+\contentsline {section}{\numberline {5.8}Conclusions}{57}
+\contentsline {section}{Appendix}{58}
+\contentsline {part}{I\hspace {1em}Appendix}{58}
+\contentsline {xpart}{Appendix}{59}
+\contentsline {chapter}{\numberline {A}Cone penetration test results}{59}
+\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{61}
+\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{61}
+\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{62}
+\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{65}
+\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{67}
+\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{68}
+\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{71}
+\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{73}
+\contentsline {chapter}{\numberline {H}Newmark integration schemes}{75}
+\contentsline {chapter}{\numberline {I}FEM stability in dynamic calculations}{76}
+\contentsline {chapter}{Bibliography}{78}
