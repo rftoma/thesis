@@ -41,15 +41,54 @@ R.~Kourkoulis, F.~Gelagoti, and I.~Anastasopoulos, ``Rocking isolation of
   frames on isolated footings: design insights and limitations,'' {\em Journal
   of Earthquake Engineering}, vol.~16, no.~3, pp.~374--400, 2012.
 
+\bibitem{chopra1985simplified}
+A.~K. Chopra and S.~C.-S. Yim, ``Simplified earthquake analysis of structures
+  with foundation uplift,'' {\em Journal of Structural Engineering}, vol.~111,
+  no.~4, pp.~906--930, 1985.
+
 \bibitem{hibbett1998abaqus}
 Hibbett, Karlsson, and Sorensen, {\em ABAQUS/standard: User's Manual}, vol.~1.
 \newblock Hibbitt, Karlsson \& Sorensen, 1998.
+
+\bibitem{apostolou2011soil}
+M.~E. Apostolou, {\em Soil--structure interaction under strong seismic moment:
+  material and geometric nonlinearity}.
+\newblock PhD thesis, National Technical University, Athens, 2011.
+
+\bibitem{bransby1998combined}
+M.~Bransby and M.~Randolph, ``Combined loading of skirted foundations,'' {\em
+  G{\'e}otechnique}, vol.~48, no.~5, pp.~637--55, 1998.
+
+\bibitem{gottardi1999plastic}
+G.~Gottardi, G.~Houlsby, and R.~Butterfield, ``Plastic response of circular
+  footings on sand under general planar loading,'' {\em G{\'e}otechnique},
+  vol.~49, no.~4, pp.~453--470, 1999.
 
 \bibitem{gajan2005centrifuge}
 S.~Gajan, B.~L. Kutter, J.~D. Phalen, T.~C. Hutchinson, and G.~R. Martin,
   ``Centrifuge modeling of load-deformation behavior of rocking shallow
   foundations,'' {\em Soil Dynamics and Earthquake Engineering}, vol.~25,
   no.~7, pp.~773--783, 2005.
+
+\bibitem{anastasopoulos2014simplified}
+I.~Anastasopoulos and T.~Kontoroupi, ``Simplified approximate method for
+  analysis of rocking systems accounting for soil inelasticity and foundation
+  uplifting,'' {\em Soil Dynamics and Earthquake Engineering}, vol.~56,
+  pp.~28--43, 2014.
+
+\bibitem{ntritsos2015static}
+N.~Ntritsos, I.~Anastasopoulos, and G.~Gazetas, ``Static and cyclic undrained
+  response of square embedded foundations,'' {\em G{\'e}otechnique}, vol.~65,
+  no.~10, pp.~805--823, 2015.
+
+\bibitem{panagiotidou2012pushover}
+A.~I. Panagiotidou, G.~Gazetas, and N.~Gerolymos, ``Pushover and seismic
+  response of foundations on stiff clay: analysis with p-delta effects,'' {\em
+  Earthquake Spectra}, vol.~28, no.~4, pp.~1589--1618, 2012.
+
+\bibitem{manualversion}
+A.~U. Manual, ``Version 6.14-1,'' {\em Dassault Syst{\'e}mes Simulia Corp.,
+  Providence, RI}.
 
 \bibitem{anastasopoulos2011simplified}
 I.~Anastasopoulos, F.~Gelagoti, R.~Kourkoulis, and G.~Gazetas, ``Simplified
@@ -71,11 +110,6 @@ H.~Roh and A.~M. Reinhorn, ``Modeling and seismic response of structures with
 \bibitem{lemaitre1994mechanics}
 J.~Lemaitre and J.-L. Chaboche, {\em Mechanics of solid materials}.
 \newblock Cambridge university press, 1994.
-
-\bibitem{ntritsos2015static}
-N.~Ntritsos, I.~Anastasopoulos, and G.~Gazetas, ``Static and cyclic undrained
-  response of square embedded foundations,'' {\em G{\'e}otechnique}, vol.~65,
-  no.~10, pp.~805--823, 2015.
 
 \bibitem{randolph2011offshore}
 M.~Randolph and S.~Gourvenec, {\em Offshore geotechnical engineering}.
@@ -130,15 +164,54 @@ P.~Mayne, ``Interpretation of geotechnical parameters from seismic piezocone
   tests,'' in {\em Proceedings 3rd international symposium on cone pentrometer
   testing, CPT}, vol.~14, pp.~47--73, 2014.
 
-\bibitem{zienkiewicz1989earthquake}
-O.~Zienkiewicz, N.~Bicanic, and F.~Shen, ``Earthquake input definition and the
-  trasmitting boundary conditions,'' in {\em Advances in computational
-  nonlinear mechanics}, pp.~109--138, Springer, 1989.
+\bibitem{pisano2014simulating}
+F.~Pisan{\`o} and B.~Jeremi{\'c}, ``Simulating stiffness degradation and
+  damping in soils via a simple visco-elastic--plastic model,'' {\em Soil
+  Dynamics and Earthquake Engineering}, vol.~63, pp.~98--109, 2014.
+
+\bibitem{dost2012monitoring}
+B.~Dost, F.~Goutbeek, T.~van Eck, and D.~Kraaijpoel, ``Monitoring induced
+  seismicity in the north of the netherlands: status report 2010,'' {\em KNMI
+  Scientific report}, pp.~2012--03, 2012.
+
+\bibitem{dost2004scaling}
+B.~Dost, T.~Van~Eck, and H.~Haak, ``Scaling of peak ground acceleration and
+  peak ground velocity recorded in the netherlands,'' {\em Bollettino di
+  Geofisica Teorica ed Appliocata}, vol.~45, no.~3, pp.~153--168, 2004.
+
+\bibitem{hashash2002viscous}
+Y.~M. Hashash and D.~Park, ``Viscous damping formulation and high frequency
+  motion propagation in non-linear site response analysis,'' {\em Soil Dynamics
+  and Earthquake Engineering}, vol.~22, no.~7, pp.~611--624, 2002.
+
+\bibitem{hilber1977improved}
+H.~M. Hilber, T.~J. Hughes, and R.~L. Taylor, ``Improved numerical dissipation
+  for time integration algorithms in structural dynamics,'' {\em Earthquake
+  Engineering \& Structural Dynamics}, vol.~5, no.~3, pp.~283--292, 1977.
 
 \bibitem{newmark1959method}
 N.~M. Newmark, ``A method of computation for structural dynamics,'' {\em
   Journal of the engineering mechanics division}, vol.~85, no.~3, pp.~67--94,
   1959.
+
+\bibitem{jeremic2009time}
+B.~Jeremic, G.~Jie, M.~Preisig, and N.~Tafazzoli, ``Time domain simulation of
+  soil-foundation-structure interaction in non-uniform soils,'' {\em Earthquake
+  Engineering \& Structural Dynamics}, vol.~38, no.~5, p.~699, 2009.
+
+\bibitem{mroz1967description}
+Z.~Mroz, ``On the description of anisotropic workhardening,'' {\em Journal of
+  the Mechanics and Physics of Solids}, vol.~15, no.~3, pp.~163--175, 1967.
+
+\bibitem{kristekova2006misfit}
+M.~Kristekov{\'a}, J.~Kristek, P.~Moczo, and S.~M. Day, ``Misfit criteria for
+  quantitative comparison of seismograms,'' {\em Bulletin of the seismological
+  Society of America}, vol.~96, no.~5, pp.~1836--1850, 2006.
+
+\bibitem{zienkiewicz1989earthquake}
+O.~Zienkiewicz, N.~Bicanic, and F.~Shen, ``Earthquake input definition and the
+  trasmitting boundary conditions,'' in {\em Advances in computational
+  nonlinear mechanics}, pp.~109--138, Springer, 1989.
 
 \bibitem{love1944h}
 A.~Love, ``H. a treatise on the mathematical theory of elasticity,'' {\em

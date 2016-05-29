@@ -487,6 +487,7 @@ The boundary condition which permits translation on x direction is assigned with
 
 Abaqus offers several methods for performing dynamic analysis of problems in which inertia effects are considered. Direct integration of the system must be used when nonlinear dynamic response is being studied. The step is defined as a dynamic one; general linear or nonlinear dynamic analysis in Abaqus/Standard uses implicit time integration to calculate the transient dynamic response of a system. Nonlinearities are usually more simply accounted for in dynamic situations than in static situations because the inertia terms provide mathematical stability to the system; thus, the method is successful in all but the most extreme cases. An automatic incrementation scheme is provided for use with the general implicit dynamic integration method. The scheme uses a half-step residual control to ensure an accurate dynamic solution. The half-step residual is the equilibrium residual error (out-of-balance forces) halfway through a time increment; for a continuum solution the equilibrium residual should be moderately small compared to significant forces in the problem.
 
+\newpage
 \section{Material description}
 For the current situation, Abaqus requires the definition of several behaviour components such as: density, elastic, plastic, damping and, eventually, a subroutine which introduces the distribution of the ultimate shear strength along the depth and the correlation between the stiffness and the strength parameters ($E$ and $S_u$).
 
@@ -641,6 +642,7 @@ Such dissimilarities are clearly expected, the main interest in this situation p
 	\label{Su2}.
 \end{figure}
 
+\newpage
 \subsection{Non-linear parameters (kinematic hardening  model with Von Mises failure criterion)}
 The constitutive model marks down to several equations which describe the inelastic soil response. As a matter of fact, the software Abaqus only requires the selection of the appropriate material module which nominates the failure criterion and its corresponding parameters; the current case deals with only three parameters momentarily: the maximum stress at zero plastic strain - $\sigma_0$, elastic Young's modulus $E=2*(1+\nu)G_0)$ and the ultimate strength $\sigma_u$ or $S_u$.
 The evolution of kinematic hardening component of the yield stress is defined by:
@@ -670,7 +672,7 @@ The yield stress at zero plastic strain $\sigma_0$ controls the initiation of in
 
 The shear modulus was derived previously from the Vs values measured by CPT, as well as all other stiffness parameters. The elastic limit strain represents the point in which the plasticity is triggered - here was taken into calculation as 10-4. Hence all the kinematic parameters are further obtained based on this value and it can be seen in Appendix \ref{App:AppendixF}.
 
-
+\newpage
 \section{Results}
 \subsection{General}
 The connection between the stress-strain plot and modulus reduction curves is straightforward for two-way cyclic loading (complete stress cycle). The set-up of the normalized stiffness degradation curve allows the prediction of stress-strain path of the soil subjected to monotonic loading. 
@@ -753,7 +755,9 @@ The comparison shows a relatively good agreement between the current results and
 
 The damping ratio might seem not to follow the exact same shape as Darendeli; important to mention that the current case ignores several features which the author included within his calculation. First, there is no additional damping introduced in the analysis; Rayleigh damping parameters were not comprised but they will in the future calculation. This explains the zero damping values once the elastic domain is active - meanwhile Darendeli results still show damping at that strain level. Moreover, Darendeli assumes that damping for any given strain level is a function of the curvature coefficient - which is also neglected in the current analysis. Also, Darendeli scales the results with several coefficients (such as curvature coefficient, scaling coefficient) together with the $D_{min}$ in order to get a better match between experimental data and empirically obtained results. 
 
-Given these, it can be concluded that the current results match to a certain extent Darendeli curves and that a good calibration of the one element shear test was obtained.
+Additionally, studies (Pisan\`{o} et al, 2014 \cite{pisano2014simulating}) investigated a comparable simulation on a viscous-elastic-plastic model on a Drucker-Prager material model and obtained similar trends in the damping curves when only frictional components were assumed. Which hints that the obtained output might not necessarily be incorrect, possible numerical errors or conditions have an impact and flaws can occur materialize. 
+
+Given these, it can be concluded that the current results match to a certain extent Darendeli's curves and that a good calibration of the one element shear test was obtained.
 
 \begin{figure}[h!]
 	\centering
@@ -769,8 +773,16 @@ Given these, it can be concluded that the current results match to a certain ext
 	\label{damping}.
 \end{figure}
 
-\section{Conclusions}
 
+\newpage
+\section{Conclusions}
+A strain-controlled numerical test was performed on a simple element assigned with properties of different clay samples located across the depth of a homogeneous layer. The aim of the study strived to generate normalized stiffness degradation and material damping curves similar to the ones provided by Darendeli's, 2001 \cite{darendeli2001development}. They represent a reference standard in this domain, based on a 4-parameters mathematical model that describes the behaviour of a soil specimen when subjected to shear cyclic loading. It is suitable for dynamic problems, that assist shear wave propagation - which is also the current case. 
+
+The present study assemblies the soft soil conditions and a recorded acceleration time history from the specific site, applies various numerical methods to achieve same output and proceeds with a comparison between the analyses. It acknowledges, in the same time, the differences and limitations occurring amid. 
+
+The overall results show a fair match when comparing the two software, but also when accounting for external sources KNMI, \cite{dost2012monitoring}, \cite{dost2004scaling}, \cite{dost2013august} that carried out particular investigations. 
+
+It can be concluded that the proposed material model qualifies as reasonable for the future examination and, thus, the current paper continues the research towards a one-dimensional site response analysis. 
 
 \input{chapter3}
 \input{chapter5}

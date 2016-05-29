@@ -1,10 +1,12 @@
 	\chapter {Site Response Analysis}
 	\section{Introduction}
-	The seismic waves generated at the bedrock suffer variation until they reach the surface; both the characteristics of the ground shaking as well as the material parameters influence the ground response that can be expressed in terms of amplitude, duration and frequency content. The importance of the ground response analysis relates to the overall dynamic study of the superstructure; the seismic waves can experience amplification or de-amplification at surface level as a function of soil damping properties together with encountered frequencies. In the case of matching frequencies between the maximum amplification of ground motion and natural frequency of the structure, the two elements (soil and construction) resonate one with the other. This translates into high oscillating amplitudes and thus considerable damage. In conclusion, performing a site response analysis enables the engineers to predict the site frequency content, the spectral acceleration alongside to peak ground acceleration and thus to create a reliable seismic design. \label{Figure 1}presents the schematization of the entire site response analysis.
+	The seismic waves generated at the bedrock suffer variation until they reach the surface; both the characteristics of the ground shaking as well as the material parameters influence the ground response that can be expressed in terms of amplitude, duration and frequency content. The importance of the ground response analysis relates to the overall dynamic study of the superstructure; the seismic waves can experience amplification or de-amplification at surface level as a function of soil damping properties together with encountered frequencies. In the case of matching frequencies between the maximum amplification of ground motion and natural frequency of the structure, the two elements (soil and construction) resonate one with the other. This translates into high \mbox{oscillating} amplitudes and thus, considerable damage. 
+	
+	In conclusion, performing a site response analysis enables the engineers to predict the site frequency content, the spectral acceleration alongside to peak ground acceleration and thus to create a reliable seismic design. Figure \label{Soilcolumn} presents the schematization of the entire site response analysis.
 	
 	
 	\section{Model description}
-	The model represents an extrapolation of the previous analysis step; the soil sample becomes a homogeneous layer with properties increasing linearly with depth and it is subjected to two steps: the gravity and the seismic excitation. The height of the layer is assumed 30 meters, this way it follows the prescriptions found in standards thus the possibility of a further meaningful results comparison. In order to simulate a one dimensional analysis, the problem is analyzed in a 2D space with the thickness of the soil relatively small compared to the height; \label{fig:Soilcolumn} shows the schematization of the problem, the blue numbers representing the nodes, the red numbers the elements, respectively. The 1D soil column represents the typical model for a site response analysis as the shear wave propagation direction is assumed to be vertical - thus the main interest stands in the interaction between the soil profile and the vertically travelling seismic wave. 
+	The model represents an extrapolation of the previous analysis step; the soil sample becomes a homogeneous layer with properties increasing linearly with depth and it is subjected to two steps: \textit{the gravity} and \textit{the seismic excitation}. The height of the layer is assumed 30 meters, have in mind it is merely an assumption - given the lack of bedrock and for the simplicity of calculation, the bedrock is considered located at 30m below surface. In order to simulate a one dimensional analysis, the problem is analysed in a 2D space plane strain ($\epsilon_{zz}=0$) with the lateral width of the soil relatively small compared to the height; the presence of bedrock translates into a rigid base having translational constraints in both directions and each pair of horizontal nodes are tied together such that will experience equivalent displacements. \label{fig:Soilcolumn} shows the schematization of the problem, the blue numbers representing the nodes, the red numbers the elements, respectively. The 1D soil column represents the typical model for a site response analysis as the shear wave propagation direction is assumed to be vertical - thus the main interest stands in the interaction between the soil profile and the vertically travelling seismic wave. 
 	
 	The validation of the model will consists of a result comparison between the analysis performed in Abaqus and the ones obtained from NERA together with the Groningen SRA performed by ARUP - the latter only offers a rough guide. The differences between the means of analysis will be investigated, the results will be expressed in terms of acceleration response in frequency domain together with stiffness degradation. 
 	
@@ -19,28 +21,28 @@
 	\end{figure}
 	
 	
-	The second step represents the soil layer subjected to the earthquake motion; it is defined as a dynamic step calculated using an implicit integration scheme. During the step, the user propagates the boundary conditions aforementioned with the exception of the horizontal base constraint; it is replaced by an acceleration type of boundary condition that is assigned with an amplitude curve - this allows the user to define an arbitrary variation in time (or frequency) of any quantity or can be defined as a mathematical function (e.g. sinusoidal), series of values in time (acceleration history) and many more. For the current study, the amplitude curve contained the acceleration-time record for a period of 10 seconds as \ref{Acceleration} shows. By assigning the amplitude curve to the boundary condition on X direction together with a restraint in Y direction, the software applies this acceleration input to the base of the sample simulating the earthquake motion.
+	The second step represents the soil layer subjected to the earthquake motion; it is defined as a dynamic step calculated using an implicit integration scheme which will be explained in more detailed later on. During the step, the user propagates the boundary conditions aforementioned with the exception of the horizontal base constraint; it is replaced by an acceleration type of boundary condition that is assigned with an amplitude curve - this allows the user to define an arbitrary variation in time (or frequency) of any quantity or can be defined as a mathematical function (e.g. sinusoidal), series of values in time (acceleration history) and many more. For the current study, the amplitude curve contained the acceleration-time record for a period of 10 seconds as \ref{Acceleration} shows; this period is considered as the representative duration of Groningen acceleration measured time history and it starts right before the peak acceleration \cite{dost2004scaling}. By assigning the amplitude curve to the boundary condition on X direction together with a restraint in Y direction, the software converts this acceleration input to the base of the sample simulating the earthquake motion into relative force history acting on the model.
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"Acc input"}
-		\caption{Acceleration input}
+		\caption{Acceleration input (induced earthquake, @Huizige, 16 Aug 2012)}
 		\label{Acceleration}
 	\end{figure}
 	
-	
+	\newpage
 	\subsection{Input parameters}
-	The material parameters can be divided into several categories the software requires:
+	The material parameters, as presented in Chapter \ref{ch3} and Appendix \ref{App:AppendixB}, can be divided into several categories the software requires:
 	\begin{enumerate}
 		\item \textit{Elastic}\quad again, Young's modulus together with Poisson's ratio becomes sufficient for the definition of elastic domain.
 		\item \textit{Plastic}\quad the nonlinear isotropic/kinematic model applies von Mises failure criterion for which three parameters are required: yield stress at zero plastic strain $\sigma_0$, small-strain Young's modulus $C$ and hardening parameter $K$.
-		\item\textit{Density -}\quad the soil layer is considered to be homogeneous, thus one single material is define. So density for a silty-clay medium weak was considered 1.8kg/m3
+		\item\textit{Density -}\quad the soil layer is considered to be homogeneous, thus one single material is define. So density for a silty-clay medium weak was considered 1800kg/m3
 		\item \textit{Damping -}\quad the software offers many damping options [from numerical to material damping]; however, for this example the Rayleigh damping parameters $\alpha$ and $\beta$ are sufficient for the scope of analysis. This matter will be discussed later on.
 	\end{enumerate}
 	
 	In addition, the model contains a subroutine which introduces the values of undrained shear strength as a function of the vertical effective stress as well as the correlation of this parameter with Young's modulus using field variables located at integration points of the elements. The field variable values can be functions of element variables such as stress or strain. Appendix \ref{App:AppendixG} shows the flow chart of Abaqus user defined subroutine together with the subroutine introduced in the calculation.
 	
-	The parameters are calculated as presented in the previous chapter (see 3.4.1.  and Appendix \ref{App:AppendixF}). One important matter to mention is the change in the calculation of Young's modulus - for the ease of calculation, this value was determined as a function of the undrained shear strength value. Anastasopoulos et al (2011) use an empirical formulae (based on e.g., Hardin and Richart 1963; Robertson and Campanella1983; Seed et al. 1986; Mayne and Rix 1993) for calculating the value of the small-strain Young's modulus as a function of the overburden stress $\sigma_y$. $C=a{\sigma }_{y}$ with a ranging from 150 to 10.000 (for clays). Accounting for von Mises failure criterion and one of its defining equations ${\sigma}_{y}=a*S_u$ it finally yields:
+	The parameters are calculated as presented in the previous chapter (see Chapter \ref{ch3} and Appendix \ref{App:AppendixF}). One important matter to mention is the change in the calculation of Young's modulus - for the ease of calculation, this value was determined as a function of the undrained shear strength value. Anastasopoulos et al, 2011 \cite{anastasopoulos2011simplified} use an empirical formulae (based on e.g., Hardin and Richart, 1963 \cite{hardin1963elastic}; Robertson and Campanella, 1983 \cite{robertson1983interpretation}; Seed et al. 1986 \cite{seed1986use}; Mayne and Rix 1993) for calculating the value of the small-strain Young's modulus as a function of the overburden stress $\sigma_y$. $C=a{\sigma }_{y}$ with a ranging from 150 to 10.000 (for clays). Accounting for von Mises failure criterion and one of its defining equations ${\sigma}_{y}=a*S_u$ it finally yields:
 	\begin{equation}
 	E=a*S_u
 	\end{equation}
@@ -62,9 +64,9 @@
 	\end{itemize}
 	
 	The advantage of coupling these two terms refers to the smoothing of the shear stress-strain cycles as well as a higher material damping. The viscous component has a favourable effect on the damping curves for small-strain domain; whilst it leads to an overestimation for large-strains. 
-	As mentioned previously, the second step of the analysis, and the most important, is declared as dynamic, implicit. In nonlinear analysis, the dynamic equation of motion is:
+	As mentioned previously, the second step of the analysis, and the most important, is declared as dynamic, implicit. In non-linear analysis, the dynamic equation of motion is:
 	\begin{equation}
-	\left[M\right]{\ddot{u}}+\left[C\right]{\dot{u}}+\left[K\right]{u}=-\left[M\right]{I}\ddot{u}_g
+	\left[M\right]{\Delta \ddot{u}}+\left[C\right]{\Delta \dot{u}}+\left[K\right]\Delta{u}=-\left[M\right]{I}\Delta\ddot{u}_g
 	\end{equation}
 	
 	where [M] - mass matrix, [C] - viscous damping matrix, [K] - stiffness matrix, {ü},{ů} and {u} - vectors of nodal relative acceleration, velocity and displacement, üg - acceleration at the base and {I} - unit vector. The matrices are compiled based on the incremental response recorded within the software analysis. The equation is solved at every incremental time step using the Newmark method.
@@ -81,7 +83,7 @@
 	
 	$\xi$ is the damping ratio at small strain; for this application $\xi$=1.2 corresponding to Darendeli's results; while $\omega_1$ is the natural circular frequency at first natural mode;
 	
-	The assumption of short layer leads to the simplification of the problem because the contribution of higher modes are relatively negligible. Despite that the experimental results prove that the damping matrix [C] is frequency independent and it has a constant value, Park and Hashash show the correlation between the stiffness [K] and the damping [C]. Since the stiffness depends on the strain level, then it can be concluded that the damping is also strain dependent, including the natural frequency. Thus, the viscous damping matrix [C] is updated at each time increment as well as the stiffness. Kramer proposes an equation for the calculation of the period of vibration that corresponds to the fundamental frequency of the selected mode as it follows:
+	The assumption of short layer leads to the simplification of the problem because the contribution of higher modes are relatively negligible. Despite that the experimental results prove that the damping matrix [C] is frequency independent and it has a constant value, Park and Hashash, 2002 \cite{hashash2002viscous} show the correlation between the stiffness [K] and the damping [C]. Since the stiffness depends on the strain level, then it can be concluded that the damping is also strain dependent, including the natural frequency. Thus, the viscous damping matrix [C] is updated at each time increment as well as the stiffness. Kramer proposes an equation for the calculation of the period of vibration that corresponds to the fundamental frequency of the selected mode as it follows:
 	\begin{equation}
 	T_n=(2n-1)\frac{\stackrel{-}{{V}_{s}}}{4H}\longrightarrow T_n=\frac{V_s}{4H}.
 	\end{equation}
@@ -114,12 +116,12 @@
 	\end{table}
 	
 	\subsection{Integration scheme}
-	It is important to understand the type of nonlinear analysis the software was opted to perform and its influence of the results. For this particular analysis, an implicit direct integration scheme was selected - this means that the set of equations concerning the set of nonlinear equations of motion are solved at each time step $\Delta t$ involving both the current and the later state of the system.
+	It is important to understand the type of nonlinear analysis the software was opted to perform and its influence of the results. For this particular analysis, an implicit direct integration scheme was selected - this means that the set of nonlinear equations of motion solved at the time step $\Delta t_{n+1}$ are employed to compute the transition from the state at $t_n$ to $t_{n+1}$; on the other hand, an explicit integration uses all information at the beginning of $t_n$ to estimate the latter state at $t_{n+1}$.
 	
-	Abaqus/Standard uses the Hilbert-Hughes-Taylor time integration method which is an extension of the Newmark $\beta$ method. Basically it controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types. More details related to Newmark integration method are presented in Appendix \ref{App:AppendixH}.
+	Abaqus/Standard uses the Hilber-Hughes-Taylor time integration method \cite{hilber1977improved} which is an extension of the Newmark $\beta$ method, 1959 \cite{newmark1959method}. Basically it controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types. More details related to Newmark integration method are presented in Appendix \ref{App:AppendixH}.
 	
 	\subsection{FEM stability}
-	The accuracy of such nonlinear problem dealing with wave propagation is controlled by two factors - node spacing in the FE model $\delta h$ and the time step $\delta t$. The spacing is directly related to the wavelength whilst the time step depends on the fundamental period of the system. 
+	According to Jeremi\'{c}, \cite{jeremic2009time}, the accuracy of such nonlinear problem dealing with wave propagation is controlled by two factors - node spacing in the FE model $\delta h$ and the time step $\delta t$. The spacing is directly related to the wavelength whilst the time step depends on the fundamental period of the system. 
 	\begin{equation}
 	\Delta h\leq\frac{\lambda_{min}}{10}=\frac{1}{10} \frac{v}{f_{max}}
 	\end{equation}
@@ -134,16 +136,19 @@
 	
 	
 	\section{NERA - Non-linear Earthquake Site Response}
-	An additional analysis was performed using NERA (Nonlinear Earthquake site Response Analyses) computer program in order to have a better grasp of the whole concept as well as a meaningful comparison. It derives from EERA that uses an equivalent linear model to investigate the same problem; the constitutive material model is proposed by Iwan and Mroz (1967) and it describes the nonlinear kinematic model as a series of n mechanical elements, each displaying different stiffness ki and sliding resistance $R_i$ as it is shown in \ref{Mroz}.
+	An additional analysis was performed using NERA (Nonlinear Earthquake site Response Analyses) computer program in order to have a better grasp of the whole concept as well as a meaningful comparison. It derives from EERA that uses an equivalent linear model to investigate the same problem; the constitutive material model is proposed by Iwan and Mroz, 1967 \cite{mroz1967description} and it describes the nonlinear kinematic model as a series of n mechanical elements, each displaying different stiffness ki and sliding resistance $R_i$ as it is shown in \ref{Mroz}. More details concerning the calibration NERA performs are presented in Appendix .
+	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"Mroz"}
-		\caption[]{Plastic description of Iwan and Mroz nonlinear model}
+		\caption[]{Plasticity description of Iwan and Mroz nonlinear model}
 		\label{Mroz}
 	\end{figure}
 	
-	NERA is composed by a FORTRAN 90 code together with a Excel plug-in that capture the nonlinear site response of a layered soil column subjected to an earthquake signal. As input, it requires the acceleration-time record, material properties with emphasis on the stiffness parameters. 
+	NERA is composed by a FORTRAN 90 code together with a Excel plug-in that capture the nonlinear site response of a layered soil column subjected to an earthquake signal. As input, it requires the acceleration-time record, elastic material properties with emphasis on the stiffness parameters - normalized stiffness degradation and material damping curves. 
+	
 	The material properties introduced within the software require a general description of the soil column as well as an individual material classification (in case the user is dealing with a multi-layered ground). The general input portrays the column with its sub-layers and unit weights, shear wave velocities and the ground water table followed by an automatic assessment of the maximum shear modulus, effective stresses and fundamental period. 
+	
 	The software allows for multiple layer definition by introducing the normalized shear modulus degradation curves and material damping curves. For this particular case, Darendeli's results presented previously were used in order to obtain a consequent comparison. However, the software does not account for data corresponding to damping curves as it is calculating its own set of values. This is because the nonlinear model proposed by Iwan and Mroz uses a different scheme for determining the damping characteristics.
 	
 	NERA starts the analysis by processing the earthquake input signal and material properties followed by step-by-step determination of the relative velocity and displacement at a selected sub-layer. The integration scheme NERA uses is the central difference which, contrary to Abaqus analysis, it is conditionally stable (the time step size is limited). This calculation method is a particular type of Newmark method in which the predicted velocity is:
@@ -156,20 +161,23 @@
 	
 	\section{Results}
 	This subchapter presents the results obtained from the site response analysis performed in Abaqus, followed by a comparison with NERA outcome; several plots are used as mean of verification and the main interest lies on the $G/G_{max}$ and damping curves, acceleration response as well as the amplification ratio in frequency domain.
-	After performing a dynamic, implicit type of analysis to the assembly described previously, the output was investigated with an initial emphasis on the stiffness degradation. To check the validity of the overall model, an uniform cyclic signal served as acceleration amplitude; a circular frequency $f=1 Hz$ was applied at the bottom of the model for a period of 10 seconds in a sinusoidal fashion. The results can be visualized in \ref{response1}, \ref{response2} and \ref{acc1}. The same remarks can be made as for the preceding analysis \textbf{see previous analysis One mesh element}; however, this model includes an additional Rayleigh damping parameter together with the subroutine that updates the values of the Young's modulus. The acceleration response highlights a de-amplification of the bottom signal together with damping effects visible in the irregularities of the curves.
+	
+	After performing a dynamic, implicit type of analysis to the assembly described previously, the output was investigated with an initial emphasis on the stiffness degradation. To check the validity of the overall model, an uniform cyclic signal served as acceleration amplitude; a circular frequency $f=1 Hz$ was applied at the bottom of the model for a period of 10 seconds in a sinusoidal fashion. Such uniform harmonic loading represents a simplification of the signal, and helps the user better understand the non-linear soil response. A real acceleration-time history consists in many irregularities and the results may be sometimes misinterpreted. That is why the investigation starts simple towards complicated.
+	
+	The results can be visualized in \ref{response1}, \ref{response2} and \ref{acc1}. The same remarks can be made as for the preceding analysis (see previous analysis in Chapter \ref{ch3}); however, this model includes an additional Rayleigh damping parameter together with the subroutine that updates the values of the Young's modulus. The acceleration response displays a de-amplification of the bottom signal together with damping effects visible in the irregularities of the curves; the de-amplification effect can be seen as the average wave speed decreases (blue line wave travels with 0.5m/s whilst the green line with almost half the speed). The values are obtained by dividing the maximum acceleration to the time period of a complete sinusoidal cycle. The shear stress-strain plots show plasticity occurring at different stress levels - the hysteresis loops shift towards origin which means that the soil achieves plasticity gradually. Additionally, the plots show a decrease in dissipated energy as the seismic waves travels from bottom to top - the area comprised within the hysteresis loops reduces as well.
 	
 	%introduce the soil column picture
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"response1"}
-		\caption[]{Hysteresis loops on the lower half of the soil layer}
+		\caption[]{Hysteresis loops on the lower half of the soil layer (Element 1 - Base; Element 15 - Middle of the layer)}
 		\label{response1}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"response2"}
-		\caption[]{Hysteresis loops for lower half of the soil layer}
+		\caption[]{Hysteresis loops for lower half of the soil layer(Element 1 - Base; Element 31 - Surface)}
 		\label{response2}
 	\end{figure}
 	
@@ -180,7 +188,7 @@
 		\label{acc1}
 	\end{figure}
 	
-	Going forward with the results, the real acceleration-time history was applied to the boundary condition at the bottom nodes for the same period of 10 seconds. The records correspond to the measurements from WSE station, Huizinge, Groningen - even though the earthquake signal lasts for 35 seconds, it was trimmed to analyse the most unfavourable 10 seconds [with the highest acceleration peak]. The obtained values in terms of shear stress and strain can be seen in \ref{resp3} whilst the top and bottom acceleration outcome is represented in \ref{acc_resp2}. Important to mention is that the boundary condition applied at the bottom of the model represents the bedrock presence, therefore the waves are incident and not reflective - the discussion about the boundary conditions influence on the wave propagation shall be presented shortly after. [As a sign convention, element 1 represents the bottom one whilst element 30 is the surface].
+	Going forward with the results, the real acceleration-time history was applied to the boundary condition at the bottom nodes for the same period of 10 seconds. The records correspond to the measurements from WSE station, Huizinge, Groningen \cite{dost2013august} - even though the earthquake signal lasts for 35 seconds, it was trimmed to analyse the most unfavourable 10 seconds [with the highest acceleration peak]. The obtained values in terms of shear stress and strain can be seen in \ref{resp3} whilst the top and bottom acceleration outcome is represented in \ref{acc_resp2}. Important to mention is that the boundary condition applied at the bottom of the model represents the bedrock presence, therefore the waves are incident and not reflective - the discussion about the boundary conditions influence on the wave propagation shall be presented shortly after. [As a sign convention, element 1 represents the bottom one whilst element 30 is the surface].
 	\begin{figure} [h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"response3"}
@@ -195,7 +203,7 @@
 		\label{acc_resp2}
 	\end{figure}
 	%introdu citat
-	Once the bottom and top acceleration outcome is extracted from the software, a Fast Fourier transform is applied with the scope of converting the current data from time domain to a representation in frequency domain. As Kristeková et al., 2006 stated "the most complete and informative characterization of a signal can be obtained by its decomposition in the time-frequency plane". However, FFT is used as a digital signal processing tool that aids other operation, rather than providing a final result itself. For example, the transfer function or a site amplification factor allows the calculation of the motion of any layer $i$ based on other motion (of any layer $j$). This transfer function relates the displacement at position $i$ to that at position $j$ as it follows:
+	Once the bottom and top acceleration outcome is extracted from the software, a Fast Fourier transform is applied with the scope of converting the current data from time domain to a representation in frequency domain. As Kristeková et al., 2006 \cite{kristekova2006misfit} stated "the most complete and informative characterization of a signal can be obtained by its decomposition in the time-frequency plane". However, FFT is used as a digital signal processing tool that aids other operation, rather than providing a final result itself. For example, the transfer function or a site amplification factor allows the calculation of the motion of any layer $i$ based on other motion (of any layer $j$). This transfer function relates the displacement at position $i$ to that at position $j$ as it follows:
 	\begin{equation}
 	F_{ij}=\frac{|u_i|}{|u_j|}
 	\end{equation}
@@ -213,13 +221,15 @@
 	\end{figure}
 	%alta referinta Zienkiewicz
 	It is important to discuss the boundary conditions and their influence on the wave transmission throughout the layer. The current model created in Abaqus includes tied boundaries, also described by Zienkiewicz et al. (1989) \cite{zienkiewicz1989earthquake} and it assumes that all displacements on the left side of the column correspond to the ones at the right side, simulating a free field boundaries, whereas the bottom nodes do not absorb the oscillating waves. The software offers the baseline correction option for the acceleration input for time domain analysis; the practice is proposed by Newmark \cite{newmark1959method} and it introduces an additional correction to the acceleration such that the mean square velocity over the event time is minimized. The use of more correction intervals provides tighter control over any “drift” in the displacement at the expense of more modification of the given acceleration trace. However, in acceleration history it does not show large difference between the responses.
+	
 	Because the boundary only transmits the waves upwards, an additional analysis was performed with a bottom acceleration record manually reduced by half. Physically, the waves within a soil have both downwards and upwards motion (incident and reflective). The decision of applying half of the signal also relates to NERA calculation in order to obtain a coherence between the two software; NERA assumes that the velocity at base is the sum of both incident and reflected waves and since at bedrock level shear force is zero it yields that the velocity becomes:
+	
 	\begin{equation}
 	v_{base}=2v_{incident}
 	\end{equation} 
 	
 	\section{Comparison Abaqus vs NERA}
-	The comparison between the two analyses were formulated in terms of acceleration response, shear stress-strain response together with the spectral ratio and the plots can be visualized below.
+	The comparison between the two analyses were formulated in terms of acceleration response, shear stress-strain response together with the spectral ratio and the plots can be visualized below. 
 	
 	\begin{figure}[h!]
 		\centering
@@ -250,7 +260,9 @@
 	\end{figure}
 	
 	\subsection{Remarks}
-	Overall, the results show a quite satisfying math; nonetheless, differences appear due to several factors as it follows:
+	It is difficult to have a relevant comparison at surface level when the sample experiences low stresses; calibration of cyclic parameters was referred to considerably higher confining stresses. Moreover, it was noticed that Abaqus generates higher plastic strains; this might explain the signal attenuation expressed in frequency domain when comparing to NERA response. 
+	
+	Overall, the results show a quite satisfying match; nonetheless, differences appear due to several factors as it follows:
 	\begin{enumerate}
 		\item Abaqus works with a dynamic implicit integration scheme with an Euler backwards theory that is unconditionally stable whereas NERA solves the system of equation through a central-difference which is conditionally stable; thus on one software, user has the option of manually adjusting the time step while on the other he cannot. The equation of motion for the system in dynamic domain it is basically the same:
 		\begin{equation}
@@ -273,6 +285,7 @@
 		\end{figure}
 		\item Abaqus results are extracted in two different locations: the stresses and strains are obtained from Gauss integration points and the accelerations are obtained at nodal positions which are situated at the interface of each two element. NERA performs the analysis according to the middle of each sub-layer, so both the top and bottom outcome are actually 0.25m below the surface or above the bottom. However, not much difference should rise from this aspect.
 		\item Another difference relates to the viscous part of the model and it is more apparent in the acceleration response in time domain, especially in the initial period. Abaqus works with the viscous term defined exclusively as a function of Rayleigh damping parameter $\beta$ meaning that the system damping depends on the stiffness, whilst NERA requires the critical damping ratio value, incorporating both $\alpha$ and $\beta$ Rayleigh factors. Moreover, the energy dissipation mechanism accounts for both viscous damping and plasticity terms which, as described previously, differ from NERA to Abaqus. When working with a high PGA value, the contribution of the non-linear model and hysteretic damping becomes greater compared to the viscous damping component.
+		\item The aforementioned differences between the calculation programs derive mainly from numerical algorithms; however, a more important aspect seems to govern the outcome of each analysis - the dynamic nature of the problem itself. The two models are not identical, thus a difference in any given point might generate distinct response at unknown location and time because of the non-linear propagation fashion. 
 		\item Noise can be experienced in both the signals of the different computer programs. This can distort the final results; filtering is possible, however it is time demanding and does not represent the main interest in this study.
 	\end{enumerate}
 	
