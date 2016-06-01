@@ -343,7 +343,7 @@ Furthermore, a comparison between a FBC and a tensionless sliding interface (TSI
 This chapter presents the analysis corresponding to the simulation of a simple shear test in the interest of validating the available soil parameters, its inelastic behaviour and, in the same time, calibrating the FEM model for future and more complicated analysis. The procedure works on a one-mesh element - this way, the material properties can be easily calibrated reducing the computational expenses. 
 
 \section{General}
-The new design philosophy will be studied numerically upon a model which consists in a homogeneous clay stratum and an elastic foundation.  A chimney structure located in the north of Netherlands serves as example, being represented by a rigid strip footing type of foundation connected to a lumped mass element by a rigid beam elements. It is desirable to introduce these elements as both rigid and elastic since the main interest channels on soil inelastic response. The underlying strata is associated with a saturated, homogeneous clay responding in an undrained manner, with varying undrained shear strength Su along its depth. The figure below briefly presents the structure introduced within the software ABAQUS - a finite element mesh based method that successfully offers complete solutions to sophisticated engineering problems regardless the application domain.
+The new design philosophy will be studied numerically upon a model which consists in a homogeneous clay stratum and an elastic foundation.  A chimney structure located in the north of Netherlands serves as example, being represented by a rigid strip footing type of foundation connected to a lumped mass element through a rigid beam element. It is desirable to declare these structural elements as both rigid behaving elastically since the main interest channels on soil inelastic response. The underlying strata is associated with a saturated, homogeneous clay responding in an undrained manner, with linearly increasing undrained shear strength Su along its depth. The figure below briefly presents the structure introduced within the software ABAQUS.
 
 \begin{figure}[h!]
 	\centering
@@ -364,7 +364,9 @@ The test helps obtaining results that further lead to the formulation of the nor
 \end{figure}
 
 \section{Normalized stiffness degradation and material damping curves}
-The current sub-chapter presents the concept of stiffness degradation together with material \mbox{damping}. As the yield stress within the soil experiences increase, phenomena also known as hardening, the elastic domain undergoes a certain evolution. This evolution can be related to the elastic modulus and shear modulus implicitly - most commonly using these standard curves ($G/G_{max}$ and damping). The site characterization plays an important role as it affects the ground motion parameters (such as Fourier spectra or response spectra). Figure \ref{scheme2} shows a schematization of the problem simplification: the soil requires the definition of two main characteristics for evaluating dynamic response. The estimation and measurement of the soil modulus reduction with respect to the shear strain has been long studied in geotechnical engineering, as it allows the prediction of the strain level which might lead to crucial modulus reduction together with the prediction of damping and the seismic response overall. 
+The current sub-chapter presents the concept of stiffness degradation together with material \mbox{damping}. As the soil experiences increase in yield stress, phenomena also known as hardening, the elastic domain undergoes a certain evolution. This evolution can be related to the elastic modulus and shear modulus implicitly - most commonly illustrated with these standard curves ($G/G_{max}$ and damping). The site parametrization plays an important role as it also influences the ground motion parameters (such as Fourier spectra or response spectra) - it becomes essential to evaluate and assign the soil reliable characteristics that capture the non-linear behaviour. Figure \ref{scheme2} shows a schematization of the problem that confirms the relevance of the two parameters: $G/G_{max}$ and $D_{min}$.
+
+The estimation and measurement of the soil modulus reduction with respect to the shear strain has been long studied in geotechnical engineering, as it allows the prediction of the strain level which might lead to crucial modulus reduction together with the prediction of damping and the seismic response overall. 
 
 \begin{figure}[h!]
 	\centering
@@ -372,18 +374,19 @@ The current sub-chapter presents the concept of stiffness degradation together w
 	\caption{Transformation of soil deposit into two parameters - schematization}
 	\label{scheme2}
 \end{figure}
-
+\newpage
 \subsection{${G/G_{max}}$ curves}
-Nonlinear response can be achieved through several types of tests, monotonic and cyclic, static and dynamic, each displaying stiffness modulus degradation influenced proportional with strain development. Generally, the shear stiffness of the soil is represented by the shear modulus, G - physically it represents the slope of the shear stress and strain when plotting them one against the other. On these specific plots it can be noticed that when a soil is subjected to symmetric cyclic loading, hysteresis loops develop depending on the strain level. The loops support the secant shear modulus calculation which can be considered as the average shear stiffness of the soil. Features such as inclination or breadth of the hysteresis loops strongly depend on both soil stiffness and damping. Given that the cyclic behaviour of the soil is nonlinear as well as hysteretic, it becomes clear that stiffness together with the damping are strain dependent. Therefore, a series of cyclic tests should be performed with varying strain levels such that the collection of results, in terms of stiffness, lead to the normalized modulus reduction curves.
+Nonlinear response can be achieved through several types of tests, monotonic and cyclic, static and dynamic, each displaying stiffness modulus degradation proportionally influenced by strain development. Generally, the shear stiffness of the soil is represented by the shear modulus, G - physically, it represents the slope of the shear stress and strain when plotting them one against the other. On these specific plots it can be noticed that when a soil is subjected to symmetric cyclic loading, hysteresis loops develop depending on the strain level. The loops support the secant shear modulus calculation which can be considered as the average shear stiffness of the soil. Features such as inclination or breadth of the hysteresis loops strongly depend on both soil stiffness and damping. Given that the cyclic behaviour of the soil is nonlinear as well as hysteretic, it becomes clear that stiffness together with the damping are strain dependent. Therefore, a series of cyclic tests should be performed with varying strain levels such that the collection of results, in terms of stiffness, lead to the normalized modulus reduction curves.
 
 One key parameter is the shear modulus at small strains, also known as \textit{small-strain shear modulus}, $G_{max}$ because it plays a significant role in the elaboration of the normalized modulus reduction curves. As the name itself describes it, $G_{max}$ serves the normalization of the cyclic tests stiffness outcome as being the maximum value the material can experience. 
 
-Damping ratio represents a material property related to the friction between soil grains, strain rate effects and inelastic stress-strain response. Each hysteresis loop describes the dissipation of energy during a loading cycle; the post-processing of data leads to the damping ratio as it depends both on the energy dissipated during a complete loading cycle at a given strain amplitude and maximum retained strain energy. The decrease in shear strain translates into decrease in dissipated energy, thus the area of the loop will suffer a reduction as well. 
+One other key parameter, damping ratio represents a material property related to the friction between soil grains, strain rate effects and inelastic stress-strain response. Each hysteresis loop describes the dissipation of energy during a loading cycle; the post-processing of data leads to the damping ratio as it depends both on the energy dissipated during a complete loading cycle at a given strain amplitude and maximum retained strain energy. Moreover, the decrease in shear strain translates into decrease in dissipated energy, thus the area of the loop will suffer a reduction as well. 
 
 Similarly, the damping ratio curves are defined collecting different nonlinear soil responses based on increasing strain amplitude. However, the trend is opposite, as in the nonlinearity of the soil results in an amplification of dissipated energy, thus in the damping ratio,  with increasing strain magnitude. 
+
 In small-strains domain, the soil behaves elastically leading to a constant shear modulus, equal to $G_{max}$, as well as a constant damping ratio, equal to $D_{min}$.
 
-The curves can be divided in three main areas with different behaviour properties defined by the following values:
+Figure \ref{normalized} shows a typical set of curves which can be divided in three main areas with different behaviour properties defined by the following values:
 \begin{enumerate}
 	\item \textbf{nonlinearity threshold} $\gamma_e^t$ or elastic threshold; represents the strain magnitude for which the shear modulus ratio $G/G_{max}>98\%$. The soil behaves elastically above the strain amplitude, deformations are producing but they are reversible during unloading process. The damping curve shows a correspondence with $D_{min}$. 
 	\item \textbf{cyclic threshold} $\gamma_e^t$ or plastic threshold; deformations become irreversible, shear modulus ratio $G/G_{max}$ decreases to approximately 80\% while damping ratio becomes 3\% higher than $D_{min}$. Beyond this point, the soil can experience volume change. 
@@ -397,11 +400,11 @@ The curves can be divided in three main areas with different behaviour propertie
 \end{figure}
 
 \subsection{Darendeli results}
-Many authors treated this subject of the degradation curves, the most acknowledged being Hardin \& Drnevich (1972), Vucetic \& Dobry (1991)\cite{dobry1988dynamic}, Ishibashi \& Zhang (1993) \cite{ishibashi1993unified} and Darendeli (2001)\cite{darendeli2001development}. The current thesis opts for the latter given its topicality, also for combining all the results obtained from previously mentioned authors and working on their limitations. In addition, it offers results associated with granular material which matches the Dutch soil used within the present model.
+Many authors treated this subject of the degradation curves, the most acknowledged being Hardin \& Drnevich, 1972, Vucetic \& Dobry, 1991\cite{dobry1988dynamic}, Ishibashi \& Zhang, 1993 \cite{ishibashi1993unified} and Darendeli, 2001\cite{darendeli2001development}. The current thesis opts for the latter given its topicality, also because it combines all the results obtained from previously mentioned authors working on their limitations. Additionally, it offers results associated with a granular material comparable with the Dutch soil used within the present model.
 %referinte
-M.Darendeli proposes a new empirical framework able to generate normalized modulus reduction and material damping curves. The author investigates the influence of several parameters (for instance soil plasticity or confining pressure) on the dynamic soil response using pre-existent data from University of Texas which has been collected over the past decades. The work of Darendeli is regarded as valuable because the results include the uncertainty in inelastic soil response within the probabilistic seismic hazard analysis.
+M.Darendeli proposes a new empirical framework able to generate normalized modulus reduction and material damping curves. The author investigates the influence of several parameters (for instance soil plasticity or confining pressure) on the dynamic soil response using pre-existent data from University of Texas which has been collected over the past decades. The work of Darendeli is regarded as valuable because the results of the probabilistic seismic hazard analysis include the uncertainty in inelastic soil response.
  
-As other many authors, Darendeli was inspired by the work of Hardin and Drnevich (1972)\cite{hardin1972shear} that represented a step forward in evaluating the dynamic soil behaviour. His study focuses initially on finding strengths and weaknesses in other studies in order to counteract them in his following experiments. The first observation highlights a feature common to all the previous generic curves: the confining pressure takes a relatively "fixed" value of approximately 1 atm and the curves do not incorporate the effect of the confining pressure on the inelastic soil behaviour. Ishibashi and Zhang (1993) \cite{ishibashi1993unified} consider soil plasticity and confining pressure but lead to unrealistic values at pressure higher than 10 atm. Darendeli proposes a four-parameter soil model which will account for the effects of the soil type, confining pressure, loading frequency and number of cycles in generating the normalized stiffness degradation and material damping curves. In addition, Table \ref{table} presents in detail other factors that might influence the inelastic soil behaviour according to Darendeli study.
+As other many authors, Darendeli was inspired by the work of Hardin and Drnevich, 1972\cite{hardin1972shear} that represented a step forward in evaluating the dynamic soil behaviour. His study focuses initially on finding strengths and weaknesses in other studies in order to counteract them in his following experiments. The first observation highlights a feature common to all the previous generic curves: the confining pressure takes a relatively "fixed" value of approximately 1 atm and the curves do not incorporate the effect of the confining pressure on the inelastic soil behaviour. Ishibashi and Zhang, 1993 \cite{ishibashi1993unified} consider soil plasticity and confining pressure but lead to unrealistic values at pressure higher than 10 atm. Darendeli proposes a four-parameter soil model which will account for the effects of the soil type, confining pressure, loading frequency and number of cycles in generating the normalized stiffness degradation and material damping curves. In addition, Table \ref{Darendeli_param} presents in detail other factors that might influence the inelastic soil behaviour according to Darendeli study.
 
 \begin{table}[h!]
 \centering
@@ -421,7 +424,7 @@ As other many authors, Darendeli was inspired by the work of Hardin and Drnevich
 ** Important\
 * Less important\
 ++ Soil dependent\
-\caption{Parameters that control nonlinear soil behaviour and their relative importance on the curves according to Darendeli}
+\caption{Parameters that control nonlinear soil behaviour and their relative importance on the curves according to Darendeli, 2001 \cite{darendeli2001development}}
 \label{Darendeli_param}
 \end{table}
 
@@ -435,14 +438,13 @@ The equation of the material damping curve is then expressed as a function of tw
 	D=b(\frac{G}{G_{max}})^{0.1}*D_{masing}+D_{min}
 \end{equation}
 
-A more detail description of Darendeli's material model can be found in \textbf{Appendix}.
+A more detail description of Darendeli's material model can be found in Appendix \ref{App:AppendixC}.
 
-
-The current study works with the recommended reduction curves presented by Darendeli within his PhD thesis \cite{darendeli2001development}. The collection of data used by the author for investigation display a good match with the parameters of the ongoing study. A selection of matching data was extracted from Darendeli's work - tables containing values for the normalized modulus reduction and damping curves; data corresponds to a soil with a plasticity index of PI=25\% and a confining pressure of 1 atmosphere which also matches current conditions. \textbf{Appendix 3} shows the values used for comparison and validation of the present analysis.
+The current study works with the recommended reduction curves presented by Darendeli within his PhD thesis \cite{darendeli2001development}. The collection of data used by the author for investigation display a good match with the parameters of the ongoing study. A selection of matching data was extracted from Darendeli's work - tables containing values for the normalized modulus reduction and damping curves; data corresponds to a soil with a plasticity index of PI=25\% and a confining pressure of 1 atmosphere which also matches current conditions and can be seen in Appendix \ref{App:AppendixC}.
 
 \section{Modelling}
 
-The analysis starts with the assumption of one element - for the ease of material calibration - homogeneous 3D solid. The model simulates a strain-controlled simple shear test, the parameters correspond to a sample taken within the homogeneous clay layer previously described located at 10m below surface. A single parameter set suffices given the dimensions of the sample: 1m each side; The bottom nodes are behaving independently, being fixed at all times during the analysis whilst the top nodes are connected through an MPC (multi-point connector) - a feature available within the software that links the top nodes to a master node (centre point). All load and boundary conditions are applied to the master node solely which transmits them further to the slave nodes guaranteeing equal displacements. The master node is assigned with its own system of coordinates which corresponds to the whole model system.
+The analysis starts with the assumption of one element - for the ease of material calibration - homogeneous 3D solid. The model simulates a strain-controlled simple shear test, the parameters correspond to a sample taken within the homogeneous clay layer previously described located at 10m below surface. A single parameter set suffices given the dimensions of the sample: 1m each side; The bottom nodes are created such way to create a rigid base at all times during the analysis whilst the top nodes are connected through an MPC (multi-point connector) - a feature available within the software that enforces a master-slave formulation linking the top nodes to the master node assigned with a reference point. All load and boundary conditions are applied to the master node solely which transmits them further to the slave nodes guaranteeing equal displacements. The master node is assigned with its own system of coordinates which corresponds to the whole model system.
 
 \begin{figure}[h!]
 	\centering
@@ -452,10 +454,9 @@ The analysis starts with the assumption of one element - for the ease of materia
 \end{figure}
 
 \subsection{Steps}
-\paragraph{First step}
 This sub-chapter presents the steps taken within this calculation including the boundary and the loads conditions as well as a short description of the testing procedure. The main idea behind this analysis is first to confine the sample to mimic the natural conditions in terms of stress path. Secondly, the shearing stage consists in controlling and varying the applied strain in order to obtain the nonlinear response. More details about the process are presents below. 
-
-The first step – \textbf{confinement }- assumes the application of the confining pressure at the (top) reference point. The overburden stress is calculated as a function of the unit weight of the soil and the depth at which the sample is considered to be. Considering the total stress analysis, the pore water pressure is also accounted for within the value. Considering the sample located 10m below the surface and performing the corresponding calculations, it yields a confining pressure F=100kpa. Equilibrium is taken into account since a total stress analysis is performed – no attention should be pointed at the development of excess pore pressure nor drainage. The illustration below represents the directions with the associated boundary conditions for the top master slave; it turns out that only the vertical translation is permitted whilst all other displacements are restricted. Subsequently, the overburden pressure is applied on the same vertical direction. In addition, the sample has all the bottom nodes restricted for both translation and rotation. 
+\paragraph{First step}
+\textbf{confinement }- assumes the application of the confining pressure at the (top) reference point. The overburden stress is calculated as a function of the unit weight of the soil and the depth corresponding to the sample position. Given the total stress analysis, the pore water pressure is also accounted for within the value; so, for a sample located around 10m below the surface, it yields a confining pressure F=100kpa. As cause of total stress analysis, equilibrium is taken into account – no attention should be pointed at the development of excess pore pressure nor drainage. The illustration below corresponds to the boundary conditions applied at reference point; it turns out that only the vertical translation is permitted whilst all other displacements are restricted. Subsequently, the total overburden pressure is applied on the same vertical direction. In addition, the sample has all the bottom nodes restricted for both translation and rotation. 
 
 \begin{figure}[h!]
 	\centering
@@ -464,9 +465,9 @@ The first step – \textbf{confinement }- assumes the application of the confini
 	\label{bc1}
 \end{figure}
 
-The step is defined as static, general - the analysis can account for both linear and nonlinear response. It ignores the time-dependent material effects such as creep or swelling, but accounts for rate-dependent plasticity or hysteretic behaviour. In a general static analysis the code is iteratively solving [Kt]{du}= {dF}, where [Kt] is the tangent stiffness matrix, {du} is the vector of unknown nodal displacements, and {dF} is the incremental load vector. Each step starts with the end conditions of the previous one, with the state of the model evolving throughout the history of general analysis steps as it responds to the history of loading. The step is associated with a direct linear equation solver - a useful tool in both linear and nonlinear analysis - the solver finds the exact solution to the system of linear equations using a direct Gauss elimination method. 
+The step is defined as static, general - the analysis can account for both linear and nonlinear response. It ignores the time-dependent material effects such as creep or swelling, but accounts for rate-dependent plasticity or hysteretic behaviour. In a general static analysis the code is iteratively solving $[K_t]{du}= {dF}$, where $[K_t]$ is the tangent stiffness matrix, ${du}$ is the vector of unknown nodal displacements, and ${dF}$ is the incremental load vector. Each step starts with the end conditions of the previous one, with the state of the model evolving throughout the history of general analysis steps as it responds to the history of loading. The step is associated with a direct linear equation solver - a useful tool in both linear and nonlinear analysis - the solver finds the exact solution to the system of linear equations using a direct Gauss elimination method. 
 \paragraph{Second step}
-The second step – shearing – propagates most of the existing boundary conditions, deactivating the restriction of top master node translation on x direction. In addition, on the same direction, a new boundary condition is created specific for the strain-controlled shear test. The principle of the simple shear test is to induce direct shear within the sample and it represents a direct method of determining the shear modulus of the soil; hence the usefulness of the current application.
+ – \textbf{shearing} – propagates most of the existing boundary conditions, deactivating the restriction of top master node translation on x direction. In addition, on the same direction, a new boundary condition is created specific for the strain-controlled shear test. The principle of the simple shear test is to induce direct shear within the sample and it represents a direct method of determining the shear modulus of the soil; hence the usefulness of the current application.
 
 \begin{figure}[h!]
 	\centering
@@ -475,9 +476,9 @@ The second step – shearing – propagates most of the existing boundary condit
 	\label{deformed}
 \end{figure}
 
-The boundary condition which permits translation on x direction is assigned with an amplitude feature. Strictly speaking, the cyclic tests should be performed with irregular amplitudes in order to accurately simulate the earthquake action; however, given the difficulties in performing such irregular tests, the simple shear test was always simplified to an uniform amplitude test. 
+The boundary condition permitting translation on X direction gets assigned with an amplitude feature. Strictly speaking, the cyclic tests should be performed with irregular amplitudes in order to accurately simulate the earthquake action; however, given the difficulties in performing such irregular tests, the simple shear test was always simplified to an uniform amplitude test. 
 
-\label{Figure 16} displays the uniform amplitude defined in current analysis - it can be regarded as a "template" for further analyses. The introduced plot is multiplied by each value assigned to the displacement boundary ($u_x$) leading to different soil responses. The value of the applied cyclic strain varies capturing the transition between small strain and large strain domain as well (1\% -  1E-4\%). Several jobs are performed with different strain values until fully elastic behaviour is attained. Each job results in a different response where the main emphasis goes on the shear strain-stress plot that describes hysteretic loops. Based on these loops, the most important parameters for degradation of the stiffness curves are determined, as well as the damping ratio.
+Figure \label{Figure 16} displays the uniform amplitude defined in current analysis - it can be regarded as a "template" for further analyses. Abaqus combines the amplitude history with the prescribed displacement, $u_x$, through a multiplication and so, the cyclic strain input is created. The magnitude of the cyclic strain varies capturing the transition between small strain and large strain domain as well ($1\% -  1E^{-4}\%$). Several analytical jobs are performed with different strain values until fully elastic behaviour is attained. Each job results in a different response where the main emphasis goes on the shear strain-stress plot that describes hysteretic loops. Based on these loops, the most important parameters for degradation of the stiffness curves are determined, as well as the damping ratio.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"bc1d2"}
@@ -486,7 +487,7 @@ The boundary condition which permits translation on x direction is assigned with
 \end{figure}
 
 Abaqus offers several methods for performing dynamic analysis of problems in which inertia effects are considered. Direct integration of the system must be used when nonlinear dynamic response is being studied. The step is defined as a dynamic one; general linear or nonlinear dynamic analysis in Abaqus/Standard uses implicit time integration to calculate the transient dynamic response of a system. Nonlinearities are usually more simply accounted for in dynamic situations than in static situations because the inertia terms provide mathematical stability to the system; thus, the method is successful in all but the most extreme cases. An automatic incrementation scheme is provided for use with the general implicit dynamic integration method. The scheme uses a half-step residual control to ensure an accurate dynamic solution. The half-step residual is the equilibrium residual error (out-of-balance forces) halfway through a time increment; for a continuum solution the equilibrium residual should be moderately small compared to significant forces in the problem.
-
+Direct implicit algorithm shall be stipulated further on in the following chapters as well as in Appendix \ref{App:AppendixH} and Appendix \ref{App:AppendixI}.
 \newpage
 \section{Material description}
 For the current situation, Abaqus requires the definition of several behaviour components such as: density, elastic, plastic, damping and, eventually, a subroutine which introduces the distribution of the ultimate shear strength along the depth and the correlation between the stiffness and the strength parameters ($E$ and $S_u$).
@@ -495,11 +496,11 @@ For the current situation, Abaqus requires the definition of several behaviour c
 As mentioned before, the analysis considers several parameters that are characteristic to the soil in Groningen area – a silty clay, weak to medium weak. In addition, a homogeneous clay layer of 20m is considered – for the ease of the calculation, the soil is converted in a one-layered soil column such that the strength and stiffness parameter distribution  along the depth is linear. This chapter presents parameters derived from both measurements and empirical equations, the analysis of one element subjected to a strain-controlled shear test and the results in terms of stiffness degradation and damping. The more detailed equations and methods of obtaining the parameters can be found in Appendix \ref{App:AppendixF}.	
 
 \paragraph{\underline{Stresses}}
-Total vertical stress represents the starting value for the evaluation of the stresses in each soil segment; assuming vertical equilibrium and neglecting the surcharge, the vertical stresses can be determined. In addition, the shear stresses on the vertical planes are assumed zero hence, no stress transformation is needed.
+Total vertical stress represents the starting value for the evaluation of the stresses in each soil segment; assuming vertical equilibrium and neglecting the surcharge, the vertical stresses can be determined. Moreover, the shear stresses on the vertical planes are assumed zero hence, no stress transformation is needed.
 
 Conform Terzaghi's principle, total stress comprises the \textit{effective stress} - which acts on the contact surfaces between the soil grains - and the \textit{pore pressure} - which is considered isotropic and it is in the form of water and air. Due to the isotropic character of the water, the shear stresses are transmitted to and through the skeleton grains exclusively. The case of pure shear suggests change in shape at constant volume and deformations of the granular material are determined by change in effective stresses. That is the reason why the initial parameters are expressed as functions of effective stresses. The equations leading to the definition of the stress state are described in Appendix \ref{App:AppendixD}.
 
-The current analysis case deals with undrained conditions within a total stress analysis; for a foundation slab subjected to permanent load, pore pressure will initially develop decreasing the effective stresses and, since water drainage does not occur immediately, the soil underneath will behave in an undrained fashion.  Subsequently, consolidation occurs with dissipation of the excess pore pressure - from this moment onward the foundation is gaining more stability as it passed the critical situation. Moreover, during earthquake, due to the dynamic loading, the undrained behaviour is displayed; hence, the calculation will take this assumption into consideration. 
+Now, considering a foundation slab subjected to permanent load, the pore pressure will initially develop decreasing the effective stresses and, since water drainage does not occur immediately, the soil underneath will behave in an undrained fashion. Subsequently, consolidation occurs with dissipation of the excess pore pressure - from this moment onward the foundation is gaining more stability as it passed the critical situation. Moreover, during earthquake, due to the dynamic loading, the undrained behaviour is displayed; these facts emphasize the choice of undrained conditions as being appropriate. 
 
 Given the supposition of no volume changes specific to the undrained conditions, the isotropic effective stresses remain constant which means that the mean effective stress remains constant as well:
 \begin{equation}
@@ -507,9 +508,9 @@ Given the supposition of no volume changes specific to the undrained conditions,
 \end{equation}
 
 \paragraph{\underline{Undrained shear strength}}
-The value of the undrained shear strength can be determined with the use of multiple parameters as well as methods. \ref{App:AppendixE} shows a collection of methods applied for obtaining the undrained shear strength of the soil based on both empirical and measurements data and the plot containing all the values can be seen in Figure22\%. In order to summarize the features in the calculations, the undrained shear strength can be a function of plasticity index (PI), stress history within the soil (more importantly the effective  vertical stress), pore pressure, mode of testing et cetera.
+The value of the undrained shear strength can be determined with the use of multiple parameters as well as methods. Appendix \ref{App:AppendixE} shows a collection of techniques for obtaining the undrained shear strength of the soil based on both empirical and measurements data and the plot containing all the values can be seen in Figure \ref{Su}. In order to summarize the features in the calculations, the undrained shear strength can be a function of plasticity index (PI), stress history within the soil (more importantly the effective  vertical stress), pore pressure, mode of testing et cetera.
 %referinta
-One important method to mention is represented by the study of Den Haan (2011) \cite{den2011ongedraineerde} as he treats the current situation (of Groningen soils) in his article "Ongedraineerde sterkte van slappe Nederlandse grond" developing new equations for obtaining undrained shear strength of clayey soils. Crux Engineering develops a Plaxis model to validate the equation leading to a set of formulae as a function of the normalized stress given in Table 1.
+One important method to mention is represented by the study of Den Haan,2011 \cite{den2011ongedraineerde} as he treats the current situation (of Groningen soils) in his article "Ongedraineerde sterkte van slappe Nederlandse grond" developing new equations for obtaining undrained shear strength of clayey soils. Crux Engineering develops a Plaxis model to validate the equation leading to a set of formulae as a function of the normalized stress given in Table 1.
 
 For the current situation, considering the normalized shear stress to be 40kPa as characteristic, the undrained shear strength equation becomes:
 \begin{equation}
@@ -528,7 +529,7 @@ For the current situation, considering the normalized shear stress to be 40kPa a
 		\hline
 	\end{tabular}
 
-	\caption{Undrained shear strength equations according to Den Haan}
+	\caption{Undrained shear strength equations according to Den Haan, 2011 \cite{den2011ongedraineerde}}
 	\label{DenHaan_param}
 \end{table}
 
@@ -542,10 +543,10 @@ The graph shows the agreement between all the methods aforementioned; the decisi
 \end{figure}
 
 \paragraph{\underline{Stiffness}}
-Stiffness plays an important role in dynamic analysis hence the correct determination becomes significant for evaluating the non-linear soil response. This sub-chapter presents two different methods of calculating the shear modulus - empirical and based on measurements - this way one can compare and validate the results.
+Stiffness plays an important role in dynamic analysis, hence the correct estimation becomes significant for evaluating the non-linear soil response. This sub-chapter presents two different methods of calculating the shear modulus - \textit{empirical} and based on \textit{measurements} - this way one can compare and validate the results.
 
 \subparagraph{Shear modulus determined empirically}
-For the empirical determination of the stiffness $G_{max}$, a simple equation was used based on studies performed by Hardin and Black (1968) \cite{hardin1972shear}. The expression contains a void-ratio function together with a confining-stress function and it was developed mainly based on laboratory test results. The first function accounts for the plasticity index as well as the void ratio as an alternative to the overconsolidation ratio whilst the later considers the stresses developed within the soil. The equation described by the two authors can be written as:
+For the empirical determination of the stiffness $G_{max}$, a simple equation was used based on studies performed by Hardin and Black, 1968 \cite{hardin1972shear}. The expression contains a void-ratio function together with a confining-stress function and it was developed mainly based on laboratory test results. The first function accounts for the plasticity index as well as the void ratio as an alternative to the overconsolidation ratio whilst the later considers the stresses developed within the soil. The equation described by the two authors can be written as:
 \begin{equation}
 	G_{max}=C \frac{(2.973-e)^2}{1+e}OCR^K(p^`)^{0.5}
 \end{equation}
@@ -560,8 +561,9 @@ Thirty years later, after several refinements of the previous equation, Shibuya 
 \begin{equation}
 \frac{G_{max}}{p^`_r}=\frac{B}{(1+e)^{2.4}}(\frac{p^`}{p^`_r})^{0.5}
 \end{equation}
-where $p^`_r$ - is the reference pressure, considered 1kPa; $e$ - void ratio,$p^`$- mean effective stress, factor $B$ for soft clays ranged between [18000 - 30000 ] with an average of 24000, as it is proved in Shibuya et al (1997) study.
-Current soil investigation and laboratory tests aimed to determine several specific values, among them the void ratio; for a silty clay, medium weak, the results yield values between $e=0.8-0.9$, while the plasticity index was proved to have values Ip=25\%-30\%. Given the fact that the reference pressure is 1kPa the ratio $p^`/p^`_r$ turns into the value of the mean effective stress; this is calculated based on the equations described previously and varies along the depth. Therefore, performing the calculation with the corresponding parameters, it results the equation for the $G_max$ as it is shown:
+where $p^`_r$ - is the reference pressure, considered 1kPa; $e$ - void ratio,$p^`$- mean effective stress, factor $B$ for soft clays ranged between [18000 - 30000 ] with an average of 24000, as it is proved in Shibuya et al, 1997 study.
+
+Current soil investigation and laboratory tests aimed to determine several specific values, among them the void ratio; for a silty clay, medium weak, the results yield values between $e=0.8-0.9$, while the plasticity index Ip=25\%-30\%. Given the fact that the reference pressure is 1kPa the ratio $p^`/p^`_r$ is equivalent to the value of the mean effective stress; this is determined based on the equations formerly described and varies along the depth. Therefore, performing the calculation with the corresponding parameters, it results the equation for the $G_{max}$ as it is shown:
 \begin{equation}
 	G_{max}=[5400-5800](\sigma^`_0)^{0.5}
 \end{equation}
@@ -573,9 +575,9 @@ On the other hand, the measurements give soil features in terms of shear wave ve
 \end{equation}
 
 where
-$G_o$ – shear modulus (calculated previously) [kPa]
-$\rho$ – the solid density [kg/m3]
-$V_{s,30}$ is calculated as the time for a shear wave to travel from a depth of 30 m to the ground surface, not the arithmetic average of $V_s$ to a depth of 30 m. There are various classification based on the soil type, one presented below corresponding to the normative Eurocode EN1998-1-1:cl3.1.2 representing the ground types and the specific shear wave velocities:  
+$G_o$ – shear modulus [kPa]
+$\rho$ – the solid density [kg/m3]. 
+$V_{s,30}$ is calculated as the time for a shear wave to travel from a depth of 30 m to the ground surface, and not as the arithmetic average of $V_s$ to a depth of 30 m. There are various classification based on the soil type, one presented below corresponding to the normative Eurocode EN1998-1-1:cl3.1.2 including the ground types and the specific shear wave velocities:  
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"EC8"}
@@ -583,14 +585,14 @@ $V_{s,30}$ is calculated as the time for a shear wave to travel from a depth of 
 	\label{EC8}
 \end{figure}
 
-The current case deals with soft soil, henceforth the Vs,30 is considered to be 180m/s –the real values determined from CPT tests and processed using Robertson’s method seem to match to table previously presented. Appendix \ref{App:AppendixA} shows the measurements in terms of CPT results as well as Vs,30. 
+The current case deals with soft soil, henceforth the Vs,30 is assumed 180m/s –the real values determined from CPT tests and processed using Robertson’s method seem to match the table previously presented. Appendix \ref{App:AppendixA} shows an example of cone penetration test (CPT) results as well as a Vs,30 distribution along the soil layer measured at the specific site. 
 
 The $G_0$ is further derived from Vs as previously explained. The elastic moduli is related to the shear modulus through the Poisson ratio:
 \begin{equation}
 	E^`=2G(1+\nu^`)
 \end{equation}
 
-The current analysis requires strength and stiffness parameters with respect to undrained total stress analysis, therefore the formula described above will be transformed accordingly: 
+The current analysis requires strength and stiffness parameters corresponding to undrained total stress analysis, therefore the formula described above will be converted accordingly: 
 \begin{equation}
 	E_u=\frac{3E^`}{3-(1-2\nu^`)}
 \end{equation}
@@ -609,7 +611,7 @@ The Poisson ratio for silty-clay in drained/effective analysis was considered $\
 	\frac{E_u}{2(1+\nu_u)}=\frac{E^`}{2(1+\nu^`); E_u=\frac{3E^`}{2(1+\nu^`)}}
 \end{equation}
 
-In addition, from empirical correlation (Hardin and Richart 1963 \cite{hardin1963elastic}; Robertson and Campanella 1983 \cite{robertson1983interpretation}; Seed et al 1986 \cite{seed1986use}; Mayne and Rix, 1993 \cite{mayne2014interpretation}) the elastic moduli can also be expressed as a function of the overburden stress $\sigma_y$.
+Anastasopoulos et al, 2011 \cite{anastasopoulos2011simplified} use an empirical formulae (based on e.g., Hardin and Richart, 1963 \cite{hardin1963elastic}; Robertson and Campanella, 1983 \cite{robertson1983interpretation}; Seed et al. 1986 \cite{seed1986use}; Mayne and Rix 1993) for calculating the value of the small-strain Young's modulus as a function of the total overburden stress $\sigma_y$. $C=a{\sigma }_{y}$ with a ranging from 150 to 10.000 (for clays). 
 \begin{equation}
 	C=a\sigma_y
 \end{equation} 
@@ -619,7 +621,7 @@ where $C$ - initial hardening Young's modulus and $\sigma_y$ corresponds to von 
 	E=a*S_u;   a=[300-1800]
 \end{equation}
 
-Appendix \ref{App:AppendixD} presents both the tables containing the input parameters - from in-situ measurements and empirically determined. Nonetheless, differences appear due to several causes and assumptions taken into account but also because of the calculation methods. Few of the sources of dissimilarity are presented below:
+Appendix \ref{App:AppendixD} presents both the tables containing the input parameters - from in-situ measurements and empirically determined. Nonetheless, differences appear due to several causes and assumptions but also because of the calculation methods. Few of the sources of dissimilarity are presented below:
 \begin{enumerate}
 	\item measurements data presents a heterogeneous soil stratification consisting in silty clay at the upper part of the layer and potklei in the lower one whilst the empirical data accounts for a completely homogeneous layer.
 	\item he measurement related properties do not vary linearly along the depth in reality as it can be seen in figure \ref{youngss} while empirical equations lead to a linearity between parameters; for instance, empirically determined stiffness $G_0$ is calculated combining the factor and the mean effective stress - which varies linearly with depth - thus the stiffness will result in a linearly distribution as well. Measurements do not display the same fashion given the Vs variation with depth.
@@ -627,8 +629,8 @@ Appendix \ref{App:AppendixD} presents both the tables containing the input param
 	\item the shear wave velocity Vs represents only an approximate of the entire region. Different results can be obtained in the vicinity of the actual measurements. However, its measurements offers a powerful tool for establishing the soil stiffness properties. 
 \end{enumerate}
 
-Such dissimilarities are clearly expected, the main interest in this situation pointing the correspondence between values; it was opted to continue the calculations using the empirical values for various reasons; one of them being represented by the future analysis, site response analysis, in combination with the software requirements - the model definition in Abaqus for a multi-layered material entails a subroutine that relates different parameters. For the current application, the connection between the parameters introduced within the subroutine refers to the correspondence between the Young's modulus and the undrained shear strength. This subject will be explained in more detail in the next chapter within the material definition part. 
-\begin{figure}
+Such dissimilarities are clearly expected, the main interest in this situation pointing the \mbox{correspondence} between values; it was opted to continue the calculations using the empirical values for various reasons; one of them being represented by the future analysis, site response analysis, in combination with the software requirements - the model definition in Abaqus for a multi-layered material entails a subroutine that relates different parameters. For the current application, the connection between the parameters introduced within the subroutine refers to the correspondence between the Young's modulus and the undrained shear strength. This subject will be explained in more detail in the next chapter within the material definition part. 
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"youngss1"}
 	\caption{Young's modulus - Comparison between empirical and measurement data}
@@ -670,23 +672,23 @@ The yield stress at zero plastic strain $\sigma_0$ controls the initiation of in
 	\sigma_0=\frac{G_{max}}{\gamma_{el}}
 \end{equation}
 
-The shear modulus was derived previously from the Vs values measured by CPT, as well as all other stiffness parameters. The elastic limit strain represents the point in which the plasticity is triggered - here was taken into calculation as 10-4. Hence all the kinematic parameters are further obtained based on this value and it can be seen in Appendix \ref{App:AppendixF}.
+The shear modulus was derived previously from the Vs values measured by CPT, as well as all other stiffness parameters. The elastic limit strain represents the point in which the plasticity is triggered - here was taken into calculation as $10^{-4}$. Hence all the kinematic parameters are further obtained based on this value and it can be seen in Appendix \ref{App:AppendixF}.
 
 \newpage
 \section{Results}
 \subsection{General}
 The connection between the stress-strain plot and modulus reduction curves is straightforward for two-way cyclic loading (complete stress cycle). The set-up of the normalized stiffness degradation curve allows the prediction of stress-strain path of the soil subjected to monotonic loading. 
-The analysis starts by creating several jobs in which the strain amplitude varied its values between $\gamma=0.1\%-10-5\%$. From each analysis the stress-strain paths are extracted and plotted leading to different curves also known as hysteresis loops. The secant shear modulus is further calculated as:
+The analysis starts by creating several jobs in which the strain amplitude varied its values between $\gamma=0.1\%-10^{-5}\%$. From each analysis the stress-strain paths are extracted and plotted leading to different curves also known as hysteresis loops. The secant shear modulus is further calculated as:
 \begin{equation}
 	G=\frac{\tau}{\gamma}
 \end{equation}
 
 All the shear modulus values are then collected within a table which will serve for the construction of the normalized modulus degradation curve. The small-strain shear modulus Gmax can be determined based on elastic Young's modulus, $E_0$, and it serves for the normalization of the obtain shear moduli. 
 \begin{equation}
-	G_0=\frac{E_0}{2(1+\nu)}
+	G_{max} = G_0=\frac{E_0}{2(1+\nu)}
 \end{equation}
 
-An example of the applied amplitude can be observed in Figure \ref{cyclic}. The current model includes a maximum amplitude of $A_{max} = 1$, a period $T=0.3s$ and a period shift of zero seconds. Each set of calculation will apply the shear strain value to this signal leading to the cyclic effect.
+An example of the applied amplitude can be observed in Figure \ref{cyclic}. The current model includes a maximum amplitude of $A_{max} = 1$, a period $T=0.3s$ and a period shift of zero seconds. Each set of calculation will apply the shear strain value to this harmonic signal leading to the cyclic effect.
 
 \begin{figure}[h!]
 	\centering
@@ -695,13 +697,13 @@ An example of the applied amplitude can be observed in Figure \ref{cyclic}. The 
 	\label{cyclic}.
 \end{figure}
 
-Such inelastic response proves to be not that sensitive to the frequency of the signal but to the maximum recorded amplitude as Gazetas, 2004 shows in his study of foundation rocking and uplifting. Indeed, models showed that the same cyclic response is obtained when varying the amplitude frequency. 
+Such inelastic response proves to be not that sensitive to the frequency of the signal but to the maximum recorded amplitude as Gazetas, 2004 \cite{gazetas2004seismic} shows in his study of foundation rocking and uplifting. Indeed, models showed that the same cyclic response is obtained when varying the amplitude frequency. 
 %reference
 The degradation curve is then composed by the normalization of the secant stiffness displayed by each analysis, $G$, with the maximum shear stiffness value corresponding to the sample, $G_{max}$. Meanwhile, the damping ratio is expressed as the ratio between the dissipated energy and stored strain energy in one complete and stable cycle of motion. Based on Figure \ref{loop}, the dissipated energy $A_L$ is described by the area inside the loop and it is calculated using the integral of the stress-strain curve as it follows:
 \begin{equation}
 	A_L=\int\tau d\gamma
 \end{equation}
-while the stored strain energy AT is expressed as:
+while the stored strain energy $A_T$ is expressed as:
 \begin{equation}
 	A_T=\frac{\tau \gamma}{2}
 \end{equation}
@@ -713,8 +715,9 @@ while the stored strain energy AT is expressed as:
 	\label{loop}.
 \end{figure}
 
+\newpage
 \subsection{Parameters that influence the soil response}
-Another investigated aspect was the influence of the sample location within the layer on the inelastic response. Various analyses were performed with values correlated with different soil depth. The table below shows the data used for calculation and the variation in parameters followed by a plot that helps visualizing the results. 
+The influence of the sample location within the layer on the inelastic response was investigated. Each analysis consisted in a different set of input parameters yielding the elasto-plastic response for different positions. The table below shows the data used for calculation and the variation in parameters followed by a plot that helps visualizing the results. 
 
 \begin{table}[h!]
 	\centering
@@ -739,7 +742,7 @@ Another investigated aspect was the influence of the sample location within the 
 	\label{loops2}.
 \end{figure}
 
-The figure displays the difference in response for three location of the sample; nonetheless, the stiffness plays an important part as well as the undrained shear strength. The three loops correspond to different stress levels, thus different amounts of dissipated energy. Important to mention that the maximum shear stress associated to each loop matches the undrained shear strength ($\tau_{max} =S_u$), this way validating the undrained conditions and the analysis itself.
+Figure \ref{loops2} displays the difference in response for three locations of the sample; nonetheless, the stiffness plays an important part as well as the undrained shear strength. The three loops correspond to different stress levels, thus different amounts of dissipated energy. Important to mention that the maximum shear stress associated to each loop matches the undrained shear strength ($\tau_{max} =S_u$), validating the undrained conditions and the analysis itself. The breadth of the loops expands with the energy dissipated whilst the inclination tends towards the vertical axis as the level reaches the soil base because the shear strength increases as well. 
 
 The parametric study continued with the variation of the prescribed displacement or the shear strain at which the plastic response is triggered. Darendeli results display the plasticity being activated at a strain level of $10^{-5}\%$; the current analysis shows a better agreement when using a prescribed displacement of $10^{-4}\%$ than the lower one. This decides that the calculation should continue with the aforementioned value in order to get comparable results with Darendeli ones.
 
@@ -755,32 +758,37 @@ The comparison shows a relatively good agreement between the current results and
 
 The damping ratio might seem not to follow the exact same shape as Darendeli; important to mention that the current case ignores several features which the author included within his calculation. First, there is no additional damping introduced in the analysis; Rayleigh damping parameters were not comprised but they will in the future calculation. This explains the zero damping values once the elastic domain is active - meanwhile Darendeli results still show damping at that strain level. Moreover, Darendeli assumes that damping for any given strain level is a function of the curvature coefficient - which is also neglected in the current analysis. Also, Darendeli scales the results with several coefficients (such as curvature coefficient, scaling coefficient) together with the $D_{min}$ in order to get a better match between experimental data and empirically obtained results. 
 
-Additionally, studies (Pisan\`{o} et al, 2014 \cite{pisano2014simulating}) investigated a comparable simulation on a viscous-elastic-plastic model on a Drucker-Prager material model and obtained similar trends in the damping curves when only frictional components were assumed. Which hints that the obtained output might not necessarily be incorrect, possible numerical errors or conditions have an impact and flaws can occur materialize. 
+Additionally, studies (Pisan\`{o} et al, 2014 \cite{papadrakakiscomparison}) investigated a comparable simulation on a elastic-plastic model on two Drucker-Prager material models (including kinematic hardening) and obtained similar trends in the damping curves as it can be seen Figure \ref{pisano}. Which hints that the obtained output might not necessarily be incorrect, possible numerical errors or conditions have an impact and flaws can occur materialize. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9 \linewidth]{pisano}
+	\caption{Comparison of a Drucker-Prager kinematic hardening bounding surface model (DPbs) with vanishing elastic region with Darendeli at $p_0=1 atm$}
+	\label{pisano}
+\end{figure}
 
 Given these, it can be concluded that the current results match to a certain extent Darendeli's curves and that a good calibration of the one element shear test was obtained.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.75\linewidth]{"ggmax2"}
+\begin{figure}[!h]
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+	\includegraphics[width=\textwidth]{ggmax2}
 	\caption{Normalized stiffness degradation curves comparison}
-	\label{ggmax2}.
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"dampiing"}
+	\label{ggmax2}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.45\textwidth}
+	\includegraphics[width=\textwidth]{dampiing}
 	\caption{Damping ratio comparison}
-	\label{damping}.
+	\label{damping}
+\end{minipage}
 \end{figure}
 
 
 \newpage
 \section{Conclusions}
-A strain-controlled numerical test was performed on a simple element assigned with properties of different clay samples located across the depth of a homogeneous layer. The aim of the study strived to generate normalized stiffness degradation and material damping curves similar to the ones provided by Darendeli's, 2001 \cite{darendeli2001development}. They represent a reference standard in this domain, based on a 4-parameters mathematical model that describes the behaviour of a soil specimen when subjected to shear cyclic loading. It is suitable for dynamic problems, that assist shear wave propagation - which is also the current case. 
+A strain-controlled numerical test was performed on a simple element assigned with properties of different clay samples located across the depth of a homogeneous layer. The aim of the study strived to generate normalized stiffness degradation and material damping curves similar to the ones provided by Darendeli's, 2001 \cite{darendeli2001development}. They represent a reference standard in this domain, based on a 4-parameters mathematical model that describes the behaviour of a soil specimen when subjected to shear cyclic loading. It is suitable for dynamic problems that assist shear wave propagation - which is also the current case.
 
-The present study assemblies the soft soil conditions and a recorded acceleration time history from the specific site, applies various numerical methods to achieve same output and proceeds with a comparison between the analyses. It acknowledges, in the same time, the differences and limitations occurring amid. 
-
-The overall results show a fair match when comparing the two software, but also when accounting for external sources KNMI, \cite{dost2012monitoring}, \cite{dost2004scaling}, \cite{dost2013august} that carried out particular investigations. 
+Despite the lack of damping characteristics and coefficients that guarantee a smooth transition along the curvature, the model succeeds in generating normalized modulus reduction curves and material damping with a decent degree of accuracy when examining in contrast with Darendeli's set of curves.  
 
 It can be concluded that the proposed material model qualifies as reasonable for the future examination and, thus, the current paper continues the research towards a one-dimensional site response analysis. 
 

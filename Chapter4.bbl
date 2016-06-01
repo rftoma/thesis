@@ -159,25 +159,29 @@ H.~B. Seed and P.~De~Alba, ``Use of spt and cpt tests for evaluating the
   liquefaction resistance of sands,'' in {\em Use of in situ tests in
   geotechnical engineering}, pp.~281--302, ASCE, 1986.
 
-\bibitem{mayne2014interpretation}
-P.~Mayne, ``Interpretation of geotechnical parameters from seismic piezocone
-  tests,'' in {\em Proceedings 3rd international symposium on cone pentrometer
-  testing, CPT}, vol.~14, pp.~47--73, 2014.
+\bibitem{gazetas2004seismic}
+G.~Gazetas, P.~Psarropoulos, I.~Anastasopoulos, and N.~Gerolymos, ``Seismic
+  behaviour of flexible retaining systems subjected to short-duration
+  moderately strong excitation,'' {\em Soil Dynamics and Earthquake
+  Engineering}, vol.~24, no.~7, pp.~537--550, 2004.
 
-\bibitem{pisano2014simulating}
-F.~Pisan{\`o} and B.~Jeremi{\'c}, ``Simulating stiffness degradation and
-  damping in soils via a simple visco-elastic--plastic model,'' {\em Soil
-  Dynamics and Earthquake Engineering}, vol.~63, pp.~98--109, 2014.
-
-\bibitem{dost2012monitoring}
-B.~Dost, F.~Goutbeek, T.~van Eck, and D.~Kraaijpoel, ``Monitoring induced
-  seismicity in the north of the netherlands: status report 2010,'' {\em KNMI
-  Scientific report}, pp.~2012--03, 2012.
+\bibitem{papadrakakiscomparison}
+M.~Papadrakakis, N.~Lagaros, and V.~Plevris, ``A comparison of two
+  elastic-plastic approaches to cyclic soil modelling,''
 
 \bibitem{dost2004scaling}
 B.~Dost, T.~Van~Eck, and H.~Haak, ``Scaling of peak ground acceleration and
   peak ground velocity recorded in the netherlands,'' {\em Bollettino di
   Geofisica Teorica ed Appliocata}, vol.~45, no.~3, pp.~153--168, 2004.
+
+\bibitem{newmark1959method}
+N.~M. Newmark, ``A method of computation for structural dynamics,'' {\em
+  Journal of the engineering mechanics division}, vol.~85, no.~3, pp.~67--94,
+  1959.
+
+\bibitem{rayleigh1976theory}
+J.~Rayleigh and R.~Lindsay, ``The theory of sound, vols. 1 and 2dover,'' {\em
+  New York}, 1976.
 
 \bibitem{hashash2002viscous}
 Y.~M. Hashash and D.~Park, ``Viscous damping formulation and high frequency
@@ -188,11 +192,6 @@ Y.~M. Hashash and D.~Park, ``Viscous damping formulation and high frequency
 H.~M. Hilber, T.~J. Hughes, and R.~L. Taylor, ``Improved numerical dissipation
   for time integration algorithms in structural dynamics,'' {\em Earthquake
   Engineering \& Structural Dynamics}, vol.~5, no.~3, pp.~283--292, 1977.
-
-\bibitem{newmark1959method}
-N.~M. Newmark, ``A method of computation for structural dynamics,'' {\em
-  Journal of the engineering mechanics division}, vol.~85, no.~3, pp.~67--94,
-  1959.
 
 \bibitem{jeremic2009time}
 B.~Jeremic, G.~Jie, M.~Preisig, and N.~Tafazzoli, ``Time domain simulation of
@@ -212,6 +211,11 @@ M.~Kristekov{\'a}, J.~Kristek, P.~Moczo, and S.~M. Day, ``Misfit criteria for
 O.~Zienkiewicz, N.~Bicanic, and F.~Shen, ``Earthquake input definition and the
   trasmitting boundary conditions,'' in {\em Advances in computational
   nonlinear mechanics}, pp.~109--138, Springer, 1989.
+
+\bibitem{dost2012monitoring}
+B.~Dost, F.~Goutbeek, T.~van Eck, and D.~Kraaijpoel, ``Monitoring induced
+  seismicity in the north of the netherlands: status report 2010,'' {\em KNMI
+  Scientific report}, pp.~2012--03, 2012.
 
 \bibitem{love1944h}
 A.~Love, ``H. a treatise on the mathematical theory of elasticity,'' {\em

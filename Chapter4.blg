@@ -1,17 +1,16 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Chapter4.aux
 The style file: ieeetr.bst
 Database file #1: bibliography.bib
-Repeated entry---line 425 of file bibliography.bib
+Repeated entry---line 451 of file bibliography.bib
  : @article{manualversion
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 547 of file bibliography.bib
- : @article{pisano2014simulating
- :                              ,
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "koh86harmonic"
+Warning--I didn't find a database entry for "p"
 Warning--empty journal in faccioli2001investigation
 Warning--empty year in manualversion
 Warning--empty journal in ishibashi1993unified
 Warning--empty publisher in darendeli2001development
-(There were 2 error messages)
+Warning--empty journal in papadrakakiscomparison
+Warning--empty year in papadrakakiscomparison
+(There was 1 error message)
