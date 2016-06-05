@@ -188,6 +188,10 @@ Y.~M. Hashash and D.~Park, ``Viscous damping formulation and high frequency
   motion propagation in non-linear site response analysis,'' {\em Soil Dynamics
   and Earthquake Engineering}, vol.~22, no.~7, pp.~611--624, 2002.
 
+\bibitem{kramer1996geotechnical}
+S.~L. Kramer, {\em Geotechnical earthquake engineering}.
+\newblock Pearson Education India, 1996.
+
 \bibitem{hilber1977improved}
 H.~M. Hilber, T.~J. Hughes, and R.~L. Taylor, ``Improved numerical dissipation
   for time integration algorithms in structural dynamics,'' {\em Earthquake
@@ -198,9 +202,17 @@ B.~Jeremic, G.~Jie, M.~Preisig, and N.~Tafazzoli, ``Time domain simulation of
   soil-foundation-structure interaction in non-uniform soils,'' {\em Earthquake
   Engineering \& Structural Dynamics}, vol.~38, no.~5, p.~699, 2009.
 
+\bibitem{NERA}
+``Nera a computer program for nonlinear earthquake site response analyses of
+  layered soil deposits,''
+
 \bibitem{mroz1967description}
 Z.~Mroz, ``On the description of anisotropic workhardening,'' {\em Journal of
   the Mechanics and Physics of Solids}, vol.~15, no.~3, pp.~163--175, 1967.
+
+\bibitem{martellotta2015review}
+L.~Martellotta, D.~Martens, and P.~Teuffel, ``Review of seismic retrofitting
+  strategies for residential buildings in an international context,'' 2015.
 
 \bibitem{kristekova2006misfit}
 M.~Kristekov{\'a}, J.~Kristek, P.~Moczo, and S.~M. Day, ``Misfit criteria for

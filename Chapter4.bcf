@@ -44,7 +44,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
@@ -69,7 +69,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldate</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
@@ -125,15 +125,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortscheme</bcf:key>
-      <bcf:value>anyt</bcf:value>
+      <bcf:value>nty</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -324,6 +324,7 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
+    <bcf:option datatype="boolean">subentry</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
     <bcf:option datatype="integer">maxnames</bcf:option>
@@ -712,13 +713,10 @@
     <bcf:sort order="1">
       <bcf:sortitem order="1">presort</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="2">
-      <bcf:sortitem order="1">labelalpha</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3" final="1">
+    <bcf:sort order="2" final="1">
       <bcf:sortitem order="1">sortkey</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="4">
+    <bcf:sort order="3">
       <bcf:sortitem order="1">sortname</bcf:sortitem>
       <bcf:sortitem order="2">author</bcf:sortitem>
       <bcf:sortitem order="3">editor</bcf:sortitem>
@@ -726,15 +724,15 @@
       <bcf:sortitem order="5">sorttitle</bcf:sortitem>
       <bcf:sortitem order="6">title</bcf:sortitem>
     </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
     <bcf:sort order="5">
       <bcf:sortitem order="1">sortyear</bcf:sortitem>
       <bcf:sortitem order="2">year</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="6">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="7">
       <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
       <bcf:sortitem order="2">0000</bcf:sortitem>
     </bcf:sort>
@@ -2095,9 +2093,89 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">dost2013august</bcf:citekey>
+    <bcf:citekey order="2">park2004soil</bcf:citekey>
+    <bcf:citekey order="3">correia2012nonlinear</bcf:citekey>
+    <bcf:citekey order="4">faccioli2001investigation</bcf:citekey>
+    <bcf:citekey order="5">gazetas2013nonlinear</bcf:citekey>
+    <bcf:citekey order="6">gajan2009effects</bcf:citekey>
+    <bcf:citekey order="7">anastasopoulos2010soil</bcf:citekey>
+    <bcf:citekey order="8">kourkoulis2012rocking</bcf:citekey>
+    <bcf:citekey order="9">gazetas2013nonlinear</bcf:citekey>
+    <bcf:citekey order="10">chopra1985simplified</bcf:citekey>
+    <bcf:citekey order="11">koh86harmonic</bcf:citekey>
+    <bcf:citekey order="12">hibbett1998abaqus</bcf:citekey>
+    <bcf:citekey order="13">anastasopoulos2010soil</bcf:citekey>
+    <bcf:citekey order="14">gazetas2013nonlinear</bcf:citekey>
+    <bcf:citekey order="15">apostolou2011soil</bcf:citekey>
+    <bcf:citekey order="16">faccioli2001investigation</bcf:citekey>
+    <bcf:citekey order="17">anastasopoulos2010soil</bcf:citekey>
+    <bcf:citekey order="18">bransby1998combined</bcf:citekey>
+    <bcf:citekey order="19">gottardi1999plastic</bcf:citekey>
+    <bcf:citekey order="20">gajan2005centrifuge</bcf:citekey>
+    <bcf:citekey order="21">anastasopoulos2014simplified</bcf:citekey>
+    <bcf:citekey order="22">ntritsos2015static</bcf:citekey>
+    <bcf:citekey order="23">panagiotidou2012pushover</bcf:citekey>
+    <bcf:citekey order="24">manualversion</bcf:citekey>
+    <bcf:citekey order="25">gazetas2013nonlinear</bcf:citekey>
+    <bcf:citekey order="26">anastasopoulos2011simplified</bcf:citekey>
+    <bcf:citekey order="27">kanno2006new</bcf:citekey>
+    <bcf:citekey order="28">roh2010modeling</bcf:citekey>
+    <bcf:citekey order="29">correia2012nonlinear</bcf:citekey>
+    <bcf:citekey order="30">lemaitre1994mechanics</bcf:citekey>
+    <bcf:citekey order="31">hibbett1998abaqus</bcf:citekey>
+    <bcf:citekey order="32">ntritsos2015static</bcf:citekey>
+    <bcf:citekey order="33">randolph2011offshore</bcf:citekey>
+    <bcf:citekey order="34">dobry1988dynamic</bcf:citekey>
+    <bcf:citekey order="35">ishibashi1993unified</bcf:citekey>
+    <bcf:citekey order="36">darendeli2001development</bcf:citekey>
+    <bcf:citekey order="37">hardin1972shear</bcf:citekey>
+    <bcf:citekey order="38">ishibashi1993unified</bcf:citekey>
+    <bcf:citekey order="39">darendeli2001development</bcf:citekey>
+    <bcf:citekey order="40">darendeli2001development</bcf:citekey>
+    <bcf:citekey order="41">darendeli2001development</bcf:citekey>
+    <bcf:citekey order="42">den2011ongedraineerde</bcf:citekey>
+    <bcf:citekey order="43">den2011ongedraineerde</bcf:citekey>
+    <bcf:citekey order="44">den2011ongedraineerde</bcf:citekey>
+    <bcf:citekey order="45">den2011ongedraineerde</bcf:citekey>
+    <bcf:citekey order="46">hardin1972shear</bcf:citekey>
+    <bcf:citekey order="47">shibuya1997elastic</bcf:citekey>
+    <bcf:citekey order="48">anastasopoulos2011simplified</bcf:citekey>
+    <bcf:citekey order="49">hardin1963elastic</bcf:citekey>
+    <bcf:citekey order="50">robertson1983interpretation</bcf:citekey>
+    <bcf:citekey order="51">seed1986use</bcf:citekey>
+    <bcf:citekey order="52">gazetas2004seismic</bcf:citekey>
+    <bcf:citekey order="53">papadrakakiscomparison</bcf:citekey>
+    <bcf:citekey order="54">darendeli2001development</bcf:citekey>
+    <bcf:citekey order="55">dost2004scaling</bcf:citekey>
+    <bcf:citekey order="56">newmark1959method</bcf:citekey>
+    <bcf:citekey order="57">rayleigh1976theory</bcf:citekey>
+    <bcf:citekey order="58">hashash2002viscous</bcf:citekey>
+    <bcf:citekey order="59">kramer1996geotechnical</bcf:citekey>
+    <bcf:citekey order="60">hilber1977improved</bcf:citekey>
+    <bcf:citekey order="61">newmark1959method</bcf:citekey>
+    <bcf:citekey order="62">jeremic2009time</bcf:citekey>
+    <bcf:citekey order="63">NERA</bcf:citekey>
+    <bcf:citekey order="64">mroz1967description</bcf:citekey>
+    <bcf:citekey order="65">dost2013august</bcf:citekey>
+    <bcf:citekey order="66">martellotta2015review</bcf:citekey>
+    <bcf:citekey order="67">kristekova2006misfit</bcf:citekey>
+    <bcf:citekey order="68">zienkiewicz1989earthquake</bcf:citekey>
+    <bcf:citekey order="69">newmark1959method</bcf:citekey>
+    <bcf:citekey order="70">lemaitre1994mechanics</bcf:citekey>
+    <bcf:citekey order="71">mroz1967description</bcf:citekey>
+    <bcf:citekey order="72">dost2012monitoring</bcf:citekey>
+    <bcf:citekey order="73">dost2004scaling</bcf:citekey>
+    <bcf:citekey order="74">dost2013august</bcf:citekey>
+    <bcf:citekey order="75">zienkiewicz1989earthquake</bcf:citekey>
+    <bcf:citekey order="76">zienkiewicz1989earthquake</bcf:citekey>
+    <bcf:citekey order="77">love1944h</bcf:citekey>
+    <bcf:citekey order="78">nielsen2006absorbing</bcf:citekey>
+    <bcf:citekey order="79">lysmer1969finite</bcf:citekey>
+    <bcf:citekey order="80">zienkiewicz1989earthquake</bcf:citekey>
+    <bcf:citekey order="81">newmark1959method</bcf:citekey>
+    <bcf:citekey order="82">NERA</bcf:citekey>
   </bcf:section>
 </bcf:controlfile>

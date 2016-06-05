@@ -9,7 +9,14 @@
 \usepackage{minitoc}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[nottoc]{tocbibind}
-
+\usepackage{color}
+\usepackage{listings}
+\lstset{language=[90]Fortran,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{red},
+	commentstyle=\color{green},
+	morecomment=[l]{!\ }% Comment only with space after !
+}
 
 \begin{document}
 	\begin{titlepage}
@@ -358,7 +365,7 @@ The test helps obtaining results that further lead to the formulation of the nor
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{"shear_strain_detail"}
+	\includegraphics[width=0.6\linewidth]{"shear_strain_detail"}
 	\caption{Schematization of shear test}
 	\label{fig:shear}
 \end{figure}
@@ -370,7 +377,7 @@ The estimation and measurement of the soil modulus reduction with respect to the
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{"soildeposit"}
+	\includegraphics[width=0.6\linewidth]{"soildeposit"}
 	\caption{Transformation of soil deposit into two parameters - schematization}
 	\label{scheme2}
 \end{figure}
@@ -460,7 +467,7 @@ This sub-chapter presents the steps taken within this calculation including the 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"bc1d"}
+	\includegraphics[width=0.6\linewidth]{"bc1d"}
 	\caption{Boundary conditions applied at bottom nodes during confinement step}
 	\label{bc1}
 \end{figure}
@@ -490,7 +497,14 @@ Abaqus offers several methods for performing dynamic analysis of problems in whi
 Direct implicit algorithm shall be stipulated further on in the following chapters as well as in Appendix \ref{App:AppendixH} and Appendix \ref{App:AppendixI}.
 \newpage
 \section{Material description}
-For the current situation, Abaqus requires the definition of several behaviour components such as: density, elastic, plastic, damping and, eventually, a subroutine which introduces the distribution of the ultimate shear strength along the depth and the correlation between the stiffness and the strength parameters ($E$ and $S_u$).
+For the current situation, Abaqus requires the definition of several behaviour components such as:
+\begin{enumerate}
+	\item Density - the unit weight density of the model; it is assigned with one value $\rho = 1800 kg/m^3$;
+	\item Elastic - for isotropic conditions, Young's modulus $E$ and Poisson's ratio $\nu$ are sufficient for defining the elastic domain;
+	\item Plastic - non-linear kinematic hardening formulated with a von Mises failure criterion with associative flow; the initial stiffness modulus $C$, yield stress at zero plastic strain $\sigma_0$ and the hardening parameter $K$, all being defined in Appendix \ref{App:AppendixB}.
+\end{enumerate}
+
+	Eventually, in a more advanced stage of the analysis, damping properties are added along with a customized subroutine which introduces the ultimate shear strength along the depth as a function of the elastic stiffness and the effective stresses ($E$ and $\sigma^`_0$).
 
 \subsection{Input parameters}
 As mentioned before, the analysis considers several parameters that are characteristic to the soil in Groningen area – a silty clay, weak to medium weak. In addition, a homogeneous clay layer of 20m is considered – for the ease of the calculation, the soil is converted in a one-layered soil column such that the strength and stiffness parameter distribution  along the depth is linear. This chapter presents parameters derived from both measurements and empirical equations, the analysis of one element subjected to a strain-controlled shear test and the results in terms of stiffness degradation and damping. The more detailed equations and methods of obtaining the parameters can be found in Appendix \ref{App:AppendixF}.	
@@ -630,18 +644,20 @@ Appendix \ref{App:AppendixD} presents both the tables containing the input param
 \end{enumerate}
 
 Such dissimilarities are clearly expected, the main interest in this situation pointing the \mbox{correspondence} between values; it was opted to continue the calculations using the empirical values for various reasons; one of them being represented by the future analysis, site response analysis, in combination with the software requirements - the model definition in Abaqus for a multi-layered material entails a subroutine that relates different parameters. For the current application, the connection between the parameters introduced within the subroutine refers to the correspondence between the Young's modulus and the undrained shear strength. This subject will be explained in more detail in the next chapter within the material definition part. 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"youngss1"}
-	\caption{Young's modulus - Comparison between empirical and measurement data}
-	\label{youngss}.
-\end{figure}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{"su2"}
+\begin{figure}[!h]
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{"youngss1"}
+\caption{Young's modulus - Comparison between empirical and measurement data}
+\label{youngss}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.45\textwidth}
+	\includegraphics[width=\textwidth]{"su2"}
 	\caption{Undrained shear strength - Comparison between empirical and measurement data}
-	\label{Su2}.
+	\label{Su2}
+\end{minipage}
 \end{figure}
 
 \newpage
@@ -748,7 +764,7 @@ The parametric study continued with the variation of the prescribed displacement
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"ggmax"}
+	\includegraphics[width=1\linewidth]{"ggmax2"}
 	\caption{Normalized stiffness degradation curves for various plastic strains}
 	\label{ggmax}.
 \end{figure}
@@ -768,19 +784,26 @@ Additionally, studies (Pisan\`{o} et al, 2014 \cite{papadrakakiscomparison}) inv
 
 Given these, it can be concluded that the current results match to a certain extent Darendeli's curves and that a good calibration of the one element shear test was obtained.
 
-\begin{figure}[!h]
-\centering
-\begin{minipage}[b]{0.45\textwidth}
-	\includegraphics[width=\textwidth]{ggmax2}
-	\caption{Normalized stiffness degradation curves comparison}
-	\label{ggmax2}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.45\textwidth}
-	\includegraphics[width=\textwidth]{dampiing}
-	\caption{Damping ratio comparison}
-	\label{damping}
-\end{minipage}
+%\begin{figure}[!h]
+%\centering
+%\begin{minipage}[b]{0.45\textwidth}
+	%\includegraphics[width=\textwidth]{ggmax2}
+	%\caption{Normalized stiffness degradation curves comparison}
+	%\label{ggmax2}
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{0.45\textwidth}
+%	\includegraphics[width=\textwidth]{dampiing}
+%	\caption{Damping ratio comparison}
+%	\label{damping}
+%\end{minipage}
+%\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1 \linewidth]{ggmax}
+	\caption{Normalized stiffness degradation (right) and material damping curves for various sample locations}
+	\label{ggmaxi}
 \end{figure}
 
 
@@ -1159,6 +1182,58 @@ where $q_t$ - net cone resistance, $u_2$ - penetration pore water pressure, $u_0
 
 \vspace*{3cm}
 Note: The squared-boxes represent an action taken during the analysis. The round-shaped boxes represent a decision in the code or at a specific state (i.e. beginning of the increment) during the analysis.
+\newpage
+\chapter{User subroutine implemented in analysis} \label{subroutine}
+The current Appendix presents the subroutine code written to introduce the undrained shear strength $S_u$ as a function of vertical effective stress; additionally, the undrained shear strength contributes to the calculation of the Young's modulus $E_0$.
+
+\begin{lstlisting}
+	      subroutine usdfld(field,statev,pnewdt,direct,t,celent,time,dtime,
+	      1 cmname,orname,nfield,nstatv,noel,npt,layer,kspt,kstep,kinc,
+	      2 ndi,nshr,coord,jmac,jmtyp,matlayo,laccflg)
+	      
+	      include 'aba_param.inc'
+	      
+	      character*80 cmname,orname
+	      character*8  flgray(15)
+	      dimension field(nfield),statev(nstatv),direct(3,3),t(3,3),time(2),
+	      & coord(*),jmac(*),jmtyp(*)
+	      dimension array(15),jarray(15)
+	      !     Call and read current stresses 
+	      call getvrm('SP',array,jarray,flgray,jrcd,
+	      &jmac, jmtyp, matlayo, laccflg)
+	      S22=ARRAY(2)
+	      c
+	      if (kstep.eq.1 .and. kinc.eq.1) then
+	      !       read y coordinates at first increment
+	      y = coord(2)
+	      !       define depth. 
+	      h= 30.0 - y
+	      ! Define vertical effective stress
+	      SV=S22 - 10 * h
+	      !	Update undrained shear strength value
+	      Su=2.8+0.37*ABS(SV)
+	      E = 2000*Su
+	      !       a=2000
+	      field(1)=E
+	      field(2)=Su
+	      else
+	      !       assign initial values computed in the first increment
+	      field(1) = statev(1)
+	      field(2) = statev(2)
+	      end if 
+	      !
+	      statev(1)=field(1)
+	      statev(2)=field(2)
+	      !     If error, write comment to .DAT file:
+	      if(JRCD.NE.0)then
+	      write(6,*) 'REQUEST ERROR IN USDFLD FOR ELEMENT NUMBER ',
+	      & NOEL,'INTEGRATION POINT NUMBER ',NPT
+	      endif
+	      !
+	      return
+	      end
+\end{lstlisting}
+
 
 \newpage
 \chapter{Newmark integration schemes} \label{App:AppendixH}
@@ -1245,6 +1320,60 @@ here $v$ - highest shear wave velocity. The final time step size is 0.005 sec ac
 \end{table}
 
 For the mesh elements, four-node quad elements (CPE4) are used to model the soil using the plane strain formulation of the quad-element. The element connectivity uses a counterclockwise pattern for the previously-described node numbering scheme (see Figure \ref{Soilcolumn}). The soil elements in each layer are assigned the material tag of the material object corresponding to that layer. A unit thickness is used in all examples for simulating the 1D condition. The self-weight of the soil is considered as a body force acting on each element. The body force is set as the unit weight of the soil in each layer, which is determined from the respective mass density input value.
+
+\chapter{NERA - Iwan Mroz material model description} \label{NERAa}
+The information is according to NERA manual \cite{NERA}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"NERA1"}
+	\label{Nera1}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"NERA2"}
+	\label{Nera2}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"NERA 3"}
+	\label{Nera3}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"NERA 4"}
+	\label{Nera4}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"NERA5"}
+	\label{Nera5}
+\end{figure}
+
+\chapter{NERA - Input example} \label{Input_NERA}
+The appendix presents a set of input parameters corresponding to the low peak ground acceleration case.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.2\linewidth]{"NERA_RES"}
+	\label{Ner1}
+\end{figure} 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"NERA_RES2"}
+	\label{Ner2}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{"NERA_RES3"}
+	\label{Ner3}
+\end{figure}
+
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}

@@ -106,7 +106,7 @@ analysis.
 
 \subsection{Boundary conditions}
 For this type of application, it becomes necessary to define two sets of boundary conditions: the \textit{global} and the \textit{local} ones. The first set assumes the top surface as being constraint-free, whilst rigid bottom is initially defined. The lateral boundaries are both vertically and horizontally constrained.
-Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium - however, the calculation can become quite time and space consuming, thus the need of another concepts. Many researchers proposed methods of tackling the problem, here highlighting the work of  \textbf{Zienkiewicz et al (1989) \cite{zienkiewicz1989earthquake}, Lysmer and Kuhlemeyer} \cite{zienkiewicz1989earthquake} and many more ()
+Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium - however, the calculation can become quite time and space consuming, thus the need of another concepts. Many researchers proposed methods of tackling the problem, here highlighting the work of  Zienkiewicz et al (1989) \cite{zienkiewicz1989earthquake}, Lysmer and Kuhlemeyer \cite{zienkiewicz1989earthquake} and many more.
 
 \paragraph{Theory of wave propagation}
 For the simplicity of the problem, vertically propagating waves were considered exclusively; it is also well known that both the body waves - P waves and S waves - are independent of each other. According to Love(1944) \cite{love1944h}, the wave equation for an isotropic elastic medium is:
@@ -141,7 +141,9 @@ In the following section \ref{implemenent} , several boundary condition concepts
 There are a couple of methods that are well known in literature and are tested within the section and presented as it follows: 
  \paragraph{Tied lateral boundaries}
 	The traditional approach considers pairs of lateral nodes being tied together such way that the horizontal and vertical displacement are equal throughout the entire analysis. This feature can be easily achieved using Abaqus MPC (multi-point constraint) option specifically designed for this situation. The assumption is in conformity with Zienkiewicz's work stating that the presence of the structure on soil oscillation is negligible when the boundaries are sufficiently far.
+	
 	Subsequently, the input motion is introduced at the vertically fixed base of the model that replicates the presence of the bedrock. As previously discussed, the acceleration signal obtained from the dataset for Groningen field was recorded at borehole depth, not at bedrock, which means that the recordings can include both incident and reflected waves. In order to exclude an overestimation of the real input signal, the accelerogram was truncated in half to ensure that only upward travelling waves are considered.
+	
 	Nevertheless, this method can be formulated in the FE product either through a dynamic or a quasi-static step depending whether the earthquake is expressed in terms of total displacements or total accelerations.
 	However attractive this simple method might be, its shortcomings originate from both the lack of an actual bedrock or from the uncertainties rising when defining the model dimensions - there are no rule of thumbs for determining the truncation of the mathematical model.
 	
@@ -246,9 +248,10 @@ The aforementioned features of the free-field boundary conditions are detailed b
 	
 	With these being said, the main model consists of:
 
-	BC; explica feature din abaqus si cum rezolva.
+\textit{NOTE: This analysis is currently in stand-by as I had troubles using these features in Abaqus.}
+	 
+%%	BC; explica feature din abaqus si cum rezolva.
 	\paragraph{Equivalent forces}
-	\paragraph{Displacements}
 	 
 
 \section{Results}
@@ -256,6 +259,114 @@ The aforementioned features of the free-field boundary conditions are detailed b
 \subsection{Effects of loads}
 \subsection{FBC vs TSI}
 
+\paragraph{Soil-Foundation interaction}
+A simple footing with dimensions L=4m and b=0.5m is resting on the non-linear soil medium. As mentioned before, the analysis investigates the differences between two types of soil-footing contact: FBC and TSI. The fully bonded contact assumes the elements are permanently tied together during the analysis whilst the sliding interface allows uplifting to occur. The advanced contact algorithm was described in previous sections and the output consists in responses extracted from both the analyses. The footing acts like a rigid body; the boundaries are located at considerable distance from the footing in order to avoid its influence on the stress field. In fact, a test was performed to check the accuracy of the boundary position. Thus, the results from the site response analysis were compared to the ones at the boundaries until they were matching - because the one-dimensional soil column used in the SRA is representative for a far-field soil element, it shows how the ground itself behaves during an earthquake. As soon as this goal was achieved, it could be concluded on a correct width of the soil body - for this specific case, it proved that L=100m is sufficient. A collection of figures can be seen as it follows:
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{"free-field2"}
+		\caption{Validation for soil layer width}
+		\label{validation}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.6 \linewidth]{"max_ax"}
+		\caption{Maximum acceleration for FBC and TSI analyses recorded underneath the foundation}
+		\label{maxax}
+	\end{figure}
+	
+\textit{to be continued...}	
+
+\newpage
+\paragraph{Soil-Foundation-Structure interaction}
+Two additional elements are to be added for this section: the pier, acting infinitely rigid and the lumped mass on top of it. For the current situation, only the pier is present - (\textit{NOTE: Abaqus proves to be difficult when defining the connection between these elements - I shall insist more on this part}); the outcome is presented by means of stresses and displacements under footing, acceleration response, amplification factor and many more.
+
+The results correspond to a simple analysis consisting in the non-linear soil supporting a rigid footing-pier assembly. The test starts with a geostatic step, followed by appliance of self weight of the foundation-pier and seismic excitation at the base of the layer. 
+
+The self weight of the footing relates to the calculations performed by Arcadis and Crux Engineering BV, which state that an uniform pressure load acts on the footing with a value of $q=65.5 kN/m^2$. Converting this load into a concentrated force applied at the footing centre of the mass, it yields $F=260 kN$. 
+
+As for the dynamic step, the acceleration time history was scaled to include a PGA of 0.28g as representative for this specific site. The signal is trimmed yet again, because it contains both upward and downward waves and because the base aims to simulate the presence of the bedrock. Thus, the wave should be travelling upwards exclusively. A sketch of the input can be seen in the figure below.
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"input_acc"}
+			\caption{Acceleration input for PGA=0.28g trimmed to half}
+			\label{inputacc}
+		\end{figure}
+		
+\newpage
+\subsection{Stresses}
+
+The main emphasis relates to the proximity of the footing; the stresses developing from both the self weight action as well as the seismic excitation were collected and presented in the following plots. 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"shear stress"}
+	\caption{Maximum shear stress comparison}
+	\label{shearrr}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"vert stresses"}
+	\caption{Maximum vertical stress under footing comparison}
+	\label{vert}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"displacement"}
+	\caption{Maximum vertical displacement under footing}
+	\label{inputacc}
+\end{figure}
+
+\newpage
+\subsection{Acceleration response}
+The study extends to the investigation of the dynamic response at the mass location -which represents the top of the pier element. The acceleration is extracted for three main points: the base of the model, the surface point of the soil right beneath the footing and the lumped mass positioned on top of the structure. One goal is to observe whether the structure experiences amplification or de-amplification - this way, one can assume if the ductility demand decreased or not. Apart from comparing the acceleration response in various positions, the amplification factor is investigated too in the same fashion previous chapter operates.
+
+Acceleration outcome is transferred in frequency domain via a Fast Fourier computation for both soil surface response and lumped mass and the transfer function is calculated:
+
+	\begin{equation}
+	A(f)=\frac{F_{a,mass}(f)}{F_{a,surface}(f)}
+	\end{equation}
+	where $A(f)$ - site amplification factor; $F_a,mass(f)$ and $F_a,surface(f)$ - Fourier amplitudes of the lumped mass on top of the pier and of the ground acceleration at surface, respectively. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"amplification"}
+	\caption{Amplification factor structure-soil surface}
+	\label{ampli}
+\end{figure}
+
+The output of the TSI case displays way fewer increment steps - it is speculated that this relates to the converge; as it achieves convergence faster than FBC care, the analysis does not require a decrease of time step, thus it prints the values at larger increment intervals. The problem shall be investigated in more detailed with the interest of obtaining more point results.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"acc_TSI"}
+	\caption{Acceleration response for TSI}
+	\label{TSIacc}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"acc_FBC"}
+	\caption{Acceleration response comparison at point mass level}
+	\label{FBCacc}
+\end{figure}
+
+The two analyses are originating from the same base model (same mesh, material input parameters, time incrementation elements), however, there are some numerical uncertainties that leads to an unsatisfactory collection of information points for the case with TS interface. Nonetheless, it is assumed, for the moment, that the peak acceleration was not omitted and that it can be depicted in the plot. Then, it seems that considering a tensionless sliding interface instead of a fully bonded contact reduces the acceleration at higher levels, thus the building experiences de-amplification. The output in frequency domain also indicates the phenomena as a larger amplification factor is observed when applying a permanent soil-footing tie. Additionally, the frequencies of soil surface and point mass are relatively close when working with a fully bonded footing; as previously said, if two elements oscillate with similar frequency, resonance can occur amplifying the damage. 
+
+
+\textbf{Notes}
+For the future investigation, I will:
+\begin{enumerate}
+	\item add a lumped mass on top of the pier and repeat this analysis;
+	\item create the moment-shear envelope;
+	\item check rotations at the centre of the mass to validate the uplifting and bearing capacity type of failure mechanism (overturning moments);
+	\item investigate the absorbing conditions (if time allows).
+\end{enumerate}
 \section{Limitations and recommendations}
+
+
 \section{Conclusions}
 
