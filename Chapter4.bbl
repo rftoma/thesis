@@ -5,41 +5,75 @@ B.~Dost and D.~Kraaijpoel, ``The august 16, 2012 earthquake near huizinge
   (groningen),'' {\em KNMI Scientific report (http://www. knmi.
   nl/knmilibrary/miscellaneousreport. html)}, 2013.
 
-\bibitem{park2004soil}
-D.~Park and Y.~M. Hashash, ``Soil damping formulation in nonlinear time domain
-  site response analysis,'' {\em Journal of Earthquake Engineering}, vol.~8,
-  no.~02, pp.~249--274, 2004.
+\bibitem{park1984seismic}
+Y.-J. Park, A.-S. Ang, and Y.-K. Wen, ``Seismic damage analysis and
+  damage-limiting design of rc buildings,'' tech. rep., University of Illinois
+  Engineering Experiment Station. College of Engineering. University of
+  Illinois at Urbana-Champaign., 1984.
 
-\bibitem{correia2012nonlinear}
-A.~Correia, A.~Pecker, S.~Kramer, and R.~Pinho, ``Nonlinear pile-head
-  macro-element model: Ssi effects on seismic response of a monoshaft-supported
-  bridge,'' in {\em Proceedings of the 15th World Conference on Earthquake
-  Engineering}, 2012.
+\bibitem{code2005eurocode}
+P.~Code, ``Eurocode 8: Design of structures for earthquake resistance-part 1:
+  General rules, seismic actions and rules for buildings,'' 2005.
+
+\bibitem{pecker2014role}
+A.~Pecker, R.~Paolucci, C.~Chatzigogos, A.~A. Correia, and R.~Figini, ``The
+  role of non-linear dynamic soil-foundation interaction on the seismic
+  response of structures,'' {\em Bulletin of Earthquake Engineering}, vol.~12,
+  no.~3, pp.~1157--1176, 2014.
 
 \bibitem{faccioli2001investigation}
 E.~Faccioli, R.~Paolucci, and G.~Vivero, ``Investigation of seismic
   soil-footing interaction by large scale tests and analytical models,'' 2001.
 
-\bibitem{gazetas2013nonlinear}
-G.~Gazetas, I.~Anastasopoulos, O.~Adamidis, and T.~Kontoroupi, ``Nonlinear
-  rocking stiffness of foundations,'' {\em Soil Dynamics and Earthquake
-  Engineering}, vol.~47, pp.~83--91, 2013.
+\bibitem{gazetas2004seismic}
+G.~Gazetas, P.~Psarropoulos, I.~Anastasopoulos, and N.~Gerolymos, ``Seismic
+  behaviour of flexible retaining systems subjected to short-duration
+  moderately strong excitation,'' {\em Soil Dynamics and Earthquake
+  Engineering}, vol.~24, no.~7, pp.~537--550, 2004.
 
-\bibitem{gajan2009effects}
-S.~Gajan and B.~L. Kutter, ``Effects of moment-to-shear ratio on combined
-  cyclic load-displacement behavior of shallow foundations from centrifuge
-  experiments,'' {\em Journal of geotechnical and geoenvironmental
-  engineering}, vol.~135, no.~8, pp.~1044--1055, 2009.
+\bibitem{gajan2005centrifuge}
+S.~Gajan, B.~L. Kutter, J.~D. Phalen, T.~C. Hutchinson, and G.~R. Martin,
+  ``Centrifuge modeling of load-deformation behavior of rocking shallow
+  foundations,'' {\em Soil Dynamics and Earthquake Engineering}, vol.~25,
+  no.~7, pp.~773--783, 2005.
 
 \bibitem{anastasopoulos2010soil}
 I.~Anastasopoulos, G.~Gazetas, M.~Loli, M.~Apostolou, and N.~Gerolymos, ``Soil
   failure can be used for seismic protection of structures,'' {\em Bulletin of
   Earthquake Engineering}, vol.~8, no.~2, pp.~309--326, 2010.
 
+\bibitem{anastasopoulos2011simplified}
+I.~Anastasopoulos, F.~Gelagoti, R.~Kourkoulis, and G.~Gazetas, ``Simplified
+  constitutive model for simulation of cyclic response of shallow foundations:
+  validation against laboratory tests,'' {\em Journal of Geotechnical and
+  Geoenvironmental Engineering}, vol.~137, no.~12, pp.~1154--1168, 2011.
+
 \bibitem{kourkoulis2012rocking}
 R.~Kourkoulis, F.~Gelagoti, and I.~Anastasopoulos, ``Rocking isolation of
   frames on isolated footings: design insights and limitations,'' {\em Journal
   of Earthquake Engineering}, vol.~16, no.~3, pp.~374--400, 2012.
+
+\bibitem{gazetas2013nonlinear}
+G.~Gazetas, I.~Anastasopoulos, O.~Adamidis, and T.~Kontoroupi, ``Nonlinear
+  rocking stiffness of foundations,'' {\em Soil Dynamics and Earthquake
+  Engineering}, vol.~47, pp.~83--91, 2013.
+
+\bibitem{darendeli2001development}
+M.~B. Darendeli, {\em Development of a new family of normalized modulus
+  reduction and material damping curves}.
+\newblock 2001.
+
+\bibitem{veletsos1965deformation}
+A.~Veletsos, N.~Newmark, and C.~Chelapati, ``Deformation spectra for elastic
+  and elastoplastic systems subjected to ground shock and earthquake motions,''
+  in {\em Proceedings of the 3rd world conference on earthquake engineering},
+  vol.~2, pp.~663--682, 1965.
+
+\bibitem{gazetas2013can}
+G.~Gazetas, ``Can we design in geotechnics with seismic factors of safety less
+  than 1?,'' {\em Comptes Rendus Du 15{\`e}me Congr{\`e}s Europ{\'e}en de
+  M{\'e}canique Des Sols \& de G{\'e}otechnique: La G{\'e}otechnique Des Sols
+  Indur{\'e}s-Roches Tendres,[Athina 2011].. Pt. 4}, p.~141, 2013.
 
 \bibitem{chopra1985simplified}
 A.~K. Chopra and S.~C.-S. Yim, ``Simplified earthquake analysis of structures
@@ -64,12 +98,6 @@ G.~Gottardi, G.~Houlsby, and R.~Butterfield, ``Plastic response of circular
   footings on sand under general planar loading,'' {\em G{\'e}otechnique},
   vol.~49, no.~4, pp.~453--470, 1999.
 
-\bibitem{gajan2005centrifuge}
-S.~Gajan, B.~L. Kutter, J.~D. Phalen, T.~C. Hutchinson, and G.~R. Martin,
-  ``Centrifuge modeling of load-deformation behavior of rocking shallow
-  foundations,'' {\em Soil Dynamics and Earthquake Engineering}, vol.~25,
-  no.~7, pp.~773--783, 2005.
-
 \bibitem{anastasopoulos2014simplified}
 I.~Anastasopoulos and T.~Kontoroupi, ``Simplified approximate method for
   analysis of rocking systems accounting for soil inelasticity and foundation
@@ -90,12 +118,6 @@ A.~I. Panagiotidou, G.~Gazetas, and N.~Gerolymos, ``Pushover and seismic
 A.~U. Manual, ``Version 6.14-1,'' {\em Dassault Syst{\'e}mes Simulia Corp.,
   Providence, RI}.
 
-\bibitem{anastasopoulos2011simplified}
-I.~Anastasopoulos, F.~Gelagoti, R.~Kourkoulis, and G.~Gazetas, ``Simplified
-  constitutive model for simulation of cyclic response of shallow foundations:
-  validation against laboratory tests,'' {\em Journal of Geotechnical and
-  Geoenvironmental Engineering}, vol.~137, no.~12, pp.~1154--1168, 2011.
-
 \bibitem{kanno2006new}
 T.~Kanno, A.~Narita, N.~Morikawa, H.~Fujiwara, and Y.~Fukushima, ``A new
   attenuation relation for strong ground motion in japan based on recorded
@@ -106,6 +128,12 @@ T.~Kanno, A.~Narita, N.~Morikawa, H.~Fujiwara, and Y.~Fukushima, ``A new
 H.~Roh and A.~M. Reinhorn, ``Modeling and seismic response of structures with
   concrete rocking columns and viscous dampers,'' {\em Engineering Structures},
   vol.~32, no.~8, pp.~2096--2107, 2010.
+
+\bibitem{correia2012nonlinear}
+A.~Correia, A.~Pecker, S.~Kramer, and R.~Pinho, ``Nonlinear pile-head
+  macro-element model: Ssi effects on seismic response of a monoshaft-supported
+  bridge,'' in {\em Proceedings of the 15th World Conference on Earthquake
+  Engineering}, 2012.
 
 \bibitem{lemaitre1994mechanics}
 J.~Lemaitre and J.-L. Chaboche, {\em Mechanics of solid materials}.
@@ -124,11 +152,6 @@ R.~Dobry and M.~Vucetic, {\em Dynamic properties and seismic response of soft
 \bibitem{ishibashi1993unified}
 I.~Ishibashi and X.~Zhang, ``Unified dynamic shear moduli and damping patios of
   sand and clay.,'' vol.~33, no.~1, pp.~182--191, 1993.
-
-\bibitem{darendeli2001development}
-M.~B. Darendeli, {\em Development of a new family of normalized modulus
-  reduction and material damping curves}.
-\newblock 2001.
 
 \bibitem{hardin1972shear}
 B.~O. Hardin and V.~P. Drnevich, ``Shear modulus and damping in soils,'' {\em
@@ -158,12 +181,6 @@ P.~K. Robertson and R.~Campanella, ``Interpretation of cone penetration tests.
 H.~B. Seed and P.~De~Alba, ``Use of spt and cpt tests for evaluating the
   liquefaction resistance of sands,'' in {\em Use of in situ tests in
   geotechnical engineering}, pp.~281--302, ASCE, 1986.
-
-\bibitem{gazetas2004seismic}
-G.~Gazetas, P.~Psarropoulos, I.~Anastasopoulos, and N.~Gerolymos, ``Seismic
-  behaviour of flexible retaining systems subjected to short-duration
-  moderately strong excitation,'' {\em Soil Dynamics and Earthquake
-  Engineering}, vol.~24, no.~7, pp.~537--550, 2004.
 
 \bibitem{papadrakakiscomparison}
 M.~Papadrakakis, N.~Lagaros, and V.~Plevris, ``A comparison of two

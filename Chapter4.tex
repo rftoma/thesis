@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{report}
+\documentclass[12pt,a4paper]{report}
 \usepackage[utf8x]{inputenc}
 \usepackage{ucs}
 \usepackage{amsmath}
@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage[toc,page,header]{appendix}
 \usepackage{minitoc}
-\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[a4paper,width=160mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[nottoc]{tocbibind}
 \usepackage{color}
 \usepackage{listings}
@@ -45,7 +45,7 @@
 		  	Delft University of Technology\\
 		  	Crux Engineering BV
 		  	Netherlands\\
-		  	30th of June 2016
+		  %	30th of June 2016
 		  	
 		  \end{center}
 		
@@ -72,17 +72,17 @@
 		
 		%% List the committee members, starting with the Rector Magnificus and the
 		%% promotor(s) and ending with the reserve members.
-		\medskip\noindent
-		\begin{tabular}{p{5cm}l}
-			Prof.\ dr.\ M.A. Hicks, & Delft University of Technology \\
-			Dr.\ F.\ Pisan\`{o}, & Delft University of Technology \\
-			Dr.\ ir. \ P.\ H\"{o}lscher, & Delft University of Technology \\
-			ir.\ E.\ J.\ Kaspers, & Crux Engineering BV\\
-			ing.\ K.J. \ DeJong & Crux Engineering BV\\
+	%	\medskip\noindent
+	%	\begin{tabular}{p{5cm}l}
+		%	Prof.\ dr.\ M.A. Hicks, & Delft University of Technology \\
+		%	Dr.\ F.\ Pisan\`{o}, & Delft University of Technology \\
+		%	Dr.\ ir. \ P.\ H\"{o}lscher, & Delft University of Technology \\
+		%	ir.\ E.\ J.\ Kaspers, & Crux Engineering BV\\
+		%	ing.\ K.J. \ DeJong & Crux Engineering BV\\
 			
 			\medskip
 		
-	\end{tabular}
+%	\end{tabular}
 		
 		\vspace{4\bigskipamount}
 		
@@ -101,20 +101,20 @@
 		{http://repository.tudelft.nl/}.
 		
 	\end{titlepage}
-\newenvironment{dedication}
-{\clearpage           % we want a new page
-	\thispagestyle{empty}% no header and footer
-	\vspace*{\stretch{1}}% some space at the top 
-	\raggedleft          % flush to the right margin
-}
-{\par % end the paragraph
-	\vspace{\stretch{3}} % space at bottom is three times that at the top
-	\clearpage           % finish off the page
-}
-	\begin{dedication}
-	\textit{If I have seen further it is by standing on the shoulders of Giants.} \\
-	Isaac Newton
-	\end{dedication}
+%\newenvironment{dedication}
+%{\clearpage           % we want a new page
+%	\thispagestyle{empty}% no header and footer
+%	\vspace*{\stretch{1}}% some space at the top 
+%	\raggedleft          % flush to the right margin
+%}
+%{\par % end the paragraph
+%	\vspace{\stretch{3}} % space at bottom is three times that at the top
+%	\clearpage           % finish off the page
+%}
+%	\begin{dedication}
+%	\textit{If I have seen further it is by standing on the shoulders of Giants.} \\
+%	Isaac Newton
+%	\end{dedication}
 
 \tableofcontents
 	
@@ -122,12 +122,13 @@
 \section{Current situation - an overview}
 In the past few decades, Northern area of Netherlands is facing ground tremors induced by the gas extraction, the greatest event being registered on 16th of August 2012, at Huizinge \cite{dost2013august}, with a depth of 10km and a magnitude of $M_w$=3.6. Even though the majority of these earthquakes are shallow and small, the larger events can eventually produce damage concerning the citizens and mining companies. The level of uncertainties rises and the phenomena starts to be problematic when combined with other detrimental factors. For instance, the foundation shape and design, the uncertainties related to the soil homogeneity and nonlinear response or the need of updating the design codes accordingly. Currently, numerous organizations and companies investigate the phenomenon - performing hazard studies and aiming to provide reliable design methods that best suit the condition. 
 
-The first particularity of the state of affairs is represented by the characteristic of the earthquake itself. Europe mainly encounters tectonic seism in south and south-eastern parts, while the current condition reveals a triggered seismic activity - which is more difficult to assess source wise. Induced seismicity relates to human activities that alter the stress-strain development within the crust and usually reveals low magnitude. It follows that the relationship between “anthropogenic” stress disturbances and the resulting earthquake magnitude will always be somewhat unpredictable, insofar as it is partly associated with “background” event probabilities. Nevertheless, the factors that could influence the maximum size of induced earthquakes are of great interest. 
+The first particularity of the state of affairs is represented by the characteristic of the earthquake itself. Europe mainly encounters tectonic seism in south and south-eastern parts, while the the Groningen site condition reveals a triggered seismic activity - which is more difficult to assess source-wise. Induced seismicity relates to human activities that alter the stress-strain development within the crust and usually associates with low magnitudes. It follows that the relationship between “anthropogenic” stress disturbances and the resulting earthquake magnitude will always be somewhat unpredictable, insofar as it is partly associated with “background” event probabilities. Nevertheless, the factors that could influence the maximum size of induced earthquakes are of great interest. 
 
-Many devices have been installed in order to record the ground shaking events - accelerometers and borehole sensors serve to improve database. Accelerograms represent recordings of the ground acceleration during an earthquake. The other additional stations improve detection and monitoring through real-time continuous data transmission. The recordings, particularly those from analog instruments, invariably contain noise that can mask and distort the ground-motion signal at both high and low frequencies hence the need of correction equations eliminate the errors.  Real records are an ever more attractive option for defining the input to dynamic analyses in geotechnical and structural engineering. Guidelines on procedures for the selection of appropriate suites of acceleration time-series for this purpose are lacking, and seismic design codes are particularly poor in this respect. 
+Secondly, guidelines for the selection of appropriate suites of acceleration time-series for this purpose are lacking and seismic design codes are particularly poor in this respect. Additionally, accelerograms and borehole sensors data are insufficient to develop a reliable ground prediction model. (Accelerograms represent recordings of the ground acceleration during an earthquake). Obviously, real records are an ever more attractive option for defining the input to dynamic analyses in geotechnical and structural engineering - however, few relevant events took place so far. 
 
-During the event from August 2012, the devices recorded the ground motion and transcribed the signals into plots containing the ground acceleration against time. The available accelerogram data allows a better understanding of the entire phenomena whilst several aspects arise after a close investigation. Firstly, the seismicity shows similar patterns compared to the triggered type of earthquake - which, based on empirical data, is considered to have an upper limit of $M_w$=5.0. Studying the event, considering a large time scale, reveals that the Groningen field is mainly dominated by rather frequent small events than scarce large ones. Meanwhile, both statistical and physical modelling are performed for estimating the Mmax values.
-The seismic source is usually described through P waves, S waves and surface waves that are all affected by the orientation of the fault plane. In addition, waveform data allows determination of focal mechanisms of the small earthquake in inhomogeneous subsoil. A correct evaluation of the waves further provides reliable parameters such as the seismic moment, amplitude correction along with the focal mechanism. The current seismic survey, found in the figure below, shows this dissimilarity in data recorded in close locations (red representing Middelstum event in 2009 and blue the Huizinge event, respectively) highlighting the difference in the polarity pattern of the P waves [as it can be seen in the vertical accelerograms]. This translates into a difficulty in understanding  the characteristics of the earthquake and its mechanical behaviour. In addition, the double S pulse, evident in the Huizinge earthquake, extends the duration of the strong shaking. These multiple S-phases might be generated by the salt layer which varies in thickness along the area. Salt deposit is a high velocity layer - hence multiple reflections can be the culprit for this particular wave propagation pattern. 
+During the event from August 2012, the devices recorded the ground motion and transcribed the signals into plots containing the ground acceleration against time. The available accelerogram data allows a better understanding of the entire phenomena whilst several aspects arise after a close investigation. Firstly, the seismicity shows similar patterns compared to the triggered type of earthquake - which, based on empirical data, is considered to have an upper limit of $M_w=5.0$. Studying the event, considering a large time scale, reveals that the Groningen field is mainly dominated by rather frequent small events than scarce large ones. Meanwhile, both statistical and physical modelling are performed for estimating the maximum moment magnitude $M_max$ values.
+
+Furthermore, the seismic source is usually described through principal (P) waves, secondary or shear (S) waves and surface waves that are all affected by the orientation of the fault plane. In addition, waveform data allows detection of focal mechanisms of the small earthquake in inhomogeneous subsoil. A correct evaluation of the waves further provides reliable parameters such as the seismic moment, amplitude correction along with the focal mechanism. The current seismic survey, found in the figure below, shows this dissimilarity in data recorded in close locations (red representing Middelstum event in 2009 and blue the Huizinge event, respectively) highlighting the difference in the polarity pattern of the P waves [as it can be seen in the vertical accelerograms]. This translates into a difficulty in understanding  the characteristics of the earthquake and its mechanical behaviour. Moreover, the double S pulse, evident in the Huizinge earthquake, extends the duration of the ground shaking. These multiple S-phases might be generated by the salt layer which varies in thickness along the area. Salt deposit is a high velocity layer - hence multiple reflections can be the culprit for this particular wave propagation pattern. 
 
 \begin{figure}[h!]
 	\centering
@@ -135,9 +136,10 @@ The seismic source is usually described through P waves, S waves and surface wav
 	\caption[]{Accelerograms from Middelstum 1st April 2009 (red arrow) and Huizinge 16th of August 2012 (1 - Radial, 2 - Transverse, 3 - Vertical)}
 	\label{Pwaves}
 \end{figure}
+
 Another aspect important to mention refers to previous times where the Dutch standard did not include seismic design which further reflected into inadequately reinforced concrete structures as well as the lack of reinforcement within masonry buildings. Existing constructions are not seismically prepared - as the only lateral force taken into consideration, while designing, was the wind load (5 - 15 times lower than a seismic load). Ductility demand is not fulfilled henceforth, cracks appear after earthquake and structures start to account irreversible damage.  The foundations of most buildings are footing strips, 10cm to 30cm high and 20cm wide unable to withstand the stresses produced during an ground shaking. The floor does not provide the rigid diaphragm property, allowing the vertical elements (walls and columns) to displace independently. The overall stiffness cannot avoid damage and so foundation strengthening methods \textit{supply the solution}. 
 
-One major factor influencing the nonlinear response is the subsoil on which the structures are founded on. The typical soil for Netherlands consists in layers of sand in all states, peat, clay which all denote weak strength, potential of swelling, creep and pore pressure build-up as well as low seismic velocities. Softer soils amplify more the seismic waves, increasing the effect. This, in association with the multiple S-phase, leads to an augmented energy pulse throughout a longer duration. In fact, due to its prolonged duration, it is considered to exceed the limits imposed by the simplified response spectrum given within the Eurocode 8 guidelines.
+One major factor influencing the structural nonlinear response is the subsoil on which the buildings are founded on. The typical soil for Netherlands consists in layers of sand in all states, peat, clay which all denote weak strength, potential of swelling, creep and pore pressure build-up as well as low seismic velocities. Softer soils amplify more the seismic waves, increasing the effect. This, in association with the multiple S-phase, leads to an augmented energy pulse throughout a longer duration. In fact, due to its prolonged duration, it is considered to exceed the limits imposed by the simplified response spectrum given within the Eurocode 8 guidelines.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.42\linewidth]{"spectrum_code"}
@@ -145,31 +147,122 @@ One major factor influencing the nonlinear response is the subsoil on which the 
 	\label{SA}
 \end{figure}
 
-Reflecting on the previous aspects, the situation calls for extensive investigation to determine the nature of the seismic action, its consequences and mitigation forms - here, expressed in terms of seismic design computation methods. 
+Reflecting on all these aspects, the situation calls for extensive investigation to determine the nature of the seismic action, its consequences and mitigation forms - or seismic design computation methods. 
+
+\section{Solutions}
+\paragraph{Conventional design}
+Earthquake effects on buildings have been studied for over a century. Since the civil engineering community realized that guaranteeing great bearing capacity to the structures does not necessarily translate into enhanced safety, it adopted a \textit{fail-safe} design concept. The aim included a better control over the load path and energy dissipation throughout the structure, reliable solutions in case of unforeseen collapse of an element. A number of requirements arise from the concept such as: \textit{(i)} structural elements are able to withstand exceeding dynamic loads avoiding collapse - acknowledged as \textit{ductility design}; \textit{(ii)} the building encloses specific elements that are designed to fail in order to maintain overall integrity; and \textit{(iii)} bending type of failure is preferable instead of shear failure - \textit{capacity design} (Park and Pauley, 1975 \cite{park1984seismic}).
+
+Conventional or capacity seismic design implies that highly inelastic response cannot be always avoided, thus an optimal energy dissipation mechanism is preferred that would engage several bearing elements to experience full strength mobilization. One of the most successful concepts of energy dissipation suggests that columns should remain strong while beams can display plastic articulation at the extremities; additionally, the pier encounters plasticity at their base level. The concept is also known as \textit{strong columns, weak beams} and it can be seen in Figure \ref{strongCol}. The plastic articulation (or hinge) means a type of energy damping device allowing rotation of an otherwise rigid element; it develops when plastic bending takes place within the element. This also comes in conformity with the capacity design rule:  \textit{bending failure} rather than \textit{brittle shear failure}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"plastification"}
+	\caption{Strong columns, weak beam concept}
+	\label{strongCol}
+\end{figure}
+
+On the other hand, EC8 (Part 2, section 5.8) \cite{code2005eurocode} states that the foundation seismic design should avoid the mobilization of strength in the foundation at any costs: \textit{“...foundations shall not be used as sources of hysteretic energy dissipation, and therefore shall be designed to remain elastic under the design seismic action.”} Numerically, this means that the safety factor for static loads used in foundation design are large ($FS=2-3$). Structurally, it hints that no plastic hinges should develop within the underlying soil. And from geotechnical point of view, the foundation should not reach any state that might imply failure. 
+
+To outline the main features of the conventional foundation design:
+\begin{enumerate}
+	\item  No plastic hinging formation in pile-caps, foundation beams, rafts, so on.
+	\item Prevention of bearing capacity type of failure mechanism under uplifting shallow foundations.
+	\item No sliding at the soil-footing interface or excessive uplifting of a shallow foundation is allowed.
+	\item No passive failure adjacent to the edges of an embedded foundation.
+	\item No combination of any of the previous “failure” modes.
+\end{enumerate}
+
+\paragraph{New design philosophy}
+Recent researches focused on the behaviour of shallow foundations subjected to strong seismic loading and proved that the bearing capacity of the underlying soil is a reliable element that helps the structure to withstand such excitation and, further, the nonlinear foundation response acts rather beneficial in case of strong ground shakes. The concept of “rocking isolation” has thereby emerged as an alternative to the conservative – yet not safer – design of foundations against strong seismic shaking ( Pecker, 1998, 2003 \cite{pecker2014role}; Martin \& Lam, 2000; Faccioli et al., 2001 \cite{faccioli2001investigation}; Kutter et al., 2003; Gazetas et al., 2004 \cite{gazetas2004seismic}; Gajan et al., 2005 \cite{gajan2005centrifuge}; Anastasopoulos et al., 2010 \cite{anastasopoulos2010soil}, 2012 \cite{anastasopoulos2011simplified}; Kourkoulis et al 2012 \cite{kourkoulis2012rocking}; Gazetas 2013 \cite{gazetas2013nonlinear}). The reasons behind this new approach can relate to the following:
+
+\begin{itemize}
+	\item The last 25 years showed increasing ground acceleration values; this implies a higher capacity demand for the foundation in order to remain elastic and a larger ductility demand for the superstructure if the soil fails in limiting the transmitted accelerations.
+	\item There is a considerable amount of historical monuments surviving earthquake actions showing that sliding and uplifting played a beneficial role during the ground shaking. Two opposite examples can be visualized in Figures \ref{kobe} and \ref{turkey}.
+	\item The earthquake can be regarded as a combination of fast-cyclic and kinematic effects – it is common practice to take advantage of such features when designing slopes or retaining walls and allow sliding to occur.
+\end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{"new_phil"}
+	\caption{Comparison between conventional capacity design and the new design philosophy}
+	\label{comp}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{example1}
+		\caption{Plastic hinging at the base of the superstructure associated with collapse - Kobe, Japan 1995 }
+		\label{kobe}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{example3}
+		\caption{Unintentional plastic hinging development within the soft soil; large rotations leading eventually to collapse - Adapazari, Turkey 1999}
+		\label{turkey}
+	\end{minipage}
+\end{figure}
+
+The new design philosophy proposes to “contradict” aspects of the conventional design with emphasis on development of plastic articulations within the soil. Strong seismic motion induces large structural inertia forces which, in the case of slender buildings, means larger overturning moments compared to vertical forces. As a result, the footing experiences uplifting at one edge and, possibly, high normal stresses under the opposite edge; if this concentration of stresses is sufficiently large then bearing capacity failure mechanism materializes. Even though, in static conditions this phenomena would act detrimental causing failure, in dynamic circumstances the cyclic and kinematic effects of the earthquake actually improve the structural performance because:
+\begin{enumerate}
+	\item The inertial forces change the loading direction rapidly; in the end, it is a cyclic motion so the forces reverse and distress the soil; hence an under-designed foundation ($FS<1$) will experience large displacements during a limited period of time (tenths of a second) but they are reversed before the critical point is reached.
+	\item The developing inertial forces should be regarded as an vibratory displacement at the base and not as an external load on the superstructure. Excessive settlements and rotation can be generated as a function of the foundation capacity, however, failure is almost improbable. Thus, the loads transmitted to the superstructure are also restricted to the actual capacity of base or the interface separating the foundation-structure system.
+\end{enumerate}
+
+Thus, the main objectives of the new design philosophy focus on foundation response when subjected to seismic motion – a response that opposes the current codes requirements and typically is associated with failure. Thus, the fundamental features of the new method are: 
+\begin{enumerate}
+	\item Soil uplift and sliding at soil-structure interface is allowed and actually triggered;
+	\item Mobilization of bearing capacity failure mechanism due to large over-turning moments;
+	\item Plastification of soil near the edges of the footing described by large vertical stresses; 
+	\item Combination of any of the above.
+\end{enumerate}
+
+The current study works with a collection of peculiar characteristics. First of all, the earthquake is defined as a triggered type, unlike the usual European tectonic one. Moreover, Netherlands national code does not incorporate chapters regarding suitable seismic design simply because it was not the case so far – organizations and companies are currently busy elaborating a proper formulation for this matter. Secondly, the soil is very soft, bedrock lacks at any meaningful depth; the multi-shear waves might amplify the acceleration response at surface, thus the whole assembly describes a unique situation. Thirdly, it would improve the economical aspect, since a reduction in the superstructure ductility demand means a cost reduction regarding the necessary reinforcement required by a conventional capacity design.
+
+Having all these mentioned, the challenge of this thesis is to apply and examine the new design philosophy effects upon this particular set of aspects. The method proved to be efficient in cases of soft soil responding to the largest earthquake motions of all time; furthermore, it addressed shallow foundations in many tests– which is also the case in this investigation. Instead of taking the standard steps to analyse the dynamic response of the shallow footing, why not adopt this new design philosophy? Why not take advantage of the soft soil prone to accumulate large stresses and use it to limit the ductility demand within the superstructure? 
+
+At the end of the research, it should be concluded whether this new method is a trustworthy approach for Groningen seismic conditions. In case of success, perhaps it will attract more attention and it will stimulate future research towards this trend.
+
+
 
 \section{Research objectives}
-Given the complexity of the current application, several limitations are required to be imposed
+Given the complexity of the current application, several limitations are required to be imposed such as:
 \begin{itemize}
-	\item Calibration of the material model to match the normalized curves proposed by Darendeli (2011)\\
-	\item Validation of 1D site response analysis through a comparison between two software: Abaqus and NERA
-	\item Evaluation of different soil responses when subjected to various values of PGA
-	\item Investigation of the influence of the model boundary conditions on soil response
-	\item Evaluation of the soil-foundation interaction as well as soil-foundation-structure interaction when subjected to a real earthquake signal
-	\item continue
+	\item water is considered at surface level to match the undrained conditions assumption. No pore pressure is accounted for – only total stress analysis conditions are evaluated.
+	\item the soil parameters correspond to a homogeneous clay material with linearly increasing properties along the depth which are determined empirically.
+	\item no complicated structure is analysed: the foundation-structure system is implemented in Abaqus using a simple geometry: rectangular footing with a lumped mass on top of the slender pier. The emphasis is on the inelastic soil response and not on the superstructure.
+	\item only a qualitative comparison with results from scientific literature associated with 2D plane strain conditions is performed, since no real data is available.
 \end{itemize}
+
+In order to prepare the final analysis, several previous steps need to be taken:
+\begin{enumerate}
+	\item Calibration of the material model to match the normalized curves proposed by Darendeli, 2011 \cite{darendeli2001development}.
+	\item Examination of one-dimensional site response analysis incorporating the calibrated material model. Validation of results through a comparison between two software: Abaqus and NERA.
+	\item Evaluation of inelastic soil responses at surface level when subjected to various values of PGA.
+	\item Investigation of the influence of the model boundary conditions on soil response.
+\end{enumerate}
+
+Finally, the main scope of the research is to verify whether the new design philosophy is suitable for the ground and seismic conditions specific to Groningen area. This will materialize in an investigation carried out on a soil layer supporting a simple elastic foundation and the main emphasis is on:
+
+\begin{enumerate}
+	\item Soil inelastic response: uplift and sliding at soil-structure interface - large settlements and rotation at foundation centre of mass. 
+	\item Bearing-capacity failure mechanism: large overturning moments at foundation level.
+	\item Soil plastification: large vertical stresses beneath the footing edges.
+\end{enumerate}
+
+The effects of such analysis will be compared to the results the researchers group obtained when dealing with similar situations. In case the outcome show a fair match, it can be speculated that the new design philosophy is successful for this particular set of conditions.
 
 \section{Research outline}
 A schematic outline regarding the processes conducted during the thesis project are presented below. 
 
-The study starts with an overview of the new design philosophy to be used in the analyses - a new method that promotes the idea of seismic response going beyond certain thresholds that are commonly associated with system failure. 
+The study starts with an overview of the new design philosophy to be used in the analyses - a new method that promotes the idea of seismic response going beyond certain thresholds that are commonly associated with system failure. Additionally, it gains knowledge regarding the specific conditions the Northern area of Netherlands reveals, including the particular type of earthquake.
 
-A first step towards the main goal is made through the calibration of the material model and it is described in Chapter \ref{ch3}. A strain-controlled shear test is simulated through one (mesh) element;  by applying several strain levels to the shear box it is possible to obtain the non-linear soil response and represent it using normalized stiffness degradation together with material damping curves. The validation consists in comparing the achieved results with the ones existing in the scientific literature.
+A first step towards the main goal is made through the calibration of the material model and it is described in Chapter \ref{ch3}. A strain-controlled shear test is simulated through one element mesh;  by applying several strain levels to the shear box it is possible to obtain the non-linear soil response and represent it using normalized stiffness degradation together with material damping curves. The validation consists in comparing the achieved results with the ones existing in the scientific literature.
 
-Chapter 4 extends the previous analysis to a one dimensional soil column subjected to both uniform harmonic as well as real acceleration time history. A site response analysis is performed with emphasis on the inelastic soil outcome in frequency domain together with the site amplification factor. A comparison is performed between Abaqus software ouput and NERA (Non-Linear Earthquake Site Response Analysis) software - in order to validate the model which will assist the future investigation. Despite various differences that can emerge from distinctions in calculation algorithms, the results display a quite satisfying match. In addition, two acceleration time history records  are examined characterised by a higher PGA value and a lower, respectively. Thus, the results can sustain a comparison with the general response assigned for Groningen area expressed in soil amplification hence the validation relates to the context.
+Chapter 4 extends the previous analysis to a one dimensional soil column subjected to both uniform harmonic as well as real acceleration time history. A site response analysis is performed with emphasis on the inelastic soil outcome in frequency domain together with the site amplification factor. A comparison is performed between Abaqus software ouput and NERA (Non-Linear Earthquake Site Response Analysis) software - in order to validate the model which will assist the future investigation. Despite various differences that can emerge from distinctions in calculation algorithms, the results display a quite satisfactory match. In addition, two acceleration time history records  are examined characterised by a higher PGA value and a lower, respectively. Thus, the results can sustain a comparison with the general response assigned for Groningen area expressed in soil amplification hence the validation relates to the context.
 
-In Chapter 5, a finite-element model describes the soil-structure interaction capturing the new design philosophy features (a) soil uplift and (b) mobilization of bearing capacity type of failure. One of the most important aspects of such analysis relates to the boundary conditions associated with wave propagation phenomena. Since the need of reducing the computational expense of the numerical investigation, solutions must offer a good balance between model dimensions and accurate outcome - hence, various boundary condition options were explored and their effect on the overall inelastic soil outcome. Moreover, the nonlinear ground response is highlighted through interaction curves produced under static conditions and compared to the existing literature. Considering the geometrical nonlinearity associated with the out-rival of the soil-footing interface tensile strength and thus with the uplifting, parametric studies focus on the influence of structural mass dividing the analysis between (a) lightly-loaded and (b) heavily-loaded footings. In addition, to accentuate the differences between the conventional and the new design philosophy together with the uplifting effect, two other distinctions in terms of soil-footing contact are formulated as (a) Fully Bonded Contact \textit{FBC} and (b) Tensionless Sliding Interface \textit{TSI}.
-
-
+In Chapter 5, a finite-element model describes the soil-structure interaction capturing the new design philosophy features (a) soil uplift and (b) mobilization of bearing capacity type of failure. One of the most important aspects of such analysis relates to the boundary conditions associated with wave propagation phenomena. Since the need of reducing the computational expense of the numerical investigation, solutions must offer a good balance between model dimensions and accurate outcome - hence, various boundary condition options were explored and their effect on the overall inelastic soil outcome. Moreover, the nonlinear ground response is highlighted through interaction curves produced under static conditions and compared to the existing literature. Considering the geometrical nonlinearity associated with the out-rival of the soil-footing interface tensile strength and thus with the uplifting, parametric studies focus on the influence of structural mass dividing the analysis between \textit{(a) lightly-loaded} and \textit{(b) heavily-loaded footings}. In addition, to accentuate the differences between the conventional and the new design philosophy together with the uplifting effect, two other distinctions in terms of soil-footing contact are formulated as (a) Fully Bonded Contact \textit{FBC} and (b) Tensionless Sliding Interface \textit{TSI}.
 
 \begin{figure}[h!]
 	\centering
@@ -180,25 +273,87 @@ In Chapter 5, a finite-element model describes the soil-structure interaction ca
 
 \chapter{Literature survey}
 \section{A new design philosophy}
-Earthquake effects on building have been studied for over a century. Since the civil engineering community realized that guaranteeing great bearing capacity to the structures does not necessarily translate into enhanced safety, it adopted a \textit{fail-safe} design concept. The aim included a better control over the load path and energy dissipation throughout the structure, reliable solutions in case of unforeseen collapse of an element. A number of requirements arise from the concept such as: structural elements are able to withstand exceeding dynamic loads avoiding collapse - acknowledged as \textit{ductility design}; the building encloses specific elements that are designed to fail in order to maintain overall integrity; and bending type of failure is preferable instead of shear failure - \textit{capacity design }(Park and Pauley, 1975 \cite{park2004soil}). 
-
-All the requirements also include that the soil should avoid reaching a yielding state, behaving completely elastic. Moreover, the calculations relied on the hypothesis of a linear viscoelastic soil performance and a fully-bonded contact between the foundation block and underground. The adopted capacity design permits plastic deformation within structural elements but avoids reaching plastic state below the ground level. In other words, the foundation continues to behave elastically avoiding passive or shear failure along the sides or base, the ground shaking does not mobilizes the soil strength, and uplifting remains limited to 1/4 of the total area whilst sliding at the soil-structure contact surface is restricted.  In addition, it seemed that using factors of safety larger than 1 imposes restrictions in exploiting the non-linearly energy dissipation mechanism that, in reality, would improve structural response. Also, several phenomena may become neglected for instance, sliding or uplifting.
-
-Following the late records of several of the strongest earthquakes, it becomes clearly that uncertainties govern assessing the maximum credible seismic loading and the characteristic parameters (PGA, PGV, etc). Larger values are observed every earthquake, the structures behave differently within limited area whilst detailed seismic monitoring of large regions seems rather impracticable; for the earthquake in Kobe (1995) the accelerograms revealed a ground acceleration of 0.85g compared to the 0.30 g value used within the design. Evaluating the buildings after the earthquake in Bucharest (1977), records showed different PGA values for structures located approximately same distance from the fault which means that PGA does not govern exclusively but there are various other factors that dictate structural behaviour (frequency content, pulse). Henceforth, the necessity of a new design concept that permits the structure to bear larger earthquakes without collapsing or to avoid substantial deformation within the structural elements. This can be translated into a lesser structural ductility demand as the subsoil mobilizes its bearing capacity.
-Secondly, the economical aspect plays an important role in design as the current trend suggests stronger and larger structures equipped with reinforcement that withstand great earthquakes once or twice during operation stages. What if assuming the opposite of the actual situation - under-design the foundation while limiting the accelerations transmitted to the superstructure? In this way, the ductility demand decreases in the case of the structure due to the yielding capacity of the soil failure mechanism that ensures improved safety margins, as it shall be proved further.
-
-Recent researches focused on the behaviour of shallow foundations subjected to strong seismic loading and proved that the bearing capacity of the underlying soil is a reliable element that helps the structure to withstand such excitation and, further, the nonlinear foundation response acts rather beneficial in case of strong ground shakes.  The concept of “rocking isolation” has thereby emerged as an alternative to the conservative – yet not safer – design of foundations against strong seismic shaking ( Pecker, 1998, 2003 \cite{correia2012nonlinear}; Martin \& Lam, 2000; Faccioli et al., 2001 \cite{faccioli2001investigation}; Kutter et al., 2003; Gazetas et al., 2004 \cite{gazetas2013nonlinear}; Gajan et al., 2005 \cite{gajan2009effects}; Anastasopoulos et al., 2010 \cite{anastasopoulos2010soil}, 2012; Kourkoulis et al 2012 \cite{kourkoulis2012rocking}; Gazetas 2013 \cite{gazetas2013nonlinear}). 
 
 The current chapter presents the particularities of the new approach together with a summary of results and conclusions yielding from numerical models compared to experimental tests (centrifuge tests). The design seems appealing mainly because of current soil conditions Groningen area displays - mostly silty clay layers carrying strip foundations - if the method proves to be successful, it might mark the beginning of a new trend in seismic design research.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"new_phil"}
-	\caption{Comparison between conventional capacity design and the new design philosophy}
-	\label{comp}
-\end{figure}
-\section{Effects of nonlinearity}
-During seismic loading, the soil responds in a non-linear fashion; studies highlight three mechanisms that might occur in case of ground shaking as the figure below shows. Moreover, one can recognize two types of nonlinearities that govern the response - geometrical and material.
+It becomes important to understand the effects, benefits and disadvantages of the new method before carrying any analysis. The priority is to examine the inelastic soil response consequences on overall structural assembly, to follow recent research outcome and means of obtaining it. Moreover, a comparison between the two methods help defining advantages, recognize limitations and improvements one method might bring against the other. Let us begin by acknowledging the starting points of the new design philosophy.
+
+\section{Newmark sliding block analogue}
+Newmark, 1965 \cite{veletsos1965deformation} proposed a simplified model to examine the dynamic behaviour of earth dams and embankments in terms of permanent deformations, both rotation and settlement. The subject of the study is the analogue of a rigid block located on an inclined surface and the focus is on the deformations caused when the inertia forces acting on the sliding mass exceeds the frictional resistance of the failure surface. A key parameter is represented by the critical, or yield, acceleration $A_c$ which plays different roles depending on the application. Firstly, it depicts the pseudo-static base acceleration $A_c$ generating inertia forces that enhance the \textbf{sliding failure} ($FS=1$) and secondly, it describes the constant base acceleration leading to large over-turning moments, thus to a \textbf{bearing-capacity failure} ($FS=1$). The author showed that when the peak amplitude excitation A exceeds the critical acceleration of the system $A_c$, the underlying medium will only encounter permanent (inelastic) deformations; however, the displacement is not sufficient to provoke failure. A schematization of Newmark model is available in Figures \ref{newmark1} and \ref{newmark2}. Important to mention that these models work in pseudo-static conditions. 
+
+The main lesson learned from Newmark's application is that using an engineering safety factor $F_E$ less than 1 does not necessarily act detrimental on the structure, but it rather leads to a fair performance.
+ 
+ \begin{figure}[!h]
+ 	\centering
+ 	\begin{minipage}[b]{0.45\textwidth}
+ 		\includegraphics[width=\textwidth]{newmark1}
+ 		\caption{First example of Newmark model on inclined plane: critical acceleration depicting the sliding failure at the soil-block interface}
+ 		\label{newmark1}
+ 	\end{minipage}
+ 	\hfill
+ 	\begin{minipage}[b]{0.45\textwidth}
+ 		\includegraphics[width=\textwidth]{newmark2}
+ 		\caption{A second example of Newmark application on horizontal plane: critical acceleration leading to bearing capacity failure}
+ 		\label{newmark2}
+ 	\end{minipage}
+ \end{figure}
+ 
+ Learning from this concept, Gazetas, 2013 \cite{gazetas2013can} creates two numerical examples that include a safety factor $F_E$ less than unity focusing on both sliding and bearing-capacity failure.
+Firstly, the author investigates the rocking motion of a rigid block highlighting the toppling effect. The object of the study is a rectangular block located on top of a rigid base with tensionless interface; details can be seen in Figure \ref{new6}. The excitation comes in the form of Ricker pulse (a common signal with three main amplitudes) and the imposed acceleration exceeds the critical value, leading to a safety factor:
+ \begin{equation}
+ F_E= \frac{A_c}{A} \longrightarrow F_E=1/4 \longrightarrow F_E<1
+ \end{equation}
+ Moreover, the effect of the wavelet frequency gains attention as three various frequencies are introduced ranging from 0.5Hz to 4Hz; they represent typical ground accelerograms.  Results show that the lower frequency produces the maximum angle of rotation with a value close to the "overturning" angle $\theta_c$:
+ \begin{equation}
+ 	\theta_c=arctan(b/h)
+ \end{equation}
+ 
+ The conclusion states that high frequencies induce less rotation compared to lower frequencies; also, it "barely uplifts the block" hence assuming an engineering safety factor $F_E$ of less than unity does not imply failure by overturning the slender rigid structures.
+  
+  \begin{figure}[!h]
+  	\centering
+  	\begin{minipage}[b]{0.45\textwidth}
+  		\includegraphics[width=\textwidth]{newmark3}
+  		\caption{Representation of rocking rigid block together with a pseudo-static critical acceleration}
+  		\label{new6}
+  	\end{minipage}
+  	\hfill
+  	\begin{minipage}[b]{0.45\textwidth}
+  		\includegraphics[width=\textwidth]{newmark6}
+  		\caption{Representation of Ricker pulse. Input frequencies (0.5Hz - 4Hz) and the outcome in terms of angle of rotation $\theta$}
+  		\label{newmark6}
+  	\end{minipage}
+  \end{figure} 
+ 
+ \newpage
+  Furthermore, Gazetas analysed a simple one-bay building frame subjected to low frequency acceleration record corresponding to Kocaeli earthquake (Turkey, 1999) - the choice of a low frequency motion corresponds to a large angle of rotation as it was discussed in the previous example. The aim of the study is to highlight the mobilisation of soil failure. The author incorporated the pseudo-static critical acceleration $A_c$ that Newmark proposed and calculated the safety factor in terms of accelerations:
+ \begin{equation}
+ F_E= \frac{A_c}{A} \longrightarrow F_E=1/3 \longrightarrow F_E<1
+ \end{equation}
+ where $A_c$ is the critical acceleration leading to large overturning moments $M$ and shear forces $Q$ on the foundation which, in combination with the vertical force $N$, lead to the bearing capacity failure. And $A$ is the peak ground acceleration of the input record, here $A=0.36g$. Figure \ref{new5} shows the configuration of the model.
+ 
+   \begin{figure}[!h]
+   	\centering
+   	\begin{minipage}[b]{0.45\textwidth}
+   		\includegraphics[width=9cm, height=12cm, keepaspectratio]{newmark5}
+   		\caption{Representation of bearing-capacity failure of a one-bay building frame under a pseudo-static critical acceleration}
+   		\label{new5}
+   	\end{minipage}
+   	\hfill
+   	\begin{minipage}[b]{0.45\textwidth}
+   		\includegraphics[width=\textwidth]{newmark4}
+   		\caption{Soil response of a building frame subjected to acceleration record with A=0.36g. The shear stress contours indicate the failure zones at different times}
+   		\label{new4}
+   	\end{minipage}
+   \end{figure} 
+  
+ The results of the analysis can be seen in Figure \ref{new4}. It can be concluded that, indeed, failure mechanisms develop within the underlying soil; however, due to the cyclic nature of the seismic motion, the "failure" does not take long and is cancelled by the trend in opposite direction. The third snapshot (at t=17s) represents the end of the earthquake and it shows that the final outcome is a combination of settlements and permanent rotation. This might be acceptable in many cases; still, this is the responsibility of the structural engineer to decide the critical deformations.
+ 
+ Nevertheless, the entire phenomenon requires more attention to the details - the chapter continues with a description of non-linear aspects emerging from such dynamic application.
+  
+  \newpage
+\section{Non-linear soil response - Effects}
+During seismic loading, the soil responds in a non-linear fashion; studies highlight three mechanisms that might occur in case of ground shaking as the figure below shows. Moreover, one can recognize two types of nonlinearities that govern the response - \textbf{geometrical} and \textbf{material}.
 
 Geometrical nonlinearity can be described as the separation at supporting soil-strip footing interface that it usually addressed as \textit{uplifting} whilst the material nonlinearity refers to the type of failure mechanisms governed by the bearing capacity mobilization induced by large cyclic overturning moments - also known as \textit{soil failure}. 
 

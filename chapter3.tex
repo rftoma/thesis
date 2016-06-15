@@ -116,7 +116,7 @@
 		\label{beta_param}
 	\end{table}
 	
-	\subsection{Integration scheme}
+	\subsection{Integration scheme} \label{sectionNew}
 	It is important to understand the type of nonlinear analysis the software was opted to perform and its influence of the results. For this particular analysis, an implicit direct integration scheme was selected - this means that the set of nonlinear equations of motion solved at the time step $\Delta t_{n+1}$ are employed to compute the transition from the state at $t_n$ to $t_{n+1}$; on the other hand, an explicit integration uses all information at the beginning of $t_n$ to estimate the latter state at $t_{n+1}$.
 	
 	Abaqus/Standard uses the Hilber-Hughes-Taylor time integration method \cite{hilber1977improved} which is an extension of the Newmark $\beta$ method, 1959 \cite{newmark1959method}. Basically it controls the numerical damping within the system which might rise due to the energy dissipation mechanisms associated with different operator types. More details related to Newmark integration method are presented in Appendix \ref{App:AppendixH}.
@@ -333,7 +333,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"ARUP"}
-		\caption{Groningen site non-linear ground response, input vs surface PGA according to ARUP report}
+		\caption{Groningen site non-linear ground response, input vs surface PGA according to ARUP report; the additional blue star corresponds to the present high PGA analysis (PGA=0.6g) and the yellow star to the low PGA case (PGA=0.1g). The red line marks the borded between the two regions - amplification and de-amplification.}
 		\label{ARUP}
 	\end{figure}
 	

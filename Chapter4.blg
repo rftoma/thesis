@@ -1,20 +1,21 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Chapter4.aux
 The style file: ieeetr.bst
 Database file #1: bibliography.bib
-I was expecting a `,' or a `}'---line 393 of file bibliography.bib
+I was expecting a `,' or a `}'---line 414 of file bibliography.bib
  :  
  :  author={Bardet, JD, Tobita, T}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 464 of file bibliography.bib
+Repeated entry---line 485 of file bibliography.bib
  : @article{manualversion
  :                       ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "koh86harmonic"
+Warning--empty journal in code2005eurocode
 Warning--empty journal in faccioli2001investigation
+Warning--empty publisher in darendeli2001development
 Warning--empty year in manualversion
 Warning--empty journal in ishibashi1993unified
-Warning--empty publisher in darendeli2001development
 Warning--empty journal in papadrakakiscomparison
 Warning--empty year in papadrakakiscomparison
 Warning--empty author in NERA

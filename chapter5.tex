@@ -1,23 +1,31 @@
 	\chapter{Soil Structure Interaction analysis} \label{ch6}
 	
-	The current chapter presents the analysis performed in 2D plane stress domain of the soil-footing(-structure) interaction considering a shallow foundation subjected to a recorded acceleration-time history. Various methods of seismic implementation are carried out to examine aspects such as load effects on soil response, effectiveness of energy dissipation mechanisms and soil detachment occurrence.
+	The current chapter presents the analysis performed in 2D plane stress domain of the soil-footing(-structure) interaction considering a shallow foundation subjected to a recorded acceleration-time history. Various methods of seismic implementation are carried out to examine aspects such as load effects on soil response, effectiveness of energy dissipation mechanisms and soil uplift occurrence.
 	
 	\section{New design philosophy}
-	As previously presented, the new design philosophy suggests a different perspective on the induced non-linearity over the soil-structure assembly. Researchers involved within this study showed \mbox{several} effects associated with soil "failure" as acting beneficially in case of seismic ground motion. The interest in the current essay is to apply such approach on a different setting: soft soils, lack of bedrock, induced, and not tectonic, earthquakes together with shallow foundations. In order to summarize the goals, it is utmost important to define the characteristic non-linear effects:
+	As previously presented, the new design philosophy suggests a different perspective on the induced non-linearity over the soil-structure assembly. Researchers involved within this study (Anastasopoulos et al., 2010 \cite{anastasopoulos2010soil}, Gazetas et al, 2013 \cite{gazetas2013nonlinear}, Apostolou et al., 2011 \cite{apostolou2011soil}, etc.) showed \mbox{several} effects associated with soil "failure" as acting beneficially in case of seismic ground motion. The interest in the present essay is to apply such approach on a different setting: soft soils, lack of bedrock, induced, and not tectonic, earthquakes together with shallow foundations. In order to summarize the goals, it is utmost important to define the characteristic non-linear effects:
 	\begin{itemize}
 		\item separation at soil-footing surface under rocking vibration originating from the soil layer also known as \textit{uplifting} that occurs when negligible interface tensile capacity is considered.
 		\item mobilisation of the bearing capacity type of failure surface mechanism arises when experiencing large cyclic overturning moments - \textit{soil failure}.
-		\item plastification of the underlying ground in the proximity of the edges of the foundation \mbox{described} by large vertical stresses.
+		\item plastification of the underlying ground in the proximity of the edges of the foundation \mbox{induced} by large vertical stresses.
 	\end{itemize} 
 	
 	\section{Problem definition}
 	The former chapter gets extended towards a 2D plane stress problem involving a homogeneous soil layer supporting a shallow foundation and the entire structure is subjected to a seismic input motion. The study aims at inspecting the inelastic soil response, the proposed method accuracy and its limitations. The final goal is to be able to acknowledge the new design philosophy suitability for this specific earthquake in Groningen area.
 	
 	\section{Model description}
-	As expected, the soil properties do not change drastically, for all the work that was previously conducted proves the parameters validity. The preceding model (1D soil column) is expanded into a larger soil layer supporting a shallow foundation. The resting building relates to a chimney located in the north of Netherlands and it was chosen for its relatively simple geometry together with available structural properties and it can be seen in Figure \ref{chimney}.
+	As expected, the soil properties do not change drastically, for all the work that was previously conducted proves the parameters validity. The preceding model (1D soil column) is expanded into a larger soil layer supporting a shallow foundation. The resting building relates to a chimney located in Hoogezand village, Groningen, in  the north of Netherlands and it was chosen for its relatively simple geometry together with available structural properties. The location and the chimney itself can be seen in Figures \ref{Boom} and \ref{chimney}.
+	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.7 \linewidth]{"chimney"}
+		\includegraphics[width=0.6 \linewidth]{"Boomgaard"}
+		\caption{Map location of the chimney - Groningen area}
+		\label{Boom}
+	\end{figure} 
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.6 \linewidth]{"chimney"}
 		\caption{Real structure objected to study}
 		\label{chimney}
 	\end{figure} 
@@ -27,7 +35,7 @@
 \section{Method of analysis}
 Inelastic soil response investigation is implemented numerically with a finite element method considering two-dimensional plane strain assumptions; both the soil medium and the footing are modelled as deformable solids using quadrilateral, continuum elements, the superstructure simplified to a pier is assigned with a beam element section whilst the lumped mass is represented by a mass element. A state-of-art contact algorithm defines the soil-structure interface incorporating uplifting and sliding features whereas purely elastic impact assumption is adopted. Every analysis starts with a static step - the geostatic step in which initial stress conditions are established.  
 
-The dynamic analyses operate through an implicit direct-integration algorithm - global equations of motion are integrated in time domain via implicit Hilber-Hughes-Taylor operator. Newton's method includes the $\alpha$ and $\beta$ parameters with the values explained in the previous chapter. The numerical stability is achieved by calibrating both the mesh size and the time-step increment - such way elastic wave propagation laws are not violated. A schematization of the FE model can be seen in Figure\ref{ff} followed by a detailed description of the model.
+The dynamic analyses operate through an implicit direct-integration algorithm - global equations of motion are integrated in time domain via implicit Hilber-Hughes-Taylor operator. Newton's method includes the $\alpha$ and $\beta$ parameters with the values explained in the previous chapter (see section 4.2.4, chapter \ref{ch3} and Appendix \ref{App:AppendixH}). The numerical stability is achieved by calibrating both the mesh size and the time-step increment - such way elastic wave propagation laws are not violated - the calibration is also explained in Appendix \ref{App:AppendixI}. A schematization of the FE model can be seen in Figure \ref{mainM} followed by a detailed description of the model.
 
 \subsection{Analysis procedure - Steps}
 Every analysis begins with the calculation of the in-situ stresses to establish the geostatic conditions. Gravity load is applied all over the soil medium, simulating the real status when no foundation is resting on the ground. 
@@ -106,7 +114,7 @@ analysis.
 
 \subsection{Boundary conditions}
 For this type of application, it becomes necessary to define two sets of boundary conditions: the \textit{global} and the \textit{local} ones. The first set assumes the top surface as being constraint-free, whilst rigid bottom is initially defined. The lateral boundaries are both vertically and horizontally constrained.
-Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium - however, the calculation can become quite time and space consuming, thus the need of another concepts. Many researchers proposed methods of tackling the problem, here highlighting the work of  Zienkiewicz et al (1989) \cite{zienkiewicz1989earthquake}, Lysmer and Kuhlemeyer \cite{zienkiewicz1989earthquake} and many more.
+Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium - however, the calculation can become quite time and space consuming, thus the need of another concepts. Many researchers proposed methods of tackling the problem, here highlighting the work of Lysmer and Kuhlemeyer \cite{zienkiewicz1989earthquake}, Zienkiewicz et al (1989) \cite{zienkiewicz1989earthquake},  and many more.
 
 \paragraph{Theory of wave propagation}
 For the simplicity of the problem, vertically propagating waves were considered exclusively; it is also well known that both the body waves - P waves and S waves - are independent of each other. According to Love(1944) \cite{love1944h}, the wave equation for an isotropic elastic medium is:
@@ -186,7 +194,7 @@ Gathering all information, the modelling scheme should consist of two, perhaps t
 \section{Implementation of ABC} \label{implemenent}
 The aforementioned features of the free-field boundary conditions are detailed below, starting with the free-field soil column followed by the main model description together with various modelling techniques. 
 	\paragraph{Free-field soil column}
-	The free-field soil column performs similar to a vertical soil medium located far enough from the actual foundation for the vibrations not to perturb its state stress. This can be simply implemented as the one-dimensional column subjected to seismic excitation, identical to the model created for the site response analysis. Its advantages involve the option of extracting the results at any desired node, converting them into input for further calculations. Moreover, these results aid reducing the size of the main model domain and this saves the procedure considerable time. Thus, the previous analysis becomes essential as it ticks all the boxes. 
+	The free-field soil column performs similar to a vertical soil medium located far enough from the actual foundation for the vibrations not to perturb its state stress. This can be simply implemented as the one-dimensional column subjected to seismic excitation, identical to the model created for the site response analysis. Its advantages involve the option of extracting the results at any desired node, converting them into input for further calculations. Moreover, these results aid reducing the size of the main model domain and this saves the procedure considerable time. Thus, the previous analysis becomes essential as it satisfies all the apparent requirements. 
 	
 	It is worth to acknowledge the constraints linking pairs of lateral nodes in order to maintain equal horizontal displacements along the seismic test. Then, it suffices extracting the outcome from one set of lateral nodes, left or right displaying equal results. The output yields displacement, velocity and acceleration time histories for each lateral node - allowing a further implementation into the main model.
 	
@@ -260,7 +268,7 @@ The aforementioned features of the free-field boundary conditions are detailed b
 \subsection{FBC vs TSI}
 
 \paragraph{Soil-Foundation interaction}
-A simple footing with dimensions L=4m and b=0.5m is resting on the non-linear soil medium. As mentioned before, the analysis investigates the differences between two types of soil-footing contact: FBC and TSI. The fully bonded contact assumes the elements are permanently tied together during the analysis whilst the sliding interface allows uplifting to occur. The advanced contact algorithm was described in previous sections and the output consists in responses extracted from both the analyses. The footing acts like a rigid body; the boundaries are located at considerable distance from the footing in order to avoid its influence on the stress field. In fact, a test was performed to check the accuracy of the boundary position. Thus, the results from the site response analysis were compared to the ones at the boundaries until they were matching - because the one-dimensional soil column used in the SRA is representative for a far-field soil element, it shows how the ground itself behaves during an earthquake. As soon as this goal was achieved, it could be concluded on a correct width of the soil body - for this specific case, it proved that L=100m is sufficient. A collection of figures can be seen as it follows:
+A simple rectangular footing with dimensions L=4m and b=0.5m is resting on the non-linear soil medium. As mentioned before, the analysis investigates the differences between two types of soil-footing contact: FBC and TSI. The fully bonded contact assumes the elements are permanently tied together during the analysis whilst the sliding interface allows uplifting to occur. The advanced contact algorithm was described in previous sections and the output consists of responses extracted from both analyses. The footing acts like a rigid body; the boundaries are located at considerable distance from the footing in order to avoid its influence on the stress field. In fact, a test was performed to check the accuracy of the boundary position. Thus, the results from the site response analysis were compared to the ones at the boundaries until they were matching - because the one-dimensional soil column used in the SRA is representative for a far-field soil element, it shows how the ground itself behaves during an earthquake. As soon as this goal was achieved, it could be concluded on a correct width of the soil body - for this specific case, it proved that L=100m is sufficient. A collection of figures can be seen as it follows:
 
 	\begin{figure}[!h]
 		\centering
@@ -280,11 +288,11 @@ A simple footing with dimensions L=4m and b=0.5m is resting on the non-linear so
 
 \newpage
 \paragraph{Soil-Foundation-Structure interaction}
-Two additional elements are to be added for this section: the pier, acting infinitely rigid and the lumped mass on top of it. For the current situation, only the pier is present - (\textit{NOTE: Abaqus proves to be difficult when defining the connection between these elements - I shall insist more on this part}); the outcome is presented by means of stresses and displacements under footing, acceleration response, amplification factor and many more.
+Two additional elements are to be added for this section: the pier, acting infinitely rigid and the lumped mass on top of it. For the current situation, only the pier is present - (\textit{NOTE: Abaqus proves to be difficult when defining the connection between these elements - I shall insist more on this part}); the outcome is presented by means of stresses and displacements under footing, acceleration response, amplification factor etcetera.
 
-The results correspond to a simple analysis consisting in the non-linear soil supporting a rigid footing-pier assembly. The test starts with a geostatic step, followed by appliance of self weight of the foundation-pier and seismic excitation at the base of the layer. 
+The results correspond to a more advanced analysis consisting in the non-linear soil supporting a rigid footing-pier assembly. The test starts with a geostatic step, followed by the appliance of self weight of the foundation-pier and seismic excitation at the base of the layer. 
 
-The self weight of the footing relates to the calculations performed by Arcadis and Crux Engineering BV, which state that an uniform pressure load acts on the footing with a value of $q=65.5 kN/m^2$. Converting this load into a concentrated force applied at the footing centre of the mass, it yields $F=260 kN$. 
+The self weight of the footing relates to the calculations performed by Arcadis and Crux \mbox{Engineering BV}, which state that an uniform pressure load acts on the footing with a value of $q=65.5 kN/m^2$. Converting this load into a concentrated force applied at the footing centre of the mass, yields $F=260 kN$. 
 
 As for the dynamic step, the acceleration time history was scaled to include a PGA of 0.28g as representative for this specific site. The signal is trimmed yet again, because it contains both upward and downward waves and because the base aims to simulate the presence of the bedrock. Thus, the wave should be travelling upwards exclusively. A sketch of the input can be seen in the figure below.
 
@@ -298,7 +306,7 @@ As for the dynamic step, the acceleration time history was scaled to include a P
 \newpage
 \subsection{Stresses}
 
-The main emphasis relates to the proximity of the footing; the stresses developing from both the self weight action as well as the seismic excitation were collected and presented in the following plots. 
+The main emphasis is on the proximity of the footing; the stresses developing from both the self weight action as well as the seismic excitation were collected and presented in the following plots. 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"shear stress"}
@@ -322,9 +330,9 @@ The main emphasis relates to the proximity of the footing; the stresses developi
 
 \newpage
 \subsection{Acceleration response}
-The study extends to the investigation of the dynamic response at the mass location -which represents the top of the pier element. The acceleration is extracted for three main points: the base of the model, the surface point of the soil right beneath the footing and the lumped mass positioned on top of the structure. One goal is to observe whether the structure experiences amplification or de-amplification - this way, one can assume if the ductility demand decreased or not. Apart from comparing the acceleration response in various positions, the amplification factor is investigated too in the same fashion previous chapter operates.
+The study extends to the investigation of the dynamic response at the mass location -which represents the top of the pier element. The acceleration is extracted for three main points: the base of the model, the surface point of the soil right beneath the footing and the lumped mass positioned on top of the structure. One goal is to observe whether the structure experiences amplification or de-amplification which can hint if the ductility demand decreased or not. Apart from comparing the acceleration response in various positions, the amplification factor is investigated in the same fashion previous chapter operates.
 
-Acceleration outcome is transferred in frequency domain via a Fast Fourier computation for both soil surface response and lumped mass and the transfer function is calculated:
+Acceleration outcome is transferred in frequency domain via a Fast Fourier computation for responses from soil surface and lumped mass; the transfer function is calculated:
 
 	\begin{equation}
 	A(f)=\frac{F_{a,mass}(f)}{F_{a,surface}(f)}
@@ -338,7 +346,7 @@ Acceleration outcome is transferred in frequency domain via a Fast Fourier compu
 	\label{ampli}
 \end{figure}
 
-The output of the TSI case displays way fewer increment steps - it is speculated that this relates to the converge; as it achieves convergence faster than FBC care, the analysis does not require a decrease of time step, thus it prints the values at larger increment intervals. The problem shall be investigated in more detailed with the interest of obtaining more point results.
+The output of the TSI case displays way fewer increment steps - it is speculated that this relates to the convergence; as it converges faster than FBC, the analysis does not require a smaller time step, thus it prints the values at larger increment intervals. \textit{NOTE: The problem shall be investigated in more detailed with the interest of obtaining more point results.}
 
 \begin{figure}[!h]
 	\centering
@@ -354,7 +362,7 @@ The output of the TSI case displays way fewer increment steps - it is speculated
 	\label{FBCacc}
 \end{figure}
 
-The two analyses are originating from the same base model (same mesh, material input parameters, time incrementation elements), however, there are some numerical uncertainties that leads to an unsatisfactory collection of information points for the case with TS interface. Nonetheless, it is assumed, for the moment, that the peak acceleration was not omitted and that it can be depicted in the plot. Then, it seems that considering a tensionless sliding interface instead of a fully bonded contact reduces the acceleration at higher levels, thus the building experiences de-amplification. The output in frequency domain also indicates the phenomena as a larger amplification factor is observed when applying a permanent soil-footing tie. Additionally, the frequencies of soil surface and point mass are relatively close when working with a fully bonded footing; as previously said, if two elements oscillate with similar frequency, resonance can occur amplifying the damage. 
+The two analyses are originating from the same base model (same mesh, material input parameters, time incrementation elements), however, there are some numerical uncertainties that leads to an unsatisfactory collection of information points for the case with TS interface. Nonetheless, it is assumed, for the moment, that the peak acceleration was not omitted and that it can be depicted in the plot. Then, it seems that considering a tensionless sliding interface instead of a fully bonded contact reduces the acceleration at higher levels, thus the building experiences de-amplification. The output in frequency domain also indicates this phenomena as a larger amplification factor is observed when applying a permanent soil-footing tie. Additionally, the frequencies of soil surface and point mass are relatively close when working with a fully bonded footing; as previously said, if two elements oscillate with similar frequency, resonance can occur amplifying the damage. 
 
 
 \textbf{Notes}
