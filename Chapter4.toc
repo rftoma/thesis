@@ -9,95 +9,95 @@
 \contentsline {section}{\numberline {2.1}A new design philosophy}{13}
 \contentsline {section}{\numberline {2.2}Newmark sliding block analogue}{13}
 \contentsline {section}{\numberline {2.3}Non-linear soil response - Effects}{16}
-\contentsline {section}{\numberline {2.4}Uplifting}{17}
-\contentsline {section}{\numberline {2.5}Soil yielding}{17}
-\contentsline {section}{\numberline {2.6}Numerical analyses}{18}
-\contentsline {section}{\numberline {2.7}Soil condition}{20}
-\contentsline {subsection}{\numberline {2.7.1}Problem statement}{20}
-\contentsline {subsection}{\numberline {2.7.2}Constitutive model}{20}
-\contentsline {section}{\numberline {2.8}Numerical tools}{22}
+\contentsline {section}{\numberline {2.4}Geometrical non-linearity: Uplifting}{17}
+\contentsline {section}{\numberline {2.5}Material non-linearity: Soil yielding}{18}
+\contentsline {section}{\numberline {2.6}Numerical analyses}{19}
+\contentsline {section}{\numberline {2.7}Soil condition}{21}
+\contentsline {subsection}{\numberline {2.7.1}Problem statement}{21}
+\contentsline {subsection}{\numberline {2.7.2}Constitutive model}{21}
+\contentsline {section}{\numberline {2.8}Numerical tools}{23}
 \contentsline {section}{\numberline {2.9}Expected results}{23}
-\contentsline {chapter}{\numberline {3}Material calibration using one mesh element}{26}
-\contentsline {section}{\numberline {3.1}General}{26}
-\contentsline {section}{\numberline {3.2}Normalized stiffness degradation and material damping curves}{27}
-\contentsline {subsection}{\numberline {3.2.1}${G/G_{max}}$ curves}{29}
-\contentsline {subsection}{\numberline {3.2.2}Darendeli results}{29}
-\contentsline {section}{\numberline {3.3}Modelling}{31}
-\contentsline {subsection}{\numberline {3.3.1}Steps}{31}
-\contentsline {paragraph}{First step}{32}
-\contentsline {paragraph}{Second step}{33}
-\contentsline {section}{\numberline {3.4}Material description}{35}
-\contentsline {subsection}{\numberline {3.4.1}Input parameters}{35}
-\contentsline {paragraph}{\relax $\@@underline {\hbox {Stresses}}\mathsurround \z@ $\relax }{35}
-\contentsline {paragraph}{\relax $\@@underline {\hbox {Undrained shear strength}}\mathsurround \z@ $\relax }{36}
-\contentsline {paragraph}{\relax $\@@underline {\hbox {Stiffness}}\mathsurround \z@ $\relax }{36}
-\contentsline {subparagraph}{Shear modulus determined empirically}{36}
-\contentsline {subparagraph}{Shear modulus determined based on available measurements }{38}
-\contentsline {subsection}{\numberline {3.4.2}Non-linear parameters (kinematic hardening model with Von Mises failure criterion)}{41}
-\contentsline {section}{\numberline {3.5}Results}{42}
-\contentsline {subsection}{\numberline {3.5.1}General}{42}
-\contentsline {subsection}{\numberline {3.5.2}Parameters that influence the soil response}{44}
-\contentsline {subsection}{\numberline {3.5.3}Validation - Comparison with Darendeli curves}{45}
-\contentsline {section}{\numberline {3.6}Conclusions}{47}
-\contentsline {chapter}{\numberline {4}Site Response Analysis}{48}
-\contentsline {section}{\numberline {4.1}Introduction}{48}
-\contentsline {section}{\numberline {4.2}Model description}{48}
-\contentsline {subsection}{\numberline {4.2.1}Steps of analysis}{49}
-\contentsline {paragraph}{Geostatic}{49}
-\contentsline {paragraph}{Dynamic}{49}
-\contentsline {subsection}{\numberline {4.2.2}Input parameters}{51}
-\contentsline {subsection}{\numberline {4.2.3}Rayleigh coefficients}{51}
-\contentsline {subsection}{\numberline {4.2.4}Integration scheme}{53}
-\contentsline {subsection}{\numberline {4.2.5}FEM stability}{53}
-\contentsline {subsection}{\numberline {4.2.6}Mesh}{53}
-\contentsline {section}{\numberline {4.3}NERA - Non-linear Earthquake Site Response}{54}
-\contentsline {section}{\numberline {4.4}Results}{55}
-\contentsline {section}{\numberline {4.5}Comparison Abaqus vs NERA}{59}
-\contentsline {subsection}{\numberline {4.5.1}Remarks}{60}
-\contentsline {subsection}{\numberline {4.5.2}Additional investigation}{62}
-\contentsline {section}{\numberline {4.6}Conclusions}{63}
-\contentsline {chapter}{\numberline {5}Soil Structure Interaction analysis}{66}
-\contentsline {section}{\numberline {5.1}New design philosophy}{66}
-\contentsline {section}{\numberline {5.2}Problem definition}{66}
-\contentsline {section}{\numberline {5.3}Model description}{67}
-\contentsline {section}{\numberline {5.4}Method of analysis}{68}
-\contentsline {subsection}{\numberline {5.4.1}Analysis procedure - Steps}{68}
-\contentsline {subsection}{\numberline {5.4.2}Contact definition}{69}
-\contentsline {paragraph}{Mechanical properties}{69}
-\contentsline {paragraph}{Contact interface discretization}{71}
-\contentsline {subsection}{\numberline {5.4.3}Boundary conditions}{71}
-\contentsline {paragraph}{Theory of wave propagation}{71}
-\contentsline {paragraph}{Tied lateral boundaries}{72}
-\contentsline {paragraph}{Transmitting boundaries}{73}
-\contentsline {section}{\numberline {5.5}Implementation of ABC}{74}
-\contentsline {paragraph}{Free-field soil column}{74}
-\contentsline {paragraph}{Main model}{76}
-\contentsline {paragraph}{Equivalent forces}{77}
-\contentsline {section}{\numberline {5.6}Results}{77}
-\contentsline {subsection}{\numberline {5.6.1}Effects of applied boundary conditions}{77}
-\contentsline {subsection}{\numberline {5.6.2}Effects of loads}{77}
-\contentsline {subsection}{\numberline {5.6.3}FBC vs TSI}{77}
-\contentsline {paragraph}{Soil-Foundation interaction}{77}
-\contentsline {paragraph}{Soil-Foundation-Structure interaction}{79}
-\contentsline {subsection}{\numberline {5.6.4}Stresses}{80}
-\contentsline {subsection}{\numberline {5.6.5}Acceleration response}{81}
-\contentsline {section}{\numberline {5.7}Limitations and recommendations}{83}
-\contentsline {section}{\numberline {5.8}Conclusions}{83}
-\contentsline {section}{Appendix}{84}
-\contentsline {part}{I\hspace {1em}Appendix}{84}
-\contentsline {xpart}{Appendix}{85}
-\contentsline {chapter}{\numberline {A}Cone penetration test results}{85}
-\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{87}
-\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{87}
-\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{88}
-\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{91}
-\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{93}
-\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{95}
-\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{98}
-\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{100}
-\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{102}
-\contentsline {chapter}{\numberline {I}Newmark integration schemes}{104}
-\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{106}
-\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{108}
-\contentsline {chapter}{\numberline {L}NERA - Input example}{113}
-\contentsline {chapter}{Bibliography}{115}
+\contentsline {chapter}{\numberline {3}Material calibration using one mesh element}{27}
+\contentsline {section}{\numberline {3.1}General}{27}
+\contentsline {section}{\numberline {3.2}Normalized stiffness degradation and material damping curves}{28}
+\contentsline {subsection}{\numberline {3.2.1}${G/G_{max}}$ curves}{30}
+\contentsline {subsection}{\numberline {3.2.2}Darendeli results}{30}
+\contentsline {section}{\numberline {3.3}Modelling}{32}
+\contentsline {subsection}{\numberline {3.3.1}Steps}{32}
+\contentsline {paragraph}{First step}{33}
+\contentsline {paragraph}{Second step}{34}
+\contentsline {section}{\numberline {3.4}Material description}{36}
+\contentsline {subsection}{\numberline {3.4.1}Input parameters}{36}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Stresses}}\mathsurround \z@ $\relax }{36}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Undrained shear strength}}\mathsurround \z@ $\relax }{37}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Stiffness}}\mathsurround \z@ $\relax }{37}
+\contentsline {subparagraph}{Shear modulus determined empirically}{37}
+\contentsline {subparagraph}{Shear modulus determined based on available measurements }{39}
+\contentsline {subsection}{\numberline {3.4.2}Non-linear parameters (kinematic hardening model with Von Mises failure criterion)}{42}
+\contentsline {section}{\numberline {3.5}Results}{43}
+\contentsline {subsection}{\numberline {3.5.1}General}{43}
+\contentsline {subsection}{\numberline {3.5.2}Parameters that influence the soil response}{45}
+\contentsline {subsection}{\numberline {3.5.3}Validation - Comparison with Darendeli curves}{46}
+\contentsline {section}{\numberline {3.6}Conclusions}{48}
+\contentsline {chapter}{\numberline {4}Site Response Analysis}{49}
+\contentsline {section}{\numberline {4.1}Introduction}{49}
+\contentsline {section}{\numberline {4.2}Model description}{49}
+\contentsline {subsection}{\numberline {4.2.1}Steps of analysis}{50}
+\contentsline {paragraph}{Geostatic}{50}
+\contentsline {paragraph}{Dynamic}{50}
+\contentsline {subsection}{\numberline {4.2.2}Input parameters}{52}
+\contentsline {subsection}{\numberline {4.2.3}Rayleigh coefficients}{52}
+\contentsline {subsection}{\numberline {4.2.4}Integration scheme}{54}
+\contentsline {subsection}{\numberline {4.2.5}FEM stability}{54}
+\contentsline {subsection}{\numberline {4.2.6}Mesh}{54}
+\contentsline {section}{\numberline {4.3}NERA - Non-linear Earthquake Site Response}{55}
+\contentsline {section}{\numberline {4.4}Results}{56}
+\contentsline {section}{\numberline {4.5}Comparison Abaqus vs NERA}{60}
+\contentsline {subsection}{\numberline {4.5.1}Remarks}{61}
+\contentsline {subsection}{\numberline {4.5.2}Additional investigation}{63}
+\contentsline {section}{\numberline {4.6}Conclusions}{64}
+\contentsline {chapter}{\numberline {5}Soil Structure Interaction analysis}{67}
+\contentsline {section}{\numberline {5.1}New design philosophy}{67}
+\contentsline {section}{\numberline {5.2}Problem definition}{67}
+\contentsline {section}{\numberline {5.3}Model description}{68}
+\contentsline {section}{\numberline {5.4}Method of analysis}{69}
+\contentsline {subsection}{\numberline {5.4.1}Analysis procedure - Steps}{69}
+\contentsline {subsection}{\numberline {5.4.2}Contact definition}{70}
+\contentsline {paragraph}{Mechanical properties}{70}
+\contentsline {paragraph}{Contact interface discretization}{72}
+\contentsline {subsection}{\numberline {5.4.3}Boundary conditions}{72}
+\contentsline {paragraph}{Theory of wave propagation}{72}
+\contentsline {paragraph}{Tied lateral boundaries}{73}
+\contentsline {paragraph}{Transmitting boundaries}{74}
+\contentsline {section}{\numberline {5.5}Implementation of ABC}{75}
+\contentsline {paragraph}{Free-field soil column}{75}
+\contentsline {paragraph}{Main model}{77}
+\contentsline {paragraph}{Equivalent forces}{78}
+\contentsline {section}{\numberline {5.6}Results}{78}
+\contentsline {subsection}{\numberline {5.6.1}Effects of applied boundary conditions}{78}
+\contentsline {subsection}{\numberline {5.6.2}Effects of loads}{78}
+\contentsline {subsection}{\numberline {5.6.3}FBC vs TSI}{78}
+\contentsline {paragraph}{Soil-Foundation interaction}{78}
+\contentsline {paragraph}{Soil-Foundation-Structure interaction}{80}
+\contentsline {subsection}{\numberline {5.6.4}Stresses}{81}
+\contentsline {subsection}{\numberline {5.6.5}Acceleration response}{82}
+\contentsline {section}{\numberline {5.7}Limitations and recommendations}{84}
+\contentsline {section}{\numberline {5.8}Conclusions}{84}
+\contentsline {section}{Appendix}{85}
+\contentsline {part}{I\hspace {1em}Appendix}{85}
+\contentsline {xpart}{Appendix}{86}
+\contentsline {chapter}{\numberline {A}Cone penetration test results}{86}
+\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{88}
+\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{88}
+\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{89}
+\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{92}
+\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{94}
+\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{96}
+\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{99}
+\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{101}
+\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{103}
+\contentsline {chapter}{\numberline {I}Newmark integration schemes}{105}
+\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{107}
+\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{109}
+\contentsline {chapter}{\numberline {L}NERA - Input example}{114}
+\contentsline {chapter}{Bibliography}{116}

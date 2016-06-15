@@ -298,17 +298,17 @@ The main lesson learned from Newmark's application is that using an engineering 
  	\end{minipage}
  \end{figure}
  
- Learning from this concept, Gazetas, 2013 \cite{gazetas2013can} creates two numerical examples that include a safety factor $F_E$ less than unity focusing on both sliding and bearing-capacity failure.
-Firstly, the author investigates the rocking motion of a rigid block highlighting the toppling effect. The object of the study is a rectangular block located on top of a rigid base with tensionless interface; details can be seen in Figure \ref{new6}. The excitation comes in the form of Ricker pulse (a common signal with three main amplitudes) and the imposed acceleration exceeds the critical value, leading to a safety factor:
+ Learning from this concept, Gazetas, 2013 \cite{gazetas2013can} creates two numerical examples that include a safety factor $F_E$ less than unity, focusing on both sliding and bearing-capacity failure.
+Firstly, the author investigates the rocking motion of a rigid block highlighting the toppling effect. The object of the study is a rectangular block located on rigid base with a tensionless interface; details can be seen in Figure \ref{new6}. The excitation comes in the form of Ricker pulse (a representative signal with three main amplitudes) exceeding the critical value $A_c$, thus leading to a safety factor:
  \begin{equation}
  F_E= \frac{A_c}{A} \longrightarrow F_E=1/4 \longrightarrow F_E<1
  \end{equation}
- Moreover, the effect of the wavelet frequency gains attention as three various frequencies are introduced ranging from 0.5Hz to 4Hz; they represent typical ground accelerograms.  Results show that the lower frequency produces the maximum angle of rotation with a value close to the "overturning" angle $\theta_c$:
+ Moreover, the effect of the wavelet frequency gains attention as three various frequencies are introduced ranging from 0.5Hz to 4Hz (representative for the typical ground accelerograms). Results show that the lower frequency produces the maximum angle of rotation $\theta$ with a value close to the "overturning" angle $\theta_c$:
  \begin{equation}
  	\theta_c=arctan(b/h)
  \end{equation}
  
- The conclusion states that high frequencies induce less rotation compared to lower frequencies; also, it "barely uplifts the block" hence assuming an engineering safety factor $F_E$ of less than unity does not imply failure by overturning the slender rigid structures.
+ The conclusion states that high frequencies induce less rotation compared to lower frequencies; also, the higher frequency input "barely uplifts the block" hence, assuming an engineering safety factor $F_E$ of less than unity does not imply failure by overturning the slender rigid structures.
   
   \begin{figure}[!h]
   	\centering
@@ -318,7 +318,7 @@ Firstly, the author investigates the rocking motion of a rigid block highlightin
   		\label{new6}
   	\end{minipage}
   	\hfill
-  	\begin{minipage}[b]{0.45\textwidth}
+  	\begin{minipage}[b]{0.5\textwidth}
   		\includegraphics[width=\textwidth]{newmark6}
   		\caption{Representation of Ricker pulse. Input frequencies (0.5Hz - 4Hz) and the outcome in terms of angle of rotation $\theta$}
   		\label{newmark6}
@@ -349,13 +349,14 @@ Firstly, the author investigates the rocking motion of a rigid block highlightin
   
  The results of the analysis can be seen in Figure \ref{new4}. It can be concluded that, indeed, failure mechanisms develop within the underlying soil; however, due to the cyclic nature of the seismic motion, the "failure" does not take long and is cancelled by the trend in opposite direction. The third snapshot (at t=17s) represents the end of the earthquake and it shows that the final outcome is a combination of settlements and permanent rotation. This might be acceptable in many cases; still, this is the responsibility of the structural engineer to decide the critical deformations.
  
+ 
  Nevertheless, the entire phenomenon requires more attention to the details - the chapter continues with a description of non-linear aspects emerging from such dynamic application.
   
   \newpage
 \section{Non-linear soil response - Effects}
-During seismic loading, the soil responds in a non-linear fashion; studies highlight three mechanisms that might occur in case of ground shaking as the figure below shows. Moreover, one can recognize two types of nonlinearities that govern the response - \textbf{geometrical} and \textbf{material}.
+During seismic loading, the soil responds in a non-linear fashion; studies (Gazetas, 2004 \cite{gazetas2004nonlinear}, Apostolou, 2012\cite{apostolou2011soil}) highlight three mechanisms that might occur in case of ground shaking as the figure below shows. Moreover, one can recognize two types of nonlinearities that govern the response - \textbf{geometrical} and \textbf{material}.
 
-Geometrical nonlinearity can be described as the separation at supporting soil-strip footing interface that it usually addressed as \textit{uplifting} whilst the material nonlinearity refers to the type of failure mechanisms governed by the bearing capacity mobilization induced by large cyclic overturning moments - also known as \textit{soil failure}. 
+Geometrical nonlinearity can be described as the separation at supporting soil-strip footing interface that it usually addressed as \textit{uplifting}. The material nonlinearity refers to the type of failure mechanisms governed by the bearing capacity mobilization induced by large cyclic overturning moments - also known as \textit{soil failure}. 
 
 \begin{figure}[h!]
 	\centering
@@ -363,20 +364,43 @@ Geometrical nonlinearity can be described as the separation at supporting soil-s
 	\caption{Types of nonlinearity}
 	\label{types}
 \end{figure}
-Scientific literature describes several types of possibilities of nonlinear soil-foundation response in terms of both geometric nonlinearity (uplifting and sliding) and material inelasticity (soil yielding) and it can be studied using the following methods:
+
+Scientific literature (Chopra, 1985 \cite{chopra1985simplified}, Pecker, 2001 \cite{cremer2001cyclic}, Gazetas, 2013 \cite{gazetas2013can}) describes several types of possibilities of nonlinear soil-foundation response in terms of both geometric nonlinearity (uplifting and sliding) and material inelasticity (soil yielding) and it can be studied using the following methods:
 \begin{itemize}
-	\item 	Winkler method - comprises the settlement-rotation at the base of the foundation which is described as a series of dashpots and springs. The model was described by a beam on an elastic medium;
+	\item 	Winkler method - comprises the settlement-rotation at the base of the foundation which is described as a series of dashpots and springs. The structure was described by a beam on an elastic medium;
 	\item 	advanced macro-element modelling - the whole soil-structure system is described by an unique element which simulates the generalized force-displacement behaviour of the foundation. It is worth noting that in the elastic range, and without uplifting, the macroelement reduces to the familiar dynamic spring and dashpot(impedance) matrix;
-	
 	\item direct methods (finite element or finite difference methods) that successfully simulate both the soil and the foundation and the contact surface between them. This method is currently used as it proves itself efficient and accurate.
 \end{itemize}
 
-\section{Uplifting}
-New philosophy not only allows one of the nonlinearity behaviour to develop within the soil but also encourages that design should apply a safety factor against uplifting and soil failure lower than unity. This way, the structure ductility demand will decrease considerably, optimizing the energy dissipation path throughout the building. Various studies focused on the rocking response simulating the soil in different manners; for example, the first models included tensionless spring-dashpot elements that described the soil (Chopra \& Yim 1985 \cite{chopra1985simplified}, Koh et al, 1986 \cite{koh86harmonic}) followed by a single macro-element which includes constitutive law that accounts for the uplift mechanism in a soil-foundation system. Ultimately, the dynamic analysis is performed in finite-element based software ( Hibbit et al, 2001 \cite{hibbett1998abaqus}, Gazetas et al, 2010 \cite{anastasopoulos2010soil}) - the model combines a rigid foundation footing, elasto-plastic soil and an advanced contact algorithm that inserts the potential sliding and uplifting.
+\section{Geometrical non-linearity: Uplifting}
+New philosophy not only allows one of the nonlinearity behaviour to develop within the soil but also encourages that design should apply a safety factor against uplifting and soil failure lower than unity. This way, the structure ductility demand will decrease considerably, optimizing the energy dissipation path throughout the building. Various studies focused on the rocking response simulating the soil in different manners; for example, the first models included tensionless spring-dashpot elements that described the rigid soil (Chopra \& Yim 1985 \cite{chopra1985simplified}, Koh et al, 1986 \cite{koh86harmonic}) followed by a single macro-element which includes constitutive law that accounts for the uplift mechanism in a soil-foundation system. Ultimately, the dynamic analysis is performed in finite-element based software ( Hibbit et al, 2001 \cite{hibbett1998abaqus}, Gazetas et al, 2010 \cite{anastasopoulos2010soil}) - the model combines a rigid foundation footing, elasto-plastic soil and an advanced contact algorithm that inserts the potential sliding and uplifting.
 
-The uplifting behaviour acts beneficial in dynamic conditions because the foundation can withstand higher values of bending moments compared to the ultimate capacity, $M_{ult}$. The key in this rocking behaviour is the relatively short time period in which the stresses surpass the limiting values. The ground acceleration displays a rapid change in trend which makes the foundation block to decelerate, stop and rock in the opposite direction. Researchers showed the correlation between the natural period of the foundation footing and rocking potential - high frequency seismic motion lead to a somehow "safer" rocking response preventing collapse or toppling of the superstructure. Scientific literature (Gazetas et al, 2013 \cite{gazetas2013nonlinear}, Apostolou, 2011 \cite{apostolou2011soil}, Faccioli et al, 2001 \cite{faccioli2001investigation}, Anastasopoulos et al \cite{anastasopoulos2010soil} etc.) confirms that the nature of the seismic excitations along with the fundamental period of the structure dictate the response of the soil-foundation system.
+The geometrical non-linearity is generated when large overturning moments (associated with uplift) or lateral forces (inducing sliding) is applied on the footing. Uplifting occurs due to the incapability of the soil to withstand tensile stresses and it materializes through loss of contact at soil-foundation interface. Additionally, it dictates the moment-rotation relationship towards a softening behaviour even under elastic conditions.
 
-\section{Soil yielding}
+Early studies considered a simplified rigid soil model and highlighted two states of response: (1) full-contact stage and (2) uplifting stage. A transition between the two phases relates to the bending capacity the structure displays. For a rectangular shallow foundation under static conditions, the moment capacity of the structure right before the initialization of the uplift is:
+\begin{equation}
+	M_{ult}= \frac{N B}{2}
+\end{equation}
+ where $N$ is the permanent axial force on the footing, $B$ is the width of the foundation. The load is assumed to be applied with an eccentricity equal to the half-span of the footing (B/2). 
+ 
+ Further, the maximum overturning moment induced by inertial forces is:
+ \begin{equation}
+ 	M_{max}= N \frac{a}{g}\frac{H}{2}
+ \end{equation}
+where $a$ is the PGA value, $g$ is the gravitational acceleration ($g=9.81m/s^2$), $H$ is the height of the superstructure.
+
+Now, the criterion for uplifting is expressed as a function of these two moments; particularly, if the maximum overturning moment goes beyond the capacity ($M_{max}>M_{ult}$), then toppling of the structure occurs. This statement is true for static conditions while in dynamic conditions the uplifting acts beneficial. This is because the foundation can withstand higher values of bending moments compared to the ultimate capacity, $M_{ult}$. The key in this rocking behaviour is the relatively short time period in which the stresses surpass the limiting values. The ground acceleration displays a rapid change in trend which makes the foundation block to decelerate, stop and rock in the opposite direction. Researchers (Gazetas, 2013 \cite{gazetas2013can}) showed the correlation between the natural period of the foundation footing and rocking potential - high frequency seismic motion lead to a somehow "safer" rocking response preventing collapse or toppling of the superstructure. 
+
+Scientific literature (Gazetas et al, 2013 \cite{gazetas2013nonlinear}, Apostolou, 2011 \cite{apostolou2011soil}, Faccioli et al, 2001 \cite{faccioli2001investigation}, Anastasopoulos et al \cite{anastasopoulos2010soil} etc.) confirms that the nature of the seismic excitations along with the fundamental period of the structure dictate the response of the soil-foundation system via a more complicated material model that allows for soil yielding. One important aspect to keep in mind is uplifting systems experience larger rotations and occasional overturning whilst the sliding system resists the strong seismic motions with large permanent displacements.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"rocking"}
+	\caption{The geometrically non-linear nature of the problem is evident even under the assumption of an elastic soil. The image confirms the conclusions from both earlier and more recent models }
+	\label{rocking}
+\end{figure}
+
+\section{Material non-linearity: Soil yielding}
 The nonlinearity observed in the soil response mainly depends on the shear strains which develop within the material when the foundation experiences large angles of rotation. An important parameter arises when the foundation is subjected to large rotations - vertical safety factor $FS_v$ defined as the ratio between the ultimate bearing capacity under pure vertical static load $N_u$ and the currently applied axial force $N$ - $FS_v = \frac{N_u}{N}$. Furthermore, the rotational capacity expressed in terms of ultimate moment resistance of the footing relates to both the axial force N, and the shear force Q acting on the foundation. Recent research emphasize on elaborating ultimate limit states defined by combinations of N, Q and M loads - the graphical representation is known as failure envelope. 
 
 Another of the new concept goals stands in defining this failure locus - based on load combinations and their position regarding this envelope, one can state whether the foundation acts stable or not. Many experiments based on model-scale shallow footing support this theory along with theoretical and numerical failure equations (Murff, 1994, Bransby and Randolf, 1998 \cite{bransby1998combined}, Butterfield and Gottardi, 1994 \cite{gottardi1999plastic}). Experiments (Gajan et al, 2005 \cite{gajan2005centrifuge}) highlight the influence of two parameters governing the load displacement and energy dissipation aspects of the soil-foundation interface during cyclic loading: static factor of safety regarding vertical force exclusively (FSv) and moment-to-shear ratio - together describing the load path. Henceforth, a challenge in assessing seismic loading impact represents the correct evaluation of loading combination (shear force Q and overturning moment M) that will lead to failure for a given vertical force, N, acting on the superstructure.

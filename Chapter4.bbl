@@ -75,19 +75,30 @@ G.~Gazetas, ``Can we design in geotechnics with seismic factors of safety less
   M{\'e}canique Des Sols \& de G{\'e}otechnique: La G{\'e}otechnique Des Sols
   Indur{\'e}s-Roches Tendres,[Athina 2011].. Pt. 4}, p.~141, 2013.
 
-\bibitem{chopra1985simplified}
-A.~K. Chopra and S.~C.-S. Yim, ``Simplified earthquake analysis of structures
-  with foundation uplift,'' {\em Journal of Structural Engineering}, vol.~111,
-  no.~4, pp.~906--930, 1985.
-
-\bibitem{hibbett1998abaqus}
-Hibbett, Karlsson, and Sorensen, {\em ABAQUS/standard: User's Manual}, vol.~1.
-\newblock Hibbitt, Karlsson \& Sorensen, 1998.
+\bibitem{gazetas2004nonlinear}
+G.~Gazetas and M.~Apostolou, ``Nonlinear soil--structure interaction:
+  foundation uplifting and soil yielding,'' in {\em Proceedings of the 3rd
+  USA--Japan workshop on soil--structure interaction. Menlo Park}, 2004.
 
 \bibitem{apostolou2011soil}
 M.~E. Apostolou, {\em Soil--structure interaction under strong seismic moment:
   material and geometric nonlinearity}.
 \newblock PhD thesis, National Technical University, Athens, 2011.
+
+\bibitem{chopra1985simplified}
+A.~K. Chopra and S.~C.-S. Yim, ``Simplified earthquake analysis of structures
+  with foundation uplift,'' {\em Journal of Structural Engineering}, vol.~111,
+  no.~4, pp.~906--930, 1985.
+
+\bibitem{cremer2001cyclic}
+C.~Cremer, A.~Pecker, and L.~Davenne, ``Cyclic macro-element for
+  soil--structure interaction: material and geometrical non-linearities,'' {\em
+  International Journal for Numerical and Analytical Methods in Geomechanics},
+  vol.~25, no.~13, pp.~1257--1284, 2001.
+
+\bibitem{hibbett1998abaqus}
+Hibbett, Karlsson, and Sorensen, {\em ABAQUS/standard: User's Manual}, vol.~1.
+\newblock Hibbitt, Karlsson \& Sorensen, 1998.
 
 \bibitem{bransby1998combined}
 M.~Bransby and M.~Randolph, ``Combined loading of skirted foundations,'' {\em
