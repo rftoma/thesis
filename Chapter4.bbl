@@ -96,18 +96,42 @@ C.~Cremer, A.~Pecker, and L.~Davenne, ``Cyclic macro-element for
   International Journal for Numerical and Analytical Methods in Geomechanics},
   vol.~25, no.~13, pp.~1257--1284, 2001.
 
+\bibitem{koh1986harmonic}
+A.-S. Koh, P.~D. Spanos, and J.~M. Roesset, ``Harmonic rocking of rigid block
+  on flexible foundation,'' {\em Journal of engineering mechanics}, vol.~112,
+  no.~11, pp.~1165--1180, 1986.
+
 \bibitem{hibbett1998abaqus}
 Hibbett, Karlsson, and Sorensen, {\em ABAQUS/standard: User's Manual}, vol.~1.
 \newblock Hibbitt, Karlsson \& Sorensen, 1998.
 
-\bibitem{bransby1998combined}
-M.~Bransby and M.~Randolph, ``Combined loading of skirted foundations,'' {\em
-  G{\'e}otechnique}, vol.~48, no.~5, pp.~637--55, 1998.
+\bibitem{meek1975effects}
+J.~W. Meek, ``Effects of foundation tipping on dynamic response,'' {\em Journal
+  of the Structural Division}, vol.~101, no.~7, pp.~1297--1311, 1975.
 
-\bibitem{gottardi1999plastic}
-G.~Gottardi, G.~Houlsby, and R.~Butterfield, ``Plastic response of circular
-  footings on sand under general planar loading,'' {\em G{\'e}otechnique},
-  vol.~49, no.~4, pp.~453--470, 1999.
+\bibitem{pecker2000earthquake}
+A.~Pecker, M.~Pender, {\em et~al.}, ``Earthquake resistant design of
+  foundations: new construction,'' in {\em ISRM International Symposium},
+  International Society for Rock Mechanics, 2000.
+
+\bibitem{seed1986use}
+H.~B. Seed and P.~De~Alba, ``Use of spt and cpt tests for evaluating the
+  liquefaction resistance of sands,'' in {\em Use of in situ tests in
+  geotechnical engineering}, pp.~281--302, ASCE, 1986.
+
+\bibitem{mroz1967description}
+Z.~Mroz, ``On the description of anisotropic workhardening,'' {\em Journal of
+  the Mechanics and Physics of Solids}, vol.~15, no.~3, pp.~163--175, 1967.
+
+\bibitem{lemaitre1994mechanics}
+J.~Lemaitre and J.-L. Chaboche, {\em Mechanics of solid materials}.
+\newblock Cambridge university press, 1994.
+
+\bibitem{correia2012nonlinear}
+A.~Correia, A.~Pecker, S.~Kramer, and R.~Pinho, ``Nonlinear pile-head
+  macro-element model: Ssi effects on seismic response of a monoshaft-supported
+  bridge,'' in {\em Proceedings of the 15th World Conference on Earthquake
+  Engineering}, 2012.
 
 \bibitem{anastasopoulos2014simplified}
 I.~Anastasopoulos and T.~Kontoroupi, ``Simplified approximate method for
@@ -140,15 +164,14 @@ H.~Roh and A.~M. Reinhorn, ``Modeling and seismic response of structures with
   concrete rocking columns and viscous dampers,'' {\em Engineering Structures},
   vol.~32, no.~8, pp.~2096--2107, 2010.
 
-\bibitem{correia2012nonlinear}
-A.~Correia, A.~Pecker, S.~Kramer, and R.~Pinho, ``Nonlinear pile-head
-  macro-element model: Ssi effects on seismic response of a monoshaft-supported
-  bridge,'' in {\em Proceedings of the 15th World Conference on Earthquake
-  Engineering}, 2012.
+\bibitem{bransby1998combined}
+M.~Bransby and M.~Randolph, ``Combined loading of skirted foundations,'' {\em
+  G{\'e}otechnique}, vol.~48, no.~5, pp.~637--55, 1998.
 
-\bibitem{lemaitre1994mechanics}
-J.~Lemaitre and J.-L. Chaboche, {\em Mechanics of solid materials}.
-\newblock Cambridge university press, 1994.
+\bibitem{gottardi1999plastic}
+G.~Gottardi, G.~Houlsby, and R.~Butterfield, ``Plastic response of circular
+  footings on sand under general planar loading,'' {\em G{\'e}otechnique},
+  vol.~49, no.~4, pp.~453--470, 1999.
 
 \bibitem{randolph2011offshore}
 M.~Randolph and S.~Gourvenec, {\em Offshore geotechnical engineering}.
@@ -187,11 +210,6 @@ B.~O. Hardin and F.~Richart~Jr, ``Elastic wave velocities in granular soils,''
 P.~K. Robertson and R.~Campanella, ``Interpretation of cone penetration tests.
   part i: Sand,'' {\em Canadian geotechnical journal}, vol.~20, no.~4,
   pp.~718--733, 1983.
-
-\bibitem{seed1986use}
-H.~B. Seed and P.~De~Alba, ``Use of spt and cpt tests for evaluating the
-  liquefaction resistance of sands,'' in {\em Use of in situ tests in
-  geotechnical engineering}, pp.~281--302, ASCE, 1986.
 
 \bibitem{papadrakakiscomparison}
 M.~Papadrakakis, N.~Lagaros, and V.~Plevris, ``A comparison of two
@@ -233,10 +251,6 @@ B.~Jeremic, G.~Jie, M.~Preisig, and N.~Tafazzoli, ``Time domain simulation of
 \bibitem{NERA}
 ``Nera a computer program for nonlinear earthquake site response analyses of
   layered soil deposits,''
-
-\bibitem{mroz1967description}
-Z.~Mroz, ``On the description of anisotropic workhardening,'' {\em Journal of
-  the Mechanics and Physics of Solids}, vol.~15, no.~3, pp.~163--175, 1967.
 
 \bibitem{martellotta2015review}
 L.~Martellotta, D.~Martens, and P.~Teuffel, ``Review of seismic retrofitting
