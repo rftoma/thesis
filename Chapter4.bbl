@@ -127,12 +127,6 @@ Z.~Mroz, ``On the description of anisotropic workhardening,'' {\em Journal of
 J.~Lemaitre and J.-L. Chaboche, {\em Mechanics of solid materials}.
 \newblock Cambridge university press, 1994.
 
-\bibitem{correia2012nonlinear}
-A.~Correia, A.~Pecker, S.~Kramer, and R.~Pinho, ``Nonlinear pile-head
-  macro-element model: Ssi effects on seismic response of a monoshaft-supported
-  bridge,'' in {\em Proceedings of the 15th World Conference on Earthquake
-  Engineering}, 2012.
-
 \bibitem{anastasopoulos2014simplified}
 I.~Anastasopoulos and T.~Kontoroupi, ``Simplified approximate method for
   analysis of rocking systems accounting for soil inelasticity and foundation
@@ -152,6 +146,11 @@ A.~I. Panagiotidou, G.~Gazetas, and N.~Gerolymos, ``Pushover and seismic
 \bibitem{manualversion}
 A.~U. Manual, ``Version 6.14-1,'' {\em Dassault Syst{\'e}mes Simulia Corp.,
   Providence, RI}.
+
+\bibitem{huckelbridge1978seismic}
+A.~A. Huckelbridge and R.~W. Clough, ``Seismic response of uplifting building
+  frame,'' {\em Journal of the Structural Division}, vol.~104, no.~8,
+  pp.~1211--1229, 1978.
 
 \bibitem{kanno2006new}
 T.~Kanno, A.~Narita, N.~Morikawa, H.~Fujiwara, and Y.~Fukushima, ``A new

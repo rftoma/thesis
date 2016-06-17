@@ -150,7 +150,7 @@ One major factor influencing the structural nonlinear response is the subsoil on
 Reflecting on all these aspects, the situation calls for extensive investigation to determine the nature of the seismic action, its consequences and mitigation forms - or seismic design computation methods. 
 
 \section{Solutions}
-\paragraph{Conventional design}
+\subsection{Conventional design}
 Earthquake effects on buildings have been studied for over a century. Since the civil engineering community realized that guaranteeing great bearing capacity to the structures does not necessarily translate into enhanced safety, it adopted a \textit{fail-safe} design concept. The aim included a better control over the load path and energy dissipation throughout the structure, reliable solutions in case of unforeseen collapse of an element. A number of requirements arise from the concept such as: \textit{(i)} structural elements are able to withstand exceeding dynamic loads avoiding collapse - acknowledged as \textit{ductility design}; \textit{(ii)} the building encloses specific elements that are designed to fail in order to maintain overall integrity; and \textit{(iii)} bending type of failure is preferable instead of shear failure - \textit{capacity design} (Park and Pauley, 1975 \cite{park1984seismic}).
 
 Conventional or capacity seismic design implies that highly inelastic response cannot be always avoided, thus an optimal energy dissipation mechanism is preferred that would engage several bearing elements to experience full strength mobilization. One of the most successful concepts of energy dissipation suggests that columns should remain strong while beams can display plastic articulation at the extremities; additionally, the pier encounters plasticity at their base level. The concept is also known as \textit{strong columns, weak beams} and it can be seen in Figure \ref{strongCol}. The plastic articulation (or hinge) means a type of energy damping device allowing rotation of an otherwise rigid element; it develops when plastic bending takes place within the element. This also comes in conformity with the capacity design rule:  \textit{bending failure} rather than \textit{brittle shear failure}.
@@ -173,7 +173,7 @@ To outline the main features of the conventional foundation design:
 	\item No combination of any of the previous “failure” modes.
 \end{enumerate}
 
-\paragraph{New design philosophy}
+\subsection{New design philosophy}
 Recent researches focused on the behaviour of shallow foundations subjected to strong seismic loading and proved that the bearing capacity of the underlying soil is a reliable element that helps the structure to withstand such excitation and, further, the nonlinear foundation response acts rather beneficial in case of strong ground shakes. The concept of “rocking isolation” has thereby emerged as an alternative to the conservative – yet not safer – design of foundations against strong seismic shaking ( Pecker, 1998, 2003 \cite{pecker2014role}; Martin \& Lam, 2000; Faccioli et al., 2001 \cite{faccioli2001investigation}; Kutter et al., 2003; Gazetas et al., 2004 \cite{gazetas2004seismic}; Gajan et al., 2005 \cite{gajan2005centrifuge}; Anastasopoulos et al., 2010 \cite{anastasopoulos2010soil}, 2012 \cite{anastasopoulos2011simplified}; Kourkoulis et al 2012 \cite{kourkoulis2012rocking}; Gazetas 2013 \cite{gazetas2013nonlinear}). The reasons behind this new approach can relate to the following:
 
 \begin{itemize}
@@ -481,23 +481,115 @@ A more detailed description of the constitutive model can be found in Appendix \
 
 \section{Numerical analyses}
 \subsection{General features}
-Researchers (Anastasopoulos, \cite{anastasopoulos2014simplified}, Ntritsos et al, 2015 \cite{ntritsos2015static}, Panagiotidou, 2012 \cite{panagiotidou2012pushover}) developed several models that highlight the new design particularities - both two-dimensional and three-dimensional elements were used in order to elaborate the soil-foundation system behaviour in static, cyclic and dynamic load combinations. All the FE analyses performed to research this approach were formulated using the software \textit{Abaqus} \cite{manualversion}. Both the soil and the foundation are modelled as eight-noded hexahedral brick-type element, the soil being considered a non-linear element while the latter elastic. Gauss points serve as reference points for extracting the results allowing a selective reduced integration - such method leads to accurate solutions including those for incompressible materials as it was confirmed in previous publications (Gazetas, 2013 \cite{gazetas2013nonlinear}).
+Researchers (Anastasopoulos, \cite{anastasopoulos2014simplified}, Ntritsos et al, 2015 \cite{ntritsos2015static}, Panagiotidou, 2012 \cite{panagiotidou2012pushover}) \mbox{developed} various models that highlight the new design particularities - both two-dimensional and three-dimensional elements were used in order to elaborate the soil-foundation system behaviour in static, cyclic and dynamic load combinations. 
 
-The simulations included a saturated clay type of material characterised by an undrained shear strength $S_u$ and a maximum shear modulus $G_{max}$. It proves appropriate to consider undrained soil behaviour due to the rapid loading that corresponds to the seismic excitation - in addition, it allows a total stress analysis which can be described using a von Mises failure criterion along with an associative flow rule. The inelastic soil response was described through an evolution law based on both nonlinear kinematic hardening and isotropic hardening components that account for the changes the yield surface experience within the stress state.
+All the FE analyses performed to research this approach were formulated using the software \textit{Abaqus} \cite{manualversion}. Both the soil and the foundation are modelled as eight-noded hexahedral brick-type element, the soil being considered a non-linear element while the latter elastic. Additionally, centrifuge tests and experiments are compared with the numerical outcome for validation purposes.
 
-The two main components of the structural system were separated through an interface that permits sliding and uplifting - a special contact algorithm was introduced such that the interface elements can detach in the specific areas where the angle of rotation exceeds the foundation characteristic critical rotation. The boundaries, both lateral and vertical, depend on the loading type the structure experiences - static conditions do not impose special requirements regarding the position of the boundaries. However, dynamic conditions introduce the wave propagation effect that might distort the final results due to reflections - hence the boundaries should be placed at a considerable distance from the foundation. The location of these borders account for the pressure-bulbs generated by the dissipation of vertical stresses induced by the moment loading on the foundation strips.
+A number of simulations included a saturated clay type of material characterised by an undrained shear strength $S_u$ and a maximum shear modulus $G_{max}$. It proves appropriate to consider undrained soil behaviour due to the rapid loading that corresponds to the seismic excitation - in addition, it allows a total stress analysis which can be described using a von Mises failure criterion along with an associative flow rule. The inelastic soil response was described through an evolution law based on both nonlinear kinematic hardening and isotropic hardening components that account for the changes the yield surface experiences within the stress state.
 
-A series of ground-shaking accelerograms served as dynamic input for the analyses - both medium and strong earthquakes recorded all around the world (Kalamata, 1986; Kobe, 1995; Lefkada, 2003, etc). These data were introduced for systems considering slender structures simplified as rigid oscillators standing on inelastic soil. The system response was further processed in order to obtain an approximation of the rocking behaviour. In addition, emphasis on the nonlinearities effects were made with respect to the fundamental period of the oscillator.
+The two main components of the structural system were separated through an interface that permits sliding and uplifting - a special contact algorithm dictates the detachment in the specific areas where the angle of rotation exceeds the foundation characteristic critical rotation $\theta_c$. The boundaries, both lateral and vertical, depend on the loading type the structure experiences - static conditions do not impose special requirements regarding the position of the boundaries. However, dynamic conditions introduce the wave propagation effect that might distort the final results due to reflections. Two boundary options are proposed - the first one assumes the bounds at a considerable distance from the foundation such that the reflected waves do not influence the results. The second one places the bounds in a position consistent with the static conditions - the trick is to add "lateral infinite elements" that absorb the propagated waves and have similar effect with the first option. The location of the later borders accounts for the pressure-bulbs generated by the dissipation of vertical stresses induced by the moment loading on the foundation strips. Figures \ref{2d} and \ref{3d} show examples of FEM models incorporating all the features formerly described.
 
-\subsection{Shallow foundations}Anastasopoulos et al., 2011 \cite{anastasopoulos2011simplified} investigates the response of a shallow foundation subjected to cyclic loading using results from centrifuge and large-scale tests to validate the numerical simulation performed in ABAQUS. The FE element model was subjected to several loading packets using prescribed displacements along with increasing cyclic amplitude. The output is described in terms of low strain stiffness along with the ultimate bearing capacity for both sand and clay material. In order to follow the new philosophy design assumptions, uplifting was allowed and expressed as a reduction in the effective width of the foundation combined with extensive soil plastification on the opposite side of the footing.
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{scheme2D}
+		\caption{Overview of the finite element modeling: plane-strain conditions are assumed, taking account of material (soil and superstructure) inelasticity and geometric}
+		\label{2d}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{3d_model}
+		\caption{Rigorous 3D FEM model comprising the soil-footing-structure system accounting for material and geometric nonlinearities}
+		\label{3d}
+	\end{minipage}
+\end{figure} 
 
-\subsection{Embedded foundations}
+\newpage
+\subsection{Conventional versus new design philosophy}
+The whole design research started with a comparison between the conventional and new design philosophy when subjected to various acceleration time histories. Figure \ref{conventional2} shows the results for a situation with moderate seismic input corresponding to Kalamata earthquake, 1986 whereas Figure \ref{conventional} shows the distinction between the two alternatives when considering a stronger earthquake (Kobe, 1995). All the assumptions aforementioned are valid for these analyses. The conventional design premises correspond to the ones described in section 1.2.1 whilst the later method characteristics are depicted in section 1.2.2. Moreover, the capacity design includes an overstrength factor of safety for seismic loading $\gamma_{Rd}=1.4$ dictating the position of the plastic hinge at the pier base. On the other hand, the under-designed foundation, corresponding to the new design, is assigned with an understrength factor of safety $1/\gamma_{Rd}=0.7 <1$. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{"conven2"}
+	\caption{Distinction between capacity design and new design philosophy when subjected to a medium earthquake signal (Kalamata, 1985); (a) moment-rotation relationship at foundation level; (b) settlement-rotation response of the footings; (c) bending-moment curvature response at the pier base; (d) time history of deck drift $\Delta$}
+	\label{conventional2}
+\end{figure}
+
+\paragraph{Medium earthquake motion}
+Few remarks can be formulated based on the observed results. The first set of plots highlight the elastic response of the footing when conventional design is considered whereas the new design shows highly inelastic response. The non-linear response comes at the cost of large settlements under the foundation as the second plot shows; on the contrary, the elastic foundation and pier yielding prevent such consequences. Furthermore, the conventionally designed pier experiences \mbox{inelasticity}, however in tolerable limits while in the new design scheme, the pier remains mainly elastic thanks to soil yielding. Finally, the deck drift, or horizontal displacement at mass, is on one hand caused by the flexural pier distortion (here, $\Delta c$) while on the other hand is due to foundation rotation ($\Delta r$). 
+
+\newpage
+\paragraph{Strong earthquake motion}
+The investigation is further extended to include a stronger earthquake motion which is exceeding the design limits (the Takatori accelerogram recorded at Kobe, 1995). This acceleration time history is relevant as it represents one of the most disastrous earthquakes of the recent times (PGA=0.7g, PGV=169cm/s); the simplified structural system corresponds to a section of Hanshin Expressway which partly collapsed during the earthquake. The results of the two alternatives can be visualized in Figure \ref{conventional}.
+
+Similar conclusions can be drawn from this comparison; the deformed mesh plots make the position of the "plastic hinging" quite evident: the capacity designed system experiences large curvature at the base of the pier and little inelastic deformation at the soil level whereas the other alternative shows opposite effects. The accumulation of stresses beneath the foundation (the extended red areas) hints the bearing capacity type of failure expected from the under-designed footing. The curvature recorded at pier level clearly indicates collapse for the conventional case and elastic response for the other. These effects are linked with the deck drift $\Delta$: large horizontal displacement at the top of the pier is observed in contrast with limited deck drift for the second alternative. Additionally, the moment-rotation at foundation level corresponds to the soil response: on one hand, elastic foundation response as the pier failure limits the transmitted stresses towards the soil and, on the other hand, inelastic response associated with bearing capacity failure mechanism. As consequences, the conventional designed foundation experiences small settlements at soil level (approx. 7cm) when the other method reveals increased foundation settlements (24cm). As Anastasopoulos, 2010 \cite{anastasopoulos2010soil} acknowledged "\textit{...although such settlement is certainly not negligible, it can be considered as a small price to pay to avoid collapse under such a tremendous ground shaking}".
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{"conventional"}
+	\caption{Comparison between the two design alternatives for strong seismic signal; (a) deformed mesh indicating the location of plastic hinging zones; (b) bending moment-curvature response at pier base level; (c) time history of deck drift}; (d) overturning moment-rotation relationship at foundation level; (e) foundation settlement-rotation response.
+	\label{conventional}
+\end{figure}
+
+
+\subsection{Relevant studies}
+Now, that the main differences in response were evaluated, it is important to select \mbox{relevant} cases from the vast collection of studies performed to support the new design philosophy. Various methods of simulating dynamic response were examined for systems considering slender structures simplified as rigid oscillators standing on inelastic soil. The system response was further processed in order to obtain an approximation of the rocking behaviour - moment-rotation response together with settlement-rotation are of main interest. In addition, emphasis on the nonlinearities effects were made with respect to the fundamental period of the oscillator.
+
+\paragraph{Monotonic response}
+The monotonic tests represent a simplified technique to estimate the dynamic response; it comes in the form of a "push-over analysis" and it gained popularity for being able to accurately estimate the seismic deformation demands and ultimate capacity. The concept consists in applying a monotonically increasing lateral displacement loading at superstructure level until failure by overturning is reached. 
+
+\paragraph{Cyclic response}
+The cyclic tests act in accordance with the previous concept; in fact, it is known as "cyclic push-over test". A rather rotation-controlled loading is applied on the same location in superstructure to simulate the cyclic effects: the rotation is applied through a lateral displacement associated with a constant cyclic amplitude.
+
+\paragraph{Dynamic response}
+Finally, the seismic response is generated via a series of ground-shaking accelerograms - both medium and strong earthquakes recorded all around the world (Kalamata, 1986; Kobe, 1995; Lefkada, 2003, etc). The dynamic input was introduced at bedrock level whilst the response was extracted at the base of the structure.
+
+Furthermore, all simulations examined the difference in response between lightly and heavily loaded foundation expressed in terms of safety factors. The former situation translates into a high vertical safety factor $FS_v=5$ whereas the later assumes a low value $FS_v=2$. *The vertical safety factor $FS_v$ is defined as the ratio between the ultimate bearing capacity under pure vertical static load $N_u$ and the currently applied axial force $N$ - $FS_v = \frac{N_u}{N}$. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{"largeFS"}
+	\caption{Distinction between lightly and heavily loaded foundation highlighting the effects on the soil response}
+	\label{largeFS}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{"staticpush"}
+	\caption{Comparison between the soil response when subjected to monotonic/cyclic/ seismic loading; moment-rotation response for (a)FSv=5 and (b) FSv=2}
+	\label{pushover}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{settle}
+		\caption{Settlement-rotation relationship for FSv=5 (lightly loaded foundation) (gray line corresponds to monotonic backbone curve)}
+		\label{set}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{settle2}
+		\caption{Settlement-rotation relationship for FSv=2 (heavily loaded foundation (gray line corresponds to monotonic backbone curve)}
+		\label{set2}
+	\end{minipage}
+\end{figure} 
+
+\newpage
+Figures \ref{largeFS}, \ref{pushover}, \ref{set} and \ref{set2} show a collection of responses with emphasis on the inelastic response; several remarks can be made regarding the differences in outcome and the correlation with the vertical safety factor, as it follows:
+
+\begin{itemize}
+	\item the lightly loaded foundation displays an uplifting-dominated response compared to the sinking-dominated response associated with the heavily loaded foundation (see fig \ref{largeFS});
+	\item for the former situation, the cyclic moment-rotation envelope is well comprised within the static push-over one (see fig \ref{pushover} (a1)) - it relates to the low dissipated energy. The cyclic loading causes small deformations - as a consequence, the area underneath the footing edges shows progressive recession (small downward settlements and considerable degradation of rotational stiffness) - see fig \ref{set}. 
+	\item in contrast, the highly loaded foundations experience a different trend: the moment-rotation envelope does not follow the static conditions anymore. As the safety factor increases, the soil encounters an accumulation of downward settlements; furthermore, bearing capacity failure mechanism is evident since excessive shear deformation occur;
+	\item the deformation of the lighly loaded footings is roughly elastic whereas the heavily loaded exhibit a strongly inelastic response - this means gradual accumulation of plastic deformation leading to higher residual rotations.
+	\item the results of the cyclic push-over analysis match the seismic analysis outcome. The soil high compliance leads to large deformations and, thus, the bearing capacity failure mechanism becomes apparent.
+\end{itemize}
+
+Anastasopoulos et al., 2011 \cite{anastasopoulos2011simplified} investigate the response of a shallow foundation subjected to cyclic loading using results from centrifuge and large-scale tests to validate the numerical simulation performed in ABAQUS. 
 Overall, numerical analyses provide satisfactory results compared to experimental tests. One of the conclusions that can be drawn from the comparison refers to the influence of the rotation amplitude - an increase in the amplitude leads to a decrease in rotational stiffness and does not affect the moment capacity as the number of cycles increase; moreover, the soil settles less each rotational cycle as the number of cycles adds up contributing to vertical stiffness build-up, phenomena known as soil densification. Although the effect cannot be described accurately within the numerical model, the systemic events govern the behaviour hence more attention should be paid in that area.
 
-As discussed before, the static vertical safety factor strongly influences the rocking effectiveness and it relates to soil properties. One of the greatest challenges remains the soil parameterization, especially strength wise, due to consequences of an overestimation - large rotations at foundation level along with intolerable settlements. Varying the value of the safety factor in order to capture the differences between actual and overestimated soil characteristics, several conclusions can be drawn. Firstly, a lower FSv, translated into a lower soil strength, leads to an improved performance in contrast with the conventional design even though it records larger permanent displacements. Further, when the system is subjected to strong seismic loading, the expected response differs considerably from the actual one - uplifting governs the ideal case (FSv=5) whilst a rather sinking-dominated response yields from reality (FSv=3) leading to large accumulative settlements and foundation rotation. However, the system still reacts in an favourable manner; same situation was recorded for moderate seismic excitations -distinct responses for various FSv whose settlement level does not alter structural stability. 
-
 Secondly, even the studies successfully describe the response of 1 dof oscillator using the new philosophy design, complex structures introduce deformation compatibility requirements which prove to be vital. After Hucklebridge, 1977 \cite{huckelbridge1978seismic} followed by Midorikawa et al.,2006 \cite{kanno2006new} established the beneficial effects of introducing a rocking-column capacity into structural design, Roh and Reinhorn,2010 \cite{roh2010modeling} stress on the disadvantages of this method - one element relaxations induces overstress in another leading to unbearable deformations within the superstructure. Extensive uplifting induced by asymmetric loading distribution leads to increased rotation demand of the structural elements and further in residual irreversible deformations. Yet, the system performs in a satisfactory style for strong seismic loadings, here Takatori earthquake recorded in Kobe, 1995. In addition, the presence of beams connecting the columns might limit the drift at top level dictating, more or less, the same displacement.
-
+%maybe put the bay
 
 \section{Numerical tools}
 Abaqus \cite{hibbett1998abaqus} offers a wide range of elements and features that help achieving a nonlinear analysis regardless the domain or simulation expertise - it's attractiveness stands in the possibility of customization, making the software extremely flexible, yet meticulous. It serves well the geotechnical engineering goals as it provides soil and structural elements, total and effective stress analysis, consolidation, static and dynamic analysis and many more. Several types of analysis are available - the main interest relates to Abaqus/Standard.
@@ -523,12 +615,7 @@ The current dissertation narrows on few aspects from the vast possibilities that
 	\item Tensionless sliding interface [TSI] - allows sliding at the contact surface as well as separation of the foundation; the interface follows Coulomb's friction law in total stress depending on the adhesion coefficient $\alpha$.
 \end{enumerate}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.8\linewidth]{"fbc"}
-	\caption{Types of boundary conditions; FBC (left) and TSI(right)}
-	\label{FBC}
-\end{figure}
+
 Furthermore, several studies focused on the importance of the combined NQM loading and the effect of every of the three forces susceptible to act on the foundation at certain points. Yun \& Brandy, 2007 and Gouvernec (2008) \cite{randolph2011offshore} formerly examined the undrained bearing capacity of rigid embedded strip foundations under combined $NQM$ loading using a fully bonded contact, followed by Ntritsos et al (2015) who extended the studies to three-dimensional problem of squared foundations adding the option of a tensionless sliding interface.
 
 Nevertheless, the two maximum values - horizontal load Qmax and overturning moment Mmax do not solely represent the failure mechanism; infinite combinations of $Q$ and $M$ are comprised within a failure envelope plotted against normalized values. Additionally, the effect of the vertical load which influences the $QM$ interaction was set to $N=0$. The figure beneath displays the four main points on the envelope that represent different loading conditions together with significant output at carefully selected points. Both the fully bonded contact (FBC) and tensionless sliding interface (TSI) conditions were investigated and presented for comparison. Important to mention is that the authors preferred to normalize the $Q$ and $M$ values in accordance to the foundation width $B$, area $A$ and undrained shear strength $S_u$ - the plot contains on the x direction $Q/AS_u$ whilst for the y direction it has $M/BAS_u$. 
