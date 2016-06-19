@@ -147,22 +147,6 @@ A.~I. Panagiotidou, G.~Gazetas, and N.~Gerolymos, ``Pushover and seismic
 A.~U. Manual, ``Version 6.14-1,'' {\em Dassault Syst{\'e}mes Simulia Corp.,
   Providence, RI}.
 
-\bibitem{huckelbridge1978seismic}
-A.~A. Huckelbridge and R.~W. Clough, ``Seismic response of uplifting building
-  frame,'' {\em Journal of the Structural Division}, vol.~104, no.~8,
-  pp.~1211--1229, 1978.
-
-\bibitem{kanno2006new}
-T.~Kanno, A.~Narita, N.~Morikawa, H.~Fujiwara, and Y.~Fukushima, ``A new
-  attenuation relation for strong ground motion in japan based on recorded
-  data,'' {\em Bulletin of the Seismological Society of America}, vol.~96,
-  no.~3, pp.~879--897, 2006.
-
-\bibitem{roh2010modeling}
-H.~Roh and A.~M. Reinhorn, ``Modeling and seismic response of structures with
-  concrete rocking columns and viscous dampers,'' {\em Engineering Structures},
-  vol.~32, no.~8, pp.~2096--2107, 2010.
-
 \bibitem{bransby1998combined}
 M.~Bransby and M.~Randolph, ``Combined loading of skirted foundations,'' {\em
   G{\'e}otechnique}, vol.~48, no.~5, pp.~637--55, 1998.
@@ -213,6 +197,11 @@ P.~K. Robertson and R.~Campanella, ``Interpretation of cone penetration tests.
 \bibitem{papadrakakiscomparison}
 M.~Papadrakakis, N.~Lagaros, and V.~Plevris, ``A comparison of two
   elastic-plastic approaches to cyclic soil modelling,''
+
+\bibitem{pisano2014simulating}
+F.~Pisan{\`o} and B.~Jeremi{\'c}, ``Simulating stiffness degradation and
+  damping in soils via a simple visco-elastic--plastic model,'' {\em Soil
+  Dynamics and Earthquake Engineering}, vol.~63, pp.~98--109, 2014.
 
 \bibitem{dost2004scaling}
 B.~Dost, T.~Van~Eck, and H.~Haak, ``Scaling of peak ground acceleration and

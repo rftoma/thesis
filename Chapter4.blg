@@ -14,6 +14,10 @@ Repeated entry---line 538 of file bibliography.bib
  : @article{manualversion
  :                       ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 660 of file bibliography.bib
+ : @article{pisano2014simulating
+ :                              ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in code2005eurocode
 Warning--empty journal in faccioli2001investigation
 Warning--empty publisher in darendeli2001development
@@ -25,4 +29,4 @@ Warning--empty author in NERA
 Warning--empty journal in NERA
 Warning--empty year in NERA
 Warning--empty journal in martellotta2015review
-(There were 3 error messages)
+(There were 4 error messages)
