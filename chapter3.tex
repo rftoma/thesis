@@ -1,12 +1,12 @@
 	\chapter {Site Response Analysis}
 	\section{Introduction}
-	The seismic waves generated at the bedrock suffer variation until they reach the surface; both the characteristics of the ground shaking as well as the material parameters influence the ground response that can be expressed in terms of amplitude, duration and frequency content. The importance of the ground response analysis relates to the overall dynamic study of the superstructure; the seismic waves can experience amplification or de-amplification at surface level as a function of soil damping properties together with encountered frequencies. In the case of matching frequencies between the maximum amplification of ground motion and natural frequency of the structure, the two elements (soil and construction) resonate one with the other. This translates into high \mbox{oscillating} amplitudes and thus, considerable damage. 
+	The seismic waves generated at the bedrock suffer variation until they reach the surface; the seismic input as well as the soil material properties influence the non-linear response. The importance of the ground response analysis relates to the overall dynamic performance of the superstructure; the seismic waves can experience amplification or de-amplification at surface level as a function of soil damping properties together with encountered frequencies. It is well known that a system has the tendency to respond at larger amplitude when it vibrates with a frequency matching the natural frequency of the system - the phenomena is known as mechanical resonance and, in structural domain, it translates into high oscillations, thus considerable damage.
 	
-	In conclusion, performing a site response analysis enables the engineers to predict the site frequency content, the spectral acceleration alongside to peak ground acceleration and thus to create a reliable seismic design. For the current study, the Site Response Analysis is performed in the interest of attaining results that support the next analysis step: the soil-structure interaction.
+	In conclusion, performing a site response analysis enables the engineers to numerically predict the site frequency content, the spectral acceleration alongside to peak ground acceleration and thus to create a reliable seismic design. For the current study, the Site Response Analysis is performed in the interest of attaining results that support the next analysis step: the soil-structure interaction.
 	
 	
 	\section{Model description}
-	The model represents an extrapolation of the previous analysis step; the soil sample becomes a homogeneous layer with properties increasing linearly with depth and it is subjected to two steps: \textit{the gravity} and \textit{the seismic excitation}. Given the lack of bedrock in reality and for the simplicity of calculation, the bedrock is assumed to be located at 30m below surface. In order to simulate a one dimensional analysis, the problem is analysed in a 2D space plane strain ($\epsilon_{zz}=0$) with the lateral width of the soil relatively small compared to the height; the presence of bedrock is numerically equivalent to a rigid base having translational constraints in both directions. Each pair of horizontal nodes are tied together such that will experience equal displacements. Figure \label{fig:Soilcolumn} shows the schematization of the problem, the blue numbers representing the nodes, the red numbers the elements, respectively. The 1D soil column serves as the typical model for a site response analysis as the shear wave propagation direction is assumed to be vertical - thus the main interest relates to the soil performance when experiencing vertically travelling seismic waves.
+	The model represents an extrapolation of the previous analysis step; the soil properties (see Appendix \ref{App:AppendixD}) are applied to a homogeneous layer with properties increasing linearly with depth and it is subjected to two steps: \textit{the gravity} and \textit{the seismic excitation}. Given the lack of bedrock in reality and for the simplicity of calculation, the bedrock is assumed to be located at 30m below surface. In order to simulate a one dimensional analysis, the problem is analysed in a 2D space plane strain ($\epsilon_{zz}=0$) with the lateral width of the soil relatively small compared to the height; the presence of bedrock is numerically equivalent to a rigid base having translational constraints in both directions. Each pair of horizontal nodes are tied together such that will experience equal displacements. Figure \label{fig:Soilcolumn} shows the schematization of the problem, the blue numbers representing the nodes, the red numbers the elements, respectively. The 1D soil column serves as the typical model for a site response analysis as the shear wave propagation direction is assumed to be vertical - thus the main interest relates to the soil performance when experiencing vertically travelling seismic waves.
 	
 	The validation of the model will consists of results comparison between the analysis performed in Abaqus and the ones in NERA together with the SRA performed by ARUP for Groningen site - the latter only offers a rough guide. The differences between the means of analysis will be investigated, the outcome will be expressed in terms of acceleration response in frequency domain together with stiffness degradation. 
 	
@@ -25,14 +25,14 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.7\linewidth]{"Acc input"}
+		\includegraphics[width=0.5\linewidth]{"Acc input"}
 		\caption{Acceleration input (induced earthquake, WSE station, Huizige, Groningen, 16 Aug 2012)}
 		\label{Acceleration}
 	\end{figure}
 	
 	\newpage
 	\subsection{Input parameters}
-	The material parameters, as presented in Chapter \ref{ch3} and Appendix \ref{App:AppendixB}, can be divided into several categories the software requires:
+	The material parameters can be divided into several categories the software module requires:
 	\begin{enumerate}
 		\item \textit{Elastic}\quad again, Young's modulus together with Poisson's ratio becomes sufficient for the definition of elastic domain.
 		\item \textit{Plastic}\quad the nonlinear isotropic/kinematic model applies von Mises failure criterion for which three parameters are required: yield stress at zero plastic strain $\sigma_0$, small-strain Young's modulus $C$ and hardening parameter $K$.
@@ -42,7 +42,7 @@
 	
 	In addition, the model contains a subroutine which introduces the values of undrained shear strength as a function of the vertical effective stress as well as the correlation of this parameter with Young's modulus. The benefits of using a subroutine relate the expansion of the standard input parameter set by inserting field variables at material points as functions of time or of any material quantity. Moreover, it links the field variables with solution-dependent material properties, values being updated at the start of each increment through interpolation; an average value is used for linear elements; an approximate linear variation is used for quadratic elements. The routine allows the user to access quantities at material points and manipulate them according to the desired application. 
 	
-	Appendix \ref{App:AppendixG} shows the flow chart of Abaqus user defined subroutine whilst Appendix \ref{subroutine} shows the routine created for these calculations. The input parameters are calculated as presented in the previous chapter (see Chapter \ref{ch3} and Appendix \ref{App:AppendixF}).  
+	Appendix \ref{App:AppendixG} shows the flow chart of Abaqus user defined subroutine whilst Appendix \ref{subroutine} shows the routine created for these calculations. The input parameters are calculated as presented in the previous chapter (see Chapter \ref{ch3}, section 3.4 and Appendix \ref{App:AppendixF}).  
 	
 	\subsection{Rayleigh coefficients}
 	The dissipative character of the elasto-plastic material can be better enhanced by introducing a viscous damping mechanism. The overall stress state of the soil skeleton can be separated into two parts: 
@@ -233,7 +233,7 @@
 	\end{equation} 
 	
 	\section{Comparison Abaqus vs NERA}
-	The comparison between the two analyses were formulated in terms of acceleration response, shear stress-strain response together with the spectral ratio and the plots can be visualized below. 
+	The comparison refers to the inelastic response focusing on the stiffness, acceleration and spectral response. Moreover, the amplification factor in investigated. The outcome of the two different PGA levels are also presented and the plots can be visualized below. 
 	
 	\begin{figure}[h!]
 		\centering
@@ -263,74 +263,45 @@
 		\label{tau_gamma2}
 	\end{figure}
 	
-	\subsection{Remarks}
-	It is difficult to have a relevant comparison at surface level when the sample experiences low stresses; calibration of cyclic parameters was referred to rather high confining stresses. Moreover, it was noticed that Abaqus generates higher plastic strains; this might explain the signal attenuation expressed in frequency domain when comparing to NERA response. 
-	
-	Overall, the results show a quite satisfying match; nonetheless, differences appear due to several factors as it follows:
-	\begin{enumerate}
-		\item Abaqus works with a dynamic implicit integration scheme with an Euler backwards theory that is unconditionally stable whereas NERA solves the system of equation through a central-difference integration which is conditionally stable; thus on one software, user has the option of manually adjusting the time step while on the other he cannot. The equation of motion for the system in dynamic domain it is basically the same:
-		\begin{equation}
-		f=F-\rho\ddot{u}
-		\end{equation}
-		where f - body force, F - external body force, $\rho$ - soil unit weight and $\ddot{u}$ - relative nodal acceleration. Thus, the difference is \textit{numerical} and cannot be adjusted in detail.
-		\item Both the models are based on the concept of a yield surface which means that there is a surface defined in stress space within which no plastic deformation takes place. The nonlinear kinematic hardening model used in Abaqus is based on the Lemaitre and Chaboche \cite{lemaitre1994mechanics} model that considers two yield surfaces and a varying hardening modulus whilst NERA works according to Iwan and Mroz \cite{mroz1967description} multi-linear kinematic hardening model that has a multiple surface plasticity. Both models include a 'fading memory' term but function differently. Thus, the difference is related to the plastic domain and how the model behaves when irreversible deformations are encountered. 
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.7\linewidth]{"yield_srf"}
-			\caption{Non-linear kinematic hardening model according to Lemaitre,Chaboche [left] and Iwan,Mroz[right]}
-			\label{Yield}
-		\end{figure}
-		\item NERA computes the shear stress and strain increments according to the sliding resistance and tangent modulus of each slider that are derived from the $G_i-\gamma_i$ points introduced as input. The tangential shear modulus is related to the secant shear modulus by $H_i=G_{max}\frac{G'_{i+1}\gamma_{i+1}-G'_i\gamma_i}{\gamma_{i+1}-\gamma_i}$ where $G_i=\frac{G_i}{G_{max}}$ . The stiffness of each component of the system is related to the tangent modulus while the shear stress is associated with the sliding resistance. On the other hand, Abaqus does not work with the tangent modulus, but with maximum shear modulus Gmax and the undrained shear strength. Also, in NERA there is no option for introducing the values corresponding to the undrained shear strength or its correlation with any other parameter. Figure 14 shows the distribution of the shear modulus with depth in both the software - these values are calculated from the input parameter - Abaqus extracts it based on the Young's modulus together with Poisson's ratio whilst NERA does it based on the soil unit weight and shear wave velocity. The values are exactly the same, it can be noticed also from the slope the hysteresis loops presented in the stress-strain plots; the width also resembles as well as the unloading-reloading areas. However, the tangent shear modulus differs from one software to the other.
-		\begin{figure}[h!]
-			\centering
-			\includegraphics[width=0.7\linewidth]{"shear"}
-			\caption{Shear modulus $G_{max}$ comparison}
-			\label{shear1}
-		\end{figure}
-		\item Abaqus results are extracted in two different locations: the stresses and strains are obtained from Gauss integration points and the accelerations are obtained at nodal positions which are situated at the interface of each two element. NERA performs the analysis according to the middle of each sub-layer, so both the top and bottom outcome are actually 0.25m below the surface or above the bottom. However, not much difference should rise from this aspect.
-		\item Another difference relates to the viscous part of the model and it is more apparent in the acceleration response in time domain, especially in the initial period. Abaqus works with the viscous term defined exclusively as a function of Rayleigh damping parameter $\beta$ meaning that the system damping depends on the stiffness, whilst NERA requires the critical damping ratio value, incorporating both $\alpha$ and $\beta$ Rayleigh factors. Moreover, the energy dissipation mechanism accounts for both viscous damping and plasticity terms which, as described previously, differ from NERA to Abaqus. When working with a high PGA value, the contribution of the non-linear model and hysteretic damping becomes greater compared to the viscous damping component.
-		\item The aforementioned differences between the calculation programs derive mainly from numerical algorithms; however, a more important aspect seems to govern the outcome of each analysis - the dynamic nature of the problem itself. The two models are not identical, thus a difference in any given point might generate distinct response at unknown location and time because of the non-linear propagation fashion. 
-		\item Noise can be experienced in both the signals of the different computer programs. This can distort the final results; filtering is possible, however it is time demanding and does not represent the main interest in this study.
-	\end{enumerate}
-	
 	\subsection{Additional investigation}
-	An additional investigation was performed in order to check the soil response when closer to elastic domain - as in, a lower PGA was applied at the bottom boundary. The first analysis contained a PGA value of approximately 0.5g whilst the second one scaled down the value to 0.1g. The results can be seen in the following figures.
+	An additional investigation was performed based on a lower PGA value (PGA=0.1g). This first reason relates to the soil response when closer to elastic domain. Secondly, to highlight a difference in dynamic behaviour for various levels of base acceleration. Moreover, it is speculated that lower PGA characteristics might act detrimental compared to a higher value - a rather seismic wave amplification is expected from such input. Lastly, the recorded accelerograms in Groningen showed an overall low PGA value. The results can be seen in the following figures.
 	
-	\begin{figure}[h!]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"acc_low"}
 		\caption{Acceleration response comparison for PGA=0.1g}
 		\label{acc_low}
 	\end{figure}
 	
-	\begin{figure}[h!]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"hysteresis_low_bot"}
 		\caption{Hysteresis loops comparison for bottom level}
 		\label{hyst_bot}
 	\end{figure}
 	
-	\begin{figure}[h!]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"hysteresis_low_surf"}
 		\caption{Hysteresis loops comparison for surface level}
 		\label{hyst_top}
 	\end{figure}
 	
-	\begin{figure}[h!]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"spectral_low"}
 		\caption{Fourier amplitude spectra for PGA=0.1 - logarithmic scale}
 		\label{fourier3}
 	\end{figure}
 	
-	\begin{figure}[h!]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"spectral2"}
 		\caption{Site amplification factor comparison for PGA=0.1g}
 		\label{SAF}
 	\end{figure}
-	\begin{figure}[h!]
+	
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"ARUP"}
 		\caption{Groningen site non-linear ground response, input vs surface PGA according to ARUP report; the additional blue star corresponds to the present high PGA analysis (PGA=0.6g) and the yellow star to the low PGA case (PGA=0.1g). The red line marks the borded between the two regions - amplification and de-amplification.}
@@ -339,7 +310,5 @@
 	
 	The results confirm the expectation regarding the amplification effect of the soil combined with the PGA level, also they are in accordance with ARUP report regarding the site response analysis performed for the specific location in discussion. The acceleration responses at surface produced in both the computational software present the same maximum value, of course, with differences that were exposed previously, the elastic response seems to match together with the stiffness degradation effect. 
 	
-	\section{Conclusions}
-	The present study assemblies the soft soil conditions and a recorded acceleration time history from the specific site, applies various numerical methods to achieve same output and proceeds with a comparison between the analyses. It acknowledges, in the same time, the differences and limitations occurring amid. Given the fact that the study deals with a non-linear kinematic hardening process, it becomes quite difficult to point exactly the main cause that leads to dissimilarity. The overall results show a fair match when comparing the two software, but also when accounting for external sources KNMI, \cite{dost2012monitoring}, \cite{dost2004scaling}, \cite{dost2013august} that carried out particular investigations. 
-		
-	It can be concluded that for the Groningen sites, low PGA input ($a_g=0.1g$) the surface acceleration response amplified whereas when dealing with a high PGA input ($a_g\textgreater0.15g$) the top PGA is de-amplified. Both the strength properties of the homogeneous medium and the earthquake motion characteristics influence the seismic wave propagation though the soil; for this particular case, the inelastic response depends on the limited capability of the soft layers to transmit seismic signals to the surface because of the low strength and on the high hysteretic damping observed at large strains. At low PGA values, the soil displays elastic behaviour as it reaches the surface, the frequencies do not experience considerable damping whereas at high PGA levels, the soil shifts towards its natural frequency, damping the higher ones and non-linear constitutive model plays a more important role than the viscous damping effect.
+	\newpage
+	\input{remarksch33}

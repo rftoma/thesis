@@ -32,42 +32,42 @@
 \contentsline {chapter}{\numberline {3}Material calibration using one element mesh}{36}
 \contentsline {section}{\numberline {3.1}General}{36}
 \contentsline {section}{\numberline {3.2}Normalized stiffness degradation and material damping curves}{37}
-\contentsline {subsection}{\numberline {3.2.1}${G/G_{max}}$ curves}{39}
+\contentsline {subsection}{\numberline {3.2.1}${G/G_{max}}$ curves}{38}
 \contentsline {subsection}{\numberline {3.2.2}Darendeli results}{39}
 \contentsline {section}{\numberline {3.3}Modelling}{41}
 \contentsline {subsection}{\numberline {3.3.1}Steps}{41}
-\contentsline {paragraph}{First step}{42}
-\contentsline {paragraph}{Second step}{43}
-\contentsline {section}{\numberline {3.4}Material description}{45}
-\contentsline {subsection}{\numberline {3.4.1}Input parameters}{45}
-\contentsline {paragraph}{\relax $\@@underline {\hbox {Stresses}}\mathsurround \z@ $\relax }{45}
-\contentsline {paragraph}{\relax $\@@underline {\hbox {Undrained shear strength}}\mathsurround \z@ $\relax }{46}
-\contentsline {paragraph}{\relax $\@@underline {\hbox {Stiffness}}\mathsurround \z@ $\relax }{46}
-\contentsline {subparagraph}{Shear modulus determined empirically}{46}
-\contentsline {subparagraph}{Shear modulus determined based on available measurements }{48}
-\contentsline {subsection}{\numberline {3.4.2}Non-linear parameters (kinematic hardening model with Von Mises failure criterion)}{51}
-\contentsline {section}{\numberline {3.5}Results}{52}
-\contentsline {subsection}{\numberline {3.5.1}General}{52}
-\contentsline {subsection}{\numberline {3.5.2}Parameters that influence the soil response}{54}
-\contentsline {subsection}{\numberline {3.5.3}Validation - Comparison with Darendeli curves}{55}
-\contentsline {section}{\numberline {3.6}Conclusions}{57}
-\contentsline {chapter}{\numberline {4}Site Response Analysis}{58}
-\contentsline {section}{\numberline {4.1}Introduction}{58}
-\contentsline {section}{\numberline {4.2}Model description}{58}
-\contentsline {subsection}{\numberline {4.2.1}Steps of analysis}{59}
-\contentsline {paragraph}{Geostatic}{59}
-\contentsline {paragraph}{Dynamic}{59}
-\contentsline {subsection}{\numberline {4.2.2}Input parameters}{61}
-\contentsline {subsection}{\numberline {4.2.3}Rayleigh coefficients}{61}
-\contentsline {subsection}{\numberline {4.2.4}Integration scheme}{63}
-\contentsline {subsection}{\numberline {4.2.5}FEM stability}{63}
-\contentsline {subsection}{\numberline {4.2.6}Mesh}{63}
-\contentsline {section}{\numberline {4.3}NERA - Non-linear Earthquake Site Response}{64}
-\contentsline {section}{\numberline {4.4}Results}{65}
-\contentsline {section}{\numberline {4.5}Comparison Abaqus vs NERA}{69}
-\contentsline {subsection}{\numberline {4.5.1}Remarks}{70}
-\contentsline {subsection}{\numberline {4.5.2}Additional investigation}{72}
-\contentsline {section}{\numberline {4.6}Conclusions}{73}
+\contentsline {paragraph}{First step}{41}
+\contentsline {paragraph}{Second step}{42}
+\contentsline {section}{\numberline {3.4}Material description}{44}
+\contentsline {subsection}{\numberline {3.4.1}Input parameters}{44}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Stresses}}\mathsurround \z@ $\relax }{44}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Undrained shear strength}}\mathsurround \z@ $\relax }{45}
+\contentsline {paragraph}{\relax $\@@underline {\hbox {Stiffness}}\mathsurround \z@ $\relax }{45}
+\contentsline {subparagraph}{Shear modulus determined empirically}{45}
+\contentsline {subparagraph}{Shear modulus determined based on available measurements }{47}
+\contentsline {subsection}{\numberline {3.4.2}Non-linear parameters (kinematic hardening model with Von Mises failure criterion)}{50}
+\contentsline {section}{\numberline {3.5}Results}{51}
+\contentsline {subsection}{\numberline {3.5.1}General}{51}
+\contentsline {subsection}{\numberline {3.5.2}Parameters that influence the soil response}{53}
+\contentsline {subsection}{\numberline {3.5.3}Validation - Comparison with Darendeli curves}{54}
+\contentsline {section}{\numberline {3.6}Conclusions}{56}
+\contentsline {chapter}{\numberline {4}Site Response Analysis}{57}
+\contentsline {section}{\numberline {4.1}Introduction}{57}
+\contentsline {section}{\numberline {4.2}Model description}{57}
+\contentsline {subsection}{\numberline {4.2.1}Steps of analysis}{58}
+\contentsline {paragraph}{Geostatic}{58}
+\contentsline {paragraph}{Dynamic}{58}
+\contentsline {subsection}{\numberline {4.2.2}Input parameters}{60}
+\contentsline {subsection}{\numberline {4.2.3}Rayleigh coefficients}{60}
+\contentsline {subsection}{\numberline {4.2.4}Integration scheme}{62}
+\contentsline {subsection}{\numberline {4.2.5}FEM stability}{62}
+\contentsline {subsection}{\numberline {4.2.6}Mesh}{62}
+\contentsline {section}{\numberline {4.3}NERA - Non-linear Earthquake Site Response}{63}
+\contentsline {section}{\numberline {4.4}Results}{64}
+\contentsline {section}{\numberline {4.5}Comparison Abaqus vs NERA}{68}
+\contentsline {subsection}{\numberline {4.5.1}Additional investigation}{68}
+\contentsline {subsection}{\numberline {4.5.2}Remarks}{69}
+\contentsline {section}{\numberline {4.6}Conclusions}{74}
 \contentsline {chapter}{\numberline {5}Soil Structure Interaction analysis}{76}
 \contentsline {section}{\numberline {5.1}New design philosophy}{76}
 \contentsline {section}{\numberline {5.2}Problem definition}{76}
