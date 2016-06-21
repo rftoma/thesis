@@ -65,51 +65,51 @@
 \contentsline {section}{\numberline {4.3}NERA - Non-linear Earthquake Site Response}{63}
 \contentsline {section}{\numberline {4.4}Results}{64}
 \contentsline {section}{\numberline {4.5}Comparison Abaqus vs NERA}{68}
-\contentsline {subsection}{\numberline {4.5.1}Additional investigation}{68}
-\contentsline {subsection}{\numberline {4.5.2}Remarks}{69}
+\contentsline {subsection}{\numberline {4.5.1}Additional investigation}{69}
+\contentsline {subsection}{\numberline {4.5.2}Remarks}{72}
 \contentsline {section}{\numberline {4.6}Conclusions}{74}
-\contentsline {chapter}{\numberline {5}Soil Structure Interaction analysis}{76}
-\contentsline {section}{\numberline {5.1}New design philosophy}{76}
-\contentsline {section}{\numberline {5.2}Problem definition}{76}
-\contentsline {section}{\numberline {5.3}Model description}{77}
-\contentsline {section}{\numberline {5.4}Method of analysis}{78}
-\contentsline {subsection}{\numberline {5.4.1}Analysis procedure - Steps}{78}
-\contentsline {subsection}{\numberline {5.4.2}Contact definition}{79}
-\contentsline {paragraph}{Mechanical properties}{79}
-\contentsline {paragraph}{Contact interface discretization}{81}
-\contentsline {subsection}{\numberline {5.4.3}Boundary conditions}{81}
-\contentsline {paragraph}{Theory of wave propagation}{81}
-\contentsline {paragraph}{Tied lateral boundaries}{82}
-\contentsline {paragraph}{Transmitting boundaries}{83}
-\contentsline {section}{\numberline {5.5}Implementation of ABC}{84}
-\contentsline {paragraph}{Free-field soil column}{84}
-\contentsline {paragraph}{Main model}{86}
-\contentsline {paragraph}{Equivalent forces}{87}
-\contentsline {section}{\numberline {5.6}Results}{87}
-\contentsline {subsection}{\numberline {5.6.1}Effects of applied boundary conditions}{87}
-\contentsline {subsection}{\numberline {5.6.2}Effects of loads}{87}
-\contentsline {subsection}{\numberline {5.6.3}FBC vs TSI}{87}
-\contentsline {paragraph}{Soil-Foundation interaction}{87}
-\contentsline {paragraph}{Soil-Foundation-Structure interaction}{89}
-\contentsline {subsection}{\numberline {5.6.4}Stresses}{90}
-\contentsline {subsection}{\numberline {5.6.5}Acceleration response}{91}
-\contentsline {section}{\numberline {5.7}Limitations and recommendations}{93}
-\contentsline {section}{\numberline {5.8}Conclusions}{93}
-\contentsline {section}{Appendix}{94}
-\contentsline {part}{II\hspace {1em}Appendix}{94}
-\contentsline {xpart}{Appendix}{95}
-\contentsline {chapter}{\numberline {A}Cone penetration test results}{95}
-\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{97}
-\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{97}
-\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{98}
-\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{101}
-\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{103}
-\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{105}
-\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{108}
-\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{110}
-\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{112}
-\contentsline {chapter}{\numberline {I}Newmark integration schemes}{114}
-\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{116}
-\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{118}
-\contentsline {chapter}{\numberline {L}NERA - Input example}{123}
-\contentsline {chapter}{Bibliography}{125}
+\contentsline {chapter}{\numberline {5}Soil Structure Interaction analysis}{75}
+\contentsline {section}{\numberline {5.1}New design philosophy}{75}
+\contentsline {section}{\numberline {5.2}Problem definition}{75}
+\contentsline {section}{\numberline {5.3}Model description}{76}
+\contentsline {section}{\numberline {5.4}Method of analysis}{77}
+\contentsline {subsection}{\numberline {5.4.1}Analysis procedure - Steps}{77}
+\contentsline {subsection}{\numberline {5.4.2}Contact definition}{78}
+\contentsline {paragraph}{Mechanical properties}{78}
+\contentsline {paragraph}{Contact interface discretization}{80}
+\contentsline {subsection}{\numberline {5.4.3}Boundary conditions}{80}
+\contentsline {paragraph}{Theory of wave propagation}{80}
+\contentsline {paragraph}{Tied lateral boundaries}{81}
+\contentsline {paragraph}{Transmitting boundaries}{82}
+\contentsline {section}{\numberline {5.5}Implementation of ABC}{83}
+\contentsline {paragraph}{Free-field soil column}{83}
+\contentsline {paragraph}{Main model}{85}
+\contentsline {paragraph}{Equivalent forces}{86}
+\contentsline {section}{\numberline {5.6}Results}{86}
+\contentsline {subsection}{\numberline {5.6.1}Effects of applied boundary conditions}{86}
+\contentsline {subsection}{\numberline {5.6.2}Effects of loads}{86}
+\contentsline {subsection}{\numberline {5.6.3}FBC vs TSI}{86}
+\contentsline {paragraph}{Soil-Foundation interaction}{86}
+\contentsline {paragraph}{Soil-Foundation-Structure interaction}{88}
+\contentsline {subsection}{\numberline {5.6.4}Stresses}{89}
+\contentsline {subsection}{\numberline {5.6.5}Acceleration response}{90}
+\contentsline {section}{\numberline {5.7}Limitations and recommendations}{92}
+\contentsline {section}{\numberline {5.8}Conclusions}{92}
+\contentsline {section}{Appendix}{93}
+\contentsline {part}{II\hspace {1em}Appendix}{93}
+\contentsline {xpart}{Appendix}{94}
+\contentsline {chapter}{\numberline {A}Cone penetration test results}{94}
+\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{96}
+\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{96}
+\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{97}
+\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{100}
+\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{102}
+\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{104}
+\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{107}
+\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{109}
+\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{111}
+\contentsline {chapter}{\numberline {I}Newmark integration schemes}{113}
+\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{115}
+\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{117}
+\contentsline {chapter}{\numberline {L}NERA - Input example}{122}
+\contentsline {chapter}{Bibliography}{124}
