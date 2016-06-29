@@ -259,17 +259,15 @@ B.~Dost, F.~Goutbeek, T.~van Eck, and D.~Kraaijpoel, ``Monitoring induced
   seismicity in the north of the netherlands: status report 2010,'' {\em KNMI
   Scientific report}, pp.~2012--03, 2012.
 
-\bibitem{love1944h}
-A.~Love, ``H. a treatise on the mathematical theory of elasticity,'' {\em
-  Cambridge: Cambridge University Press}, vol.~1, p.~952, 1944.
+\bibitem{drosos2012soil}
+V.~Drosos, T.~Georgarakos, M.~Loli, I.~Anastasopoulos, O.~Zarzouras, and
+  G.~Gazetas, ``Soil-foundation-structure interaction with mobilization of
+  bearing capacity: Experimental study on sand,'' {\em Journal of Geotechnical
+  and Geoenvironmental Engineering}, vol.~138, no.~11, pp.~1369--1386, 2012.
 
-\bibitem{nielsen2006absorbing}
-A.~H. Nielsen, ``Absorbing boundary conditions for seismic analysis in
-  abaqus,'' in {\em ABAQUS Users’ Conference}, pp.~359--376, 2006.
-
-\bibitem{lysmer1969finite}
-J.~Lysmer and R.~L. Kuhlemeyer, ``Finite dynamic model for infinite media,''
-  {\em Journal of the Engineering Mechanics Division}, vol.~95, no.~4,
-  pp.~859--878, 1969.
+\bibitem{meyerhof1957ultimate}
+G.~Meyerhof, ``The ultimate bearing capacity of foundations on slopes,'' in
+  {\em Proceedings of the 4th international conference on soil mechanics and
+  foundation engineering}, vol.~1, pp.~384--386, 1957.
 
 \end{thebibliography}
