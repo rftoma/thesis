@@ -259,6 +259,11 @@ B.~Dost, F.~Goutbeek, T.~van Eck, and D.~Kraaijpoel, ``Monitoring induced
   seismicity in the north of the netherlands: status report 2010,'' {\em KNMI
   Scientific report}, pp.~2012--03, 2012.
 
+\bibitem{lysmer1969finite}
+J.~Lysmer and R.~L. Kuhlemeyer, ``Finite dynamic model for infinite media,''
+  {\em Journal of the Engineering Mechanics Division}, vol.~95, no.~4,
+  pp.~859--878, 1969.
+
 \bibitem{drosos2012soil}
 V.~Drosos, T.~Georgarakos, M.~Loli, I.~Anastasopoulos, O.~Zarzouras, and
   G.~Gazetas, ``Soil-foundation-structure interaction with mobilization of
@@ -269,5 +274,11 @@ V.~Drosos, T.~Georgarakos, M.~Loli, I.~Anastasopoulos, O.~Zarzouras, and
 G.~Meyerhof, ``The ultimate bearing capacity of foundations on slopes,'' in
   {\em Proceedings of the 4th international conference on soil mechanics and
   foundation engineering}, vol.~1, pp.~384--386, 1957.
+
+\bibitem{gajan2009effects}
+S.~Gajan and B.~L. Kutter, ``Effects of moment-to-shear ratio on combined
+  cyclic load-displacement behavior of shallow foundations from centrifuge
+  experiments,'' {\em Journal of geotechnical and geoenvironmental
+  engineering}, vol.~135, no.~8, pp.~1044--1055, 2009.
 
 \end{thebibliography}

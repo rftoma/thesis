@@ -14,41 +14,41 @@
 	The former chapter gets extended towards a 2D plane stress problem involving a homogeneous soil layer supporting a shallow foundation. The entire structural system is subjected to a seismic input motion. The study aims at inspecting the inelastic soil response, the proposed method accuracy and its limitations. The final goal is to be able to acknowledge the new design philosophy suitability for this specific earthquake in Groningen area.
 	
 	\section{Model description}
-	As expected, the soil properties do not change drastically, for all the work that was previously conducted proves the parameters validity. The preceding model (1D soil column) is expanded into a larger soil layer supporting a shallow foundation. The resting building is represented by a chimney located in Hoogezand village, Groningen, in  the north of Netherlands and it was chosen for its relatively simple geometry together with available structural properties. The location and the chimney itself can be seen in Figures \ref{Boom} and \ref{chimney}.
+	The object of study of the current chapter includes a soil layer of 30 meters deep together with a simplified soil-structure system resting upon it. As expected, the soil properties do not change drastically, for all the work that was previously conducted proves the parameters validity. Thus, the preceding model (1D soil column, see chapter 4, section 4.2.2) is expanded into a larger soil layer supporting the shallow foundation. A chimney located in Hoogezand village, Groningen, in  the north of Netherlands serves as example for the building and it was chosen for its relatively simple geometry together with available structural properties. The location and the chimney itself can be seen in Figures \ref{Boom} and \ref{chimney}.
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.6 \linewidth]{"Boomgaard"}
+		\includegraphics[width=0.5 \linewidth]{"Boomgaard"}
 		\caption{Map location of the chimney - Groningen area}
 		\label{Boom}
 	\end{figure} 
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.6 \linewidth]{"chimney"}
+		\includegraphics[width=0.5 \linewidth]{"chimney"}
 		\caption{Real structure objected to study}
 		\label{chimney}
 	\end{figure} 
 
 	
 \section{Method of analysis}
-Inelastic soil response investigation is implemented numerically with a finite element model considering two-dimensional plane strain assumptions. Both soil medium and footing are modelled as deformable solids using quadrilateral, continuum elements. The chimney is represented by a rectangular footing with a lumped mass on top of a slender, rigid pier. Moreover, the footing is also considered to behave in a stiff fashion when seismically loaded. The main emphasis is on the soil response rather than on the structural one, thus the simplification. A state-of-art contact algorithm defines the soil-structure interface incorporating uplifting and sliding features whereas purely elastic impact assumption is adopted. Every analysis starts with a static step - the geostatic step in which initial stress conditions are established.  
+The inelastic soil response investigation is implemented numerically with a finite element model considering two-dimensional plane strain assumptions. Both soil medium and \mbox{footing} are modelled as deformable solids using quadrilateral, continuum elements. The chimney is represented by a rectangular footing with a lumped mass on top of a slender, rigid pier. Moreover, the footing is also considered to behave in a stiff fashion when seismically loaded. The main emphasis is on the soil response rather than on the structural one, thus the simplification. A state-of-art contact algorithm defines the soil-structure interface incorporating uplifting and sliding features whereas purely elastic impact assumption is adopted. Every analysis starts with a \textit{static step} - the geostatic step in which initial stress conditions are established.  
 
-The dynamic analyses operate through an implicit direct-integration algorithm - the global non-linear set of equations of motion is integrated in time domain via implicit Hilber-Hughes-Taylor operator. Newton's method includes the $\alpha$ and $\beta$ parameters with the values explained in the previous chapter (see section 4.2.4, chapter \ref{ch3} and Appendix \ref{App:AppendixH}). The numerical stability is achieved by calibrating both the mesh size and the time-step increment in such a way that elastic wave propagation laws are not violated; the calibration is also explained in Appendix \ref{App:AppendixI}. A schematization of the FE model can be seen in Figure \ref{mainM} followed by a detailed description of the model.
+The dynamic analyses operate through an implicit direct-integration algorithm - the global set of non-linear equations of motion is integrated in time domain via the implicit Hilber-Hughes-Taylor operator (a customed Newmark's method). As it was mentioned before, the Newmark's method includes the $\alpha$ and $\beta$ parameters with the values explained in the previous chapter (see section 4.2.4, chapter \ref{ch3} and Appendix \ref{App:AppendixH}). The numerical stability is achieved by calibrating both the mesh size and the time-step increment in such a way that elastic wave propagation laws are not violated; the calibration is also explained in Appendix \ref{App:AppendixI}. A schematization of the FE model can be seen in Figure \ref{mainM} followed by a detailed description of the model.
 
 \subsection{Analysis procedure - Steps}
-Each analysis begins with a geostatic step such that the in-situ stresses are established first. Gravity load is applied all over the soil medium, simulating the real soil status when no foundation is resting on the ground.
+The research strategy resembles to the ones previously presented (see section 4.2.1). Each analysis begins with a geostatic step such that the in-situ stresses are established first. Gravity load is applied all over the soil medium, simulating the real soil status when no foundation is resting on the ground.
 
-Further on, the footing influence is similarly introduced as the material density together with the gravity load define the foundation self weight. No additional vertical load is required. Moreover, the rigid pier includes a mass element at the top that simulates the superstructure weight. In the end, the whole assembly aims to reproduce a single-dof structure.
+Further on, the footing influence is similarly introduced as the material density together with the gravity load define the foundation self weight. No additional vertical load is required so far. Moreover, the rigid pier includes a mass element at the top that simulates the superstructure weight. In the end, the whole assembly aims to reproduce a single-dof structure.
 
-Lastly, the seismic excitation must be integrated within the model. In order to get a smooth transition from the Site Response Analysis (SRA) towards the final goal, the study first assumes an sinusoidal cyclic input at the base of the soil layer. Finally, the real acceleration time history presented in previous chapter serves as example. The PGA is assumed to be 0.28g and it is implemented at a depth of 30meters. Firstly, because it is consistent with the SRA performed in chapter 4 and secondly, because it simulates the bedrock.
+Lastly, the seismic excitation must be integrated within the model. In order to get a smooth transition from the Site Response Analysis (SRA) towards the final goal, the study first assumes an sinusoidal cyclic input at the base of the soil layer. Finally, the real acceleration time history presented in previous chapter serves as example. The PGA is assumed to be 0.28g and it is implemented at a depth of 30 meters. Firstly, because this location is consistent with the SRA performed in chapter 4 and secondly, because it simulates the presence of bedrock.
 
-As for the boundary conditions, many approaches are formulated in the scientific literature regarding the simulation of the earthquake \mbox{action} for obtaining accurate results. Numerous methods relate to the implementation of boundary conditions as the problem becomes non-linear and it experiences wave propagation. Stability, computational expenses and model dimensions play an important role for the accuracy of the output and require most attention.  Henceforth, different types of boundary conditions were imposed that mimic the acceleration time history in distinct manners. Important to keep in mind that some methods do not necessarily require dynamic algorithms, a quasi-static analysis is preferable for such cases - this aspects will be explained in detail later in this chapter.
+As for the boundary conditions, many approaches are formulated in the scientific literature regarding the simulation of the earthquake \mbox{action} for obtaining accurate results. Numerous methods relate to the implementation of boundary conditions as the problem becomes non-linear and it experiences wave propagation. Numerical stability, computational expenses and model dimensions play an important role for the accuracy of the output and require most attention.  %Henceforth, different types of boundary conditions were imposed that mimic the acceleration time history in distinct manners. Important to keep in mind that some methods do not necessarily require dynamic algorithms, a quasi-static analysis is preferable for such cases - this aspects will be explained in detail later in this chapter.
 
 Thus, there are three main steps conducted within all analyses:
 \begin{enumerate}
-	\item \textbf{Geostatic} - for introducing the initial stress conditions of a free-field;
-	\item \textbf{Self weight application} - the perturbation on the stresses close to the surface due to the presence of the footing;
+	\item \textbf{Geostatic} - for setting up the initial stress conditions of a free-field;
+	\item \textbf{Self weight application} - representing the perturbation on the stresses close to the surface due to the presence of the footing;
 	\item \textbf{Dynamic/ Quasi-static} - applying the seismic input in various manners to simulate the earthquake motion.
 \end{enumerate}
 
@@ -113,9 +113,9 @@ The sliding formulation required for the interaction implementation has two opti
 \subsection{Boundary conditions}
 For this type of application, it becomes necessary to define two sets of boundary conditions: the \textit{global} and the \textit{local} ones. The first set assumes the top surface as being constraint-free, whilst rigid bottom is initially defined. The lateral boundaries are both vertically and horizontally constrained.
 
-Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium. Another concept relates to transmitting boundaries and many researchers proposed methods of tackling the problem, here highlighting the work of Lysmer and Kuhlemeyer \cite{zienkiewicz1989earthquake} and Zienkiewicz et al (1989) \cite{zienkiewicz1989earthquake}.
+Nevertheless, in dynamic analyses, a fixed boundary condition will lead to wave reflection at the outer limits of the model translated into energy trapped inside the model. This effect becomes detrimental, therefore solutions must mitigate reflective waves propagating throughout the model. One way is to create a large enough model to simulate an infinite medium. Another concept relates to transmitting boundaries and many researchers proposed methods of tackling the problem, here highlighting the work of Lysmer and Kuhlemeyer, 1969 \cite{lysmer1969finite} and Zienkiewicz et al (1989) \cite{zienkiewicz1989earthquake}.
 
-However, for simplicity of the problem, these complex concepts were not implemented so the focus was on verifying the accurate position of the lateral boundaries. Moreover, the current application is dealing with a simple geometry, reduced  footing-structure dimensions and a dissipative material. So it can be assumed that soil plasticity will favour the energy dissipation and prevent the wave reflection to greatly influence the response in the proximity of the foundation.
+However, for simplicity of the problem, these complex concepts were not implemented so the focus was on verifying the accurate position of the lateral boundaries. Moreover, the current application is dealing with a simple geometry, reduced  footing-structure dimensions and a dissipative material. So it can be assumed that soil plasticity will favour the energy dissipation and prevent the wave reflection at lateral boundaries to greatly influence the response in the proximity of the foundation.
 
  \paragraph{Tied lateral boundaries}
 	The traditional approach considers pairs of lateral nodes being tied together such way that the horizontal and vertical displacement are equal throughout the entire analysis. This feature can be easily achieved using Abaqus MPC (multi-point constraint) option specifically designed for this situation. The assumption is in conformity with Zienkiewicz's work (\cite{zienkiewicz1989earthquake}) stating that the presence of the structure on soil oscillation is negligible when the boundaries are sufficiently far.
@@ -123,11 +123,14 @@ However, for simplicity of the problem, these complex concepts were not implemen
 	Subsequently, the input motion is introduced at the vertically fixed base of the model that replicates the presence of the bedrock. As previously discussed, the acceleration signal obtained from the dataset for Groningen field was recorded at borehole depth, not at bedrock, which means that the recordings can include both incident and reflected waves. In order to exclude an overestimation of the real input signal, the accelerogram was truncated in half to ensure that only upward travelling waves are considered.
 	
 	Nevertheless, this method can be formulated in the FE product either through a dynamic or a quasi-static step depending whether the earthquake is expressed in terms of total displacements or total accelerations.
+	
 	However attractive this simple method might be, its shortcomings originate from both the lack of an actual bedrock or from the uncertainties rising when defining the model dimensions - there are no rule of thumbs for determining the truncation of the mathematical model. Thus, in order to establish a correct location for these boundaries, various tests were performed introducing the concept of free-field soil column.
 	
 	\paragraph{Free-field soil column}
 	It behaves similarly to a vertical soil medium located far enough from the actual foundation for the vibrations not to perturb its state stress. This can be simply implemented as the one-dimensional column subjected to seismic excitation, identical to the model created for the site response analysis. Its advantages involve the option of extracting the results at any desired node. Thus, the previous analysis becomes essential as it represents the benchmark when verifying the soil medium dimensions.
 		
+	It is worth to acknowledge the constraints which link pairs of lateral nodes in order to maintain equal horizontal displacements along the seismic test. Then, it suffices extracting the outcome from one set of lateral nodes, since left or right are displaying equal results. The output yields displacement, velocity and acceleration time histories for each lateral node - allowing the comparison with the main model lateral response.
+			
 	A series of results extracted from the SRA are presented below:
 		\begin{figure}[h!]
 			\centering
@@ -150,15 +153,14 @@ However, for simplicity of the problem, these complex concepts were not implemen
 					\label{disp_ff}
 				\end{figure} 
 	
-	Once the response at the lateral boundaries of the main model corresponds to the one recorded from the free-field soil column, then the location of the boundaries becomes valid and the final dimension of the model can be established. For this particular case, it was concluded that a total length of the soil medium, L=100m, is sufficient to incorporate both near and far field domains.  (see Figure \ref{validation}).
+	Once the response at the lateral boundaries of the main model corresponds to the one recorded from the free-field soil column, then the location of the boundaries becomes valid and the final dimension of the model can be established. For this particular case, it was concluded that a total length of the soil medium, L=100m, is sufficient to incorporate both near and far field domains. Figure \ref{validation}) shows a comparison between the response obtained from both one-dimensional model and the main 2D model.
 		\begin{figure}[!h]
 			\centering
 			\includegraphics[width=0.7\linewidth]{"free-field2"}
 			\caption{Validation for soil layer width by comparing the acceleration response at surface level}
 			\label{validation}
 		\end{figure}			
-		
-	It is worth to acknowledge the constraints which link pairs of lateral nodes in order to maintain equal horizontal displacements along the seismic test. Then, it suffices extracting the outcome from one set of lateral nodes, since left or right are displaying equal results. The output yields displacement, velocity and acceleration time histories for each lateral node - allowing the comparison with the main model lateral response.			
+			
 			
 	\newpage
 	\paragraph{Main model}
@@ -166,8 +168,8 @@ However, for simplicity of the problem, these complex concepts were not implemen
 	\begin{enumerate}
 		\item \textit{soil medium} - a homogeneous clay layer, solid, deformable, displaying non-linear kinematic hardening. Same material and meshing (plane-strain CPE4R) properties as the free-field column (see also Appendix \ref{App:AppendixA} and \ref{App:AppendixF}).
 		\item \textit{footing} -  rectangular solid (B=4m, b=0.5m), deformable, meshed with continuum elements (plane-strain with reduced integration CPE4R) behaving elastically.
-		\item \textit{mass} - concentrated mass represented by a point assigned with inertial mass. It is in conformity with the assumption of a SDOF system.
-		\item \textit{pier} - beam element (B21), infinitely rigid representing the chimney itself.
+		\item \textit{pier} - beam element (B21), perfectly elastic representing the chimney itself.
+		\item \textit{mass} - concentrated mass represented by a point assigned with inertial mass. Together with the footing and pier, the assembly is in conformity with the assumption of a SDOF system.
 		\item \textit{contact interface} - special algorithm contact presented in detail in section 5.4.2;
 	\end{enumerate}
 	
@@ -185,13 +187,15 @@ However, for simplicity of the problem, these complex concepts were not implemen
 	\end{itemize}
 	
 \subsection{Cyclic analyses}
-	The investigation starts with a series of lateral cyclic push-over tests because the trends in response are far easier to observe in such harmonic conditions. The method, as it was described previously (see section 2.7.3), represents a fair simplification of the seismic \mbox{problem}. Also, the researcher community (Gazetass et al, \cite{gazetas2004seismic}, Drosos et al, 2012 \cite{drosos2012soil}) took similar steps in order to observe the evolution of settlement-rotation response of the foundation. Moreover, the current study can be regarded as rather exclusive, since the seismic inspection performed for Groningen site conditions corresponds to the conventional design (available within EC 8). Thus, for verification, this paper compares the obtained results with the ones accessible in the scientific literature.
+	The investigation starts with a series of  uniform harmonic cyclic tests because the trends in response are far easier to observe in such conditions. The method, as it was described previously (see section 2.7.3), represents a fair simplification of the seismic \mbox{problem}. Also, the researcher community (Gazetass et al, \cite{gazetas2004seismic}, Drosos et al, 2012 \cite{drosos2012soil}) took similar steps in order to observe the evolution of settlement-rotation response of the foundation. Moreover, the current study can be regarded as rather exclusive, since the seismic inspection performed for Groningen site conditions corresponds to the conventional design (available within EC 8). Thus, for verification, this paper compares the obtained results with the ones accessible in the scientific literature.
 
 	%A simple rectangular footing with dimensions L=4m and b=0.5m is resting on the non-linear soil medium. %As mentioned before, the analysis investigates the differences between two types of soil-footing contact: FBC and TSI. The fully bonded contact assumes the elements are permanently tied together during the analysis whilst the sliding interface allows uplifting to occur. 
 	%The advanced contact algorithm was described in previous sections and the output consists of responses extracted from both analyses. The footing acts like a rigid body; the boundaries are located at considerable distance from the footing in order to avoid its influence on the stress field.
 	The test starts with a geostatic step, followed by the appliance of self weight of the foundation-pier and lateral prescribed displacement at mass level. 
 	
-	The self weight of the building is converted into a concentrated force applied at mass level as well. In order to highlight the difference between lightly and heavily loaded foundation, it is important to determine the bearing capacity. Based on Terzaghi, 1943 initial work, Meyerkof, 1957\cite{meyerhof1957ultimate} proposes the ultimate bearing capacity of the footing only for vertical loading and in undrained conditions as:
+	The dead load acting on the building is converted into a concentrated force applied at mass level. One of the goals of this study is to investigate the difference in response between lightly and heavily loaded foundations. In order to be able to observe such dissimilarities, it is important to determine the footing bearing capacity first. To distinguish the lightly loaded foundations from the heavily loaded ones, the concept of vertical safety factor ($FS_v$) is introduced, which relates the applied axial force (at mass level) to the bearing capacity.
+	
+	Based on Terzaghi, 1943 initial work, Meyerkof, 1957\cite{meyerhof1957ultimate} proposes the ultimate bearing capacity of a rectangular footing only for vertical loading and in undrained conditions as:
 	\begin{equation}
 		s_c=1+B/L*0.2
 	\end{equation}
@@ -207,22 +211,29 @@ However, for simplicity of the problem, these complex concepts were not implemen
 	\end{equation}
 	
 	Additionally, a static analysis was performed in Abaqus to verify the value of the ultimate bearing capacity for vertical loading. The result can be extracted using a load-displacement plot which can be seen in the figure below.
-		
+
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=0.5\linewidth]{"ultimatebearing"}
+			\caption{Load-displacement representation calculated numerically for a shallow strip of L=4m}
+			\label{bearing}
+		\end{figure}
+
 	Thus, the gross allowable-load bearing capacity of shallow foundations requires the application of a static vertical factor of safety ($FS_v$) to the gross ultimate bearing capacity:
 	
 \begin{equation}
 	FS_v=\frac{N_{ult}}{N_{allow}}
 \end{equation}
 
-To distinguish the lightly loaded foundations from the heavily loaded ones, the values assigned to represent the self weight of the structure differ such that two safety factors yield: $FS=2$ and $FS=5$. 
+The dynamic input signal is represented by an uniform sinusoidal cyclic curve, consisting of 10 cycles of 1Hz frequency and an acceleration of 1g. This is relatively close to the recorded acceleration which has an overall frequency of 1,4Hz. The signal is applied at the base of the soil medium, in the horizontal direction whilst the translation is constrained in vertical direction.
 
-\color{red}Furthermore, the cyclic push-over test consists in a controlled lateral displacement of the mass point assigned to the top of the pier. It simulates the seismic action as the deformation is assigned with a harmonic cyclic amplitude curve. The same approach was presented formerly (see sections 3.3.1. and 4.4). The input curve consists in 10 cycles with a frequency of 1Hz and an acceleration of 0.28g. Again, Abaqus combines the prescribed displacement with the curve yielding a slow-cyclic movement. 
+Thus, there are two analyses performed: the lightly loaded foundation corresponding to a vertical safety factor $FS_v=5$ and the heavily loaded one assigned with $FS_v=2$. The results of the analysis together with several remarks associated with this uniform sinusoidal acceleration signal can be found in the following section.
+%\color{red}Furthermore, the cyclic push-over test consists in a controlled lateral displacement of the mass point assigned to the top of the pier. It simulates the seismic action as the deformation is assigned with a harmonic cyclic amplitude curve. The same approach was presented formerly (see sections 3.3.1. and 4.4). The input curve consists in 10 cycles with a frequency of 1Hz and an acceleration of 0.28g. Again, Abaqus combines the prescribed displacement with the curve yielding a slow-cyclic movement. 
 %\textit{NOTE: This analysis is currently in stand-by as I had troubles using these features in Abaqus.}
-	 
-	 
-	
+	  
 \subsection{Seismic analyses}	 
-The examination of the cyclic response was investigated so far. The paper continues with the dynamic step for which the acceleration time history was scaled to include a PGA of 0.28g as representative for this specific site. The signal is trimmed yet again, because it contains both upward and downward waves and because the base aims to simulate the presence of the bedrock. Thus, the wave should be travelling upwards exclusively. A sketch of the input can be seen in the figure below.
+The paper continues with the dynamic step for which the acceleration time history was scaled to include a PGA of 0.28g as representative for this specific site. The signal is trimmed yet again, because it contains both upward and downward waves and because the base aims to simulate the presence of the bedrock. Thus, the wave should be travelling upwards exclusively. A sketch of the input can be seen in the figure below.
 	
 	\begin{figure}[!h]
 		\centering
@@ -232,12 +243,37 @@ The examination of the cyclic response was investigated so far. The paper contin
 	\end{figure}
 
 \section{Results}
-This section focuses on the results, on several components and conditions which might influence the outcome differently. One important aspect is the safety factor which makes a distinction between lightly and heavily loaded foundations. Furthermore, the presence of a surcharge in the proximity of the footing is also examined. Moreover, the structural dimensions effects on the non-linear soil response are also addressed. Finally, the type of contact at soil-footing interface is analysed and the comparison between the obtained values and ones found in scientific literature is conducted.
+This section focuses on the results, on several components and conditions which might influence the outcome differently. One important aspect is the safety factor which makes a distinction between lightly and heavily loaded foundations. Furthermore, the presence of a surcharge in the proximity of the footing is also examined. Moreover, the structural dimensions effects on the non-linear soil response are addressed. Finally, the type of contact at soil-footing interface is analysed and the comparison between the obtained values and ones found in scientific literature is conducted.
 
+The outcome indicates first the response according to the uniform cyclic input, in order to observe the trends and compare with the literature study, followed by the response of the seismically loaded system. Each aspect will be described and remarks will be formulated.
 
 \subsection{Effects of vertical loading}
-Studies show (Gajan, 2009 \cite{gajan2009effects} Drosos et. al, 2012 \cite{drosos2012soil}), Anastasopoulos, 2014 \cite{anastasopoulos2014simplified}) that the safety factor plays an important role when it comes to distinguish the uplifting from soil yielding soil inelastic response. Two situations are discussed for this part: lightly and heavily loaded foundations. The first assumes a low level of vertical loading acting on the shallow footing which translates into a large safety factor, $FS=5$. The latter represents the opposite with a safety factor $FS=2.$ The main objective of this particular investigation is to check whether the same trends are observed when dealing with these conditions. The comparison between the obtained results and the scientific literature (explained in Section 2.7.2) makes this check possible.
-\paragraph{Lightly loaded foundations}
+Studies show (Gajan, 2009 \cite{gajan2009effects} Drosos et. al, 2012 \cite{drosos2012soil}), Anastasopoulos, 2014 \cite{anastasopoulos2014simplified}) that the safety factor plays an important role when it comes to distinguish the uplifting from soil yielding soil inelastic response. Two situations are discussed for this part: lightly and heavily loaded foundations. The first assumes a low level of vertical loading acting on the shallow footing which translates into a large static vertical safety factor, $FS_v=5$. The latter represents the opposite with a safety factor $FS_v=2.$ The main objective of this particular investigation is to check whether the same trends are observed when dealing with these conditions. The comparison between the obtained results and the scientific literature (explained in Section 2.7.2) makes this check possible.
+
+Figure show the results corresponding to the sinusoidal acceleration input. The emphasis is on the moment-rotation ($M-\theta$), settlement-rotation ($w-\theta$) at footing level, the hysteretic response underneath the foundation and the acceleration recorded at three main points: base, surface and mass level.
+
+\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{"sin_4m"}
+		\caption{Sinusoidal cyclic test results pointing the differences between lightly loaded foundation $FS_v=5$ and heavily loaded foundation ($FS_v=2$): (a1),(a2) moment-rotation; (b1), (b2) settlement rotation at foundation level; (c1), (c2) hysteresis loops right below the centre of foundation. The results correspond to a shallow footing of 4m width and two different dead loads.}
+		\label{sin}
+\end{figure}
+
+The method of analysis resembles the work conducted by Drosos et al, 2012 \cite{drosos2012soil} who performed a series of tests including the harmonic input excitations. The authors \mbox{examined} the behaviour of three foundations with various dimensions making the differences between small, medium and large foundation. Below, the results according to a base excitation of 1Hz amplitude with an acceleration of 0.5g can be seen.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"drosos2"}
+	\caption{Results according to Drosos et al, 2012 regarding the foundation response to base excitation of a 12-cycle 1Hz sine with 0.5 acceleration amplitude. The response is expressed in terms of moment-rotation (top) and settlement-rotation (above)}
+	\label{drosos}
+\end{figure}
+
+It is important to mention that the researchers distinguish the different safety factors and aspect ratios by keeping the superstructure dead load and soil properties constant while changing the foundation size. So, the large foundation corresponds to the \mbox{conservatively} designed footing whereas the small one indicates the under-designed foundation. This also hints the differences between the capacity design and the new philosophy design. Moreover, assuming constant dead load, it means that the large foundation corresponds to lightly loaded foundation while the small one represents the opposite. 
+
+Meanwhile, the current study keeps the foundation size and soil properties constant while changing the dead load. 
+
+As for the acceleration response, the emphasis is on three points across the model: the mass level (top of the pier), surface (underneath the midpoint of the footing) and base level (bedrock). 
+
 
 
 \subsection{Effects of aspect ratio}
