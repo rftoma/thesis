@@ -83,29 +83,30 @@
 \contentsline {paragraph}{Main model}{83}
 \contentsline {subsection}{\numberline {5.4.4}Cyclic analyses}{84}
 \contentsline {subsection}{\numberline {5.4.5}Seismic analyses}{85}
-\contentsline {section}{\numberline {5.5}Results}{85}
+\contentsline {section}{\numberline {5.5}Results}{86}
 \contentsline {subsection}{\numberline {5.5.1}Effects of vertical loading}{86}
-\contentsline {subsection}{\numberline {5.5.2}Effects of aspect ratio}{88}
-\contentsline {subsection}{\numberline {5.5.3}Effects of surcharge}{88}
-\contentsline {subsection}{\numberline {5.5.4}Stresses}{90}
-\contentsline {subsection}{\numberline {5.5.5}Acceleration response}{91}
-\contentsline {section}{\numberline {5.6}Limitations and recommendations}{93}
-\contentsline {section}{\numberline {5.7}Conclusions}{93}
-\contentsline {section}{Appendix}{94}
-\contentsline {part}{II\hspace {1em}Appendix}{94}
-\contentsline {xpart}{Appendix}{95}
-\contentsline {chapter}{\numberline {A}Cone penetration test results}{95}
-\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{97}
-\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{97}
-\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{98}
-\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{101}
-\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{103}
-\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{105}
-\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{108}
-\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{110}
-\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{112}
-\contentsline {chapter}{\numberline {I}Newmark integration schemes}{114}
-\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{116}
-\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{118}
-\contentsline {chapter}{\numberline {L}NERA - Input example}{123}
-\contentsline {chapter}{Bibliography}{125}
+\contentsline {subsection}{\numberline {5.5.2}Effects of aspect ratio}{89}
+\contentsline {subsection}{\numberline {5.5.3}Effects of surcharge}{90}
+\contentsline {subsection}{\numberline {5.5.4}Remarks}{91}
+\contentsline {paragraph}{Effect of static vertical factor}{92}
+\contentsline {paragraph}{Effect of aspect ratio}{95}
+\contentsline {section}{\numberline {5.6}Limitations and recommendations}{96}
+\contentsline {section}{\numberline {5.7}Conclusions}{96}
+\contentsline {section}{Appendix}{97}
+\contentsline {part}{II\hspace {1em}Appendix}{97}
+\contentsline {xpart}{Appendix}{98}
+\contentsline {chapter}{\numberline {A}Cone penetration test results}{98}
+\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{100}
+\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{100}
+\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{101}
+\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{104}
+\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{106}
+\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{108}
+\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{111}
+\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{113}
+\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{115}
+\contentsline {chapter}{\numberline {I}Newmark integration schemes}{117}
+\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{119}
+\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{121}
+\contentsline {chapter}{\numberline {L}NERA - Input example}{126}
+\contentsline {chapter}{Bibliography}{128}
