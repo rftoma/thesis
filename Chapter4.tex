@@ -445,12 +445,6 @@ As the former section explained, the near-field sub-domain is governed by both t
 
 Lemaitre and Chaboche, 1994 \cite{lemaitre1994mechanics} developed such material model discussing the behaviour of both sand and undrained clay soils. Nowadays, research trend (Gazetas et al. \cite{gazetas2004nonlinear}, \cite{gazetas2013nonlinear}, \cite{anastasopoulos2010soil}) comprises the nonlinear kinematic hardening model characterized by a von Mises failure criterion along with an associated flow rule. The description of the model is rather accessible as it requires only Young's modulus $E$, soil yield stress $\sigma_y$ and strength $\sigma$. The research group performs multiple analyses using the software ABAQUS; the FEM program incorporates the non-linear kinematic hardening rule in the material section and it yields satisfying results. Moreover, they suggest a simplified constitutive model designated for studying the cyclic response of shallow foundation (Anastasopolous, 2011 \cite{anastasopoulos2011simplified}); the validation includes experimental work such as large-scale tests on a square footing resting on a loose sand and centrifuge tests of shallow footings on clay and sand. Results highlight that von Mises failure criterion is a trustworthy material model for clay in undrained conditions; also, the numerical and experimental models are were capable of accurately process the lateral cyclic performance and the lateral capacity of the footing. The vertical loading led to similar effects on the footing, thus it can be concluded that the current constitutive model represents a fair choice for this particular problem. One of the material model limitations stand in its incapacity of acquiring pore pressure build-up nor dissipation effects. Yet, it proves safe to assume an undrained behaviour given the short duration of seismic loading applied on the system. Figure shows a sample of results obtained by Anastasopoulos (\cite{anastasopoulos2011simplified}).
 
-\begin{figure}[!h]
-\centering
-	\includegraphics[width=0.5 \linewidth]{"exper"}
-	\caption{Validation of the numerical model against the centrifuge test of a square footing resting on clay. Large vertical loading on the foundation to generate bearing capacity type of failure. The inelastic soil response is expressed in terms of moment-rotation relationship and uplifting potential}
-	\label{experimental}
-\end{figure}
 
 \paragraph{Plastic models} Generally, materials experience irreversible deformations when elastic limit is reached but loading persists. Theory of the elasticity explains the occurrence of slip surfaces caused by instabilities via the time-independent irreversible deformations. Moreover, it determines the permanent deformations that lead to collapse preventing them while investigating the stability of the system. 
 In order to create a plasticity model, there is the need of few features such as:
@@ -460,7 +454,14 @@ In order to create a plasticity model, there is the need of few features such as
 	\item a plastic flow rule\
 \end{itemize}
 
-Simplifications of this constitutive models tend to responsibly neglect anisotropy and \mbox{temperature} independence aspects. Important to mention that the term \textit{kinematic} refers to criteria evolution while textit{isotropic} relates to flow and hardening criteria. Linear kinematic hardening rules provide the translation of the loading surface making use of the hardening variable which indicates the position of the loading surface. However, its limitations call for a more advanced model able to capture the nonlinearity caused by the kinematic hardening. For instance, the linear hardening rule fails to assess the relaxation effects induced by average stresses or the ratcheting effect. In addition, stabilization occurs accordingly to a perfectly plastic cycle when subjected to prescribed strains which does not happen in reality.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6 \linewidth]{"exper"}
+	\caption{Validation of the numerical model against the centrifuge test of a square footing resting on clay. Large vertical loading on the foundation to generate bearing capacity type of failure. The inelastic soil response is expressed in terms of moment-rotation relationship and uplifting potential}
+	\label{experimental}
+\end{figure}
+
+Simplifications of this constitutive models tend to responsibly neglect anisotropy and \mbox{temperature} independence aspects. Important to mention that the term \textit{kinematic} refers to criteria evolution while \textit{isotropic} relates to flow and hardening criteria. Linear kinematic hardening rules provide the translation of the loading surface making use of the hardening variable which indicates the position of the loading surface. However, its limitations call for a more advanced model able to capture the nonlinearity caused by the kinematic hardening. For instance, the linear hardening rule fails to assess the relaxation effects induced by average stresses or the ratcheting effect. In addition, stabilization occurs accordingly to a perfectly plastic cycle when subjected to prescribed strains which does not happen in reality.
 
 Henceforth, the evolution of stress in nonlinear conditions includes two components:
 
@@ -485,6 +486,7 @@ where C is the initial kinematic hardening parameter, K is the parameter charact
 
 A more detailed description of the constitutive model can be found in Appendix \ref{App:AppendixB} in terms of stress state, failure criterion development and mathematical formulas.
 
+\newpage
 \section{Numerical analyses}
 \subsection{General features}
 Researchers (Anastasopoulos, \cite{anastasopoulos2014simplified}, Ntritsos et al, 2015 \cite{ntritsos2015static}, Panagiotidou, 2012 \cite{panagiotidou2012pushover}) \mbox{developed} various models that highlight the new design particularities - both two-dimensional and three-dimensional elements were used in order to elaborate the soil-foundation system behaviour in static, cyclic and dynamic load combinations. 
@@ -614,14 +616,7 @@ Many studies focused on the importance of the combined $NQM$ loading and individ
 	\label{fail_contour}
 \end{figure}
 
-Nevertheless, the two maximum values - horizontal load $Q_{max}$ and overturning moment $M_{max}$ do not solely represent the failure mechanism; infinite combinations of $Q$ and $M$ are comprised within a failure envelope plotted against normalized values. Additionally, the effect of the vertical load which influences the $QM$ interaction was set to $N=0$. The figure beneath displays the four main points on the envelope that represent different loading conditions together with significant output at carefully selected points. Both the fully bonded contact (FBC) and tensionless sliding interface (TSI) conditions were investigated and presented for comparison. Important to mention is that the authors preferred to normalize the $Q$ and $M$ values in accordance to the foundation width $B$, area $A$ and undrained shear strength $S_u$ - the plot contains on the x direction $Q/AS_u$ whilst for the y direction it has $M/BAS_u$. 
-The main points have specific characteristics as it follows:
-\begin{itemize}
-	\item \textbf{Point A} \textit{pure moment loading $M_{ult}$;} in this point, shear force $Q=0$. A scoop-type of mechanism is noticeable along with the plastic shear strains shadow contours. Negative rotation can be observed from both the embedded plot as well from the graph.
-	\item\textbf{Point B} \textit{pure rotation $M_{max}$;} the tangent line to this point is parallel to the horizontal axis which acts accordingly to the associated flow rule which dictates preservation of normality. Given the dependence of moment loading, the mechanism is characterized by the scoop shape as well. The foundation response is mainly rotational with negative horizontal translation.  
-	\item\textbf{Point C} \textit{pure horizontal translation $Q_{max}$;} also, the preservation of normality can be noticed in the form of the tangent line which is parallel to the vertical axis. The failure mechanism is characterized by the sliding of the whole system; both active and passive sides exhibit failure as presented above - including the side walls effects.
-	\item\textbf{Point D} \textit{pure horizontal load $Q_ult$;} reversed scoop mechanism is observed with the centre of rotation close to the soil surface - the failure mechanism equally depends on both the horizontal translation and counter-clockwise rotation.
-\end{itemize}
+Nevertheless, the two maximum values - horizontal load $Q_{max}$ and overturning moment $M_{max}$ do not solely represent the failure mechanism; infinite combinations of $Q$ and $M$ are comprised within a failure envelope plotted against normalized values. Additionally, the effect of the vertical load which influences the $QM$ interaction was set to $N=0$.
 
 The herewith figures correspond to the two types of interface - FBC and TSI. There are certain dissimilarities between the two contact surfaces effects - few are exposed as it follows:
 \begin{itemize}
@@ -679,7 +674,7 @@ Having inclusively formulated both the problem, the goal and the means for achie
 	\item investigation of differences in the inelastic response between a fully bonded contact and tensionless sliding interface;
 	\item deformations encountered at the edges of the foundation: rotation, settlement;
 	\item stress concentration beneath the footing;
-	\item failure envelope;
+	\item effects of natural frequency on the overall response;
 	\item influence of the safety factor on the non-linear soil response and deformation trends.
 \end{itemize} 
 
