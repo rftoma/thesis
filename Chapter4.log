@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.6)  18 JUL 2016 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.6)  18 JUL 2016 20:50
 entering extended mode
 **./Chapter4.tex
 (Chapter4.tex
@@ -1362,17 +1362,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Chapter 6.
 [99
 
-]) [100
+] [100]) [101
 
 ]
 Appendix A.
-<"cpt".jpg, id=441, 454.69875pt x 407.27156pt>
+<"cpt".jpg, id=445, 454.69875pt x 407.27156pt>
 File: "cpt".jpg Graphic file (type jpg)
  <use "cpt".jpg>
 Package pdftex.def Info: "cpt".jpg used on input line 1154.
 (pdftex.def)             Requested size: 386.96024pt x 346.60503pt.
 
-<"cpt2".jpg, id=442, 447.92343pt x 319.1925pt>
+<"cpt2".jpg, id=446, 447.92343pt x 319.1925pt>
 File: "cpt2".jpg Graphic file (type jpg)
  <use "cpt2".jpg>
 Package pdftex.def Info: "cpt2".jpg used on input line 1159.
@@ -1381,19 +1381,19 @@ Package pdftex.def Info: "cpt2".jpg used on input line 1159.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[101
+[102
 
- <./cpt.jpg>] [102 <./cpt2.jpg>]
+ <./cpt.jpg>] [103 <./cpt2.jpg>]
 Appendix B.
-[103
+[104
 
-] <"tresca".jpg, id=453, 457.71pt x 198.7425pt>
+] <"tresca".jpg, id=456, 457.71pt x 198.7425pt>
 File: "tresca".jpg Graphic file (type jpg)
  <use "tresca".jpg>
 Package pdftex.def Info: "tresca".jpg used on input line 1211.
 (pdftex.def)             Requested size: 364.19664pt x 158.14508pt.
 
-<"Mises".jpg, id=454, 405.76593pt x 346.29375pt>
+<"Mises".jpg, id=457, 405.76593pt x 346.29375pt>
 File: "Mises".jpg Graphic file (type jpg)
  <use "Mises".jpg>
 Package pdftex.def Info: "Mises".jpg used on input line 1222.
@@ -1402,9 +1402,9 @@ Package pdftex.def Info: "Mises".jpg used on input line 1222.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[104 <./tresca.jpg>] [105 <./Mises.jpg>] [106]
+[105 <./tresca.jpg>] [106 <./Mises.jpg>] [107]
 Appendix C.
-<"masing".jpg, id=464, 327.47343pt x 252.945pt>
+<"masing".jpg, id=468, 327.47343pt x 252.945pt>
 File: "masing".jpg Graphic file (type jpg)
  <use "masing".jpg>
 Package pdftex.def Info: "masing".jpg used on input line 1309.
@@ -1414,40 +1414,40 @@ File: "loop".jpg Graphic file (type jpg)
 <use "loop".jpg>
 Package pdftex.def Info: "loop".jpg used on input line 1318.
 (pdftex.def)             Requested size: 227.62204pt x 130.01772pt.
- [107
+ [108
 
- <./masing.jpg>] [108]
+ <./masing.jpg>] [109]
 Appendix D.
-[109
+[110
 
-] [110]
+] [111]
 Appendix E.
-<"SuMC".jpg, id=478, 743.02594pt x 351.56343pt>
+<"SuMC".jpg, id=481, 743.02594pt x 351.56343pt>
 File: "SuMC".jpg Graphic file (type jpg)
  <use "SuMC".jpg>
 Package pdftex.def Info: "SuMC".jpg used on input line 1415.
 (pdftex.def)             Requested size: 227.62204pt x 107.69606pt.
- [111
+ [112
 
  <./SuMC.jpg>]
 Overfull \hbox (22.86385pt too wide) in paragraph at lines 1436--1445
  [][] 
  []
 
-[112]
+[113]
 File: "Su".jpg Graphic file (type jpg)
  <use "Su".jpg>
 Package pdftex.def Info: "Su".jpg used on input line 1474.
 (pdftex.def)             Requested size: 204.85844pt x 209.26604pt.
- [113]
+ [114]
 Appendix F.
-<"empirical".jpg, id=489, 620.3175pt x 408.02437pt>
+<"empirical".jpg, id=492, 620.3175pt x 408.02437pt>
 File: "empirical".jpg Graphic file (type jpg)
  <use "empirical".jpg>
 Package pdftex.def Info: "empirical".jpg used on input line 1484.
 (pdftex.def)             Requested size: 455.24408pt x 299.44293pt.
 
-<"measurements".jpg, id=490, 628.59843pt x 405.01312pt>
+<"measurements".jpg, id=493, 628.59843pt x 405.01312pt>
 File: "measurements".jpg Graphic file (type jpg)
 
 <use "measurements".jpg>
@@ -1457,18 +1457,18 @@ Package pdftex.def Info: "measurements".jpg used on input line 1491.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[114
+[115
 
- <./empirical.jpg>] [115 <./measurements.jpg>]
+ <./empirical.jpg>] [116 <./measurements.jpg>]
 Appendix G.
-<"flowABQ".jpg, id=497, 378.66469pt x 404.26031pt>
+<"flowABQ".jpg, id=500, 378.66469pt x 404.26031pt>
 File: "flowABQ".jpg Graphic file (type jpg)
  <use "flowABQ".jpg>
 Package pdftex.def Info: "flowABQ".jpg used on input line 1503.
 (pdftex.def)             Requested size: 455.24408pt x 486.02289pt.
- [116
+ [117
 
- <./flowABQ.jpg>] [117]
+ <./flowABQ.jpg>] [118]
 Appendix H.
 
 Overfull \hbox (89.7373pt too wide) in paragraph at lines 1514--1515
@@ -1491,33 +1491,33 @@ Overfull \hbox (62.14331pt too wide) in paragraph at lines 1544--1545
 ][][][][][][][][][][][][][][][][] 
  []
 
-[118
+[119
 
 ]
 Overfull \hbox (34.54932pt too wide) in paragraph at lines 1553--1554
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[119]
+[120]
 Appendix I.
-[120
+[121
 
 ]
 Appendix J.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[121
+[122
 
-] [122]
+] [123]
 Appendix K.
-<"NERA1".jpg, id=521, 520.19344pt x 368.1253pt>
+<"NERA1".jpg, id=524, 520.19344pt x 368.1253pt>
 File: "NERA1".jpg Graphic file (type jpg)
  <use "NERA1".jpg>
 Package pdftex.def Info: "NERA1".jpg used on input line 1652.
 (pdftex.def)             Requested size: 455.24408pt x 322.16502pt.
 
-<"NERA2".jpg, id=522, 288.3272pt x 403.5075pt>
+<"NERA2".jpg, id=525, 288.3272pt x 403.5075pt>
 File: "NERA2".jpg Graphic file (type jpg)
  <use "NERA2".jpg>
 Package pdftex.def Info: "NERA2".jpg used on input line 1658.
@@ -1526,7 +1526,7 @@ Package pdftex.def Info: "NERA2".jpg used on input line 1658.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"NERA 3".jpg, id=523, 317.68687pt x 423.83344pt>
+<"NERA 3".jpg, id=526, 317.68687pt x 423.83344pt>
 File: "NERA 3".jpg Graphic file (type jpg)
  <use "NERA 3".jpg>
 Package pdftex.def Info: "NERA 3".jpg used on input line 1664.
@@ -1535,7 +1535,7 @@ Package pdftex.def Info: "NERA 3".jpg used on input line 1664.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"NERA 4".jpg, id=524, 285.31593pt x 401.24907pt>
+<"NERA 4".jpg, id=527, 285.31593pt x 401.24907pt>
 File: "NERA 4".jpg Graphic file (type jpg)
  <use "NERA 4".jpg>
 Package pdftex.def Info: "NERA 4".jpg used on input line 1670.
@@ -1544,7 +1544,7 @@ Package pdftex.def Info: "NERA 4".jpg used on input line 1670.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"NERA5".jpg, id=525, 277.035pt x 423.08063pt>
+<"NERA5".jpg, id=528, 277.035pt x 423.08063pt>
 File: "NERA5".jpg Graphic file (type jpg)
  <use "NERA5".jpg>
 Package pdftex.def Info: "NERA5".jpg used on input line 1676.
@@ -1556,12 +1556,12 @@ LaTeX Warning: Float too large for page by 6.05516pt on input line 1678.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[123
+[124
 
- <./NERA1.jpg>] [124 <./NERA2.jpg>] [125 <./NERA 3.jpg>] [126 <./NERA 4.jpg>] [
-127 <./NERA5.jpg>]
+ <./NERA1.jpg>] [125 <./NERA2.jpg>] [126 <./NERA 3.jpg>] [127 <./NERA 4.jpg>] [
+128 <./NERA5.jpg>]
 Appendix L.
-<"NERA_RES".jpg, id=542, 576.65437pt x 417.05812pt>
+<"NERA_RES".jpg, id=545, 576.65437pt x 417.05812pt>
 File: "NERA_RES".jpg Graphic file (type jpg)
  <use "NERA_RES".jpg>
 Package pdftex.def Info: "NERA_RES".jpg used on input line 1685.
@@ -1571,7 +1571,7 @@ Overfull \hbox (91.04742pt too wide) in paragraph at lines 1685--1687
  [][] 
  []
 
-<"NERA_RES2".jpg, id=543, 930.47626pt x 469.00218pt>
+<"NERA_RES2".jpg, id=546, 930.47626pt x 469.00218pt>
 File: "NERA_RES2".jpg Graphic file (type jpg)
  <use "NERA_RES2".jpg>
 Package pdftex.def Info: "NERA_RES2".jpg used on input line 1691.
@@ -1580,7 +1580,7 @@ Package pdftex.def Info: "NERA_RES2".jpg used on input line 1691.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"NERA_RES3".jpg, id=544, 872.50969pt x 352.31625pt>
+<"NERA_RES3".jpg, id=547, 872.50969pt x 352.31625pt>
 File: "NERA_RES3".jpg Graphic file (type jpg)
  <use "NERA_RES3".jpg>
 Package pdftex.def Info: "NERA_RES3".jpg used on input line 1697.
@@ -1589,12 +1589,12 @@ Package pdftex.def Info: "NERA_RES3".jpg used on input line 1697.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(Chapter4.bbl [128
+(Chapter4.bbl [129
 
- <./NERA_RES.jpg>] [129 <./NERA_RES2.jpg> <./NERA_RES3.jpg>]
-[130
+ <./NERA_RES.jpg>] [130 <./NERA_RES2.jpg> <./NERA_RES3.jpg>]
+[131
 
-] [131] [132])
+] [132] [133])
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the Chapter4.maf file.
@@ -1606,7 +1606,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Chapter4.log file.
 
-[133] (Chapter4.aux)
+[134] (Chapter4.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1640,9 +1640,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Administrator/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
 /Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmtt10.pfb>
-Output written on Chapter4.pdf (135 pages, 8692401 bytes).
+Output written on Chapter4.pdf (136 pages, 8694601 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
+ 621 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  586 words of extra memory for PDF output out of 10000 (max. 10000000)
 
