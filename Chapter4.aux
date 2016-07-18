@@ -349,7 +349,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Real structure objected to study}}{71}}
 \newlabel{chimney}{{5.2}{71}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Method of analysis}{71}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Analysis procedure - Steps}{72}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Analysis procedure}{72}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Contact definition}{72}}
 \@writefile{toc}{\contentsline {paragraph}{Mechanical properties}{73}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Exponential \IeC {\textquotedblleft }softened\IeC {\textquotedblright } pressure-overclosure relationship in Abaqus/Standard}}{73}}
@@ -363,203 +363,205 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Boundary conditions}{75}}
 \@writefile{toc}{\contentsline {paragraph}{Tied lateral boundaries}{75}}
 \@writefile{toc}{\contentsline {paragraph}{Free-field soil column}{75}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Acceleration time history output at base and surface level}}{76}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Acceleration, velocity and displacement time histories output throughout the free-field soil column}}{76}}
 \newlabel{Acc_ff}{{5.5}{76}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Velocity time history output from Free field soil column}}{76}}
-\newlabel{velo}{{5.6}{76}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Horizontal displacement time history}}{77}}
-\newlabel{disp_ff}{{5.7}{77}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Validation for soil layer width by comparing the acceleration response at surface level}}{77}}
-\newlabel{validation}{{5.8}{77}}
-\@writefile{toc}{\contentsline {paragraph}{Main model}{77}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Validation for soil layer width by comparing the acceleration response at surface level}}{76}}
+\newlabel{validation}{{5.6}{76}}
 \citation{gazetas2004seismic}
 \citation{drosos2012soil}
+\@writefile{toc}{\contentsline {paragraph}{Main model}{77}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Schematization of the main FE model}}{77}}
+\newlabel{mainM}{{5.7}{77}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Cyclic analyses}{77}}
 \citation{meyerhof1957ultimate}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Schematization of the main FE model}}{78}}
-\newlabel{mainM}{{5.9}{78}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Cyclic analyses}{78}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Load-displacement representation calculated numerically for a shallow strip of L=4m}}{79}}
-\newlabel{bearing}{{5.10}{79}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Load-displacement representation calculated numerically for a shallow strip of L=4m}}{78}}
+\newlabel{bearing}{{5.8}{78}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}Seismic analyses}{79}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Acceleration input for PGA=0.28g trimmed to half in order to include upwards travelling waves exclusively. The signal is divided into periods of 2 seconds each - the colours will correspond to the results presented in the next section.}}{79}}
+\newlabel{inputacc}{{5.9}{79}}
 \citation{gajan2009effects}
 \citation{drosos2012soil}
 \citation{anastasopoulos2014simplified}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Acceleration input for PGA=0.28g trimmed to half in order to include upwards travelling waves exclusively. The signal is divided into periods of 2 seconds each - the colours will correspond to the results presented in the next section.}}{80}}
-\newlabel{inputacc}{{5.11}{80}}
+\citation{drosos2012soil}
 \@writefile{toc}{\contentsline {section}{\numberline {5.5}Results}{80}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Effects of vertical loading}{80}}
-\citation{drosos2012soil}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Sinusoidal cyclic test results pointing the \unhbox \voidb@x \hbox {differences} between lightly loaded foundation $FS_v=5$ and heavily loaded foundation ($FS_v=2$): (a1),(a2) moment-rotation; (b1), (b2) settlement rotation at foundation level; (c1), (c2) hysteresis loops right below the centre of foundation. The results correspond to a shallow footing of 4m width and two different dead loads.}}{81}}
-\newlabel{sin}{{5.12}{81}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Results according to Drosos et al, 2012 for a base excitation of a 12-cycle 1Hz sine with 0.5 acceleration amplitude. The response is expressed in terms of moment-rotation (top) and settlement-rotation (bottom). Note that small foundation=heavily loaded($FS_v=3.5$) and large foundation=lightly loaded ($FS_v=7.3$)}}{82}}
-\newlabel{drosos}{{5.13}{82}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Acceleration response at three main points within the model for both lightly loaded foundations ($FS_v=5$) and a comparison between the two footings at mass level. Both the foundations display similar acceleration trends, so only one was chosen as representative.}}{83}}
-\newlabel{acc4msin}{{5.14}{83}}
-\@writefile{toc}{\contentsline {paragraph}{Seismic analyses}{83}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Sinusoidal cyclic test results pointing the \unhbox \voidb@x \hbox {differences} between lightly loaded foundation $FS_v=5$ and heavily loaded foundation ($FS_v=2$): (a1),(a2) moment-rotation; (b1), (b2) settlement rotation at foundation level; (c1), (c2) hysteresis loops right below the centre of foundation. The results correspond to a shallow footing of 4m width and two different dead loads.}}{81}}
+\newlabel{sin}{{5.10}{81}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Results according to Drosos et al, 2012 for a base excitation of a 12-cycle 1Hz sine with 0.5 acceleration amplitude. The response is expressed in terms of moment-rotation (top) and settlement-rotation (bottom). Note that small foundation($FS_v=3.5$) and large foundation ($FS_v=7.3$)}}{82}}
+\newlabel{drosos}{{5.11}{82}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Acceleration response at three main points within the model for both lightly loaded foundations ($FS_v=5$) and a comparison between the two footings at mass level. Both the foundations display similar acceleration trends, so only one was chosen as representative.}}{82}}
+\newlabel{acc4msin}{{5.12}{82}}
 \citation{kutter2010estimation}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Foundation response to base excitation corresponding to a PGA=0.28g expressed in terms of: (a) moment-rotation; (b) settlement-rotation of the footing midpoint; (c) hysteresis loops underneath the structure. Two different cases are presented: lightly loaded (left) and heavily loaded foundation (right)}}{84}}
-\newlabel{eq1}{{5.15}{84}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Contact opening under the corner of the foundation for lightly loaded ($FS_v=5$) and heavily loaded foundations ($FS_v=2$)}}{85}}
-\newlabel{opening}{{5.16}{85}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Critical contact length and rocking moment capacity according to \unhbox \voidb@x \hbox {Kutter} et al, 2010}}{85}}
-\newlabel{rocking_cap}{{5.17}{85}}
+\@writefile{toc}{\contentsline {paragraph}{Seismic analyses}{83}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Foundation response to base excitation corresponding to a PGA=0.28g expressed in terms of: (a) moment-rotation; (b) settlement-rotation of the footing midpoint; (c) hysteresis loops underneath the structure. Two different cases are presented: lightly loaded (left) and heavily loaded foundation (right)}}{84}}
+\newlabel{eq1}{{5.13}{84}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Contact opening under the corner of the foundation for lightly loaded ($FS_v=5$) and heavily loaded foundations ($FS_v=2$)}}{84}}
+\newlabel{opening}{{5.14}{84}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Critical contact length and rocking moment capacity according to \unhbox \voidb@x \hbox {Kutter} et al, 2010}}{85}}
+\newlabel{rocking_cap}{{5.15}{85}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Bearing capacity failure mechanisms of highly loaded foundations illustrated in few stages}}{85}}
+\newlabel{bearingc}{{5.16}{85}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Effect of the signal frequency}{86}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Foundation response when subjected to 10 cycles of f=1Hz (left) and f=2Hz (right) in terms of moment-rotation, settlement-rotation and hysteresis loops}}{86}}
-\newlabel{2hz}{{5.18}{86}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Acceleration response comparison between f=2Hz (top) and f=1Hz (bottom)}}{87}}
-\newlabel{acc2hz}{{5.19}{87}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Foundation inelastic response when subjected to one-cycle of frequency 1Hz (left) and of frequency 2Hz (right)}}{87}}
-\newlabel{sinus}{{5.20}{87}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Foundation response when subjected to 10 cycles of f=1Hz (left) and f=2Hz (right) in terms of moment-rotation, settlement-rotation and hysteresis loops}}{86}}
+\newlabel{2hz}{{5.17}{86}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Acceleration response comparison between f=2Hz (top) and f=1Hz (bottom)}}{87}}
+\newlabel{acc2hz}{{5.18}{87}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Foundation inelastic response when subjected to one-cycle of frequency 1Hz (left) and of frequency 2Hz (right)}}{87}}
+\newlabel{sinus}{{5.19}{87}}
 \citation{zafeirakos2011role}
 \citation{zafeirakos2011role}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}Effects of aspect ratio}{89}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Foundation response to base excitation corresponding to a PGA=0.28g expressed in terms of: (a) moment-rotation; (b) settlement-rotation of the footing midpoint; (c) hysteresis loops underneath the structure. Three different cases are presented: small (FSv=2), medium (FSv=4) and large (FSv=8)}}{89}}
-\newlabel{eq2}{{5.21}{89}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces An example of inelastic soil response showing irregular trends. The study belongs to Zafeirakos, 2011 \cite  {zafeirakos2011role} and it regards a caisson embedded into the soft soil. The structural system is defined as a single dof, the study makes the difference between lightly(left) and heavily loaded foundations (right)}}{90}}
-\newlabel{eq5}{{5.22}{90}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Acceleration time history recorded at deck level (top pier) when subjected to a real seismic base signal for three different foundation size}}{90}}
-\newlabel{eq3}{{5.23}{90}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}Effects of aspect ratio}{88}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Foundation response to base excitation corresponding to a PGA=0.28g expressed in terms of: (a) moment-rotation; (b) settlement-rotation of the footing midpoint; (c) hysteresis loops underneath the structure. Three different cases are presented: small (FSv=2), medium (FSv=4) and large (FSv=8)}}{88}}
+\newlabel{eq2}{{5.20}{88}}
+\newlabel{equ}{{5.8}{88}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces An example of inelastic soil response showing irregular trends. The study belongs to Zafeirakos, 2011 \cite  {zafeirakos2011role} and it regards a caisson embedded into the soft soil. The structural system is defined as a single dof, the study makes the difference between lightly(left) and heavily loaded foundations (right)}}{89}}
+\newlabel{eq5}{{5.21}{89}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Acceleration time history recorded at deck level (top pier) when subjected to a real seismic base signal for three different foundation size}}{89}}
+\newlabel{eq3}{{5.22}{89}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5.4}Effects of surcharge}{90}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces Foundation response for various surcharge values expressed in terms of moment-rotation (the last 2 seconds) and settlement rotation (t=10 sec) of the footing midpoint}}{91}}
-\newlabel{surch}{{5.24}{91}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.25}{\ignorespaces Surcharge effect in terms of vertical stresses $\sigma _v$ (top) and settlements $w$ underneath the footing}}{91}}
-\newlabel{maxax}{{5.25}{91}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Foundation response for various surcharge values expressed in terms of moment-rotation (the last 2 seconds) and settlement rotation (t=10 sec) of the footing midpoint}}{90}}
+\newlabel{surch}{{5.23}{90}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces Surcharge effect in terms of vertical stresses $\sigma _v$ (top) and settlements $w$ underneath the footing}}{90}}
+\newlabel{maxax}{{5.24}{90}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5.5}Fully Bonded Contact vs Tensionless Sliding Interface}{91}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.25}{\ignorespaces Foundation inelastic response for a base excitation of PGA=0.28g considering Tensionless sliding interface (right) and Fully bonded contact (left) in terms of moment-rotation(top) and settlement-rotation (bottom)}}{91}}
+\newlabel{fbctsi}{{5.25}{91}}
 \citation{anastasopoulos2011simplified}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.26}{\ignorespaces Foundation inelastic response for a base excitation of PGA=0.28g considering Tensionless sliding interface (right) and Fully bonded contact (left) in terms of moment-rotation(top) and settlement-rotation (bottom)}}{92}}
-\newlabel{fbctsi}{{5.26}{92}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.6}Effects of bedrock position}{92}}
 \citation{gajan2009effects}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.27}{\ignorespaces Comparison of foundation inelastic response for a base excitation of PGA=0.28g considering a layer height of H=10 m(left) and H=30m (right) in terms of $M-\theta $ (a), $w-\theta $ (b) and $\tau -\gamma $. Both the cases correspond to a $FS_v=2)$}}{93}}
-\newlabel{10m}{{5.27}{93}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.28}{\ignorespaces Comparison of foundation inelastic response for a base excitation of PGA=0.28g considering a layer height of H=10 m(left) and H=30m (right) in terms of $M-\theta $ (a), $w-\theta $ (b) and $\tau -\gamma $. Both the cases correspond to a $FS_v=4)$}}{94}}
-\newlabel{10m2}{{5.28}{94}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.29}{\ignorespaces Foundation inelastic response $M-\theta $ (left), $w-\theta $ (right). The problem was analysed with a 3D model subjected to a lateral cyclic push-over test. The centrifuge experiment performed the same test. The ultimate bearing capacity lead to a $FS_v=2.8)$}}{94}}
-\newlabel{gazii}{{5.29}{94}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.30}{\ignorespaces Foundation inelastic response $M-\theta $ (left), $w-\theta $ (right). It corresponds to experiments involving a shear-wall shallow footing subjected to slow lateral cyclic loading conditions. The cyclic motion is induced by an acuator placed at the bottom of the sample.}}{95}}
-\newlabel{gaza}{{5.30}{95}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Limitations and recommendations}{95}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}Remarks}{96}}
-\@writefile{toc}{\contentsline {paragraph}{Effect of aspect ratio}{96}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.31}{\ignorespaces Fourier amplitude spectrum (top) including the acceleration at base, surface and mass level. Transfer function (bottom) at deck level}}{96}}
-\newlabel{eq4}{{5.31}{96}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Conclusions}{96}}
-\@writefile{toc}{\contentsline {section}{Appendix}{97}}
-\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Appendix}{97}}
-\@writefile{lof}{\contentsline {xpart}{Appendix}{98}}
-\@writefile{lot}{\contentsline {xpart}{Appendix}{98}}
-\@writefile{toc}{\contentsline {xpart}{Appendix}{98}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Cone penetration test results}{98}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.6}Effects of bedrock position}{92}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.26}{\ignorespaces Comparison of foundation inelastic response for a base excitation of PGA=0.28g considering a layer height of H=10 m(left) and H=30m (right) in terms of $M-\theta $ (a), $w-\theta $ (b) and $\tau -\gamma $. Both the cases correspond to a $FS_v=2)$}}{93}}
+\newlabel{10m}{{5.26}{93}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.27}{\ignorespaces Comparison of foundation inelastic response for a base excitation of PGA=0.28g considering a layer height of H=10 m(left) and H=30m (right) in terms of $M-\theta $ (a), $w-\theta $ (b) and $\tau -\gamma $. Both the cases correspond to a $FS_v=4)$}}{94}}
+\newlabel{10m2}{{5.27}{94}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.28}{\ignorespaces Foundation inelastic response $M-\theta $ (left), $w-\theta $ (right). The problem was analysed with a 3D model subjected to a lateral cyclic push-over test. The centrifuge experiment performed the same test. The ultimate bearing capacity lead to a $FS_v=2.8)$}}{94}}
+\newlabel{gazii}{{5.28}{94}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.29}{\ignorespaces Foundation inelastic response $M-\theta $ (left), $w-\theta $ (right). It corresponds to experiments involving a shear-wall shallow footing subjected to slow lateral cyclic loading conditions. The cyclic motion is induced by an acuator placed at the bottom of the sample.}}{95}}
+\newlabel{gaza}{{5.29}{95}}
+\citation{gazetas2004nonlinear}
+\citation{anastasopoulos2010soil}
+\citation{anastasopoulos2014simplified}
+\citation{drosos2012soil}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.30}{\ignorespaces Acceleration response comparison at mass level. The two situation address a (medium-) heavily (top) and a lightly loaded foundation (bottom) for both soil layer heights}}{96}}
+\newlabel{10}{{5.30}{96}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Conclusions}{96}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Limitations and recommendations}{97}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Conclusions}{98}}
+\@writefile{toc}{\contentsline {section}{Appendix}{99}}
+\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Appendix}{99}}
+\@writefile{lof}{\contentsline {xpart}{Appendix}{100}}
+\@writefile{lot}{\contentsline {xpart}{Appendix}{100}}
+\@writefile{toc}{\contentsline {xpart}{Appendix}{100}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Cone penetration test results}{100}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Cone penetration test results}{98}}
-\@writefile{lot}{\contentsline {xchapter}{Cone penetration test results}{98}}
-\newlabel{App:AppendixA}{{A}{98}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{100}}
+\@writefile{lof}{\contentsline {xchapter}{Cone penetration test results}{100}}
+\@writefile{lot}{\contentsline {xchapter}{Cone penetration test results}{100}}
+\newlabel{App:AppendixA}{{A}{100}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{102}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{100}}
-\@writefile{lot}{\contentsline {xchapter}{Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{100}}
-\newlabel{App:AppendixB}{{B}{100}}
-\@writefile{toc}{\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{100}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Tresca and Von mises failure criterion in stress space}}{101}}
-\newlabel{tresca}{{B.1}{101}}
-\@writefile{toc}{\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{101}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Von mises failure criterion in 3D stress space}}{102}}
-\newlabel{Mises}{{B.2}{102}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{104}}
+\@writefile{lof}{\contentsline {xchapter}{Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{102}}
+\@writefile{lot}{\contentsline {xchapter}{Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{102}}
+\newlabel{App:AppendixB}{{B}{102}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{102}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Tresca and Von mises failure criterion in stress space}}{103}}
+\newlabel{tresca}{{B.1}{103}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{103}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Von mises failure criterion in 3D stress space}}{104}}
+\newlabel{Mises}{{B.2}{104}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{106}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Description of Darendeli hyperbolic model}{104}}
-\@writefile{lot}{\contentsline {xchapter}{Description of Darendeli hyperbolic model}{104}}
-\newlabel{App:AppendixC}{{C}{104}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C.1}{\ignorespaces Hysteresis loop estimated by modelling stress-strain reversals for two-way cyclic loading according to Mass behaviour}}{104}}
-\newlabel{Masing}{{C.1}{104}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C.2}{\ignorespaces Calculation of damping ratio using a hysteresis loop}}{105}}
-\newlabel{loop2}{{C.2}{105}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{106}}
+\@writefile{lof}{\contentsline {xchapter}{Description of Darendeli hyperbolic model}{106}}
+\@writefile{lot}{\contentsline {xchapter}{Description of Darendeli hyperbolic model}{106}}
+\newlabel{App:AppendixC}{{C}{106}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.1}{\ignorespaces Hysteresis loop estimated by modelling stress-strain reversals for two-way cyclic loading according to Mass behaviour}}{106}}
+\newlabel{Masing}{{C.1}{106}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.2}{\ignorespaces Calculation of damping ratio using a hysteresis loop}}{107}}
+\newlabel{loop2}{{C.2}{107}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{108}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Input parameter - Stresses calculation}{106}}
-\@writefile{lot}{\contentsline {xchapter}{Input parameter - Stresses calculation}{106}}
-\newlabel{App:AppendixD}{{D}{106}}
-\newlabel{eq:1}{{D.1}{106}}
-\newlabel{eq:2}{{D.2}{106}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{108}}
+\@writefile{lof}{\contentsline {xchapter}{Input parameter - Stresses calculation}{108}}
+\@writefile{lot}{\contentsline {xchapter}{Input parameter - Stresses calculation}{108}}
+\newlabel{App:AppendixD}{{D}{108}}
+\newlabel{eq:1}{{D.1}{108}}
+\newlabel{eq:2}{{D.2}{108}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{110}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Determination of undrained shear strength value}{108}}
-\@writefile{lot}{\contentsline {xchapter}{Determination of undrained shear strength value}{108}}
-\newlabel{App:AppendixE}{{E}{108}}
-\@writefile{lof}{\contentsline {figure}{\numberline {E.1}{\ignorespaces Mohr's circles according to undrained conditions}}{108}}
-\newlabel{SuMC}{{E.1}{108}}
-\@writefile{lot}{\contentsline {table}{\numberline {E.1}{\ignorespaces Undrained shear strength equations according to Den Haan}}{109}}
-\newlabel{DenHaan_param_app}{{E.1}{109}}
-\@writefile{lof}{\contentsline {figure}{\numberline {E.2}{\ignorespaces Various values of the undrained shear strength Su}}{110}}
-\newlabel{Su_2}{{E.2}{110}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{111}}
+\@writefile{lof}{\contentsline {xchapter}{Determination of undrained shear strength value}{110}}
+\@writefile{lot}{\contentsline {xchapter}{Determination of undrained shear strength value}{110}}
+\newlabel{App:AppendixE}{{E}{110}}
+\@writefile{lof}{\contentsline {figure}{\numberline {E.1}{\ignorespaces Mohr's circles according to undrained conditions}}{110}}
+\newlabel{SuMC}{{E.1}{110}}
+\@writefile{lot}{\contentsline {table}{\numberline {E.1}{\ignorespaces Undrained shear strength equations according to Den Haan}}{111}}
+\newlabel{DenHaan_param_app}{{E.1}{111}}
+\@writefile{lof}{\contentsline {figure}{\numberline {E.2}{\ignorespaces Various values of the undrained shear strength Su}}{112}}
+\newlabel{Su_2}{{E.2}{112}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{113}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Abaqus Input parameters - Empirical and Measurements}{111}}
-\@writefile{lot}{\contentsline {xchapter}{Abaqus Input parameters - Empirical and Measurements}{111}}
-\newlabel{App:AppendixF}{{F}{111}}
-\@writefile{lof}{\contentsline {figure}{\numberline {F.1}{\ignorespaces Input parameters empirically determined}}{111}}
-\newlabel{empirical}{{F.1}{111}}
-\@writefile{lof}{\contentsline {figure}{\numberline {F.2}{\ignorespaces Input parameters determined from field measurements}}{112}}
-\newlabel{measurements}{{F.2}{112}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{113}}
+\@writefile{lof}{\contentsline {xchapter}{Abaqus Input parameters - Empirical and Measurements}{113}}
+\@writefile{lot}{\contentsline {xchapter}{Abaqus Input parameters - Empirical and Measurements}{113}}
+\newlabel{App:AppendixF}{{F}{113}}
+\@writefile{lof}{\contentsline {figure}{\numberline {F.1}{\ignorespaces Input parameters empirically determined}}{113}}
+\newlabel{empirical}{{F.1}{113}}
+\@writefile{lof}{\contentsline {figure}{\numberline {F.2}{\ignorespaces Input parameters determined from field measurements}}{114}}
+\newlabel{measurements}{{F.2}{114}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{115}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Flow chart - Abaqus subroutines}{113}}
-\@writefile{lot}{\contentsline {xchapter}{Flow chart - Abaqus subroutines}{113}}
-\newlabel{App:AppendixG}{{G}{113}}
-\newlabel{ABQ}{{G}{113}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{115}}
+\@writefile{lof}{\contentsline {xchapter}{Flow chart - Abaqus subroutines}{115}}
+\@writefile{lot}{\contentsline {xchapter}{Flow chart - Abaqus subroutines}{115}}
+\newlabel{App:AppendixG}{{G}{115}}
+\newlabel{ABQ}{{G}{115}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{117}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{User subroutine implemented in analysis}{115}}
-\@writefile{lot}{\contentsline {xchapter}{User subroutine implemented in analysis}{115}}
-\newlabel{subroutine}{{H}{115}}
+\@writefile{lof}{\contentsline {xchapter}{User subroutine implemented in analysis}{117}}
+\@writefile{lot}{\contentsline {xchapter}{User subroutine implemented in analysis}{117}}
+\newlabel{subroutine}{{H}{117}}
 \citation{newmark1959method}
-\@writefile{toc}{\contentsline {chapter}{\numberline {I}Newmark integration schemes}{117}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {I}Newmark integration schemes}{119}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Newmark integration schemes}{117}}
-\@writefile{lot}{\contentsline {xchapter}{Newmark integration schemes}{117}}
-\newlabel{App:AppendixH}{{I}{117}}
-\@writefile{lot}{\contentsline {table}{\numberline {I.1}{\ignorespaces Time integrator parameter}}{117}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{118}}
+\@writefile{lof}{\contentsline {xchapter}{Newmark integration schemes}{119}}
+\@writefile{lot}{\contentsline {xchapter}{Newmark integration schemes}{119}}
+\newlabel{App:AppendixH}{{I}{119}}
+\@writefile{lot}{\contentsline {table}{\numberline {I.1}{\ignorespaces Time integrator parameter}}{119}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{120}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{FEM stability in dynamic calculations}{118}}
-\@writefile{lot}{\contentsline {xchapter}{FEM stability in dynamic calculations}{118}}
-\newlabel{App:AppendixI}{{J}{118}}
-\@writefile{lot}{\contentsline {table}{\numberline {J.1}{\ignorespaces Calculation of final mesh size}}{118}}
-\newlabel{table:Deltah}{{J.1}{118}}
-\@writefile{lot}{\contentsline {table}{\numberline {J.2}{\ignorespaces Calculation of final time step}}{119}}
-\newlabel{table:DeltaT}{{J.2}{119}}
+\@writefile{lof}{\contentsline {xchapter}{FEM stability in dynamic calculations}{120}}
+\@writefile{lot}{\contentsline {xchapter}{FEM stability in dynamic calculations}{120}}
+\newlabel{App:AppendixI}{{J}{120}}
+\@writefile{lot}{\contentsline {table}{\numberline {J.1}{\ignorespaces Calculation of final mesh size}}{120}}
+\newlabel{table:Deltah}{{J.1}{120}}
+\@writefile{lot}{\contentsline {table}{\numberline {J.2}{\ignorespaces Calculation of final time step}}{121}}
+\newlabel{table:DeltaT}{{J.2}{121}}
 \citation{NERA}
-\@writefile{toc}{\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{120}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{122}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{NERA - Iwan Mroz material model description}{120}}
-\@writefile{lot}{\contentsline {xchapter}{NERA - Iwan Mroz material model description}{120}}
-\newlabel{NERAa}{{K}{120}}
-\newlabel{Nera1}{{K}{120}}
-\newlabel{Nera2}{{K}{121}}
-\newlabel{Nera3}{{K}{122}}
-\newlabel{Nera4}{{K}{123}}
-\newlabel{Nera5}{{K}{124}}
+\@writefile{lof}{\contentsline {xchapter}{NERA - Iwan Mroz material model description}{122}}
+\@writefile{lot}{\contentsline {xchapter}{NERA - Iwan Mroz material model description}{122}}
+\newlabel{NERAa}{{K}{122}}
+\newlabel{Nera1}{{K}{122}}
+\newlabel{Nera2}{{K}{123}}
+\newlabel{Nera3}{{K}{124}}
+\newlabel{Nera4}{{K}{125}}
+\newlabel{Nera5}{{K}{126}}
 \bibdata{bibliography}
-\@writefile{toc}{\contentsline {chapter}{\numberline {L}NERA - Input example}{125}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {L}NERA - Input example}{127}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{NERA - Input example}{125}}
-\@writefile{lot}{\contentsline {xchapter}{NERA - Input example}{125}}
-\newlabel{Input_NERA}{{L}{125}}
-\newlabel{Ner1}{{L}{125}}
-\newlabel{Ner2}{{L}{126}}
-\newlabel{Ner3}{{L}{126}}
+\@writefile{lof}{\contentsline {xchapter}{NERA - Input example}{127}}
+\@writefile{lot}{\contentsline {xchapter}{NERA - Input example}{127}}
+\newlabel{Input_NERA}{{L}{127}}
+\newlabel{Ner1}{{L}{127}}
+\newlabel{Ner2}{{L}{128}}
+\newlabel{Ner3}{{L}{128}}
 \bibcite{dost2013august}{1}
 \bibcite{park1984seismic}{2}
 \bibcite{code2005eurocode}{3}
@@ -574,7 +576,7 @@
 \bibcite{darendeli2001development}{12}
 \bibcite{veletsos1965deformation}{13}
 \@writefile{@@@}{\chapterbegin }
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{127}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{129}}
 \bibcite{gazetas2013can}{14}
 \bibcite{gazetas2004nonlinear}{15}
 \bibcite{apostolou2011soil}{16}
@@ -619,7 +621,7 @@
 \bibcite{drosos2012soil}{55}
 \bibcite{meyerhof1957ultimate}{56}
 \bibcite{gajan2009effects}{57}
-\bibcite{zafeirakos2011role}{58}
-\bibcite{kutter2010estimation}{59}
+\bibcite{kutter2010estimation}{58}
+\bibcite{zafeirakos2011role}{59}
 \bibstyle{ieeetr}
 \global\mtcsecondparttrue
