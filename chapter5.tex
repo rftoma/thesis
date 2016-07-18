@@ -526,23 +526,30 @@ One remark relates to the energy dissipated along the soil medium; the lesser th
 	f_s=\frac{1}{2 \pi} \sqrt{\frac{k}{m}}
 \end{equation}
 
-where k is the lateral stiffness of a flexible beam with mass and m is the structural mass.
+where, according to Timoshenko and Young, 1961 $k$ is the lateral stiffness of a cantilever beam with mass and m is the structural mass ($m=100 Mg=1000 kN$).
 
 \begin{equation}
 	k=3\frac{EI}{L^3}
 \end{equation}
 
-with E = Young's modulus of reinforced concrete ($24x10^6 MPa$), I = moment of inertia (of a cylindric body for this case) and L = length of the pier ($L=5m$). Furthermore, the moment of inertia of the chimney along the axis of symmetry is a function of the structural mass and the radius R ($R=1.5m$):
+with E = Young's modulus of reinforced concrete ($24x10^6 MPa$), I = moment of inertia (of a hollow cylindrical cross section for this case) and L = length of the pier ($L=15m$). Furthermore, the moment of inertia of the chimney along the axis of symmetry is a function of the inner and outer diameter ($d_i=1.5m$ and $d_e=1.1m$) :
  
 \begin{equation}
-	I_z=\frac{1}{2}m R^2
+	I_x=\pi \frac{{d_e}^4-{d_i}^4}{64}
 \end{equation}
 
 Finally, the fundamental period of the superstructure becomes:
 
 \begin{equation}
-	T=\frac{1}{f_s} \longrightarrow T=2\pi \sqrt{\frac{2}{3} \frac{m L^3}{E mR^2}}
+	T=\frac{1}{f_s} \longrightarrow T=2 \pi \sqrt{\frac{mL^3}{3EI}}
 \end{equation}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7 \linewidth]{"fundamental"}
+	\caption{Calculation of the fundamental period/natural frequency of the superstructure considered as a cantilever beam with lumped mass at free end}
+	\label{fundam}
+\end{figure}
 
  \begin{figure}[h]
  	\centering
@@ -568,14 +575,19 @@ Once the model was considered sufficiently reliable, the sinusoidal input was re
 	\item the safety factor is strongly correlated to the ultimate moment capacity of the footing. The larger the $FS_v$, the higher the moment capacity of the foundation and thus, greater inertial loading the structure encounters. So, the under-designed foundation (or heavily loaded $FS_v=2$) will show a reduced overturning capacity. This may be regarded as an advantage of the new design philosophy since the foundation acts as a seismic isolator for the superstructure.
 	\item the mobilization of the bearing capacity type of failure mechanism corresponds to the highly loaded foundations as well as the small footings (higher aspect ratio). In this case, the impedance mechanism is rather hysteretic due to the soil inelastic response. Meanwhile, the lightly loaded foundations (or larger footings) experienced geometric nonlinearities in terms of uplifting and sliding at the soil-footing interface. The structure will rotate more, the contact area reduces during the seismic motion leading to an increased moment capacity. Hence, the ductility demand, which is a function of the overturning moment, will increase as well together with the overall cost of the superstructure.
 	\item a stronger earthquake, with a higher frequency, limits the rotation the structure experiences, but it increases the accumulation rate of settlement. Moreover, the building suffers from a more intense shacking, especially at top level. 
-	\item 
+	\item allowing the foundation to detach from the supporting soil seems to act rather beneficial when comparing to a permanently tied one. This is mainly because the uplifting or sliding behaviour restrains the level of energy transmitted to the oscillator, decreasing the ductility demand. Once more, the argument against the rocking mechanism is the increase in settlement. However, the level of settlement is relative to the required performance of the superstructure.
+	\item the presence of another building near the footing does not seem to influence the overall behaviour. Similar response trends are observed when the surcharge varies within realistic limits.
+	\item another important aspect is represented by the natural frequencies of the two bodies that vibrate: the soil layer and the SDOF. When the two parts of the assembly show a match in the oscillation frequency, the superstructure damage amplifies. This can be observed in the acceleration response recorded at top level. The seismic excitation amplification seems to be favoured when the bedrock is considered at higher levels. Less energy is dissipated at the soil-footing interface, stimulating larger inertial forces to develop within the superstructure. Even though the structure rotates more experiencing larger overturning moments, the permanent settlement is reduced.
+	\item one other favourable aspect of the new design philosophy relates to the soil nonlinearity developed underneath the footing. The accumulation rate of settlement increased triggers a boost in the vertical stresses below the foundation edges. This leads to the mobilization of the bearing capacity failure mechanism. However, this does not play a detrimental role and does not necessarily mean collapse, but rather a material over-strength possibly related to the soil densification. Thus, one may state that such failure mechanism leads to an improved foundation performance.
 \end{itemize}
 
-\section{Limitations and recommendations}
 
+For now, the new design philosophy appears to be relatively suitable for the site conditions of Groningen. Even though the seismic excitation does not shake the foundation so intensely such that it uplifts considerably, the soil yielding plays a beneficial role in the energy dissipation mechanism. Moreover, it proves to be efficient in limiting the inertial loading transferred towards the superstructure as a function of the overtuning moment capacity. In the end, the main goal of the current paper is to show that using the new approach leads to a reduction in the ductility demand. Apparently, the only detrimental aspect regards the large accumulation of permanent settlement, which may become destructive depending on the application itself.
 
 \newpage
+\section{Limitations and recommendations}
+The soil-foundation-structure interaction was investigated considering a soft silty clay layer together with induced-type of earthquake recorded in the Northern area of the Netherlands. A new design philosophy was adopted, mainly focusing on permitting foundation detachment and soil yielding 
 
-
+\newpage
 \section{Conclusions}
 

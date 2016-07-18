@@ -91,24 +91,24 @@
 \contentsline {subsection}{\numberline {5.5.4}Effects of surcharge}{90}
 \contentsline {subsection}{\numberline {5.5.5}Fully Bonded Contact vs Tensionless Sliding Interface}{91}
 \contentsline {subsection}{\numberline {5.5.6}Effects of bedrock position}{92}
-\contentsline {section}{\numberline {5.6}Conclusions}{96}
-\contentsline {section}{\numberline {5.7}Limitations and recommendations}{97}
-\contentsline {section}{\numberline {5.8}Conclusions}{98}
-\contentsline {section}{Appendix}{99}
-\contentsline {part}{II\hspace {1em}Appendix}{99}
-\contentsline {xpart}{Appendix}{100}
-\contentsline {chapter}{\numberline {A}Cone penetration test results}{100}
-\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{102}
-\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{102}
-\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{103}
-\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{106}
-\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{108}
-\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{110}
-\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{113}
-\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{115}
-\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{117}
-\contentsline {chapter}{\numberline {I}Newmark integration schemes}{119}
-\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{120}
-\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{122}
-\contentsline {chapter}{\numberline {L}NERA - Input example}{127}
-\contentsline {chapter}{Bibliography}{129}
+\contentsline {section}{\numberline {5.6}Conclusions}{97}
+\contentsline {section}{\numberline {5.7}Limitations and recommendations}{99}
+\contentsline {section}{\numberline {5.8}Conclusions}{100}
+\contentsline {section}{Appendix}{101}
+\contentsline {part}{II\hspace {1em}Appendix}{101}
+\contentsline {xpart}{Appendix}{102}
+\contentsline {chapter}{\numberline {A}Cone penetration test results}{102}
+\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{104}
+\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{104}
+\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{105}
+\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{108}
+\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{110}
+\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{112}
+\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{115}
+\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{117}
+\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{119}
+\contentsline {chapter}{\numberline {I}Newmark integration schemes}{121}
+\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{122}
+\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{124}
+\contentsline {chapter}{\numberline {L}NERA - Input example}{129}
+\contentsline {chapter}{Bibliography}{131}
