@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.6)  18 JUL 2016 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.6)  20 JUL 2016 17:16
 entering extended mode
 **./Chapter4.tex
 (Chapter4.tex
@@ -288,27 +288,226 @@ apfig.sty"
 \WF@everypar=\toks27
 Package: wrapfig 2003/01/31  v 3.6
 )
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries
+\base\glossaries.sty"
+Package: glossaries 2016/06/09 v4.25 (NLCT)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthe
+n.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xk
+eyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\
+xkeyval.tex"
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\
+xkvutils.tex"
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
+)
+\XKV@depth=\count113
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mfirstuc\m
+firstuc.sty"
+Package: mfirstuc 2015/12/17 v2.02 (NLCT)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\e
+toolbox.sty"
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count114
+)
+\@glsmfirst=\toks30
+\@glsmrest=\toks31
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\textcase\t
+extcase.sty"
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xfor\xfor.
+sty"
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datatool\d
+atatool-base.sty"
+Package: datatool-base 2016/01/18 v2.25 (NLCT)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\substr\sub
+str.sty"
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count115
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datatool\d
+atatool-fp.sty"
+Package: datatool-fp 2016/01/18 v2.25 (NLCT)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp.sty"
+Package: fp 1995/04/02
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\defpatt
+ern.sty"
+Package: defpattern 1994/10/12
+\actioncount=\count116
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-basi
+c.sty"
+Package: fp-basic 1996/05/13
+\FP@xs=\count117
+\FP@xia=\count118
+\FP@xib=\count119
+\FP@xfa=\count120
+\FP@xfb=\count121
+\FP@rega=\count122
+\FP@regb=\count123
+\FP@regs=\count124
+\FP@times=\count125
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-addo
+ns.sty"
+Package: fp-addons 1995/03/15
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-snap
+.sty"
+Package: fp-snap 1995/04/05
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-exp.
+sty"
+Package: fp-exp 1995/04/03
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-trig
+o.sty"
+Package: fp-trigo 1995/04/14
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-pas.
+sty"
+Package: fp-pas 1994/08/29
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-rand
+om.sty"
+Package: fp-random 1995/02/23
+\FPseed=\count126
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-eqn.
+sty"
+Package: fp-eqn 1995/04/03
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-upn.
+sty"
+Package: fp-upn 1996/10/21
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-eval
+.sty"
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks32
+\@dtl@tmpcount=\count127
+\dtl@tmplength=\skip49
+\dtl@sortresult=\count128
+\@dtl@numgrpsepcount=\count129
+\@dtl@datatype=\count130
+\dtl@codeA=\count131
+\dtl@codeB=\count132
+\@dtl@foreach@level=\count133
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries
+\base\glossaries-compatible-307.sty"
+Package: glossaries-compatible-307 2016/06/09 v4.25 (NLCT)
+)
+\gls@level=\count134
+\@gls@tmpb=\toks33
+\gls@tmplen=\skip50
+\glskeylisttok=\toks34
+\glslabeltok=\toks35
+\glsshorttok=\toks36
+\glslongtok=\toks37
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries
+\styles\glossary-hypernav.sty"
+Package: glossary-hypernav 2016/06/09 v4.25 (NLCT)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries
+\styles\glossary-list.sty"
+Package: glossary-list 2016/06/09 v4.25 (NLCT)
+\glslistdottedwidth=\skip51
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries
+\styles\glossary-long.sty"
+Package: glossary-long 2016/06/09 v4.25 (NLCT)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\long
+table.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip52
+\LTright=\skip53
+\LTpre=\skip54
+\LTpost=\skip55
+\LTchunksize=\count135
+\LTcapwidth=\dimen124
+\LT@head=\box31
+\LT@firsthead=\box32
+\LT@foot=\box33
+\LT@lastfoot=\box34
+\LT@cols=\count136
+\LT@rows=\count137
+\c@LT@tables=\count138
+\c@LT@chunks=\count139
+\LT@p@ftn=\toks38
+)
+\glsdescwidth=\skip56
+\glspagelistwidth=\skip57
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries
+\styles\glossary-super.sty"
+Package: glossary-super 2016/06/09 v4.25 (NLCT)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\supertabul
+ar\supertabular.sty"
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count140
+\ST@wd=\dimen125
+\ST@rightskip=\skip58
+\ST@leftskip=\skip59
+\ST@parfillskip=\skip60
+\ST@pageleft=\dimen126
+\ST@headht=\dimen127
+\ST@tailht=\dimen128
+\ST@pagesofar=\dimen129
+\ST@pboxht=\dimen130
+\ST@lineht=\dimen131
+\ST@stretchht=\dimen132
+\ST@prevht=\dimen133
+\ST@toadd=\dimen134
+\ST@dimen=\dimen135
+\ST@pbox=\box35
+))
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries
+\styles\glossary-tree.sty"
+Package: glossary-tree 2016/06/09 v4.25 (NLCT)
+\glstreeindent=\skip61
+))
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\l
 istings.sty"
-\lst@mode=\count113
-\lst@gtempboxa=\box31
-\lst@token=\toks28
-\lst@length=\count114
-\lst@currlwidth=\dimen124
-\lst@column=\count115
-\lst@pos=\count116
-\lst@lostspace=\dimen125
-\lst@width=\dimen126
-\lst@newlines=\count117
-\lst@lineno=\count118
-\lst@maxwidth=\dimen127
+\lst@mode=\count141
+\lst@gtempboxa=\box36
+\lst@token=\toks39
+\lst@length=\count142
+\lst@currlwidth=\dimen136
+\lst@column=\count143
+\lst@pos=\count144
+\lst@lostspace=\dimen137
+\lst@width=\dimen138
+\lst@newlines=\count145
+\lst@lineno=\count146
+\lst@maxwidth=\dimen139
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\l
 stmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count119
-\lst@skipnumbers=\count120
-\lst@framebox=\box32
+\c@lstnumber=\count147
+\lst@skipnumbers=\count148
+\lst@framebox=\box37
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\l
 istings.cfg"
@@ -327,21 +526,33 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\l
 stlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) (Chapter4.aux)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\f
+ancyhdr.sty"
+\fancy@headwidth=\skip62
+\f@ncyO@elh=\skip63
+\f@ncyO@erh=\skip64
+\f@ncyO@olh=\skip65
+\f@ncyO@orh=\skip66
+\f@ncyO@elf=\skip67
+\f@ncyO@erf=\skip68
+\f@ncyO@olf=\skip69
+\f@ncyO@orf=\skip70
+) (glossary.tex) (Chapter4.aux)
 \openout1 = `Chapter4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsenc
 s.def"
@@ -350,17 +561,17 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\sup
 p-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen128
-\scratchbox=\box33
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen129
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count149
+\scratchdimen=\dimen140
+\scratchbox=\box38
+\nofMPsegments=\count150
+\nofMParguments=\count151
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count152
+\MPscratchDim=\dimen141
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
+\everyMPtoPDFconversion=\toks41
 )
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
@@ -408,50 +619,63 @@ Package minitoc(hints) Info: I0046
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count127
-[1
+(Chapter4.glsdefs)
+\c@lstlisting=\count155
+ [1
 
-{C:/Users/Administrator/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<"TUDLogo".png, id=8, 19.39246pt x 5.42026pt>
+{C:/Users/Administrator/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] <"T
+UDLogo".png, id=8, 19.39246pt x 5.42026pt>
 File: "TUDLogo".png Graphic file (type png)
- <use "TUDLogo".png>
-Package pdftex.def Info: "TUDLogo".png used on input line 64.
-(pdftex.def)             Requested size: 258.86047pt x 72.26999pt.
 
-<"CRUXlogo".jpg, id=10, 36.135pt x 48.18pt>
+<use "TUDLogo".png>
+Package pdftex.def Info: "TUDLogo".png used on input line 83.
+(pdftex.def)             Requested size: 258.86047pt x 72.26999pt.
+ <"CRUXlogo".jpg, id=10, 36.135pt x 48.18pt>
 File: "CRUXlogo".jpg Graphic file (type jpg)
- <use "CRUXlogo".jpg>
-Package pdftex.def Info: "CRUXlogo".jpg used on input line 66.
+
+<use "CRUXlogo".jpg>
+Package pdftex.def Info: "CRUXlogo".jpg used on input line 85.
 (pdftex.def)             Requested size: 54.20233pt x 72.26999pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 109.
+
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscm
 r.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
  [2
 
  <./TUDLogo.png> <./CRUXlogo.jpg>] (Chapter4.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2])
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2])
 \tf@toc=\write4
 \openout4 = `Chapter4.toc'.
 
  [3] [4
+
+
+] [5] [6] [7
 
 ]
 Chapter 1.
@@ -459,432 +683,435 @@ Chapter 1.
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32
 .def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [5
+) [8
 
-] <"Pwaves".jpg, id=35, 548.80031pt x 301.8778pt>
+] <"Pwaves".jpg, id=46, 548.80031pt x 301.8778pt>
 File: "Pwaves".jpg Graphic file (type jpg)
  <use "Pwaves".jpg>
-Package pdftex.def Info: "Pwaves".jpg used on input line 137.
+Package pdftex.def Info: "Pwaves".jpg used on input line 156.
 (pdftex.def)             Requested size: 318.66946pt x 175.29192pt.
 
-<"spectrum_code".jpg, id=36, 380.17032pt x 274.02374pt>
+<"spectrum_code".jpg, id=47, 380.17032pt x 274.02374pt>
 File: "spectrum_code".jpg Graphic file (type jpg)
 
 <use "spectrum_code".jpg>
-Package pdftex.def Info: "spectrum_code".jpg used on input line 147.
+Package pdftex.def Info: "spectrum_code".jpg used on input line 166.
 (pdftex.def)             Requested size: 191.20168pt x 137.81851pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./Pwaves.jpg>] <"plastification".jpg, id=41, 546.54187pt x 328.97906pt>
+[9 <./Pwaves.jpg>] <"plastification".jpg, id=52, 546.54187pt x 328.97906pt>
 File: "plastification".jpg Graphic file (type jpg)
 
 <use "plastification".jpg>
-Package pdftex.def Info: "plastification".jpg used on input line 162.
+Package pdftex.def Info: "plastification".jpg used on input line 181.
 (pdftex.def)             Requested size: 227.62204pt x 137.01068pt.
- [7 <./spectrum_code.jpg> <./plastification.jpg>]
-<"new_phil".jpg, id=45, 549.55313pt x 225.84375pt>
+ [10 <./spectrum_code.jpg> <./plastification.jpg>]
+<"new_phil".jpg, id=56, 549.55313pt x 225.84375pt>
 File: "new_phil".jpg Graphic file (type jpg)
  <use "new_phil".jpg>
-Package pdftex.def Info: "new_phil".jpg used on input line 189.
+Package pdftex.def Info: "new_phil".jpg used on input line 208.
 (pdftex.def)             Requested size: 409.71689pt x 168.38301pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<example1.jpg, id=46, 308.15125pt x 451.6875pt>
+<example1.jpg, id=57, 308.15125pt x 451.6875pt>
 File: example1.jpg Graphic file (type jpg)
  <use example1.jpg>
-Package pdftex.def Info: example1.jpg used on input line 197.
+Package pdftex.def Info: example1.jpg used on input line 216.
 (pdftex.def)             Requested size: 182.09485pt x 266.92062pt.
 
-<example3.jpg, id=47, 648.62325pt x 979.2585pt>
+<example3.jpg, id=58, 648.62325pt x 979.2585pt>
 File: example3.jpg Graphic file (type jpg)
  <use example3.jpg>
-Package pdftex.def Info: example3.jpg used on input line 203.
+Package pdftex.def Info: example3.jpg used on input line 222.
 (pdftex.def)             Requested size: 182.09485pt x 274.92268pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8] [9 <./new_phil.jpg> <./example1.jpg> <./example3.jpg>] [10]
-<"outline".jpg, id=57, 304.13625pt x 389.95688pt>
+[11] [12 <./new_phil.jpg> <./example1.jpg> <./example3.jpg>] [13]
+<"outline".jpg, id=69, 539.76656pt x 510.40688pt>
 File: "outline".jpg Graphic file (type jpg)
  <use "outline".jpg>
-Package pdftex.def Info: "outline".jpg used on input line 268.
-(pdftex.def)             Requested size: 318.66946pt x 408.604pt.
- [11]
-[12 <./outline.jpg>]
+Package pdftex.def Info: "outline".jpg used on input line 287.
+(pdftex.def)             Requested size: 409.71689pt x 387.43817pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] [15 <./outline.jpg>]
 Chapter 2.
-<newmark1.jpg, id=65, 359.09157pt x 237.88875pt>
+<newmark1.jpg, id=76, 359.09157pt x 237.88875pt>
 File: newmark1.jpg Graphic file (type jpg)
  <use newmark1.jpg>
-Package pdftex.def Info: newmark1.jpg used on input line 288.
+Package pdftex.def Info: newmark1.jpg used on input line 307.
 (pdftex.def)             Requested size: 204.85844pt x 135.71777pt.
 
-<newmark2.jpg, id=66, 277.78781pt x 266.49562pt>
+<newmark2.jpg, id=77, 277.78781pt x 266.49562pt>
 File: newmark2.jpg Graphic file (type jpg)
  <use newmark2.jpg>
-Package pdftex.def Info: newmark2.jpg used on input line 294.
+Package pdftex.def Info: newmark2.jpg used on input line 313.
 (pdftex.def)             Requested size: 204.85844pt x 196.53271pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13
+[16
 
-] <newmark3.jpg, id=70, 269.50688pt x 213.04594pt>
+] <newmark3.jpg, id=81, 269.50688pt x 213.04594pt>
 File: newmark3.jpg Graphic file (type jpg)
  <use newmark3.jpg>
-Package pdftex.def Info: newmark3.jpg used on input line 315.
+Package pdftex.def Info: newmark3.jpg used on input line 334.
 (pdftex.def)             Requested size: 182.09485pt x 143.94933pt.
 
-<newmark6.jpg, id=71, 333.49594pt x 249.18094pt>
+<newmark6.jpg, id=82, 333.49594pt x 249.18094pt>
 File: newmark6.jpg Graphic file (type jpg)
  <use newmark6.jpg>
-Package pdftex.def Info: newmark6.jpg used on input line 321.
+Package pdftex.def Info: newmark6.jpg used on input line 340.
 (pdftex.def)             Requested size: 250.38562pt x 187.08675pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <./newmark1.jpg> <./newmark2.jpg>]
-<newmark5.jpg, id=75, 296.60812pt x 226.59656pt>
+[17 <./newmark1.jpg> <./newmark2.jpg>]
+<newmark5.jpg, id=87, 296.60812pt x 226.59656pt>
 File: newmark5.jpg Graphic file (type jpg)
  <use newmark5.jpg>
-Package pdftex.def Info: newmark5.jpg used on input line 337.
+Package pdftex.def Info: newmark5.jpg used on input line 356.
 (pdftex.def)             Requested size: 256.08275pt x 195.63681pt.
 
-Overfull \hbox (51.2243pt too wide) in paragraph at lines 337--338
+Overfull \hbox (51.2243pt too wide) in paragraph at lines 356--357
 [][] 
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 338--338
+Underfull \hbox (badness 1270) in paragraph at lines 357--357
 []\OT1/cmr/m/n/10.95 Figure 2.5: Rep-re-sen-ta-tion of bearing-
  []
 
-<newmark4.jpg, id=76, 320.69812pt x 398.99063pt>
+<newmark4.jpg, id=88, 320.69812pt x 398.99063pt>
 File: newmark4.jpg Graphic file (type jpg)
  <use newmark4.jpg>
-Package pdftex.def Info: newmark4.jpg used on input line 343.
+Package pdftex.def Info: newmark4.jpg used on input line 362.
 (pdftex.def)             Requested size: 204.85844pt x 254.87825pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15 <./newmark3.jpg> <./newmark6.jpg>]
-<"nonlin".jpg, id=80, 569.87906pt x 153.57375pt>
+[18 <./newmark3.jpg> <./newmark6.jpg>]
+<"nonlin".jpg, id=92, 569.87906pt x 153.57375pt>
 File: "nonlin".jpg Graphic file (type jpg)
  <use "nonlin".jpg>
-Package pdftex.def Info: "nonlin".jpg used on input line 362.
+Package pdftex.def Info: "nonlin".jpg used on input line 381.
 (pdftex.def)             Requested size: 318.66946pt x 85.87651pt.
- [16 <./newmark5.jpg> <./newmark4.jpg> <./nonlin.jpg>] [17]
-<"rocking".jpg, id=89, 351.56343pt x 152.82094pt>
+ [19 <./newmark5.jpg> <./newmark4.jpg> <./nonlin.jpg>] [20]
+<"rocking".jpg, id=99, 351.56343pt x 152.82094pt>
 File: "rocking".jpg Graphic file (type jpg)
  <use "rocking".jpg>
-Package pdftex.def Info: "rocking".jpg used on input line 399.
+Package pdftex.def Info: "rocking".jpg used on input line 418.
 (pdftex.def)             Requested size: 318.66946pt x 138.52159pt.
 
-<"nearfar".jpg, id=90, 298.11375pt x 181.42781pt>
+<"nearfar".jpg, id=100, 298.11375pt x 181.42781pt>
 File: "nearfar".jpg Graphic file (type jpg)
  <use "nearfar".jpg>
-Package pdftex.def Info: "nearfar".jpg used on input line 414.
+Package pdftex.def Info: "nearfar".jpg used on input line 433.
 (pdftex.def)             Requested size: 318.66946pt x 193.94865pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18 <./rocking.jpg>] <"uplift".jpg, id=94, 335.75438pt x 241.65282pt>
+[21 <./rocking.jpg>] <"uplift".jpg, id=104, 335.75438pt x 241.65282pt>
 File: "uplift".jpg Graphic file (type jpg)
 
 <use "uplift".jpg>
-Package pdftex.def Info: "uplift".jpg used on input line 427.
+Package pdftex.def Info: "uplift".jpg used on input line 446.
 (pdftex.def)             Requested size: 364.19664pt x 262.12422pt.
- [19 <./nearfar.jpg> <./uplift.jpg>] [20]
-<"exper".jpg, id=101, 582.67688pt x 209.28188pt>
+ [22 <./nearfar.jpg> <./uplift.jpg>] [23]
+<"exper".jpg, id=112, 582.67688pt x 209.28188pt>
 File: "exper".jpg Graphic file (type jpg)
  <use "exper".jpg>
-Package pdftex.def Info: "exper".jpg used on input line 459.
+Package pdftex.def Info: "exper".jpg used on input line 478.
 (pdftex.def)             Requested size: 273.14922pt x 98.1102pt.
 
-Overfull \hbox (18.85825pt too wide) in paragraph at lines 464--465
+Overfull \hbox (18.85825pt too wide) in paragraph at lines 483--484
 []\OT1/cmr/m/n/10.95 Simplifications of this con-sti-tu-tive mod-els tend to re
 -spon-si-bly ne-glect anisotropy and []
  []
 
-[21 <./exper.jpg>]
-Overfull \hbox (6.02231pt too wide) in paragraph at lines 496--497
+[24 <./exper.jpg>]
+Overfull \hbox (6.02231pt too wide) in paragraph at lines 515--516
 []\OT1/cmr/m/n/10.95 Numerous sim-u-la-tions in-cluded a sat-u-rated clay type 
 of ma-te-rial char-ac-terised by an undrained
  []
 
-<scheme2D.jpg, id=105, 700.86844pt x 353.82187pt>
+<scheme2D.jpg, id=116, 700.86844pt x 353.82187pt>
 File: scheme2D.jpg Graphic file (type jpg)
  <use scheme2D.jpg>
-Package pdftex.def Info: scheme2D.jpg used on input line 504.
+Package pdftex.def Info: scheme2D.jpg used on input line 523.
 (pdftex.def)             Requested size: 204.85844pt x 103.41554pt.
 
-<3d_model.jpg, id=106, 325.96782pt x 236.38312pt>
+<3d_model.jpg, id=117, 325.96782pt x 236.38312pt>
 File: 3d_model.jpg Graphic file (type jpg)
  <use 3d_model.jpg>
-Package pdftex.def Info: 3d_model.jpg used on input line 510.
+Package pdftex.def Info: 3d_model.jpg used on input line 529.
 (pdftex.def)             Requested size: 204.85844pt x 148.56145pt.
- [22 <./scheme2D.jpg> <./3d_model.jpg>]
-<"conven2".jpg, id=110, 418.56375pt x 482.55281pt>
+ [25 <./scheme2D.jpg> <./3d_model.jpg>]
+<"conven2".jpg, id=121, 418.56375pt x 482.55281pt>
 File: "conven2".jpg Graphic file (type jpg)
  <use "conven2".jpg>
-Package pdftex.def Info: "conven2".jpg used on input line 531.
+Package pdftex.def Info: "conven2".jpg used on input line 550.
 (pdftex.def)             Requested size: 409.71689pt x 472.35365pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"conventional".jpg, id=111, 361.35pt x 486.31688pt>
+<"conventional".jpg, id=122, 361.35pt x 486.31688pt>
 File: "conventional".jpg Graphic file (type jpg)
  <use "conventional".jpg>
-Package pdftex.def Info: "conventional".jpg used on input line 538.
+Package pdftex.def Info: "conventional".jpg used on input line 557.
 (pdftex.def)             Requested size: 364.19664pt x 490.15213pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23] [24 <./conven2.jpg>] [25 <./conventional.jpg>]
-<"largeFS".jpg, id=122, 511.9125pt x 196.48407pt>
+[26] [27 <./conven2.jpg>] [28 <./conventional.jpg>]
+<"largeFS".jpg, id=132, 511.9125pt x 196.48407pt>
 File: "largeFS".jpg Graphic file (type jpg)
  <use "largeFS".jpg>
-Package pdftex.def Info: "largeFS".jpg used on input line 562.
+Package pdftex.def Info: "largeFS".jpg used on input line 581.
 (pdftex.def)             Requested size: 364.19664pt x 139.78647pt.
 
-<"staticpush".jpg, id=123, 744.53156pt x 436.63126pt>
+<"staticpush".jpg, id=133, 744.53156pt x 436.63126pt>
 File: "staticpush".jpg Graphic file (type jpg)
  <use "staticpush".jpg>
-Package pdftex.def Info: "staticpush".jpg used on input line 569.
+Package pdftex.def Info: "staticpush".jpg used on input line 588.
 (pdftex.def)             Requested size: 409.71689pt x 240.28784pt.
 
-<settle.jpg, id=124, 300.3722pt x 236.38312pt>
+<settle.jpg, id=134, 300.3722pt x 236.38312pt>
 File: settle.jpg Graphic file (type jpg)
  <use settle.jpg>
-Package pdftex.def Info: settle.jpg used on input line 577.
+Package pdftex.def Info: settle.jpg used on input line 596.
 (pdftex.def)             Requested size: 182.09485pt x 143.30618pt.
 
-<settle2.jpg, id=125, 331.99031pt x 237.88875pt>
+<settle2.jpg, id=135, 331.99031pt x 237.88875pt>
 File: settle2.jpg Graphic file (type jpg)
  <use settle2.jpg>
-Package pdftex.def Info: settle2.jpg used on input line 583.
+Package pdftex.def Info: settle2.jpg used on input line 602.
 (pdftex.def)             Requested size: 204.85844pt x 146.79254pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[26 <./largeFS.jpg> <./staticpush.jpg>] [27 <./settle.jpg> <./settle2.jpg>]
-<"failure".jpg, id=133, 523.9575pt x 440.39531pt>
+[29 <./largeFS.jpg> <./staticpush.jpg>] [30 <./settle.jpg> <./settle2.jpg>]
+<"failure".jpg, id=144, 523.9575pt x 440.39531pt>
 File: "failure".jpg Graphic file (type jpg)
  <use "failure".jpg>
-Package pdftex.def Info: "failure".jpg used on input line 614.
+Package pdftex.def Info: "failure".jpg used on input line 633.
 (pdftex.def)             Requested size: 364.19664pt x 306.12424pt.
- [28 <./failure.jpg>] <"fbc_contour".jpg, id=137, 548.0475pt x 391.4625pt>
+ [31 <./failure.jpg>] <"fbc_contour".jpg, id=148, 548.0475pt x 391.4625pt>
 File: "fbc_contour".jpg Graphic file (type jpg)
 
 <use "fbc_contour".jpg>
-Package pdftex.def Info: "fbc_contour".jpg used on input line 630.
+Package pdftex.def Info: "fbc_contour".jpg used on input line 649.
 (pdftex.def)             Requested size: 364.19664pt x 260.14606pt.
- <"MQN".jpg, id=138, 471.26062pt x 356.0803pt>
+ <"MQN".jpg, id=149, 471.26062pt x 356.0803pt>
 File: "MQN".jpg Graphic file (type jpg)
 
 <use "MQN".jpg>
-Package pdftex.def Info: "MQN".jpg used on input line 637.
+Package pdftex.def Info: "MQN".jpg used on input line 656.
 (pdftex.def)             Requested size: 409.71689pt x 309.5809pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29 <./fbc_contour.jpg>] [30 <./MQN.jpg>] [31] [32]
+[32 <./fbc_contour.jpg>] [33 <./MQN.jpg>] [34] [35]
 Chapter 3.
-<"scheme2D".jpg, id=152, 700.86844pt x 353.82187pt>
+<"scheme2D".jpg, id=163, 700.86844pt x 353.82187pt>
 File: "scheme2D".jpg Graphic file (type jpg)
  <use "scheme2D".jpg>
-Package pdftex.def Info: "scheme2D".jpg used on input line 689.
+Package pdftex.def Info: "scheme2D".jpg used on input line 708.
 (pdftex.def)             Requested size: 364.19664pt x 183.86424pt.
 
-[33
+[36
 
  <./scheme2D.jpg>]
-<"shear_strain_detail".jpg, id=156, 295.1025pt x 196.48407pt>
+<"shear_strain_detail".jpg, id=167, 295.1025pt x 196.48407pt>
 File: "shear_strain_detail".jpg Graphic file (type jpg)
 
 <use "shear_strain_detail".jpg>
-Package pdftex.def Info: "shear_strain_detail".jpg used on input line 700.
+Package pdftex.def Info: "shear_strain_detail".jpg used on input line 719.
 (pdftex.def)             Requested size: 273.14922pt x 181.87083pt.
 
-Overfull \hbox (14.28207pt too wide) in paragraph at lines 705--705
+Overfull \hbox (14.28207pt too wide) in paragraph at lines 724--724
 []\OT1/cmr/bx/n/14.4 Normalized stiff-ness degra-da-tion and ma-te-rial damp-in
 g curves 
  []
 
-<"soildeposit".jpg, id=157, 324.46219pt x 206.27063pt>
+<"soildeposit".jpg, id=168, 324.46219pt x 206.27063pt>
 File: "soildeposit".jpg Graphic file (type jpg)
  <use "soildeposit".jpg>
-Package pdftex.def Info: "soildeposit".jpg used on input line 710.
+Package pdftex.def Info: "soildeposit".jpg used on input line 729.
 (pdftex.def)             Requested size: 273.14922pt x 173.65956pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34 <./shear_strain_detail.jpg>] [35 <./soildeposit.jpg>]
-<"normalized".jpg, id=166, 529.22719pt x 288.3272pt>
+[37 <./shear_strain_detail.jpg>] [38 <./soildeposit.jpg>]
+<"normalized".jpg, id=176, 529.22719pt x 288.3272pt>
 File: "normalized".jpg Graphic file (type jpg)
  <use "normalized".jpg>
-Package pdftex.def Info: "normalized".jpg used on input line 734.
+Package pdftex.def Info: "normalized".jpg used on input line 753.
 (pdftex.def)             Requested size: 364.19664pt x 198.41803pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36 <./normalized.jpg>] <"1dmodel".jpg, id=170, 252.945pt x 208.52907pt>
+[39 <./normalized.jpg>] <"1dmodel".jpg, id=180, 252.945pt x 208.52907pt>
 File: "1dmodel".jpg Graphic file (type jpg)
 
 <use "1dmodel".jpg>
-Package pdftex.def Info: "1dmodel".jpg used on input line 788.
+Package pdftex.def Info: "1dmodel".jpg used on input line 807.
 (pdftex.def)             Requested size: 318.66946pt x 262.71936pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] <"bc1d".jpg, id=174, 725.71124pt x 194.22563pt>
+[40] <"bc1d".jpg, id=184, 725.71124pt x 194.22563pt>
 File: "bc1d".jpg Graphic file (type jpg)
  <use "bc1d".jpg>
-Package pdftex.def Info: "bc1d".jpg used on input line 800.
+Package pdftex.def Info: "bc1d".jpg used on input line 819.
 (pdftex.def)             Requested size: 273.14922pt x 73.10411pt.
- [38 <./1dmodel.jpg> <./bc1d.jpg>] <"deformed".jpg, id=178, 255.20343pt x 221.3
+ [41 <./1dmodel.jpg> <./bc1d.jpg>] <"deformed".jpg, id=189, 255.20343pt x 221.3
 2687pt>
 File: "deformed".jpg Graphic file (type jpg)
 
 <use "deformed".jpg>
-Package pdftex.def Info: "deformed".jpg used on input line 811.
+Package pdftex.def Info: "deformed".jpg used on input line 830.
 (pdftex.def)             Requested size: 150.23137pt x 130.29465pt.
- <"bc1d2".jpg, id=179, 618.81187pt x 398.99063pt>
+ <"bc1d2".jpg, id=190, 618.81187pt x 398.99063pt>
 File: "bc1d2".jpg Graphic file (type jpg)
 
 <use "bc1d2".jpg>
-Package pdftex.def Info: "bc1d2".jpg used on input line 821.
+Package pdftex.def Info: "bc1d2".jpg used on input line 840.
 (pdftex.def)             Requested size: 318.66946pt x 205.47333pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39 <./deformed.jpg>] [40 <./bc1d2.jpg>]
-Overfull \hbox (22.86385pt too wide) in paragraph at lines 866--875
+[42 <./deformed.jpg>] [43 <./bc1d2.jpg>]
+Overfull \hbox (22.86385pt too wide) in paragraph at lines 885--894
  [][] 
  []
 
-<"Su".jpg, id=187, 350.05782pt x 357.58594pt>
+<"Su".jpg, id=198, 350.05782pt x 357.58594pt>
 File: "Su".jpg Graphic file (type jpg)
  <use "Su".jpg>
-Package pdftex.def Info: "Su".jpg used on input line 884.
+Package pdftex.def Info: "Su".jpg used on input line 903.
 (pdftex.def)             Requested size: 318.66946pt x 325.54556pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[41] [42 <./Su.jpg>] <"EC8".jpg, id=195, 310.15875pt x 301.8778pt>
+[44] [45 <./Su.jpg>] <"EC8".jpg, id=205, 310.15875pt x 301.8778pt>
 File: "EC8".jpg Graphic file (type jpg)
 
 <use "EC8".jpg>
-Package pdftex.def Info: "EC8".jpg used on input line 927.
+Package pdftex.def Info: "EC8".jpg used on input line 946.
 (pdftex.def)             Requested size: 318.66946pt x 310.15913pt.
- [43 <./EC8.jpg>] [44]
-<"youngss1".jpg, id=204, 466.74374pt x 320.69812pt>
+ [46 <./EC8.jpg>] [47]
+<"youngss1".jpg, id=215, 466.74374pt x 320.69812pt>
 File: "youngss1".jpg Graphic file (type jpg)
  <use "youngss1".jpg>
-Package pdftex.def Info: "youngss1".jpg used on input line 980.
+Package pdftex.def Info: "youngss1".jpg used on input line 999.
 (pdftex.def)             Requested size: 318.66946pt x 218.96733pt.
 
-[45 <./youngss1.jpg>] [46]
-<"cyclicampl".jpg, id=211, 441.14813pt x 214.55156pt>
+[48 <./youngss1.jpg>] [49]
+<"cyclicampl".jpg, id=222, 441.14813pt x 214.55156pt>
 File: "cyclicampl".jpg Graphic file (type jpg)
  <use "cyclicampl".jpg>
-Package pdftex.def Info: "cyclicampl".jpg used on input line 1033.
+Package pdftex.def Info: "cyclicampl".jpg used on input line 1052.
 (pdftex.def)             Requested size: 318.66946pt x 154.99098pt.
 
-[47 <./cyclicampl.jpg>] <"loop".jpg, id=216, 486.31688pt x 277.78781pt>
+[50 <./cyclicampl.jpg>] <"loop".jpg, id=226, 486.31688pt x 277.78781pt>
 File: "loop".jpg Graphic file (type jpg)
 
 <use "loop".jpg>
-Package pdftex.def Info: "loop".jpg used on input line 1051.
+Package pdftex.def Info: "loop".jpg used on input line 1070.
 (pdftex.def)             Requested size: 182.09485pt x 104.01332pt.
- [48 <./loop.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
+ [51 <./loop.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
 []\OT1/cmr/m/n/10.95 Sample
  []
 
 
-Overfull \hbox (3.62373pt too wide) in paragraph at lines 1063--1063
+Overfull \hbox (3.62373pt too wide) in paragraph at lines 1082--1082
 []\OT1/cmr/m/n/10.95 Confinement
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
 []\OT1/cmr/m/n/10.95 Young's
  []
 
 
-Underfull \hbox (badness 4416) in paragraph at lines 1063--1063
+Underfull \hbox (badness 4416) in paragraph at lines 1082--1082
 []\OT1/cmr/m/n/10.95 Undrained shear
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
 []\OT1/cmr/m/n/10.95 Stress at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1063--1064
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1083
 []\OT1/cmr/m/n/10.95 Hardening
  []
 
-<"oneElem1".jpg, id=220, 566.115pt x 365.86688pt>
+<"oneElem1".jpg, id=230, 566.115pt x 365.86688pt>
 File: "oneElem1".jpg Graphic file (type jpg)
  <use "oneElem1".jpg>
-Package pdftex.def Info: "oneElem1".jpg used on input line 1078.
+Package pdftex.def Info: "oneElem1".jpg used on input line 1097.
 (pdftex.def)             Requested size: 364.19664pt x 235.3766pt.
- [49 <./oneElem1.jpg>] <"ggmax2".jpg, id=224, 811.53188pt x 307.90031pt>
+ [52 <./oneElem1.jpg>] <"ggmax2".jpg, id=234, 811.53188pt x 307.90031pt>
 File: "ggmax2".jpg Graphic file (type jpg)
 
 <use "ggmax2".jpg>
-Package pdftex.def Info: "ggmax2".jpg used on input line 1089.
+Package pdftex.def Info: "ggmax2".jpg used on input line 1108.
 (pdftex.def)             Requested size: 455.24408pt x 172.72838pt.
- <pisano.jpg, id=225, 574.39594pt x 315.42844pt>
+ <pisano.jpg, id=235, 574.39594pt x 315.42844pt>
 File: pisano.jpg Graphic file (type jpg)
 
 <use pisano.jpg>
-Package pdftex.def Info: pisano.jpg used on input line 1103.
+Package pdftex.def Info: pisano.jpg used on input line 1122.
 (pdftex.def)             Requested size: 409.71689pt x 225.00018pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<ggmax.jpg, id=226, 692.5875pt x 274.77657pt>
+<ggmax.jpg, id=236, 692.5875pt x 274.77657pt>
 File: ggmax.jpg Graphic file (type jpg)
  <use ggmax.jpg>
-Package pdftex.def Info: ggmax.jpg used on input line 1110.
+Package pdftex.def Info: ggmax.jpg used on input line 1129.
 (pdftex.def)             Requested size: 409.71689pt x 162.5528pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[50 <./ggmax2.jpg>] [51 <./pisano.jpg> <./ggmax.jpg>] (chapter3.tex [52]
+[53 <./ggmax2.jpg>] [54 <./pisano.jpg> <./ggmax.jpg>] (chapter3.tex [55]
 Chapter 4.
-<"Soil column".jpg, id=236, 385.44pt x 331.99031pt>
+<"Soil column".jpg, id=247, 385.44pt x 331.99031pt>
 File: "Soil column".jpg Graphic file (type jpg)
  <use "Soil column".jpg>
 Package pdftex.def Info: "Soil column".jpg used on input line 17.
 (pdftex.def)             Requested size: 273.14922pt x 235.26897pt.
 
-[53
+[56
 
-] <"Acc input".jpg, id=241, 622.57594pt x 325.215pt>
+] <"Acc input".jpg, id=251, 622.57594pt x 325.215pt>
 File: "Acc input".jpg Graphic file (type jpg)
  <use "Acc input".jpg>
 Package pdftex.def Info: "Acc input".jpg used on input line 27.
@@ -893,16 +1120,16 @@ Package pdftex.def Info: "Acc input".jpg used on input line 27.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[54 <./Soil column.jpg>] [55 <./Acc input.jpg>] [56]
+[57 <./Soil column.jpg>] [58 <./Acc input.jpg>] [59]
 
-LaTeX Warning: Reference `Figure 1' on page 57 undefined on input line 135.
+LaTeX Warning: Reference `Figure 1' on page 60 undefined on input line 135.
 
-[57] <"Mroz".jpg, id=254, 539.01375pt x 198.7425pt>
+[60] <"Mroz".jpg, id=265, 539.01375pt x 198.7425pt>
 File: "Mroz".jpg Graphic file (type jpg)
  <use "Mroz".jpg>
 Package pdftex.def Info: "Mroz".jpg used on input line 143.
 (pdftex.def)             Requested size: 318.66946pt x 117.49965pt.
- [58 <./Mroz.jpg>] <"response1".jpg, id=258, 580.41844pt x 361.35pt>
+ [61 <./Mroz.jpg>] <"response1".jpg, id=269, 580.41844pt x 361.35pt>
 File: "response1".jpg Graphic file (type jpg)
 
 <use "response1".jpg>
@@ -912,7 +1139,7 @@ Package pdftex.def Info: "response1".jpg used on input line 172.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"response2".jpg, id=259, 603.0028pt x 355.3275pt>
+<"response2".jpg, id=270, 603.0028pt x 355.3275pt>
 File: "response2".jpg Graphic file (type jpg)
  <use "response2".jpg>
 Package pdftex.def Info: "response2".jpg used on input line 179.
@@ -921,7 +1148,7 @@ Package pdftex.def Info: "response2".jpg used on input line 179.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"acc_response1".jpg, id=260, 482.55281pt x 258.21469pt>
+<"acc_response1".jpg, id=271, 482.55281pt x 258.21469pt>
 File: "acc_response1".jpg Graphic file (type jpg)
 
 <use "acc_response1".jpg>
@@ -931,7 +1158,7 @@ Package pdftex.def Info: "acc_response1".jpg used on input line 186.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"response3".jpg, id=261, 591.71063pt x 332.74312pt>
+<"response3".jpg, id=272, 591.71063pt x 332.74312pt>
 File: "response3".jpg Graphic file (type jpg)
  <use "response3".jpg>
 Package pdftex.def Info: "response3".jpg used on input line 196.
@@ -940,7 +1167,7 @@ Package pdftex.def Info: "response3".jpg used on input line 196.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"acc_response2".jpg, id=262, 666.99188pt x 291.33844pt>
+<"acc_response2".jpg, id=273, 666.99188pt x 291.33844pt>
 File: "acc_response2".jpg Graphic file (type jpg)
 
 <use "acc_response2".jpg>
@@ -954,15 +1181,15 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.
 def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) [59]
+) [62]
 
-LaTeX Warning: Text page 60 contains only floats.
+LaTeX Warning: Text page 63 contains only floats.
 
-[60 <./response1.jpg> <./response2.jpg> <./acc_response1.jpg>]
+[63 <./response1.jpg> <./response2.jpg> <./acc_response1.jpg>]
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-34
 .def"
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
-) <"Fourier".jpg, id=270, 580.41844pt x 318.43968pt>
+) <"Fourier".jpg, id=280, 580.41844pt x 318.43968pt>
 File: "Fourier".jpg Graphic file (type jpg)
  <use "Fourier".jpg>
 Package pdftex.def Info: "Fourier".jpg used on input line 220.
@@ -971,8 +1198,8 @@ Package pdftex.def Info: "Fourier".jpg used on input line 220.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[61 <./response3.jpg> <./acc_response2.jpg>]
-<"acc_comp1".jpg, id=274, 695.59875pt x 352.31625pt>
+[64 <./response3.jpg> <./acc_response2.jpg>]
+<"acc_comp1".jpg, id=284, 695.59875pt x 352.31625pt>
 File: "acc_comp1".jpg Graphic file (type jpg)
  <use "acc_comp1".jpg>
 Package pdftex.def Info: "acc_comp1".jpg used on input line 239.
@@ -981,7 +1208,7 @@ Package pdftex.def Info: "acc_comp1".jpg used on input line 239.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"spectral2".jpg, id=275, 423.83344pt x 361.35pt>
+<"spectral2".jpg, id=285, 423.83344pt x 361.35pt>
 File: "spectral2".jpg Graphic file (type jpg)
  <use "spectral2".jpg>
 Package pdftex.def Info: "spectral2".jpg used on input line 246.
@@ -990,44 +1217,44 @@ Package pdftex.def Info: "spectral2".jpg used on input line 246.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"tau_gamma1".jpg, id=276, 615.80063pt x 406.51875pt>
+<"tau_gamma1".jpg, id=286, 615.80063pt x 406.51875pt>
 File: "tau_gamma1".jpg Graphic file (type jpg)
  <use "tau_gamma1".jpg>
 Package pdftex.def Info: "tau_gamma1".jpg used on input line 253.
-(pdftex.def)             Requested size: 318.66946pt x 210.37367pt.
+(pdftex.def)             Requested size: 409.71689pt x 270.48044pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"tau_gamma2".jpg, id=277, 718.93594pt x 216.05719pt>
+<"tau_gamma2".jpg, id=287, 718.93594pt x 216.05719pt>
 File: "tau_gamma2".jpg Graphic file (type jpg)
  <use "tau_gamma2".jpg>
 Package pdftex.def Info: "tau_gamma2".jpg used on input line 260.
-(pdftex.def)             Requested size: 409.71689pt x 123.13408pt.
+(pdftex.def)             Requested size: 386.96024pt x 116.29329pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"acc_low".jpg, id=278, 683.55376pt x 354.57469pt>
+<"acc_low".jpg, id=288, 683.55376pt x 354.57469pt>
 File: "acc_low".jpg Graphic file (type jpg)
  <use "acc_low".jpg>
 Package pdftex.def Info: "acc_low".jpg used on input line 270.
-(pdftex.def)             Requested size: 318.66946pt x 165.30293pt.
+(pdftex.def)             Requested size: 364.19664pt x 188.91919pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"hysteresis_low_bot".jpg, id=279, 496.10344pt x 322.95656pt>
+<"hysteresis_low_bot".jpg, id=289, 496.10344pt x 322.95656pt>
 File: "hysteresis_low_bot".jpg Graphic file (type jpg)
 
 <use "hysteresis_low_bot".jpg>
 Package pdftex.def Info: "hysteresis_low_bot".jpg used on input line 277.
-(pdftex.def)             Requested size: 318.66946pt x 207.45038pt.
+(pdftex.def)             Requested size: 273.14922pt x 177.81883pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"hysteresis_low_surf".jpg, id=280, 487.8225pt x 356.0803pt>
+<"hysteresis_low_surf".jpg, id=290, 487.8225pt x 356.0803pt>
 File: "hysteresis_low_surf".jpg Graphic file (type jpg)
 
 <use "hysteresis_low_surf".jpg>
@@ -1037,53 +1264,60 @@ Package pdftex.def Info: "hysteresis_low_surf".jpg used on input line 284.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"spectral_low".jpg, id=281, 390.70969pt x 232.61906pt>
+<"spectral_low".jpg, id=291, 390.70969pt x 232.61906pt>
 File: "spectral_low".jpg Graphic file (type jpg)
 
 <use "spectral_low".jpg>
 Package pdftex.def Info: "spectral_low".jpg used on input line 291.
-(pdftex.def)             Requested size: 273.14922pt x 162.63345pt.
+(pdftex.def)             Requested size: 318.66946pt x 189.73726pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"site_ampl".jpg, id=282, 404.26031pt x 241.65282pt>
+<"site_ampl".jpg, id=292, 404.26031pt x 241.65282pt>
 File: "site_ampl".jpg Graphic file (type jpg)
  <use "site_ampl".jpg>
 Package pdftex.def Info: "site_ampl".jpg used on input line 298.
-(pdftex.def)             Requested size: 227.62204pt x 136.0658pt.
+(pdftex.def)             Requested size: 318.66946pt x 190.49065pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"ARUP".jpg, id=283, 252.945pt x 240.9pt>
+<"ARUP".jpg, id=293, 252.945pt x 240.9pt>
 File: "ARUP".jpg Graphic file (type jpg)
  <use "ARUP".jpg>
 Package pdftex.def Info: "ARUP".jpg used on input line 305.
-(pdftex.def)             Requested size: 227.62204pt x 216.78592pt.
+(pdftex.def)             Requested size: 318.66946pt x 303.5025pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[62 <./Fourier.jpg>] [63 <./acc_comp1.jpg> <./spectral2.jpg>] [64 <./tau_gamma1
-.jpg> <./tau_gamma2.jpg> <./acc_low.jpg>]
+[65 <./Fourier.jpg>] [66 <./acc_comp1.jpg> <./spectral2.jpg>]
 
-LaTeX Warning: Text page 65 contains only floats.
+LaTeX Warning: Text page 67 contains only floats.
 
-[65 <./hysteresis_low_bot.jpg> <./hysteresis_low_surf.jpg> <./spectral_low.jpg>
-] <"yield_srf".jpg, id=297, 651.18282pt x 268.00125pt>
+[67 <./tau_gamma1.jpg> <./tau_gamma2.jpg> <./acc_low.jpg>]
+
+LaTeX Warning: Text page 68 contains only floats.
+
+[68 <./hysteresis_low_bot.jpg> <./hysteresis_low_surf.jpg> <./spectral_low.jpg>
+] [69 <./site_ampl.jpg> <./ARUP.jpg>]
+<"yield_srf".jpg, id=310, 651.18282pt x 268.00125pt>
 File: "yield_srf".jpg Graphic file (type jpg)
  <use "yield_srf".jpg>
 Package pdftex.def Info: "yield_srf".jpg used on input line 328.
 (pdftex.def)             Requested size: 318.66946pt x 131.15408pt.
 
-[66 <./site_ampl.jpg> <./ARUP.jpg>]
-<"shear".jpg, id=301, 456.20438pt x 280.04625pt>
+<"shear".jpg, id=311, 456.20438pt x 280.04625pt>
 File: "shear".jpg Graphic file (type jpg)
  <use "shear".jpg>
 Package pdftex.def Info: "shear".jpg used on input line 335.
 (pdftex.def)             Requested size: 227.62204pt x 139.72792pt.
- [67 <./yield_srf.jpg> <./shear.jpg>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[70 <./yield_srf.jpg>] [71 <./shear.jpg>]
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 351.
 
@@ -1100,75 +1334,75 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 351.
 
-) (chapter5.tex [68] [69]
+) (chapter5.tex [72]
 Chapter 5.
-[70
+[73
 
-] <"Boomgaard".jpg, id=315, 414.04688pt x 398.23781pt>
+] <"Boomgaard".jpg, id=326, 414.04688pt x 398.23781pt>
 File: "Boomgaard".jpg Graphic file (type jpg)
 
 <use "Boomgaard".jpg>
 Package pdftex.def Info: "Boomgaard".jpg used on input line 21.
 (pdftex.def)             Requested size: 227.62204pt x 218.93423pt.
- <"chimney".jpg, id=316, 384.6872pt x 323.70938pt>
+ <"chimney".jpg, id=327, 384.6872pt x 323.70938pt>
 File: "chimney".jpg Graphic file (type jpg)
 
 <use "chimney".jpg>
 Package pdftex.def Info: "chimney".jpg used on input line 28.
 (pdftex.def)             Requested size: 227.62204pt x 191.54503pt.
- [71 <./Boomgaard.jpg> <./chimney.jpg>] [72]
-<"pressure".jpg, id=324, 349.305pt x 213.79875pt>
+ [74 <./Boomgaard.jpg> <./chimney.jpg>] [75]
+<"pressure".jpg, id=334, 349.305pt x 213.79875pt>
 File: "pressure".jpg Graphic file (type jpg)
  <use "pressure".jpg>
 Package pdftex.def Info: "pressure".jpg used on input line 77.
 (pdftex.def)             Requested size: 204.85844pt x 125.38983pt.
- [73 <./pressure.jpg>] <"stick".jpg, id=328, 395.97937pt x 291.33844pt>
+ [76 <./pressure.jpg>] <"stick".jpg, id=338, 395.97937pt x 291.33844pt>
 File: "stick".jpg Graphic file (type jpg)
 
 <use "stick".jpg>
 Package pdftex.def Info: "stick".jpg used on input line 101.
 (pdftex.def)             Requested size: 227.62204pt x 167.47385pt.
- [74 <./stick.jpg>] [75]
-<"response_model_v12_FBC".jpg, id=335, 616.55344pt x 359.84438pt>
+ [77 <./stick.jpg>] [78]
+<"response_model_v12_FBC".jpg, id=346, 616.55344pt x 359.84438pt>
 File: "response_model_v12_FBC".jpg Graphic file (type jpg)
 
 <use "response_model_v12_FBC".jpg>
 Package pdftex.def Info: "response_model_v12_FBC".jpg used on input line 137.
 (pdftex.def)             Requested size: 364.19664pt x 212.5644pt.
 
-<"free-field2".jpg, id=336, 408.02437pt x 225.09094pt>
+<"free-field2".jpg, id=347, 408.02437pt x 225.09094pt>
 File: "free-field2".jpg Graphic file (type jpg)
  <use "free-field2".jpg>
 Package pdftex.def Info: "free-field2".jpg used on input line 145.
 (pdftex.def)             Requested size: 318.66946pt x 175.8072pt.
 
-[76 <./response_model_v12_FBC.jpg> <./free-field2.jpg>]
-<"mainmodel".jpg, id=340, 712.91344pt x 338.01282pt>
+[79 <./response_model_v12_FBC.jpg> <./free-field2.jpg>]
+<"mainmodel".jpg, id=351, 712.91344pt x 338.01282pt>
 File: "mainmodel".jpg Graphic file (type jpg)
  <use "mainmodel".jpg>
 Package pdftex.def Info: "mainmodel".jpg used on input line 164.
 (pdftex.def)             Requested size: 409.71689pt x 194.25786pt.
 
-[77 <./mainmodel.jpg>] <"ultimatebearing".jpg, id=345, 444.91219pt x 289.08pt>
+[80 <./mainmodel.jpg>] <"ultimatebearing".jpg, id=355, 444.91219pt x 289.08pt>
 File: "ultimatebearing".jpg Graphic file (type jpg)
 
 <use "ultimatebearing".jpg>
 Package pdftex.def Info: "ultimatebearing".jpg used on input line 204.
 (pdftex.def)             Requested size: 227.62204pt x 147.89641pt.
- [78 <./ultimatebearing.jpg>]
-<"input_acc".jpg, id=349, 700.86844pt x 280.04625pt>
+ [81 <./ultimatebearing.jpg>]
+<"input_acc".jpg, id=359, 700.86844pt x 280.04625pt>
 File: "input_acc".jpg Graphic file (type jpg)
  <use "input_acc".jpg>
 Package pdftex.def Info: "input_acc".jpg used on input line 226.
 (pdftex.def)             Requested size: 318.66946pt x 127.3315pt.
 
-[79 <./input_acc.jpg>] <"sin_4m".jpg, id=353, 895.09406pt x 808.52063pt>
+[82 <./input_acc.jpg>] <"sin_4m".jpg, id=363, 895.09406pt x 808.52063pt>
 File: "sin_4m".jpg Graphic file (type jpg)
 
 <use "sin_4m".jpg>
 Package pdftex.def Info: "sin_4m".jpg used on input line 251.
 (pdftex.def)             Requested size: 455.24408pt x 411.2174pt.
- <"drosos2".jpg, id=354, 392.96812pt x 316.18124pt>
+ <"drosos2".jpg, id=364, 392.96812pt x 316.18124pt>
 File: "drosos2".jpg Graphic file (type jpg)
 
 <use "drosos2".jpg>
@@ -1178,19 +1412,19 @@ Package pdftex.def Info: "drosos2".jpg used on input line 258.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[80] [81 <./sin_4m.jpg>] <"acc_sin4m2".jpg, id=361, 594.72188pt x 537.50812pt>
+[83] [84 <./sin_4m.jpg>] <"acc_sin4m2".jpg, id=372, 594.72188pt x 537.50812pt>
 File: "acc_sin4m2".jpg Graphic file (type jpg)
 
 <use "acc_sin4m2".jpg>
 Package pdftex.def Info: "acc_sin4m2".jpg used on input line 271.
 (pdftex.def)             Requested size: 312.97778pt x 142.25853pt.
- [82 <./drosos2.jpg> <./acc_sin4m2.jpg>]
+ [85 <./drosos2.jpg> <./acc_sin4m2.jpg>]
 Overfull \hbox (2.13194pt too wide) in paragraph at lines 279--280
 []\OT1/cmr/m/n/10.95 most of the in-ves-ti-ga-tions found in the lit-er-a-ture 
 in-clude a soil layer with con-stant []
  []
 
-<"eq_fs5-24m".jpg, id=365, 993.7125pt x 938.75719pt>
+<"eq_fs5-24m".jpg, id=376, 993.7125pt x 938.75719pt>
 File: "eq_fs5-24m".jpg Graphic file (type jpg)
  <use "eq_fs5-24m".jpg>
 Package pdftex.def Info: "eq_fs5-24m".jpg used on input line 300.
@@ -1199,7 +1433,7 @@ Package pdftex.def Info: "eq_fs5-24m".jpg used on input line 300.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"opening".jpg, id=366, 691.08188pt x 246.1697pt>
+<"opening".jpg, id=377, 691.08188pt x 246.1697pt>
 File: "opening".jpg Graphic file (type jpg)
  <use "opening".jpg>
 Package pdftex.def Info: "opening".jpg used on input line 307.
@@ -1208,7 +1442,7 @@ Package pdftex.def Info: "opening".jpg used on input line 307.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"rocking_cap".jpg, id=367, 160.34906pt x 196.48407pt>
+<"rocking_cap".jpg, id=378, 160.34906pt x 196.48407pt>
 File: "rocking_cap".jpg Graphic file (type jpg)
  <use "rocking_cap".jpg>
 Package pdftex.def Info: "rocking_cap".jpg used on input line 315.
@@ -1218,24 +1452,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 312--318
 \OT1/cmr/m/n/10.95 is pre-sented in fig-ure 5.15[].
  []
 
-[83] [84 <./eq_fs5-24m.jpg> <./opening.jpg>]
+[86] [87 <./eq_fs5-24m.jpg> <./opening.jpg>]
 Underfull \hbox (badness 1867) in paragraph at lines 320--321
 []\OT1/cmr/m/n/10.95 Analytically, the ca-pac-ity can be ex-
  []
 
-<"bearing".jpg, id=375, 564.60938pt x 134.00063pt>
+<"bearing".jpg, id=385, 564.60938pt x 134.00063pt>
 File: "bearing".jpg Graphic file (type jpg)
  <use "bearing".jpg>
 Package pdftex.def Info: "bearing".jpg used on input line 336.
 (pdftex.def)             Requested size: 318.66946pt x 75.63074pt.
- [85 <./rocking_cap.jpg> <./bearing.jpg>]
-<"2hz".jpg, id=379, 874.76813pt x 791.95876pt>
+ [88 <./rocking_cap.jpg> <./bearing.jpg>]
+<"2hz".jpg, id=389, 874.76813pt x 791.95876pt>
 File: "2hz".jpg Graphic file (type jpg)
  <use "2hz".jpg>
 Package pdftex.def Info: "2hz".jpg used on input line 349.
 (pdftex.def)             Requested size: 364.19664pt x 329.72018pt.
 
-<"acc-2hz".jpg, id=380, 740.7675pt x 501.37312pt>
+<"acc-2hz".jpg, id=390, 740.7675pt x 501.37312pt>
 File: "acc-2hz".jpg Graphic file (type jpg)
  <use "acc-2hz".jpg>
 Package pdftex.def Info: "acc-2hz".jpg used on input line 356.
@@ -1244,7 +1478,7 @@ Package pdftex.def Info: "acc-2hz".jpg used on input line 356.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"sinusoidal2".jpg, id=381, 846.91406pt x 801.74532pt>
+<"sinusoidal2".jpg, id=391, 846.91406pt x 801.74532pt>
 File: "sinusoidal2".jpg Graphic file (type jpg)
  <use "sinusoidal2".jpg>
 Package pdftex.def Info: "sinusoidal2".jpg used on input line 364.
@@ -1253,14 +1487,14 @@ Package pdftex.def Info: "sinusoidal2".jpg used on input line 364.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[86 <./2hz.jpg>] [87 <./acc-2hz.jpg> <./sinusoidal2.jpg>]
-<"fs2,4,8".png, id=388, 1332.47812pt x 871.75688pt>
+[89 <./2hz.jpg>] [90 <./acc-2hz.jpg> <./sinusoidal2.jpg>]
+<"fs2,4,8".png, id=399, 1332.47812pt x 871.75688pt>
 File: "fs2,4,8".png Graphic file (type png)
  <use "fs2,4,8".png>
 Package pdftex.def Info: "fs2,4,8".png used on input line 384.
 (pdftex.def)             Requested size: 455.24408pt x 297.83003pt.
 
-<"irregular".jpg, id=389, 434.37282pt x 317.68687pt>
+<"irregular".jpg, id=400, 434.37282pt x 317.68687pt>
 File: "irregular".jpg Graphic file (type jpg)
  <use "irregular".jpg>
 Package pdftex.def Info: "irregular".jpg used on input line 391.
@@ -1269,7 +1503,7 @@ Package pdftex.def Info: "irregular".jpg used on input line 391.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"acc_2,4,8".jpg, id=390, 856.70062pt x 268.00125pt>
+<"acc_2,4,8".jpg, id=401, 856.70062pt x 268.00125pt>
 File: "acc_2,4,8".jpg Graphic file (type jpg)
  <use "acc_2,4,8".jpg>
 Package pdftex.def Info: "acc_2,4,8".jpg used on input line 398.
@@ -1278,26 +1512,26 @@ Package pdftex.def Info: "acc_2,4,8".jpg used on input line 398.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[88 <./fs2,4,8.png>] [89 <./irregular.jpg> <./acc_2,4,8.jpg>]
-<"surcharge2".jpg, id=398, 903.375pt x 307.1475pt>
+[91 <./fs2,4,8.png>] [92 <./irregular.jpg> <./acc_2,4,8.jpg>]
+<"surcharge2".jpg, id=408, 903.375pt x 307.1475pt>
 File: "surcharge2".jpg Graphic file (type jpg)
  <use "surcharge2".jpg>
 Package pdftex.def Info: "surcharge2".jpg used on input line 436.
 (pdftex.def)             Requested size: 409.71689pt x 139.30708pt.
 
-<"surcharge".jpg, id=399, 799.48688pt x 270.25969pt>
+<"surcharge".jpg, id=409, 799.48688pt x 270.25969pt>
 File: "surcharge".jpg Graphic file (type jpg)
  <use "surcharge".jpg>
 Package pdftex.def Info: "surcharge".jpg used on input line 443.
 (pdftex.def)             Requested size: 409.71689pt x 138.50279pt.
 
-[90 <./surcharge2.jpg> <./surcharge.jpg>]
-<"fbctsi2".jpg, id=403, 902.6222pt x 852.93657pt>
+[93 <./surcharge2.jpg> <./surcharge.jpg>]
+<"fbctsi2".jpg, id=413, 902.6222pt x 852.93657pt>
 File: "fbctsi2".jpg Graphic file (type jpg)
  <use "fbctsi2".jpg>
 Package pdftex.def Info: "fbctsi2".jpg used on input line 455.
 (pdftex.def)             Requested size: 364.19664pt x 344.14896pt.
- [91 <./fbctsi2.jpg>] <"10m_F2".jpg, id=407, 925.95938pt x 887.56593pt>
+ [94 <./fbctsi2.jpg>] <"10m_F2".jpg, id=417, 925.95938pt x 887.56593pt>
 File: "10m_F2".jpg Graphic file (type jpg)
 
 <use "10m_F2".jpg>
@@ -1307,7 +1541,7 @@ Package pdftex.def Info: "10m_F2".jpg used on input line 471.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"10m".jpg, id=408, 916.1728pt x 864.98157pt>
+<"10m".jpg, id=418, 916.1728pt x 864.98157pt>
 File: "10m".jpg Graphic file (type jpg)
  <use "10m".jpg>
 Package pdftex.def Info: "10m".jpg used on input line 479.
@@ -1316,7 +1550,7 @@ Package pdftex.def Info: "10m".jpg used on input line 479.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"example4".jpg, id=409, 775.39688pt x 283.0575pt>
+<"example4".jpg, id=419, 775.39688pt x 283.0575pt>
 File: "example4".jpg Graphic file (type jpg)
  <use "example4".jpg>
 Package pdftex.def Info: "example4".jpg used on input line 490.
@@ -1325,7 +1559,7 @@ Package pdftex.def Info: "example4".jpg used on input line 490.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"gazetas".jpg, id=410, 324.46219pt x 414.04688pt>
+<"gazetas".jpg, id=420, 324.46219pt x 414.04688pt>
 File: "gazetas".jpg Graphic file (type jpg)
  <use "gazetas".jpg>
 Package pdftex.def Info: "gazetas".jpg used on input line 501.
@@ -1334,22 +1568,22 @@ Package pdftex.def Info: "gazetas".jpg used on input line 501.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[92] [93 <./10m_F2.jpg>]
+[95] [96 <./10m_F2.jpg>]
 
-LaTeX Warning: Text page 94 contains only floats.
+LaTeX Warning: Text page 97 contains only floats.
 
 
 Overfull \vbox (4.05301pt too high) has occurred while \output is active []
 
 
-[94 <./10m.jpg> <./example4.jpg>]
-<"fundamental".jpg, id=420, 342.5297pt x 116.68594pt>
+[97 <./10m.jpg> <./example4.jpg>]
+<"fundamental".jpg, id=431, 342.5297pt x 116.68594pt>
 File: "fundamental".jpg Graphic file (type jpg)
  <use "fundamental".jpg>
 Package pdftex.def Info: "fundamental".jpg used on input line 549.
 (pdftex.def)             Requested size: 318.66946pt x 108.56664pt.
 
-<"acc_10m".jpg, id=421, 843.15pt x 571.38469pt>
+<"acc_10m".jpg, id=432, 843.15pt x 571.38469pt>
 File: "acc_10m".jpg Graphic file (type jpg)
  <use "acc_10m".jpg>
 Package pdftex.def Info: "acc_10m".jpg used on input line 556.
@@ -1358,243 +1592,261 @@ Package pdftex.def Info: "acc_10m".jpg used on input line 556.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[95 <./gazetas.jpg> <./fundamental.jpg>] [96 <./acc_10m.jpg>] [97] [98]
+[98 <./gazetas.jpg> <./fundamental.jpg>] [99 <./acc_10m.jpg>] [100] [101]
 Chapter 6.
-[99
+[102
 
-] [100]) [101
+] [103]) [104] [105
 
 ]
 Appendix A.
-<"cpt".jpg, id=445, 454.69875pt x 407.27156pt>
+<"cpt".jpg, id=458, 454.69875pt x 407.27156pt>
 File: "cpt".jpg Graphic file (type jpg)
  <use "cpt".jpg>
-Package pdftex.def Info: "cpt".jpg used on input line 1154.
+Package pdftex.def Info: "cpt".jpg used on input line 1173.
 (pdftex.def)             Requested size: 386.96024pt x 346.60503pt.
 
-<"cpt2".jpg, id=446, 447.92343pt x 319.1925pt>
+<"cpt2".jpg, id=459, 447.92343pt x 319.1925pt>
 File: "cpt2".jpg Graphic file (type jpg)
  <use "cpt2".jpg>
-Package pdftex.def Info: "cpt2".jpg used on input line 1159.
+Package pdftex.def Info: "cpt2".jpg used on input line 1178.
 (pdftex.def)             Requested size: 364.19664pt x 259.5332pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[102
+[106
 
- <./cpt.jpg>] [103 <./cpt2.jpg>]
+ <./cpt.jpg>] [107 <./cpt2.jpg>]
 Appendix B.
-[104
+[108
 
-] <"tresca".jpg, id=456, 457.71pt x 198.7425pt>
+] <"tresca".jpg, id=470, 457.71pt x 198.7425pt>
 File: "tresca".jpg Graphic file (type jpg)
  <use "tresca".jpg>
-Package pdftex.def Info: "tresca".jpg used on input line 1211.
+Package pdftex.def Info: "tresca".jpg used on input line 1230.
 (pdftex.def)             Requested size: 364.19664pt x 158.14508pt.
 
-<"Mises".jpg, id=457, 405.76593pt x 346.29375pt>
+<"Mises".jpg, id=471, 405.76593pt x 346.29375pt>
 File: "Mises".jpg Graphic file (type jpg)
  <use "Mises".jpg>
-Package pdftex.def Info: "Mises".jpg used on input line 1222.
+Package pdftex.def Info: "Mises".jpg used on input line 1241.
 (pdftex.def)             Requested size: 364.19664pt x 310.82661pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[105 <./tresca.jpg>] [106 <./Mises.jpg>] [107]
+
+Package Fancyhdr Warning: \headheight is too small (13.59999pt): 
+ Make it at least 25.16252pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[109 <./tresca.jpg>] [110 <./Mises.jpg>] [111]
 Appendix C.
-<"masing".jpg, id=468, 327.47343pt x 252.945pt>
+<"masing".jpg, id=481, 327.47343pt x 252.945pt>
 File: "masing".jpg Graphic file (type jpg)
  <use "masing".jpg>
-Package pdftex.def Info: "masing".jpg used on input line 1309.
+Package pdftex.def Info: "masing".jpg used on input line 1328.
 (pdftex.def)             Requested size: 227.62204pt x 175.81749pt.
 File: "loop".jpg Graphic file (type jpg)
 
 <use "loop".jpg>
-Package pdftex.def Info: "loop".jpg used on input line 1318.
+Package pdftex.def Info: "loop".jpg used on input line 1337.
 (pdftex.def)             Requested size: 227.62204pt x 130.01772pt.
- [108
-
- <./masing.jpg>] [109]
-Appendix D.
-[110
-
-] [111]
-Appendix E.
-<"SuMC".jpg, id=481, 743.02594pt x 351.56343pt>
-File: "SuMC".jpg Graphic file (type jpg)
- <use "SuMC".jpg>
-Package pdftex.def Info: "SuMC".jpg used on input line 1415.
-(pdftex.def)             Requested size: 227.62204pt x 107.69606pt.
  [112
 
+ <./masing.jpg>] [113]
+Appendix D.
+[114
+
+] [115]
+Appendix E.
+<"SuMC".jpg, id=495, 743.02594pt x 351.56343pt>
+File: "SuMC".jpg Graphic file (type jpg)
+ <use "SuMC".jpg>
+Package pdftex.def Info: "SuMC".jpg used on input line 1434.
+(pdftex.def)             Requested size: 227.62204pt x 107.69606pt.
+ [116
+
  <./SuMC.jpg>]
-Overfull \hbox (22.86385pt too wide) in paragraph at lines 1436--1445
+Overfull \hbox (22.86385pt too wide) in paragraph at lines 1455--1464
  [][] 
  []
 
-[113]
+[117]
 File: "Su".jpg Graphic file (type jpg)
  <use "Su".jpg>
-Package pdftex.def Info: "Su".jpg used on input line 1474.
+Package pdftex.def Info: "Su".jpg used on input line 1493.
 (pdftex.def)             Requested size: 204.85844pt x 209.26604pt.
- [114]
+ [118]
 Appendix F.
-<"empirical".jpg, id=492, 620.3175pt x 408.02437pt>
+<"empirical".jpg, id=505, 620.3175pt x 408.02437pt>
 File: "empirical".jpg Graphic file (type jpg)
  <use "empirical".jpg>
-Package pdftex.def Info: "empirical".jpg used on input line 1484.
+Package pdftex.def Info: "empirical".jpg used on input line 1503.
 (pdftex.def)             Requested size: 455.24408pt x 299.44293pt.
 
-<"measurements".jpg, id=493, 628.59843pt x 405.01312pt>
+<"measurements".jpg, id=506, 628.59843pt x 405.01312pt>
 File: "measurements".jpg Graphic file (type jpg)
 
 <use "measurements".jpg>
-Package pdftex.def Info: "measurements".jpg used on input line 1491.
+Package pdftex.def Info: "measurements".jpg used on input line 1510.
 (pdftex.def)             Requested size: 455.24408pt x 293.3149pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[115
+[119
 
- <./empirical.jpg>] [116 <./measurements.jpg>]
+ <./empirical.jpg>] [120 <./measurements.jpg>]
 Appendix G.
-<"flowABQ".jpg, id=500, 378.66469pt x 404.26031pt>
+<"flowABQ".jpg, id=514, 378.66469pt x 404.26031pt>
 File: "flowABQ".jpg Graphic file (type jpg)
  <use "flowABQ".jpg>
-Package pdftex.def Info: "flowABQ".jpg used on input line 1503.
+Package pdftex.def Info: "flowABQ".jpg used on input line 1522.
 (pdftex.def)             Requested size: 455.24408pt x 486.02289pt.
- [117
+ [121
 
- <./flowABQ.jpg>] [118]
+ <./flowABQ.jpg>] [122]
 Appendix H.
 
-Overfull \hbox (89.7373pt too wide) in paragraph at lines 1514--1515
+Overfull \hbox (89.7373pt too wide) in paragraph at lines 1533--1534
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (62.14331pt too wide) in paragraph at lines 1515--1516
+Overfull \hbox (62.14331pt too wide) in paragraph at lines 1534--1535
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (96.6358pt too wide) in paragraph at lines 1522--1523
+Overfull \hbox (96.6358pt too wide) in paragraph at lines 1541--1542
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (62.14331pt too wide) in paragraph at lines 1544--1545
+Overfull \hbox (62.14331pt too wide) in paragraph at lines 1563--1564
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][] 
  []
 
-[119
+[123
 
 ]
-Overfull \hbox (34.54932pt too wide) in paragraph at lines 1553--1554
+Overfull \hbox (34.54932pt too wide) in paragraph at lines 1572--1573
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[120]
+[124]
 Appendix I.
-[121
+[125
 
 ]
 Appendix J.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[122
+[126
 
-] [123]
+] [127]
 Appendix K.
-<"NERA1".jpg, id=524, 520.19344pt x 368.1253pt>
+<"NERA1".jpg, id=538, 520.19344pt x 368.1253pt>
 File: "NERA1".jpg Graphic file (type jpg)
  <use "NERA1".jpg>
-Package pdftex.def Info: "NERA1".jpg used on input line 1652.
+Package pdftex.def Info: "NERA1".jpg used on input line 1671.
 (pdftex.def)             Requested size: 455.24408pt x 322.16502pt.
 
-<"NERA2".jpg, id=525, 288.3272pt x 403.5075pt>
+<"NERA2".jpg, id=539, 288.3272pt x 403.5075pt>
 File: "NERA2".jpg Graphic file (type jpg)
  <use "NERA2".jpg>
-Package pdftex.def Info: "NERA2".jpg used on input line 1658.
+Package pdftex.def Info: "NERA2".jpg used on input line 1677.
 (pdftex.def)             Requested size: 455.24408pt x 637.13466pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"NERA 3".jpg, id=526, 317.68687pt x 423.83344pt>
+<"NERA 3".jpg, id=540, 317.68687pt x 423.83344pt>
 File: "NERA 3".jpg Graphic file (type jpg)
  <use "NERA 3".jpg>
-Package pdftex.def Info: "NERA 3".jpg used on input line 1664.
+Package pdftex.def Info: "NERA 3".jpg used on input line 1683.
 (pdftex.def)             Requested size: 455.24408pt x 607.40297pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"NERA 4".jpg, id=527, 285.31593pt x 401.24907pt>
+<"NERA 4".jpg, id=541, 285.31593pt x 401.24907pt>
 File: "NERA 4".jpg Graphic file (type jpg)
  <use "NERA 4".jpg>
-Package pdftex.def Info: "NERA 4".jpg used on input line 1670.
+Package pdftex.def Info: "NERA 4".jpg used on input line 1689.
 (pdftex.def)             Requested size: 455.24408pt x 640.22995pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"NERA5".jpg, id=528, 277.035pt x 423.08063pt>
+<"NERA5".jpg, id=542, 277.035pt x 423.08063pt>
 File: "NERA5".jpg Graphic file (type jpg)
  <use "NERA5".jpg>
-Package pdftex.def Info: "NERA5".jpg used on input line 1676.
+Package pdftex.def Info: "NERA5".jpg used on input line 1695.
 (pdftex.def)             Requested size: 455.24408pt x 695.23824pt.
 
 
-LaTeX Warning: Float too large for page by 6.05516pt on input line 1678.
+LaTeX Warning: Float too large for page by 6.05516pt on input line 1697.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[124
+[128
 
- <./NERA1.jpg>] [125 <./NERA2.jpg>] [126 <./NERA 3.jpg>] [127 <./NERA 4.jpg>] [
-128 <./NERA5.jpg>]
+ <./NERA1.jpg>] [129 <./NERA2.jpg>] [130 <./NERA 3.jpg>] [131 <./NERA 4.jpg>] [
+132 <./NERA5.jpg>]
 Appendix L.
-<"NERA_RES".jpg, id=545, 576.65437pt x 417.05812pt>
+<"NERA_RES".jpg, id=559, 576.65437pt x 417.05812pt>
 File: "NERA_RES".jpg Graphic file (type jpg)
  <use "NERA_RES".jpg>
-Package pdftex.def Info: "NERA_RES".jpg used on input line 1685.
+Package pdftex.def Info: "NERA_RES".jpg used on input line 1704.
 (pdftex.def)             Requested size: 546.2915pt x 395.11476pt.
 
-Overfull \hbox (91.04742pt too wide) in paragraph at lines 1685--1687
+Overfull \hbox (91.04742pt too wide) in paragraph at lines 1704--1706
  [][] 
  []
 
-<"NERA_RES2".jpg, id=546, 930.47626pt x 469.00218pt>
+<"NERA_RES2".jpg, id=560, 930.47626pt x 469.00218pt>
 File: "NERA_RES2".jpg Graphic file (type jpg)
  <use "NERA_RES2".jpg>
-Package pdftex.def Info: "NERA_RES2".jpg used on input line 1691.
+Package pdftex.def Info: "NERA_RES2".jpg used on input line 1710.
 (pdftex.def)             Requested size: 455.24408pt x 229.46242pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<"NERA_RES3".jpg, id=547, 872.50969pt x 352.31625pt>
+<"NERA_RES3".jpg, id=561, 872.50969pt x 352.31625pt>
 File: "NERA_RES3".jpg Graphic file (type jpg)
  <use "NERA_RES3".jpg>
-Package pdftex.def Info: "NERA_RES3".jpg used on input line 1697.
+Package pdftex.def Info: "NERA_RES3".jpg used on input line 1716.
 (pdftex.def)             Requested size: 455.24408pt x 183.82373pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(Chapter4.bbl [129
+(Chapter4.bbl [133
 
- <./NERA_RES.jpg>] [130 <./NERA_RES2.jpg> <./NERA_RES3.jpg>]
-[131
+ <./NERA_RES.jpg>] [134 <./NERA_RES2.jpg> <./NERA_RES3.jpg>]
+[135
 
-] [132] [133])
+] [136] [137]) [138]
+Appendix M.
+<"deformat".jpg, id=581, 362.85562pt x 297.36093pt>
+File: "deformat".jpg Graphic file (type jpg)
+ <use "deformat".jpg>
+Package pdftex.def Info: "deformat".jpg used on input line 1728.
+(pdftex.def)             Requested size: 318.66946pt x 261.15662pt.
+
+<"FBC5+".jpg, id=582, 536.75531pt x 345.54094pt>
+File: "FBC5+".jpg Graphic file (type jpg)
+ <use "FBC5+".jpg>
+Package pdftex.def Info: "FBC5+".jpg used on input line 1735.
+(pdftex.def)             Requested size: 227.62204pt x 146.53397pt.
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the Chapter4.maf file.
@@ -1606,19 +1858,21 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Chapter4.log file.
 
-[134] (Chapter4.aux)
+[139
+
+ <./deformat.jpg> <./FBC5+.jpg>] (Chapter4.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 8782 strings out of 493634
- 118702 string characters out of 3131976
- 221076 words of memory out of 3000000
- 11693 multiletter control sequences out of 15000+200000
- 12779 words of font info for 48 fonts, out of 3000000 for 9000
+ 14605 strings out of 493634
+ 207405 string characters out of 3131976
+ 337919 words of memory out of 3000000
+ 17394 multiletter control sequences out of 15000+200000
+ 13132 words of font info for 49 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 38i,11n,58p,1945b,1823s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,12n,122p,1955b,1831s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmbx10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Administrator/AppData/Loc
@@ -1634,15 +1888,16 @@ public/amsfonts/cm/cmr12.pfb><C:/Users/Administrator/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Administrator/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ad
 ministrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy6.pfb><C:/Users/Administrator/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Administrator/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
+sl10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/Users/Administrator/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Administrator/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
 /Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmtt10.pfb>
-Output written on Chapter4.pdf (136 pages, 8694601 bytes).
+/cmti10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Chapter4.pdf (141 pages, 8932571 bytes).
 PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
+ 643 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 586 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 596 words of extra memory for PDF output out of 10000 (max. 10000000)
 

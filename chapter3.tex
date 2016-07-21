@@ -56,7 +56,7 @@
 	\left[M\right]{\Delta \ddot{u}}+\left[C\right]{\Delta \dot{u}}+\left[K\right]\Delta{u}=-\left[M\right]{I}\Delta\ddot{u}_g
 	\end{equation}
 	
-	where [M] - mass matrix, [C] - viscous damping matrix, [K] - stiffness matrix, $\Delta \ddot{u}$, $\Delta \dot{u}$ and $\Delta{u}$ - vectors of nodal relative acceleration, velocity and displacement, $\Delta \ddot{u}_g$ - acceleration at the base and {I} - unit vector. The matrices are compiled based on the incremental response recorded within the software analysis. The equation is solved at every incremental time step using the Newmark \cite{newmark1959method} method.
+	where \gls{M} - mass matrix, \gls{C} - viscous damping matrix, \gls{Kk} - stiffness matrix, $\Delta \ddot{u}$, $\Delta \dot{u}$ and $\Delta{u}$ - vectors of nodal relative acceleration, velocity and displacement, $\Delta \ddot{u}_g$ - acceleration at the base and {I} - unit vector. The matrices are compiled based on the incremental response recorded within the software analysis. The equation is solved at every incremental time step using the Newmark \cite{newmark1959method} method.
 	
 	The viscous damping matrix follows Rayleigh and Lindsay, 1976 \cite{rayleigh1976theory} equation that relates the small strain damping to both mass and stiffness matrices. Thus, the equation for the viscous damping is:
 	\begin{equation}
@@ -66,7 +66,7 @@
 	\begin{equation}
 		\xi = \frac{1}{2}(\beta \omega + \frac{\alpha}{\omega})
 	\end{equation}
-	$\alpha$ and $\beta$ are determined by choosing fractions of the critical damping $\xi_{crit}$. Assuming two different circular frequencies $\omega_1$ and $\omega_2$ with the corresponding damping ratios $\xi_1$ and $\xi_2$, the two parameters become:
+	\gls{alpha} and \gls{betaa} are determined by choosing fractions of the critical damping $\xi_{crit}$. Assuming two different circular frequencies $\omega_1$ and $\omega_2$ with the corresponding damping ratios $\xi_1$ and $\xi_2$, the two parameters become:
 	\begin{equation}
 		\alpha=\frac{2 \omega_1 \omega_2 (\xi_1 \omega_2 - \xi_2 \omega_1)}{\omega_2^2 - \omega_1^2}
 	\end{equation}
@@ -81,7 +81,7 @@
 	\end{equation}
 	
 	
-	$\xi$ is the damping ratio at small strain; for this application $\xi$=1.2 corresponding to Darendeli's results; while $\omega_1$ is the natural circular frequency at first natural mode;
+	$\xi$ is the damping ratio at small strain; for this application $\xi$=1.2 corresponding to Darendeli's results; while \gls{omega} is the natural circular frequency at first natural mode;
 	
 	Despite that the experimental results prove that the damping matrix [C] is frequency independent and it has a constant value, Park and Hashash, 2002 \cite{hashash2002viscous} show the correlation between the stiffness [K] and the damping [C]. Since the stiffness depends on the strain level, then it can be concluded that the damping is also strain dependent, including the natural frequency. Thus, the viscous damping matrix [C] is updated at each time increment as well as the stiffness. Kramer, 1996 \cite{kramer1996geotechnical} proposes an equation for the calculation of the period of vibration that corresponds to the fundamental frequency of the selected mode as it follows:
 	\begin{equation}
@@ -250,14 +250,14 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.7\linewidth]{"tau_gamma1"}
+		\includegraphics[width=0.9\linewidth]{"tau_gamma1"}
 		\caption{Hysteresis loops comparison for surface level}
 		\label{tau_gamma1}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.9\linewidth]{"tau_gamma2"}
+		\includegraphics[width=0.85\linewidth]{"tau_gamma2"}
 		\caption{Hysteresis loops comparison for z=20m(left) and bottom level(right)}
 		\label{tau_gamma2}
 	\end{figure}
@@ -267,14 +267,14 @@
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.7\linewidth]{"acc_low"}
+		\includegraphics[width=0.8\linewidth]{"acc_low"}
 		\caption{Acceleration response comparison for PGA=0.1g}
 		\label{acc_low}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.7\linewidth]{"hysteresis_low_bot"}
+		\includegraphics[width=0.6\linewidth]{"hysteresis_low_bot"}
 		\caption{Hysteresis loops comparison for bottom level}
 		\label{hyst_bot}
 	\end{figure}
@@ -288,30 +288,30 @@
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.6\linewidth]{"spectral_low"}
+		\includegraphics[width=0.7\linewidth]{"spectral_low"}
 		\caption{Fourier amplitude spectra for PGA=0.1 - logarithmic scale}
 		\label{fourier3}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.5\linewidth]{"site_ampl"}
+		\includegraphics[width=0.7\linewidth]{"site_ampl"}
 		\caption{Site amplification factor comparison for PGA=0.1g (black line - NERA, green - ABAQUS)}
 		\label{SAF}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.5\linewidth]{"ARUP"}
+		\includegraphics[width=0.7\linewidth]{"ARUP"}
 		\caption{Groningen site non-linear ground response, input vs surface PGA according to ARUP report; the additional blue star corresponds to the present high PGA analysis (PGA=0.6g) and the yellow star to the low PGA case (PGA=0.1g). The red line marks the borded between the two regions - amplification and de-amplification.}
 		\label{ARUP}
 	\end{figure}
 	
 	The results confirm the expectation regarding the amplification effect of the soil combined with the PGA level, also they are in accordance with ARUP report regarding the site response analysis performed for the specific location in discussion. The acceleration responses at surface produced in both the computational software present the same maximum value, of course, with differences that were exposed previously, the elastic response seems to match together with the stiffness degradation effect. 
-	
-	
-	
 	\pagebreak
+	
+	
+	\newpage
 	\subsection{Remarks}
 	It is difficult to have a relevant comparison at surface level when the sample experiences low stresses; calibration of cyclic parameters was referred to rather high confining stresses. Moreover, it was noticed that Abaqus generates higher plastic strains; this might explain the signal attenuation expressed in frequency domain when comparing to NERA response. 
 	
@@ -342,7 +342,7 @@
 		\item Noise can be experienced in both the signals of the different computer programs. This can distort the final results; filtering is possible, however it is time demanding and does not represent the main interest in this study.
 	\end{enumerate}
 	
-	
+	\newpage
 	\section{Conclusions}
 	This chapter assemblies the soft soil conditions and a recorded acceleration time history from the specific site. A homogeneous clay layer of 30m height was subjected to a dynamic load. The seismic input corresponds to the a real accelerogram recorded in Groningen, in August 2012. The soil characteristics were empirically calculated and they correspond to the values presented in the previous chapter. Additionally, the Rayleigh damping parameters were incorporated in the material module together with a subroutine which updates the undrained shear strength and Young's modulus as a function of the vertical effective stresses. One-dimensional domain was considered due to the assumption of vertically propagated shear waves. A dynamic implicit integration scheme was used for processing the dynamic response: a special Newmark $\beta$ method (Hughes-Hilber-Taylor) describes the integration process. The stability of the analysis was also addressed. For validation purpose, a few additional site response analyses were performed with NERA - a software specially designated for such dynamic applications. Two values of PGA (peak ground amplitude) were considered depicting two different scenarios: strong and medium earthquake signals. The outcome focused on stiffness degradation, damping, acceleration response at surface levels and wave amplification.
 	

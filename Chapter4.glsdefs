@@ -1,0 +1,30 @@
+\ifglsentryexists{safety}{}%
+{%
+\gls@defglossaryentry{safety}%
+{%
+name={$FS_v$},%
+sort={FSv},%
+type={main},%
+first={FS_v},%
+firstplural={FS_vs},%
+text={FS_v},%
+plural={FS_vs},%
+description={static safety factor against vertical loading},%
+descriptionplural={static safety factor against vertical loading},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

@@ -79,7 +79,7 @@ Nonetheless, the current study indicates another type of normal contact, a softe
 	\label{pressure}
 \end{figure} 
 
-where $p_0$ is the contact pressure at zero distance, $ c_0$ is the distance from the master surface at which the pressure is decreased to 1 \% of $ p_0$. The behaviour in between is exponential. A large value of $ c_0$ leads to soft contact, a small value to hard contact. It is difficult to know a priori which values are suitable, however literature studies suggest for $p_0=10 kPA$ correlated with a clearance $c_0=10E^{-5} m$.
+where \gls{p0} is the contact pressure at zero distance, \gls{c0} is the distance from the master surface at which the pressure is decreased to 1 \% of $ p_0$. The behaviour in between is exponential. A large value of $ c_0$ leads to soft contact, a small value to hard contact. It is difficult to know a priori which values are suitable, however literature studies suggest for $p_0=10 kPA$ correlated with a clearance $c_0=10E^{-5} m$.
 
 
 For the tangential behaviour, the software provides the following options:
@@ -191,7 +191,7 @@ However, for simplicity of the problem, these complex concepts were not implemen
 	\begin{equation}
 		N_{ult}=q_{ult}xB^2=989 kN/m^2
 	\end{equation}
-	where $S_u$ is the undrained shear strength underneath the foundation (here, $S_u=10kPa$), $B$ and $L$ are the width and length of the foundation (here $B=L=4m$), $q$ is the surcharge (here, initially $q=0kPa$), $q_{ult}$ is the distributed ultimate load which leads to the $N_{ult}$ - ultimate bearing capacity. Now, considering only 2-D plane strain conditions, the value is calculated for a cross section, yielding:
+	where $S_u$ is the undrained shear strength underneath the foundation (here, $S_u=10kPa$), $B$ and $L$ are the width and length of the foundation (here $B=L=4m$), $q$ is the surcharge (here, initially $q=0kPa$), \gls{qult} is the distributed ultimate load which leads to the \gls{nult} - ultimate bearing capacity. Now, considering only 2-D plane strain conditions, the value is calculated for a cross section, yielding:
 	\begin{equation}
 		N_{ult}=q_{ult} B \longrightarrow N_{ult}=247.25 kPa
 	\end{equation}
@@ -323,7 +323,7 @@ After mentioning such dissimilarities between the scientific studies and the cur
  M_{cap,footing} = \frac{V.L_f}{2}(1-\frac{L_c}{L_f})
  \end{equation}
  
- where $V$ is the axial load applied on the structure, $L_f$ is the footing width, $L_c$ is the critical contact area. Generally, the ratio $L_f/L_c$ is estimated as the conventional static safety factor against vertical loading $FS_v$. So:
+ where $V$ is the axial load applied on the structure, $L_f$ is the footing width, \gls{lc} is the critical contact area. Generally, the ratio $L_f/L_c$ is estimated as the conventional static safety factor against vertical loading $FS_v$. So:
  
  \begin{equation}
  M_{cap,footing} = \frac{V.L_f}{2}(1-\frac{1}{FS_v})
@@ -342,7 +342,7 @@ After mentioning such dissimilarities between the scientific studies and the cur
  
  \newpage
  \subsection{Effect of the signal frequency}
- In addition, the point of interest shifted towards the importance of the seismic frequency content. Up until now, the investigation focused on a shaking motion consisting of 10 cycles of 1Hz; the additional work involves a similar uniform harmonic signal of 2Hz to observe the changes in response. Figure shows the comparison between the behaviour of the foundation when subjected to both $f=1hz$ and $f=2Hz$.
+ In addition, the point of interest shifted towards the importance of the seismic frequency content. Up until now, the investigation focused on a shaking motion consisting of 10 cycles of 1Hz; the additional work involves a similar uniform harmonic signal of 2Hz to observe the changes in response. Figure shows the comparison between the behaviour of the foundation when subjected to both \gls{f}$=1hz$ and $f=2Hz$.
  
  \begin{figure}[!h]
  	\centering
@@ -376,7 +376,7 @@ After mentioning such dissimilarities between the scientific studies and the cur
  
 \newpage
 \subsection{Effects of aspect ratio}
-One other important feature relates to the aspect ratio, because the response considerably depends on its geometry and, generally, bigger foundations experience larger bending moments; however, such resistance is counterbalanced by the substantial inertial forces induced by the earthquake.  This other important feature represents the ratio of the height of the structure (here h=5m) and the width of the foundation (L=B=4m). Three different shallow foundations were subjected to the real acceleration time history. The width of the footing ranged from L=2m, L=4m to L=8m while the dead load and soil properties were kept constant. It is important to make a connection between all the terms used in this analysis. Thus, the small foundation can be regarded as an under-designed one or heavily loaded whilst the largest footing corresponds to a rather conventionally design, representing the lightly loaded foundation. The results can be seen in the following figures with emphasis on the moment-rotation ($M-\theta$) and settlement-rotation ($w-\theta$), but also stresses beneath the structure or acceleration response at deck (top).
+One other important feature relates to the aspect ratio, because the response considerably depends on its geometry and, generally, bigger foundations experience larger bending moments; however, such resistance is counterbalanced by the substantial inertial forces induced by the earthquake.  This other important feature represents the ratio of the height of the structure (here h=5m) and the width of the foundation (L=B=4m). Three different shallow foundations were subjected to the real acceleration time history. The width of the footing ranged from L=2m, L=4m to L=8m while the dead load and soil properties were kept constant. It is important to make a connection between all the terms used in this analysis. Thus, the small foundation can be regarded as an under-designed one or heavily loaded whilst the largest footing corresponds to a rather conventionally design, representing the lightly loaded foundation. The results can be seen in the following figures with emphasis on the moment-rotation ($M-\theta$) and settlement-rotation (\gls{w}-$\theta$), but also stresses beneath the structure or acceleration response at deck (top).
 
 
  \begin{figure}[!h]
@@ -429,7 +429,7 @@ After all, one may deduce that the rocking isolation mechanism encountered by th
 
 
 \subsection{Effects of surcharge}
-In addition, the influence of structures in the proximity of the soil-foundation system was accounted for. A surcharge ranging from $q=10kN/m$ to $q=30kN/m$ was added at a distance of 1 meter from the footing with a total span of L=5m. It represents a lighter building, as the one seen in Figure \ref{comp}. No major effect on the inelastic response was observed other than increased vertical stress associated with settlements underneath the surcharge area (which was expected either way). Figure \ref{maxax} show the little variance in response of both foundation (moment-rotation plot on the right) and soil (settlement-rotation plot on the left). The last two seconds were selected to represent the moment-rotation response because the difference it was easier to observe on a smaller portion of time.
+In addition, the influence of structures in the proximity of the soil-foundation system was accounted for. A surcharge ranging from \gls{sur}$=10kN/m$ to $q=30kN/m$ was added at a distance of 1 meter from the footing with a total span of L=5m. It represents a lighter building, as the one seen in Figure \ref{comp}. No major effect on the inelastic response was observed other than increased vertical stress associated with settlements underneath the surcharge area (which was expected either way). Figure \ref{maxax} show the little variance in response of both foundation (moment-rotation plot on the right) and soil (settlement-rotation plot on the left). The last two seconds were selected to represent the moment-rotation response because the difference it was easier to observe on a smaller portion of time.
 
 	\begin{figure}[!h]
 		\centering
@@ -483,7 +483,7 @@ Figures \ref{10m} and \ref{10m2} show the inelastic soil-foundation-structure re
 
 A sudden change in the moment-rotation curve shape is observed for the smaller layer. The trend in settlement-rotation response pertains while the wave propagation is, again, simulated in the appropriate manner. Both the cases show a smoother curve and less variance in the non-linear response within the foundation. Additionally, they show also a fair match with the scientific literature findings.
 
-One example collected from the literature refers to the work of Anastasopoulos et al, 2011 \cite{anastasopoulos2011simplified} corresponding to both numerical analyses and centrifuge tests on a clay layer. The soil is stronger compared to the current situation ($S_u=100kPa$, $PI=50$ and $p_{ult}=546kPa$)  and the numerical test is a displacement-controlled quasi-static analysis. 
+One example collected from the literature refers to the work of Anastasopoulos et al, 2011 \cite{anastasopoulos2011simplified} corresponding to both numerical analyses and centrifuge tests on a clay layer. The soil is stronger compared to the current situation ($S_u=100kPa$, \gls{pi}$=50$ and $p_{ult}=546kPa$)  and the numerical test is a displacement-controlled quasi-static analysis. 
 
 \begin{figure}[!h]
 	\centering
@@ -526,19 +526,19 @@ One remark relates to the energy dissipated along the soil medium; the lesser th
 	f_s=\frac{1}{2 \pi} \sqrt{\frac{k}{m}}
 \end{equation}
 
-where, according to Timoshenko and Young, 1961 $k$ is the lateral stiffness of a cantilever beam with mass and m is the structural mass ($m=100 Mg=1000 kN$).
+where, according to Timoshenko and Young, 1961 \gls{stif} is the lateral stiffness of a cantilever beam with mass and m is the structural mass ($m=100 Mg=1000 kN$).
 
 \begin{equation}
 	k=3\frac{EI}{L^3}
 \end{equation}
 
-with E = Young's modulus of reinforced concrete ($24x10^6 MPa$), I = moment of inertia (of a hollow cylindrical cross section for this case) and L = length of the pier ($L=15m$). Furthermore, the moment of inertia of the chimney along the axis of symmetry is a function of the inner and outer diameter ($d_i=1.5m$ and $d_e=1.1m$) :
+with E = Young's modulus of reinforced concrete ($24x10^6 MPa$), \gls{i} = moment of inertia (of a hollow cylindrical cross section for this case) and L = length of the pier ($L=15m$). Furthermore, the moment of inertia of the chimney along the axis of symmetry is a function of the inner and outer diameter ($d_i=1.5m$ and $d_e=1.1m$) :
  
 \begin{equation}
 	I_x=\pi \frac{{d_e}^4-{d_i}^4}{64}
 \end{equation}
 
-Finally, the fundamental period of the superstructure becomes:
+Finally, the fundamental period of the superstructure \gls{tn} becomes:
 
 \begin{equation}
 	T=\frac{1}{f_s} \longrightarrow T=2 \pi \sqrt{\frac{mL^3}{3EI}}
@@ -588,23 +588,39 @@ For now, the new design philosophy appears to be relatively suitable for the sit
 \chapter{Discussion and conclusions}
 The soil-foundation-structure interaction was investigated considering a soft silty clay layer together with induced-type of earthquake recorded in the Northern area of the Netherlands. A new design philosophy was adopted, mainly focusing on permitting foundation detachment and soil inelastic behaviour, while keeping the foundation elastic. Basically, this new approach proposed opposite assumptions compared to the conventional capacity design.
 
-The need of such research arises from the uncertainties an induced earthquake presents. Moreover, the ground motion conditions found in Groningen area are relatively new, the scarcity of data makes it almost impossible to have much confidence in any seismic design approaches. Therefore, any technique should be evaluated. The new design philosophy seems appealing as it suggests to take advantage of the soil compliance in order to reduce the superstructure ductility demand and to improve the structural performance in dynamic circumstances. Additionally, the research community performed all analyses on soft soils (sand or clay) which correspond to the Dutch soils as well.
+The need of such research arises from the uncertainties an induced earthquake presents. Moreover, the ground motion conditions found in Groningen area are relatively new, the scarcity of recorded data makes it almost impossible to have much confidence in any seismic design method. Therefore, any technique should be evaluated. The new design philosophy seems appealing as it suggests to take advantage of the soil compliance in order to reduce the superstructure ductility demand and to improve the structural performance in dynamic circumstances. Additionally, the research community performed all analyses on soft soils (sand or clay) which correspond to the Dutch soils as well.
 
-The soil characteristics play an utmost important role in such dynamic investigations since the main emphasis is on the non-linear soil response. Chapter 2 presents the calibration of the material model able to capture features such as non-linear kinematic hardening. The purpose is to accurately compute the evolution of stress throughout the soil elements when subjected to cyclic motions. A strain-controlled simple shear test was performed on an one element mesh. The material model corresponds to Von Mises failure criterion with associated flow and the outcome was expressed as a series of normalized curves. The calibration was performed by means of comparison between the obtained results and the set of normalized curves proposed by Darendeli, 2001 \cite{darendeli2001development}.
+The soil characteristics play an utmost important role in such dynamic investigations since the main emphasis is on the non-linear soil response. Chapter 2 presents the calibration of the material model able to capture features such as non-linear kinematic hardening. The purpose is to accurately compute the evolution of stress throughout the soil elements when subjected to cyclic motions. A strain-controlled simple shear test was performed on an one element mesh. The material model corresponded to Von Mises failure criterion with associated flow and the outcome was elaborated in terms of the stiffness parameters. The calibration was performed by means of comparison between the obtained results and the set of normalized curves proposed by Darendeli, 2001 \cite{darendeli2001development}.
 
 Once a reliable material model was obtained, the study focused on the site response of the one-dimensional soil layer described in Chapter 3. It offers information of the inelastic soil behaviour when subjected to dynamic input. Moreover, it indicates the response at surface level as a function of both soil characteristics and base acceleration. As the seismic shear waves travel upwards, the soil features might amplify or de-amplify the signal. Such examination might offer estimates regarding the frequency content of the soil medium and superstructures can be designed accordingly. It was observed that for low frequencies, the signal is amplified at surface level, whilst for high frequencies the opposite trend occurs. Two various methods were employed for verification purposes, both showing similar nonlinear behaviour.
 
- Finally, the soil-structure interaction was researched with emphasis on the inelastic soil response and presented in Chapter 5. Uplifting and sliding were implemented via a complex contact algorithm, while the superstructure was introduced with a single degree of freedom format. Various parameters were systematically modified to better understand which has a greater influence on the overall response. It yielded that the vertical safety factor plays a decisive role as it differentiates two essential behaviours. Besides, it stresses on the valuable features of the new design philosophy. Firstly, that the mobilization of bearing capacity failure mechanism actually improves the foundation performance and secondly, that allowing uplifting to occur does not necessarily mean toppling or collapse. Indeed, the large permanent settlements might become an issue, however, it is the engineer's responsibility to decide whether such level of deformation is disastrous or not. 
+ Finally, the soil-structure interaction was researched with emphasis on the inelastic soil response and presented in Chapter 5. Uplifting and sliding were implemented via a complex contact algorithm, while the superstructure was represented with a single degree of freedom format. Various parameters were systematically modified to better understand which has a greater influence on the overall response. It yielded that the vertical safety factor plays a decisive role as it differentiates two essential behaviours. Besides, it stresses on the valuable features of the new design philosophy. Firstly, that the mobilization of bearing capacity failure mechanism actually improves the foundation performance. Secondly, that allowing uplifting to occur does not necessarily lead to structural toppling or collapse, but rather makes the foundation to act as a safety valve. Indeed, the large permanent settlements might become an issue; however, it is the engineer's responsibility to decide whether such level of deformation is disastrous or not. 
  
- Furthermore, the frequency characteristics of both soil medium and superstructure have a tremendous influence on the soil-structure interaction. The main goal in seismic design is to avoid the two bodies to mechanically resonate when the earthquake strikes. If the period of the shock wave and the natural period of the building coincide, then the building will "resonate" and its vibration will increase or "amplify" several times. It was demonstrated that the position of the bedrock, or the depth of the layer in discussion, has a great impact on the inelastic soil response.
+ Furthermore, the frequency characteristics of both soil medium and superstructure have a tremendous influence on the soil-structure interaction. The main goal in seismic design is to avoid the two bodies to mechanically resonate when the earthquake strikes. If the period of the shock wave and the natural period of the building coincide, then the building will "resonate" and its vibration will increase or "amplify" several times. It was demonstrated that the position of the bedrock, or the depth of the layer in discussion, has a great impact on the inelastic soil response as it changes the natural frequency. Nevertheless, the soil conditions in Groningen do not incorporate bedrock at any relevant level, thus a considerable part of the seismic energy is dissipated throughout the ground. For this particular case, the natural frequency of the superstructure differed from the earthquake when a deeper soil layer was considered. Results showed that the ground motion had major impact on the soil-structure interaction when a shallow layer was examined. 
  
  Nonetheles, there is a correlation between all the parameters accounted for as all are interconnected. The safety factor was formulated in two different manners, either as a function of the dead load or of the slenderness ratio. Regardless of the approach, the footings responded similarly highlighting the benefits of an under-designed foundation. Moreover, the overturning moment capacity is also strongly dependent on the safety factor, the amount of energy dissipated and rotation level. 
  
+ 
  Simultaneously, the acceleration response at the top of the building is linked to the natural frequency of both soil and structure but also to the level of non-linearity the foundation experiences. Once more, the under-designed footing seemed to dissipate the seismic energy quite efficiently together with the conventionally designed one. 
  
- It can be hereby stated that the new design philosophy should be reckoned as a somewhat suitable technique for seismic calculations. There are plenty  
+ Overall, the foundation designed according to the new approach rules behaved comparable with the scientific literature findings. Indeed, it showed that favouring the plastic hinging to develop below the ground surface (and not at the base of the pier) would reduce the transmitted motion towards the superstructure. The under-designed footing showed similar performance compared to the conventionally designed one, thus perhaps it is worthwhile to take advantage of the soil inelastic behaviour.
  
+ It can be hereby stated that the new design philosophy should be reckoned as a somewhat suitable technique for seismic calculations. Certainly, the current paper represents merely a first step and additional examination should be performed. However, such unconventional approach should not be dismissed. 
+ 
+ \newpage
 \section{Limitations and recommendations}
-The current paper adopted several hypotheses that simplified the problem
-\newpage
+The current paper adopted several hypotheses that simplified the problem. Even though this is a preliminary study of the non-linear soil behaviour, it may offer a framework for future research. The analysis focused on a single type of structure due to its relatively simple geometry. Still, various other buildings deserve more attention, especially the typical Dutch houses that are found in large numbers in the Groningen area. More complicated structures, such as schools or churches that have a great historical values worth all the attention. 
+
+Besides, the study focused on the behaviour of shallow foundations, a structural solution found in numerous cases in the Netherlands. Another  method widely spread across the country is represented by the piled foundations that relies on frictional characteristic of  the sandy layers. One recommendation is to examine such structural solution since it displays different energy dissipation process as well as failure mechanisms.
+
+As it was mentioned before, the seismic conditions in Groningen are relatively new and rather exclusive. Apart from the particular character of the induced earthquake, the insufficient recorded data prevents the elaboration of reliable ground motion prediction equations. It was demonstrated in Chapter 3 that the soil response at surface level was greatly influenced by the PGA value of the earthquake; thus, more data will enable the engineering community to establish a coherent seismic design approach. One other important aspect concerns the laboratory tests; these investigations are valuable as they offer detailed information regarding the non-linear soil response and the flexibility of research.
+
+Additionally, the soil properties for this particular case were empirically determined. Considering the non-linear nature of the problem, it was preferred to work with linear increasing parameters along the depth, instead of the realistic heterogeneous characteristic. Thus, it is recommended for future research to account for the variance in soil properties, to incorporate granular material which behaves completely different than the cohesive one. Moreover, the effect of pore-pressure build-up as well as the liquefaction potential are essential phenomena in seismic conditions and thus, merit all the attention.
+
+Furthermore, one of the model limitations relates to the material model used in the numerical analyses. It was mentioned previously that a Von Mises failure criterion with associative flow rule served as soil constitutive model. Due to simplification purposes and personal limitations regarding Abaqus software, the associative flow rule was not included in a rigorous manner. The calibration would have been more time consuming, thus it was opted to exclude it from calculations. Thus, for a better representation of the non-linear kinematic hardening of the soil component, it is recommended to include such feature.
+
+One other limitation refers to the numerical domain the analyses were performed in. The problem was formulated in 2D plane strain conditions which may exclude various physical \mbox{phenomena}. Hence, for future research it is suggested to carry-out analyses in three-dimensional space to better simulate the natural conditions. 
+
+Finally, it becomes crucial to investigate the problem experimentally and to validate the simulated structural response found in this study. Ultimately, observations of seismic behaviour of under-designed foundations are needed to confirm the predictions of numerical simulations.
+
 

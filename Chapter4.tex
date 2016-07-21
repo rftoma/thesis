@@ -11,6 +11,7 @@
 \usepackage[nottoc]{tocbibind}
 \usepackage{color}
 \usepackage{wrapfig}
+\usepackage[toc]{glossaries}
 \usepackage{listings}
 \lstset{language=[90]Fortran,
 	basicstyle=\ttfamily,
@@ -18,6 +19,24 @@
 	commentstyle=\color{green},
 	morecomment=[l]{!\ }% Comment only with space after !
 }
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\fancyhead[LE]{\thechapter}
+%\fancyfoot[L]{Raluca-Fulguta Toma}
+%\fancyfoot[RO, LE] {\thepage}
+\lhead{}
+\chead{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lfoot{Raluca-Fulguta Toma}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%$\theta$
+
+%\makeglossaries
+\makenoidxglossaries 
+\loadglsentries{glossary}
 
 \begin{document}
 	\begin{titlepage}
@@ -118,11 +137,11 @@
 %	\end{dedication}
 
 \tableofcontents
-
+\printnoidxglossaries
 \part{Soil-structure interaction investigation}
 \chapter{Introduction}
 \section{Current situation - an overview}
-In the past few decades, Northern area of Netherlands is facing ground tremors induced by the gas extraction, the greatest event being registered on 16th of August 2012, at Huizinge \cite{dost2013august}, with a depth of 10km and a magnitude of $M_w$=3.6. Even though the majority of these earthquakes are shallow and small, the larger events can eventually produce damage concerning the citizens and mining companies. The level of uncertainties rises and the phenomena starts to be problematic when combined with other detrimental factors. For instance, the foundation shape and design, the uncertainties related to the soil homogeneity, the nonlinear response or the need of updating the design codes accordingly. Currently, numerous organizations and companies investigate the phenomenon aiming to provide reliable design methods that best suit the condition. 
+In the past few decades, Northern area of Netherlands is facing ground tremors induced by the gas extraction, the greatest event being registered on 16th of August 2012, at Huizinge \cite{dost2013august}, with a depth of 10km and a magnitude of \gls{Mw}=3.6. Even though the majority of these earthquakes are shallow and small, the larger events can eventually produce damage concerning the citizens and mining companies. The level of uncertainties rises and the phenomena starts to be problematic when combined with other detrimental factors. For instance, the foundation shape and design, the uncertainties related to the soil homogeneity, the nonlinear response or the need of updating the design codes accordingly. Currently, numerous organizations and companies investigate the phenomenon aiming to provide reliable design methods that best suit the condition. 
 
 The first characteristic of the state of affairs is represented by the characteristic of the earthquake itself. Europe mainly encounters tectonic seism in south and south-eastern parts, while the the Groningen site condition reveals a triggered seismic activity - which is more difficult to assess source-wise. Induced seismicity relates to human activities that alter the stress-strain development within the crust and usually associates with low magnitudes. It follows that the relationship between “anthropogenic” stress disturbances and the resulting earthquake magnitude will always be somewhat unpredictable, insofar as it is partly associated with “background” event probabilities. Nevertheless, the factors that could influence the maximum size of induced earthquakes are of great interest. 
 
@@ -164,7 +183,7 @@ Conventional or capacity seismic design implies that highly inelastic response c
 	\label{strongCol}
 \end{figure}
 
-On the other hand, EC8 (Part 2, section 5.8) \cite{code2005eurocode} states that the foundation seismic design should avoid the mobilization of strength in the foundation at any costs: \textit{“...foundations shall not be used as sources of hysteretic energy dissipation, and therefore shall be designed to remain elastic under the design seismic action.”} Numerically, this means that the safety factor for static loads used in foundation design are large ($FS=2-3$). Structurally, it hints that no plastic hinges should develop within the underlying soil. And from geotechnical point of view, the foundation should not reach any state that might imply failure. 
+On the other hand, EC8 (Part 2, section 5.8) \cite{code2005eurocode} states that the foundation seismic design should avoid the mobilization of strength in the foundation at any costs: \textit{“...foundations shall not be used as sources of hysteretic energy dissipation, and therefore shall be designed to remain elastic under the design seismic action.”} Numerically, this means that the safety factor for static loads used in foundation design are large (\gls{safety}=2-3). Structurally, it hints that no plastic hinges should develop within the underlying soil. And from geotechnical point of view, the foundation should not reach any state that might imply failure. 
 
 To outline the main features of the conventional foundation design:
 \begin{enumerate}
@@ -239,7 +258,7 @@ In order to prepare the final analysis, several previous steps need to be taken:
 	\item Calibration of the material model to match the normalized curves proposed by Darendeli, 2011 \cite{darendeli2001development}.
 	\item Examination of one-dimensional site response analysis incorporating the calibrated material model. Validation of results through a comparison between two software: Abaqus and NERA.
 	\item Evaluation of inelastic soil responses at surface level when subjected to various values of PGA.
-	\item Investigation of the influence of the model boundary conditions on soil response.
+	\item Investigation of the influence of the vertical loading conditions, contact definition and frequency content on soil response.
 \end{enumerate}
 
 Finally, the main scope of the research is to verify whether the new design philosophy is suitable for the ground and seismic conditions specific to Groningen area. This will materialize in an investigation carried out on a soil layer supporting a simple elastic foundation and the main emphasis is on:
@@ -261,11 +280,11 @@ A first step towards the main goal is taken through the calibration of the mater
 
 Chapter 4 extends the previous analysis to a one dimensional soil column subjected to both uniform harmonic as well as real acceleration time history. A site response analysis is performed with emphasis on the inelastic soil outcome in frequency domain together with the site amplification factor. A comparison is performed between Abaqus software ouput and NERA (Non-Linear Earthquake Site Response Analysis) software - in order to validate the model which will assist this investigation further.  In addition, two acceleration time history records  are examined characterised by a higher PGA value and a lower, respectively. Thus, the results can sustain a comparison with the general response assigned for Groningen area expressed in soil amplification hence the validation relates to the context.
 
-In Chapter 5, a finite-element model describes the soil-structure interaction capturing the new design philosophy features (a) soil uplift and (b) mobilization of bearing capacity type of failure. One of the most important aspects of such analysis relates to the boundary conditions associated with wave propagation phenomena. Given the need of reducing the computational expense of the numerical investigation, solutions must offer a good balance between model dimensions and accurate outcome. Various boundary condition options were explored and their effect on the overall inelastic soil outcome. Moreover, the nonlinear ground response is highlighted through interaction curves produced under static conditions and compared to the existing literature. Considering the geometrical nonlinearity associated with the out-rival of the soil-footing interface tensile strength and thus with the uplifting, parametric studies focus on the influence of structural mass dividing the analysis between \textit{(a) lightly-loaded} and \textit{(b) heavily-loaded footings}. In addition, to accentuate the differences between the conventional and the new design philosophy together with the uplifting effect, two other distinctions in terms of soil-footing contact are formulated as (a) Fully Bonded Contact \textit{FBC} and (b) Tensionless Sliding Interface \textit{TSI}.
+In Chapter 5, a finite-element model describes the soil-structure interaction capturing the new design philosophy features (a) soil uplift and (b) mobilization of bearing capacity type of failure. Using a chimney building as prototype, the study focuses on the assessment of the parameters which remarkably influence the non-linear soil response. A series of parameters were methodically changed in order to observe the impact on the structural response. Considering the geometrical nonlinearity associated with the out-rival of the soil-footing interface tensile strength and thus with the uplifting, parametric studies focus on the influence of vertical loading dividing the analysis between \textit{(a) lightly-loaded} and \textit{(b) heavily-loaded footings}. In addition, to accentuate the differences between the conventional and the new design philosophy together with the uplifting effect, two other distinctions in terms of soil-footing contact are formulated as (a) Fully Bonded Contact \textit{FBC} and (b) Tensionless Sliding Interface \textit{TSI}. Moreover, the significance of the frequency content was investigated accounting for both uniform and asymmetric excitation pulse injected at different base levels. 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"outline"}
+	\includegraphics[width=0.9\linewidth]{"outline"}
 	\caption{Overview of thesis outline}
 	\label{outline}
 \end{figure}
@@ -278,9 +297,9 @@ The current chapter presents the particularities of the new approach together wi
 It becomes important to understand the effects, benefits and disadvantages of the new method before carrying any analysis. The priority is to examine the inelastic soil response consequences on overall structural assembly, to follow recent research outcome and means of obtaining it. Moreover, a comparison between the two methods help defining advantages, recognize limitations and improvements one method might bring against the other. Let us begin by acknowledging the starting points of the new design philosophy.
 
 \section{Newmark sliding block analogue}
-Newmark, 1965 \cite{veletsos1965deformation} proposed a simplified model to examine the dynamic behaviour of earth dams and embankments in terms of permanent deformations, both rotation and settlement. The subject of the study is the analogue of a rigid block positioned on an inclined surface; the focus is on the deformations caused when the inertia forces acting on the sliding mass exceed the frictional resistance of the failure surface. A key parameter is represented by the critical, or yield, acceleration $A_c$ which plays different roles depending on the application. On one example, it depicts the pseudo-static base acceleration $A_c$ generating inertia forces that enhance the \textbf{sliding failure} ($FS=1$) whereas on the other example, it describes the constant base acceleration $A_c$ leading to large over-turning moments, thus to a \textbf{bearing-capacity failure} ($FS=1$). The author showed that when the peak amplitude excitation A exceeds the critical acceleration of the system $A_c$, the underlying medium will only encounter permanent (inelastic) deformations; however, the displacement is not sufficient to provoke failure. A schematization of Newmark model is available in Figures \ref{newmark1} and \ref{newmark2}. Important to mention that these models work in pseudo-static conditions. 
+Newmark, 1965 \cite{veletsos1965deformation} proposed a simplified model to examine the dynamic behaviour of earth dams and embankments in terms of permanent deformations, both rotation and settlement. The subject of the study is the analogue of a rigid block positioned on an inclined surface; the focus is on the deformations caused when the inertia forces acting on the sliding mass exceed the frictional resistance of the failure surface. A key parameter is represented by the critical, or yield, acceleration \gls{ac} which plays different roles depending on the application. On one example, it depicts the pseudo-static base acceleration $A_c$ generating inertia forces that enhance the \textbf{sliding failure} ($FS=1$) whereas on the other example, it describes the constant base acceleration $A_c$ leading to large over-turning moments, thus to a \textbf{bearing-capacity failure} ($FS=1$). The author showed that when the peak amplitude excitation A exceeds the critical acceleration of the system $A_c$, the underlying medium will only encounter permanent (inelastic) deformations; however, the displacement is not sufficient to provoke failure. A schematization of Newmark model is available in Figures \ref{newmark1} and \ref{newmark2}. Important to mention that these models work in pseudo-static conditions. 
 
-The main lesson learned from Newmark's application is that using an engineering safety factor $F_E$ less than 1 does not necessarily act detrimental on the structure, but it rather leads to a fair performance.
+The main lesson learned from Newmark's application is that using an engineering safety factor \gls{FE} less than 1 does not necessarily act detrimental on the structure, but it rather leads to a fair performance.
  
  \begin{figure}[!h]
  	\centering
@@ -302,7 +321,7 @@ Firstly, the author investigates the rocking motion of a rigid block highlightin
  \begin{equation}
  F_E= \frac{A_c}{A} \longrightarrow F_E=1/4 \longrightarrow F_E<1
  \end{equation}
- Moreover, the effect of the wavelet frequency gains attention as three various frequencies are introduced ranging from 0.5Hz to 4Hz (representative for the typical ground accelerograms). Results show that the lower frequency produces the maximum angle of rotation $\theta$ with a value close to the "overturning" (or critical) angle $\theta_c$:
+ Moreover, the effect of the wavelet frequency gains attention as three various frequencies are introduced ranging from 0.5Hz to 4Hz (representative for the typical ground accelerograms). Results show that the lower frequency produces the maximum angle of rotation \gls{theta} with a value close to the "overturning" (or critical) angle $\theta_c$:
  \begin{equation}
  	\theta_c=arctan(b/h)
  \end{equation}
@@ -380,15 +399,15 @@ Early studies (Meek, 1975 \cite{meek1975effects}, Chopra \& Yim,1985,  \cite{cho
 \begin{equation}
 	M_{ult}= \frac{N B}{2}
 \end{equation}
- where $N$ is the permanent axial force on the footing, $B$ is the width of the foundation. The load is assumed to be applied with an eccentricity equal to the half-span of the footing (B/2). 
+ where \gls{n} is the permanent axial force on the footing, \gls{b} is the width of the foundation. The load is assumed to be applied with an eccentricity equal to the half-span of the footing (B/2). 
  
  Further, the maximum overturning moment induced by inertial forces is:
  \begin{equation}
  	M_{max}= N \frac{a}{g}\frac{H}{2}
  \end{equation}
-where $a$ is the PGA value, $g$ is the gravitational acceleration ($g=9.81m/s^2$), $H$ is the height of the superstructure.
+where $a$ is the \gls{pga} value, $g$ is the gravitational acceleration ($g=9.81m/s^2$), \gls{h} is the height of the superstructure.
 
-Now, the criterion for uplifting is expressed as a function of these two moments; particularly, if the maximum overturning moment goes beyond the capacity ($M_{max}>M_{ult}$), then toppling of the structure occurs. This statement is true for static conditions while in dynamic conditions the uplifting acts beneficial. This is because the foundation can withstand higher values of bending moments compared to the ultimate capacity, $M_{ult}$. The key in this rocking behaviour is the relatively short time period in which the stresses surpass the limiting values. The ground acceleration displays a rapid change in trend which makes the foundation block to decelerate, stop and rock in the opposite direction. Researchers (Gazetas, 2013 \cite{gazetas2013can}) showed the correlation between the natural period of the foundation footing and rocking potential: high frequency seismic motion leads to a somehow "safer" rocking response preventing collapse or toppling of the superstructure as section 2.2 also justifies.
+Now, the criterion for uplifting is expressed as a function of these two moments; particularly, if the maximum overturning moment goes beyond the capacity (\gls{mmax}>\gls{mult}), then toppling of the structure occurs. This statement is true for static conditions while in dynamic conditions the uplifting acts beneficial. This is because the foundation can withstand higher values of bending moments compared to the ultimate capacity, $M_{ult}$. The key in this rocking behaviour is the relatively short time period in which the stresses surpass the limiting values. The ground acceleration displays a rapid change in trend which makes the foundation block to decelerate, stop and rock in the opposite direction. Researchers (Gazetas, 2013 \cite{gazetas2013can}) showed the correlation between the natural period of the foundation footing and rocking potential: high frequency seismic motion leads to a somehow "safer" rocking response preventing collapse or toppling of the superstructure as section 2.2 also justifies.
 
 Scientific literature (Gazetas et al, 2013 \cite{gazetas2013nonlinear}, Apostolou, 2011 \cite{apostolou2011soil}, Faccioli et al, 2001 \cite{faccioli2001investigation}, Anastasopoulos et al \cite{anastasopoulos2010soil} etc.) confirms that the nature of the seismic excitations along with the fundamental period of the structure dictate the response of the soil-foundation system via a more complicated material model that allows for soil yielding. 
 
@@ -441,9 +460,9 @@ Appendix \ref{App:AppendixA} shows a sample of CPT taken in the area of interest
 \subsection{Constitutive model}
 \paragraph{General} A first step in deciding the implementation of the material model is understanding the application to be investigated - what phenomena happens, what are the effects, what mitigations does it require. Having in mind the dynamic nature of the problem, the material model should enclose features that are able to describe mechanically the non-linear phenomena. 
 
-As the former section explained, the near-field sub-domain is governed by both the inelastic soil response caused by seismic waves propagation and stress concentrations developed underneath the footing. The situation calls for an advanced constitutive model able to accurately integrate the hysteretic effects, the isotropic and kinematic hardening rules.
+As the former section explained, the near-field sub-domain is governed by both the inelastic soil response caused by seismic waves propagation and stress concentrations developed underneath the footing. The situation calls 5for an advanced constitutive model able to accurately integrate the hysteretic effects, the isotropic and kinematic hardening rules.
 
-Lemaitre and Chaboche, 1994 \cite{lemaitre1994mechanics} developed such material model discussing the behaviour of both sand and undrained clay soils. Nowadays, research trend (Gazetas et al. \cite{gazetas2004nonlinear}, \cite{gazetas2013nonlinear}, \cite{anastasopoulos2010soil}) comprises the nonlinear kinematic hardening model characterized by a von Mises failure criterion along with an associated flow rule. The description of the model is rather accessible as it requires only Young's modulus $E$, soil yield stress $\sigma_y$ and strength $\sigma$. The research group performs multiple analyses using the software ABAQUS; the FEM program incorporates the non-linear kinematic hardening rule in the material section and it yields satisfying results. Moreover, they suggest a simplified constitutive model designated for studying the cyclic response of shallow foundation (Anastasopolous, 2011 \cite{anastasopoulos2011simplified}); the validation includes experimental work such as large-scale tests on a square footing resting on a loose sand and centrifuge tests of shallow footings on clay and sand. Results highlight that von Mises failure criterion is a trustworthy material model for clay in undrained conditions; also, the numerical and experimental models are were capable of accurately process the lateral cyclic performance and the lateral capacity of the footing. The vertical loading led to similar effects on the footing, thus it can be concluded that the current constitutive model represents a fair choice for this particular problem. One of the material model limitations stand in its incapacity of acquiring pore pressure build-up nor dissipation effects. Yet, it proves safe to assume an undrained behaviour given the short duration of seismic loading applied on the system. Figure shows a sample of results obtained by Anastasopoulos (\cite{anastasopoulos2011simplified}).
+Lemaitre and Chaboche, 1994 \cite{lemaitre1994mechanics} developed such material model discussing the behaviour of both sand and undrained clay soils. Nowadays, research trend (Gazetas et al. \cite{gazetas2004nonlinear}, \cite{gazetas2013nonlinear}, \cite{anastasopoulos2010soil}) comprises the nonlinear kinematic hardening model characterized by a von Mises failure criterion along with an associated flow rule. The description of the model is rather accessible as it requires only Young's modulus \gls{ee}, soil yield stress \gls{stres} and strength \gls{stress}. The research group performs multiple analyses using the software ABAQUS; the FEM program incorporates the non-linear kinematic hardening rule in the material section and it yields satisfying results. Moreover, they suggest a simplified constitutive model designated for studying the cyclic response of shallow foundation (Anastasopolous, 2011 \cite{anastasopoulos2011simplified}); the validation includes experimental work such as large-scale tests on a square footing resting on a loose sand and centrifuge tests of shallow footings on clay and sand. Results highlight that von Mises failure criterion is a trustworthy material model for clay in undrained conditions; also, the numerical and experimental models are were capable of accurately process the lateral cyclic performance and the lateral capacity of the footing. The vertical loading led to similar effects on the footing, thus it can be concluded that the current constitutive model represents a fair choice for this particular problem. One of the material model limitations stand in its incapacity of acquiring pore pressure build-up nor dissipation effects. Yet, it proves safe to assume an undrained behaviour given the short duration of seismic loading applied on the system. Figure shows a sample of results obtained by Anastasopoulos (\cite{anastasopoulos2011simplified}).
 
 
 \paragraph{Plastic models} Generally, materials experience irreversible deformations when elastic limit is reached but loading persists. Theory of the elasticity explains the occurrence of slip surfaces caused by instabilities via the time-independent irreversible deformations. Moreover, it determines the permanent deformations that lead to collapse preventing them while investigating the stability of the system. 
@@ -482,7 +501,7 @@ Considering all above, von Mises failure criterion can be briefly described usin
 K=\frac{C}{\sqrt{3}S_u-\sigma_0}
 \end{equation}
 
-where C is the initial kinematic hardening parameter, K is the parameter characterizing the rate of reduction of the kinematic hardening with increasing plastic deformation, $\sigma_y$ is the maximum yield stress, $\sigma_0$ represents the yield stress at zero plastic strain and $S_u$ is the undrained shear strength. 
+where C is the initial kinematic hardening parameter, K is the parameter characterizing the rate of reduction of the kinematic hardening with increasing plastic deformation, $\sigma_y$ is the maximum yield stress, $\sigma_0$ represents the yield stress at zero plastic strain and \gls{su} is the undrained shear strength. 
 
 A more detailed description of the constitutive model can be found in Appendix \ref{App:AppendixB} in terms of stress state, failure criterion development and mathematical formulas.
 
@@ -493,7 +512,7 @@ Researchers (Anastasopoulos, \cite{anastasopoulos2014simplified}, Ntritsos et al
 
 All the FE analyses performed to research this approach were formulated using the software \textit{Abaqus} \cite{manualversion}. Both the soil and the foundation are modelled as eight-noded hexahedral brick-type element, the soil being considered a non-linear element while the latter elastic. Additionally, centrifuge tests and experiments are compared with the numerical outcome for validation purposes.
 
-Numerous simulations included a saturated clay type of material characterised by an undrained shear strength $S_u$ and a maximum shear modulus $G_{max}$. It proves appropriate to consider undrained soil behaviour due to the rapid loading that corresponds to the seismic excitation - in addition, it allows a total stress analysis which can be described using a von Mises failure criterion along with an associative flow rule. The inelastic soil response was described through an evolution law based on both nonlinear kinematic hardening and isotropic hardening components that account for the changes the yield surface experiences within the stress state.
+Numerous simulations included a saturated clay type of material characterised by an undrained shear strength $S_u$ and a maximum shear modulus \gls{gmax}. It proves appropriate to consider undrained soil behaviour due to the rapid loading that corresponds to the seismic excitation - in addition, it allows a total stress analysis which can be described using a von Mises failure criterion along with an associative flow rule. The inelastic soil response was described through an evolution law based on both nonlinear kinematic hardening and isotropic hardening components that account for the changes the yield surface experiences within the stress state.
 
 The two main components of the structural system were separated through an interface that permits sliding and uplifting - a special contact algorithm dictates the detachment in the specific areas where the angle of rotation exceeds the foundation characteristic critical rotation $\theta_c$. The boundaries, both lateral and vertical, depend on the loading type the structure experiences - static conditions do not impose special requirements regarding the position of the boundaries. However, dynamic conditions introduce the wave propagation effect that might distort the final results due to reflections. Two boundary options are proposed - the first one assumes the bounds at a considerable distance from the foundation such that the reflected waves do not influence the results. The second one places the bounds in a position consistent with the static conditions - the trick is to add "lateral infinite elements" that absorb the propagated waves and have similar effect with the first option. The location of the later borders accounts for the pressure-bulbs generated by the dissipation of vertical stresses induced by the moment loading on the foundation strips. Figures \ref{2d} and \ref{3d} show examples of FEM models incorporating all the features formerly described.
 
@@ -512,19 +531,19 @@ The two main components of the structural system were separated through an inter
 		\label{3d}
 	\end{minipage}
 \end{figure} 
-
+\gls{phi}
 \newpage
 \subsection{Conventional versus new design philosophy}
-The whole design research started with a comparison between the conventional and new design philosophy when subjected to various acceleration time histories. Figure \ref{conventional2} shows the results for a situation with moderate seismic input corresponding to Kalamata earthquake, 1986 whereas Figure \ref{conventional} shows the distinction between the two alternatives when considering a stronger earthquake (Kobe, 1995). All the assumptions aforementioned are valid for these analyses. The conventional design premises correspond to the ones described in section 1.2.1 whilst the later method characteristics are depicted in section 1.2.2. Moreover, the capacity design includes an overstrength factor of safety for seismic loading $\gamma_{Rd}=1.4$ dictating the position of the plastic hinge at the pier base. On the other hand, the under-designed foundation, corresponding to the new design, is assigned with an understrength factor of safety $1/\gamma_{Rd}=0.7 <1$. 
+The whole design research started with a comparison between the conventional and new design philosophy when subjected to various acceleration time histories. Figure \ref{conventional2} shows the results for a situation with moderate seismic input corresponding to Kalamata earthquake, 1986 whereas Figure \ref{conventional} shows the distinction between the two alternatives when considering a stronger earthquake (Kobe, 1995). All the assumptions aforementioned are valid for these analyses. The conventional design premises correspond to the ones described in section 1.2.1 whilst the later method characteristics are depicted in section 1.2.2. Moreover, the capacity design includes an overstrength factor of safety for seismic loading \gls{gamard}=1.4 dictating the position of the plastic hinge at the pier base. On the other hand, the under-designed foundation, corresponding to the new design, is assigned with an understrength factor of safety $1/\gamma_{Rd}=0.7 <1$. 
 
 
 \paragraph{Medium earthquake motion}
-Few remarks can be formulated based on the observed results. The first set of plots highlight the elastic response of the footing when conventional design is considered whereas the new design shows highly inelastic response. The non-linear response comes at the cost of large settlements under the foundation as the second plot shows; on the contrary, the elastic foundation and pier yielding prevent such consequences. Furthermore, the conventionally designed pier experiences \mbox{inelasticity}, however in tolerable limits while in the new design scheme, the pier remains mainly elastic thanks to soil yielding. Finally, the deck drift, or horizontal displacement at mass, is on one hand caused by the flexural pier distortion (here, $\Delta c$) while on the other hand is due to foundation rotation ($\Delta r$). 
+Few remarks can be formulated based on the observed results. The first set of plots highlight the elastic response of the footing when conventional design is considered whereas the new design shows highly inelastic response. The non-linear response comes at the cost of large settlements under the foundation as the second plot shows; on the contrary, the elastic foundation and pier yielding prevent such consequences. Furthermore, the conventionally designed pier experiences \mbox{inelasticity}, however in tolerable limits while in the new design scheme, the pier remains mainly elastic thanks to soil yielding. Finally, the deck drift, or horizontal displacement at mass, is on one hand caused by the flexural pier distortion (here, \gls{deltac}) while on the other hand is due to foundation rotation (\gls{deltar}). 
 
 \paragraph{Strong earthquake motion}
-The investigation is further extended to include a stronger earthquake motion which is exceeding the design limits (the Takatori accelerogram recorded at Kobe, 1995). This acceleration time history is relevant as it represents one of the most disastrous earthquakes of the recent times (PGA=0.7g, PGV=169cm/s); the simplified structural system corresponds to a section of Hanshin Expressway which partly collapsed during the earthquake. The results of the two alternatives can be visualized in Figure \ref{conventional}.
+The investigation is further extended to include a stronger earthquake motion which is exceeding the design limits (the Takatori accelerogram recorded at Kobe, 1995). This acceleration time history is relevant as it represents one of the most disastrous earthquakes of the recent times (PGA=0.7g, \gls{PGV}=169cm/s); the simplified structural system corresponds to a section of Hanshin Expressway which partly collapsed during the earthquake. The results of the two alternatives can be visualized in Figure \ref{conventional}.
 
-Similar conclusions can be drawn from this comparison; the deformed mesh plots make the position of the "plastic hinging" quite evident: the capacity designed system experiences large curvature at the base of the pier and little inelastic deformation at the soil level whereas the other alternative shows opposite effects. The accumulation of stresses beneath the foundation (the extended red areas) hints the bearing capacity type of failure expected from the under-designed footing. The curvature recorded at pier level clearly indicates collapse for the conventional case and elastic response for the other. These effects are linked with the deck drift $\Delta$: large horizontal displacement at the top of the pier is observed in contrast with limited deck drift for the second alternative. Additionally, the moment-rotation at foundation level corresponds to the soil response: on one hand, elastic foundation response as the pier failure limits the transmitted stresses towards the soil and, on the other hand, inelastic response associated with bearing capacity failure mechanism. As consequences, the conventional designed foundation experiences small settlements at soil level (approx. 7cm) when the other method reveals increased foundation settlements (24cm). As Anastasopoulos, 2010 \cite{anastasopoulos2010soil} acknowledged "\textit{...although such settlement is certainly not negligible, it can be considered as a small price to pay to avoid collapse under such a tremendous ground shaking}".
+Similar conclusions can be drawn from this comparison; the deformed mesh plots make the position of the "plastic hinging" quite evident: the capacity designed system experiences large curvature at the base of the pier and little inelastic deformation at the soil level whereas the other alternative shows opposite effects. The accumulation of stresses beneath the foundation (the extended red areas) hints the bearing capacity type of failure expected from the under-designed footing. The curvature recorded at pier level clearly indicates collapse for the conventional case and elastic response for the other. These effects are linked with the deck drift \gls{delta}: large horizontal displacement at the top of the pier is observed in contrast with limited deck drift for the second alternative. Additionally, the moment-rotation at foundation level corresponds to the soil response: on one hand, elastic foundation response as the pier failure limits the transmitted stresses towards the soil and, on the other hand, inelastic response associated with bearing capacity failure mechanism. As consequences, the conventional designed foundation experiences small settlements at soil level (approx. 7cm) when the other method reveals increased foundation settlements (24cm). As Anastasopoulos, 2010 \cite{anastasopoulos2010soil} acknowledged "\textit{...although such settlement is certainly not negligible, it can be considered as a small price to pay to avoid collapse under such a tremendous ground shaking}".
 
 \begin{figure}[!h]
 	\centering
@@ -599,7 +618,7 @@ Figures \ref{largeFS}, \ref{pushover}, \ref{set} and \ref{set2} show a collectio
 
 In the same train of ideas, the rotational capacity expressed in terms of ultimate moment resistance of the footing $M_{ult}$ relates to both the axial force $N$, and the shear force $Q$ acting on the foundation. Recent research emphasize on elaborating ultimate limit states defined by combinations of $N, Q$ and $M$ loads - the \mbox{graphical} representation is known as \textit{failure envelope}.
 	 
-Another of the new concept goals stands in defining this failure locus - based on load combinations and their position regarding this envelope, one can state whether the foundation acts stable or not. Many experiments based on model-scale shallow footing support this theory along with theoretical and numerical failure equations (Murff, 1994, Bransby and Randolf, 1998 \cite{bransby1998combined}, Butterfield and Gottardi, 1994 \cite{gottardi1999plastic}). Experiments (Gajan et al, 2005 \cite{gajan2005centrifuge}) highlight the influence of two \mbox{parameters} governing the load displacement and energy dissipation aspects of the soil-foundation interface during cyclic loading: static factor of safety regarding vertical force exclusively (FSv) and moment-to-shear ratio - together describing the load path. Henceforth, a challenge in assessing seismic loading impact represents the correct evaluation of loading combination (shear force $Q$ and overturning moment $M$) that will lead to failure for a given vertical force, $N$, acting on the superstructure.
+Another of the new concept goals stands in defining this failure locus - based on load combinations and their position regarding this envelope, one can state whether the foundation acts stable or not. Many experiments based on model-scale shallow footing support this theory along with theoretical and numerical failure equations (Murff, 1994, Bransby and Randolf, 1998 \cite{bransby1998combined}, Butterfield and Gottardi, 1994 \cite{gottardi1999plastic}). Experiments (Gajan et al, 2005 \cite{gajan2005centrifuge}) highlight the influence of two \mbox{parameters} governing the load displacement and energy dissipation aspects of the soil-foundation interface during cyclic loading: static factor of safety regarding vertical force exclusively (FSv) and moment-to-shear ratio - together describing the load path. Henceforth, a challenge in assessing seismic loading impact represents the correct evaluation of loading combination (shear force \gls{q} and overturning moment $M$) that will lead to failure for a given vertical force, $N$, acting on the superstructure.
 
  Among many others, Nitros et al, 2015 \cite{ntritsos2015static} describe such failure envelopes highlighting the importance of the foundation aspect ratio and vertical safety factor. One feature relates to the types of interface available for the analysis and two conditions are taken into consideration as it follows:
 \begin{enumerate}
@@ -664,7 +683,7 @@ Generally, the software works with a set of input options with the ability of ex
 	\item Analysis - creates a job comprising all the modules aforementioned and sends it to the Abaqus execution procedure 
 \end{enumerate} 
 
-%expected results?
+\newpage
 \section{Conclusions}
 A number of relevant examples from scientific literature were selected and presented within this chapter in order to provide a theoretical background. The current paper adapts the new design philosophy to the special soil conditions found in Groningen together with the recorded earthquake ground shaking observed on August, 2012 in Huizinge. It aims to investigate similar aspects as the ones presented previously - if the response trends correspond (even qualitatively), then the new design philosophy can be regarded as a relatively trustworthy technique; of course, more insight must be gained to confidently declare that such method should be adopted. Otherwise, different alternatives must be developed to overcome the limitations the new design encounters.
 
@@ -715,13 +734,13 @@ The concept of stiffness degradation and material damping is presented in this f
 \subsection{${G/G_{max}}$ curves}
 Nonlinear response can be achieved through several types of tests, monotonic and cyclic, static and dynamic, each displaying stiffness modulus degradation proportionally influenced by strain development. Generally, the shear stiffness of the soil is represented by the shear modulus, G - physically, it represents the slope of the shear stress and strain when plotting them one against the other. On these specific plots it can be noticed that when a soil is subjected to symmetric cyclic loading, hysteresis loops develop depending on the strain level. The loops support the secant shear modulus calculation which can be considered as the average shear stiffness of the soil. Features such as inclination or breadth of the hysteresis loops strongly depend on both soil stiffness and damping. Given that the cyclic behaviour of the soil is nonlinear as well as hysteretic, it becomes clear that stiffness together with the damping are strain dependent. Therefore, a series of cyclic tests should be performed with varying strain levels such that the collection of results, in terms of stiffness, lead to the normalized modulus reduction curves.
 
-One key parameter is the shear modulus at small strains, also known as \textit{small-strain shear modulus}, $G_{max}$ because it plays a significant role in the elaboration of the normalized modulus reduction curves. As the name itself describes it, $G_{max}$ serves the normalization of the cyclic tests stiffness outcome as being the maximum value the material can experience. 
+One key parameter is the shear modulus at small strains, also known as \textit{small-strain shear modulus}, \gls{gmax} because it plays a significant role in the elaboration of the normalized modulus reduction curves. As the name itself describes it, $G_{max}$ serves the normalization of the cyclic tests stiffness outcome as being the maximum value the material can experience. 
 
 One other key parameter, damping ratio represents a material property related to the friction between soil grains, strain rate effects and inelastic stress-strain response. Each hysteresis loop describes the dissipation of energy during a loading cycle; the post-processing of data leads to the damping ratio as it depends both on the energy dissipated during a complete loading cycle at a given strain amplitude and maximum retained strain energy. Moreover, the decrease in shear strain translates into decrease in dissipated energy, thus the area of the loop will suffer a reduction as well. 
 
 Similarly, the damping ratio curves are defined collecting different nonlinear soil responses based on increasing strain amplitude. However, the trend is opposite, as in the nonlinearity of the soil results in an amplification of dissipated energy, thus in the damping ratio,  with increasing strain magnitude. 
 
-In small-strains domain, the soil behaves elastically leading to a constant shear modulus, equal to $G_{max}$, as well as a constant damping ratio, equal to $D_{min}$.
+In small-strains domain, the soil behaves elastically leading to a constant shear modulus, equal to $G_{max}$, as well as a constant damping ratio, equal to \gls{dmin}.
 
 Figure \ref{normalized} shows a typical set of curves which can be divided in three main areas with different behaviour properties defined by the following values:
 \begin{enumerate}
@@ -769,7 +788,7 @@ Hence, the four-parameter soil model Darendeli proposes can be summarized using 
 \begin{equation}
 	\frac{G}{G_{max}}=\frac{1}{1+{\frac{\gamma}{\gamma_{ref}}}^a}
 \end{equation}
-The reference strain $\gamma_{ref}$ describes the strain level at which the shear modulus $G$ decreases to half of the maximum value $G_{max}$. Studies show that increasing confining pressures and soil plasticity lead to higher strain levels in the normalized modulus reduction curves.
+The reference strain\gls{gamref} describes the strain level at which the shear modulus $G$ decreases to half of the maximum value $G_{max}$. Studies show that increasing confining pressures and soil plasticity lead to higher strain levels in the normalized modulus reduction curves.
 The equation of the material damping curve is then expressed as a function of two main parameters ($b$ and $D_{min}$):
 \begin{equation}
 	D=b(\frac{G}{G_{max}})^{0.1}*D_{masing}+D_{min}
@@ -829,12 +848,12 @@ Direct implicit algorithm shall be stipulated further on in the following chapte
 \section{Material description}
 For the current situation, Abaqus requires the definition of material properties, such as:
 \begin{enumerate}
-	\item Density - the unit weight density of the model; it is assigned with one value $\rho = 1800 kg/m^3$;
-	\item Elastic - for isotropic conditions, Young's modulus $E$ and Poisson's ratio $\nu$ are sufficient for defining the elastic domain;
-	\item Plastic - non-linear kinematic hardening formulated with a von Mises failure criterion with associative flow; the initial stiffness modulus $C$, yield stress at zero plastic strain $\sigma_0$ and the hardening parameter $K$, all being defined in Appendix \ref{App:AppendixB}.
+	\item Density - the unit weight density of the model; it is assigned with one value \gls{rho} $= 1800 kg/m^3$;
+	\item Elastic - for isotropic conditions, Young's modulus $E$ and Poisson's ratio \gls{nu} are sufficient for defining the elastic domain;
+	\item Plastic - non-linear kinematic hardening formulated with a von Mises failure criterion with associative flow; the initial stiffness modulus \gls{c}, yield stress at zero plastic strain $\sigma_0$ and the hardening parameter $K$, all being defined in Appendix \ref{App:AppendixB}.
 \end{enumerate}
 
-	Eventually, in a more advanced stage of the analysis, damping properties are added along with a customized subroutine which introduces the ultimate shear strength along the depth as a function of the elastic stiffness and the effective stresses ($E$ and $\sigma^`_0$).
+	Eventually, in a more advanced stage of the analysis, damping properties are added along with a customized subroutine which introduces the ultimate shear strength along the depth as a function of the elastic stiffness and the effective stresses ($E$ and \gls{siigma}).
 
 \subsection{Input parameters}
 As mentioned before, the analysis considers several parameters that are characteristic to the soil in Groningen area – a silty clay, weak to medium weak. In addition, a homogeneous clay layer of 20m is considered – for the ease of the calculation, the soil is converted in a one-layered soil column such that the strength and stiffness parameter distribution  along the depth is linear. This chapter presents parameters derived from both measurements and empirical equations, the analysis of one element subjected to a strain-controlled shear test and the results in terms of stiffness degradation and damping. The more detailed equations and methods of obtaining the parameters can be found in Appendix \ref{App:AppendixF}.	
@@ -905,7 +924,7 @@ Thirty years later, after several refinements of the previous equation, Shibuya 
 \begin{equation}
 \frac{G_{max}}{p^`_r}=\frac{B}{(1+e)^{2.4}}(\frac{p^`}{p^`_r})^{0.5}
 \end{equation}
-where $p^`_r$ - is the reference pressure, considered 1kPa; $e$ - void ratio,$p^`$- mean effective stress, factor $B$ for soft clays ranged between [18000 - 30000 ] with an average of 24000, as it is proved in Shibuya et al, 1997 study.
+where $p^`_r$ - is the reference pressure, considered 1kPa; \gls{void} - void ratio,$p^`$- mean effective stress, factor $B$ for soft clays ranged between [18000 - 30000 ] with an average of 24000, as it is proved in Shibuya et al, 1997 study.
 
 Current soil investigation and laboratory tests aimed to determine several specific values, among them the void ratio; for a silty clay, medium weak, the results yield values between $e=0.8-0.9$, while the plasticity index Ip=25\%-30\%. Given the fact that the reference pressure is 1kPa the ratio $p^`/p^`_r$ is equivalent to the value of the mean effective stress; this is determined based on the equations formerly described and varies along the depth. Therefore, performing the calculation with the corresponding parameters, it results the equation for the $G_{max}$ as it is shown:
 \begin{equation}
@@ -921,7 +940,7 @@ On the other hand, the measurements give soil features in terms of shear wave ve
 where
 $G_o$ – shear modulus [kPa]
 $\rho$ – the solid density [kg/m3]. 
-$V_{s,30}$ is calculated as the time for a shear wave to travel from a depth of 30 m to the ground surface, and not as the arithmetic average of $V_s$ to a depth of 30 m. There are various classification based on the soil type, one presented below corresponding to the normative Eurocode EN1998-1-1:cl3.1.2 including the ground types and the specific shear wave velocities:  
+\gls{vs30} is calculated as the time for a shear wave to travel from a depth of 30 m to the ground surface, and not as the arithmetic average of $V_s$ to a depth of 30 m. There are various classification based on the soil type, one presented below corresponding to the normative Eurocode EN1998-1-1:cl3.1.2 including the ground types and the specific shear wave velocities:  
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"EC8"}
@@ -984,7 +1003,7 @@ Such dissimilarities are clearly expected, the main interest in this situation p
 
 \newpage
 \subsection{Non-linear parameters (kinematic hardening  model with Von Mises failure criterion)}
-The constitutive model marks down to several equations which describe the inelastic soil response. As a matter of fact, the software Abaqus only requires the selection of the appropriate material module which nominates the failure criterion and its corresponding parameters; the current case deals with only three parameters momentarily: the maximum stress at zero plastic strain - $\sigma_0$, elastic Young's modulus $E=2*(1+\nu)G_0)$ and the ultimate strength $\sigma_u$ or $S_u$.
+The constitutive model marks down to several equations which describe the inelastic soil response. As a matter of fact, the software Abaqus only requires the selection of the appropriate material module which nominates the failure criterion and its corresponding parameters; the current case deals with only three parameters momentarily: the maximum stress at zero plastic strain - $\sigma_0$, elastic Young's modulus $E=2*(1+\nu)G_0)$ and the ultimate strength \gls{sigmau} or $S_u$.
 The evolution of kinematic hardening component of the yield stress is defined by:
 \begin{equation}
 		\dot{\alpha}=C\frac{1}{\sigma_0}(\sigma-\alpha)\dot{\epsilon}^{pl}-\gamma\alpha\dot{\epsilon}^{pl}
@@ -993,8 +1012,8 @@ where
 \begin{itemize}
 	\item $C$ - the initial kinematic hardening modulus represented by Young's modulus at small strains;
 	\item $K$ - parameter determining the rate of decrease of kinematic hardening with increasing plastic deformation;
-	\item $\alpha$ - backstress;
-	\item $\dot{\epsilon}^{pl}$ - plastic strain rate;
+	\item \gls{alfa} - backstress;
+	\item \gls{eps}- plastic strain rate;
 \end{itemize}
 
 For clays, the following equation describes the maximum yield stress $\sigma_y$:
@@ -1016,7 +1035,7 @@ The shear modulus was derived previously from the Vs values measured by CPT, as 
 \section{Results}
 \subsection{General}
 The connection between the stress-strain plot and modulus reduction curves is straightforward for two-way cyclic loading (complete stress cycle). The set-up of the normalized stiffness degradation curve allows the prediction of stress-strain path of the soil subjected to monotonic loading. 
-The analysis starts by creating several jobs in which the strain amplitude varied its values between $\gamma=0.1\%-10^{-5}\%$ - the interval corresponds to medium and small-strain domain. From each analysis the stress-strain paths are extracted and plotted leading to different curves also known as hysteresis loops. The secant shear modulus is further calculated as:
+The analysis starts by creating several jobs in which the strain amplitude varied its values between \gls{gama}=$0.1\%-10^{-5}\%$ - the interval corresponds to medium and small-strain domain. From each analysis the stress-strain paths are extracted and plotted leading to different curves also known as hysteresis loops. The secant shear modulus is further calculated as:
 \begin{equation}
 	G=\frac{\tau}{\gamma}
 \end{equation}
@@ -1026,22 +1045,22 @@ All the shear modulus values are then collected and further normalized with resp
 	G_{max} = G_0=\frac{E_0}{2(1+\nu)}
 \end{equation}
 
-The combination between the prescribed lateral displacement and harmonic cyclic amplitude can be observed in Figure \ref{cyclic}. The current model includes a maximum amplitude of $A_{max} = 1$, a period $T=0.3s$ and a period shift of zero seconds. Each set of calculation will apply the shear strain value to this harmonic signal leading to the cyclic effect.
+The combination between the prescribed lateral displacement and harmonic cyclic amplitude can be observed in Figure \ref{cyclic}. The current model includes a maximum amplitude of  \gls{amax}$= 1$, a period $T=0.3s$ and a period shift of zero seconds. Each set of calculation will apply the shear strain value to this harmonic signal leading to the cyclic effect.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"cyclicampl"}
-	\caption{Uniform harmonic cyclic amplitude curve assigned to the lateral boundary condition. The example shows the combination between the amplitude $A=1$ and prescribed displacement $u=10^{-3}$. Here, the shear strain $\gamma =u$ because the sample dimensions are 1 on all directions.}
+	\caption{Uniform harmonic cyclic amplitude curve assigned to the lateral boundary condition. The example shows the combination between the amplitude $A=1$ and prescribed displacement \gls{u}$=10^{-3}$. Here, the shear strain $\gamma =u$ because the sample dimensions are 1 on all directions.}
 	\label{cyclic}.
 \end{figure}
 
 Such inelastic response proves not to be that sensitive to the frequency of the signal but to the maximum recorded amplitude as Gazetas, 2004 \cite{gazetas2004seismic} shows in his study of foundation rocking and uplifting. Indeed, models confirm the observations that the same cyclic response is obtained when varying the amplitude frequency. 
 %reference
-The degradation curve is then composed by the normalization of the secant stiffness displayed by each analysis, $G$, with the maximum shear stiffness value corresponding to the sample, $G_{max}$. Meanwhile, the damping ratio is expressed as the ratio between the dissipated energy and stored strain energy in one complete and stable cycle of motion. Based on Figure \ref{loop}, the dissipated energy $A_L$ is described by the area inside the loop and it is calculated using the integral of the stress-strain curve as it follows:
+The degradation curve is then composed by the normalization of the secant stiffness displayed by each analysis, $G$, with the maximum shear stiffness value corresponding to the sample, $G_{max}$. Meanwhile, the damping ratio is expressed as the ratio between the dissipated energy and stored strain energy in one complete and stable cycle of motion. Based on Figure \ref{loop}, the dissipated energy \gls{al} is described by the area inside the loop and it is calculated using the integral of the stress-strain curve as it follows:
 \begin{equation}
 	A_L=\int\tau d\gamma
 \end{equation}
-while the stored strain energy $A_T$ is expressed as:
+while the stored strain energy \gls{at} is expressed as:
 \begin{equation}
 	A_T=\frac{\tau \gamma}{2}
 \end{equation}
@@ -1192,7 +1211,7 @@ For simplification purpose, the stress state can be defined by three invariants 
 
 The failure criterion is defined by a function of the aforementioned invariants - it describes a surface in the stress space which delimits safety from failure. Any point within the stress space situated below the surface attains safety - the points cannot exceed the failure plane because collapse occurs; hence the equation for failure is $F = 0$, where F is the function in discussion. 
 
-Generally, a soil sample will reach failure when the total stress Mohr circle attains the strength envelope - which is described as $\tau=S_u$ and it is represented by a straight line dependent on the friction angle and cohesion $c$. For materials for which the cohesion can be set to $c=S_u$ whilst $\phi=0$, the Mohr-Coulomb failure envelope turns into a Tresca failure criterion which is parallel to the normal stress axis:
+Generally, a soil sample will reach failure when the total stress Mohr circle attains the strength envelope - which is described as \gls{tau}$=S_u$ and it is represented by a straight line dependent on the friction angle and cohesion $c$. For materials for which the cohesion can be set to \gls{c}$=S_u$ whilst \gls{phi}$=0$, the Mohr-Coulomb failure envelope turns into a Tresca failure criterion which is parallel to the normal stress axis:
 \begin{equation}
 	\sigma_{max}-\sigma_{min}=2S_u
 \end{equation}
@@ -1701,4 +1720,20 @@ The appendix presents a set of input parameters corresponding to the low peak gr
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}
+
+\chapter{Deformed mesh in Abaqus} \label{Abq}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"deformat"}
+	\caption{Mobilization of bearing capacity type of failure mechanism expressed as increase of vertical stresses underneath the foundation}
+	\label{def}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"FBC5+"}
+	\caption{An example of soil densification appearing underneath one edge of the footing. This might hint the possible overstrength of the ground material}
+	\label{fbc3}
+\end{figure}
 \end{document}          
