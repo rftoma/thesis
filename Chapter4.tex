@@ -11,6 +11,7 @@
 \usepackage[nottoc]{tocbibind}
 \usepackage{color}
 \usepackage{wrapfig}
+\usepackage{afterpage}
 \usepackage[toc]{glossaries}
 \usepackage{listings}
 \lstset{language=[90]Fortran,
@@ -33,6 +34,11 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 %$\theta$
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{-1}%
+	\newpage}
 
 %\makeglossaries
 \makenoidxglossaries 
@@ -65,7 +71,7 @@
 		  	Delft University of Technology\\
 		  	Crux Engineering BV
 		  	Netherlands\\
-		  %	30th of June 2016
+		    25th of August 2016
 		  	
 		  \end{center}
 		
@@ -93,16 +99,16 @@
 		%% List the committee members, starting with the Rector Magnificus and the
 		%% promotor(s) and ending with the reserve members.
 	%	\medskip\noindent
-	%	\begin{tabular}{p{5cm}l}
-		%	Prof.\ dr.\ M.A. Hicks, & Delft University of Technology \\
-		%	Dr.\ F.\ Pisan\`{o}, & Delft University of Technology \\
-		%	Dr.\ ir. \ P.\ H\"{o}lscher, & Delft University of Technology \\
-		%	ir.\ E.\ J.\ Kaspers, & Crux Engineering BV\\
+		\begin{tabular}{p{5cm}l}
+			Prof.\ dr.\ M.A. Hicks, & Delft University of Technology \\
+			Dr.\ F.\ Pisan\`{o}, & Delft University of Technology \\
+			Dr.\ ir. \ P.\ H\"{o}lscher, & Delft University of Technology \\
+			ir.\ E.\ J.\ Kaspers, & Crux Engineering BV\\
 		%	ing.\ K.J. \ DeJong & Crux Engineering BV\\
 			
 			\medskip
 		
-%	\end{tabular}
+	\end{tabular}
 		
 		\vspace{4\bigskipamount}
 		
@@ -121,24 +127,53 @@
 		{http://repository.tudelft.nl/}.
 		
 	\end{titlepage}
-%\newenvironment{dedication}
-%{\clearpage           % we want a new page
-%	\thispagestyle{empty}% no header and footer
-%	\vspace*{\stretch{1}}% some space at the top 
-%	\raggedleft          % flush to the right margin
-%}
-%{\par % end the paragraph
-%	\vspace{\stretch{3}} % space at bottom is three times that at the top
-%	\clearpage           % finish off the page
-%}
-%	\begin{dedication}
-%	\textit{If I have seen further it is by standing on the shoulders of Giants.} \\
-%	Isaac Newton
-%	\end{dedication}
+\newenvironment{dedication}
+{\clearpage           % we want a new page
+	\thispagestyle{empty}% no header and footer
+	\vspace*{\stretch{1}}% some space at the top 
+	\itshape             % the text is in italics
+	\raggedleft          % flush to the right margin
+}
+{\par % end the paragraph
+	\vspace{\stretch{3}} % space at bottom is three times that at the top
+	\clearpage           % finish off the page
+}
+	\begin{dedication}
+	\textit{If I have seen further it is by standing on the shoulders of Giants.} \\
+	Isaac Newton
+	\end{dedication}
+\newpage
 
+\afterpage{\blankpage}
+\chapter*{Acknowledgements}
+
+I would like to start by offering my gratitude to my thesis advisor Dr. Federico Pisan\`{o}. Despite the moments we were not sharing the same time zone, he was always open for answering my questions and guide me through difficult times. I appreciated the short, but concise meetings that were always steering me in the right direction whenever I was in doubt.\
+
+
+I would also like to thank the experts who were involved in the validation survey for this research project: ir. Ekke Kaspers as well as ing. Korneel de Jong from Crux Engineering BV. Without their passionate participation and input, the validation steps could not have been successfully conducted. The talks we had made me visualize the bigger picture and understand the essence of engineering.\
+
+Many thanks to prof. dr. Michael Hicks and Dr. ir. Paul H\"{o}lscher, for guiding me towards a truly academic report. All their feedback helped me improve my report and put my thoughts into words as efficiently as possible. Knowledge is nothing if not shared properly.\
+
+I would also like to acknowledge PhD Filippo Gatti of the Civil Engineering department at Politecnico di Milano. Without his help, my numerical progress would not have been the same. I am gratefully indebted to him for all the hours he dedicated to our Sunday Skype calls and for his very valuable comments on this thesis.\
+
+
+I must express my very profound gratitude to my parents for supporting me in following my dreams and for the continuous encouragement throughout my years of study, my friends for the positive attitude, Eddy and Ioana for the mutual cheering during the coffee breaks. Finally, I thank Mircea for showing me the bright side of life. This accomplishment would not have been possible without them. Thank you.\
+
+\vspace{3cm}
+Delft University of Technology \hfill Raluca Toma
+
+25th of August 2016
+
+\afterpage{\blankpage}
+\chapter*{Abstract}
+
+Presented here is the numerical investigation on seismic soil-structure interaction applying features of a rather non-conventional earthquake design. The examination focuses on the Groningen site conditions which lately experienced an induced-type of earthquake. A unique situation
 \tableofcontents
 \printnoidxglossaries
+
 \part{Soil-structure interaction investigation}
+\afterpage{\blankpage}
+\setcounter{page}{1}
 \chapter{Introduction}
 \section{Current situation - an overview}
 In the past few decades, Northern area of Netherlands is facing ground tremors induced by the gas extraction, the greatest event being registered on 16th of August 2012, at Huizinge \cite{dost2013august}, with a depth of 10km and a magnitude of \gls{Mw}=3.6. Even though the majority of these earthquakes are shallow and small, the larger events can eventually produce damage concerning the citizens and mining companies. The level of uncertainties rises and the phenomena starts to be problematic when combined with other detrimental factors. For instance, the foundation shape and design, the uncertainties related to the soil homogeneity, the nonlinear response or the need of updating the design codes accordingly. Currently, numerous organizations and companies investigate the phenomenon aiming to provide reliable design methods that best suit the condition. 
@@ -538,7 +573,7 @@ The whole design research started with a comparison between the conventional and
 
 
 \paragraph{Medium earthquake motion}
-Few remarks can be formulated based on the observed results. The first set of plots highlight the elastic response of the footing when conventional design is considered whereas the new design shows highly inelastic response. The non-linear response comes at the cost of large settlements under the foundation as the second plot shows; on the contrary, the elastic foundation and pier yielding prevent such consequences. Furthermore, the conventionally designed pier experiences \mbox{inelasticity}, however in tolerable limits while in the new design scheme, the pier remains mainly elastic thanks to soil yielding. Finally, the deck drift, or horizontal displacement at mass, is on one hand caused by the flexural pier distortion (here, \gls{deltac}) while on the other hand is due to foundation rotation (\gls{deltar}). 
+Few remarks can be formulated based on the observed results. The first set of plots highlight the elastic response of the footing when conventional design is considered whereas the new design shows highly inelastic response. The non-linear response comes at the cost of large settlements under the foundation as the second plot shows; on the contrary, the elastic foundation and pier yielding prevent such consequences. Furthermore, the conventionally designed pier experiences \mbox{inelasticity}, however in tolerable limits while in the new design scheme, the pier remains mainly elastic thanks to soil yielding. Finally, the deck drift, or horizontal displacement at mass, is on one hand caused by the flexural pier distortion (here, $\Delta_c$) while on the other hand is due to foundation rotation $\Delta_r$. 
 
 \paragraph{Strong earthquake motion}
 The investigation is further extended to include a stronger earthquake motion which is exceeding the design limits (the Takatori accelerogram recorded at Kobe, 1995). This acceleration time history is relevant as it represents one of the most disastrous earthquakes of the recent times (PGA=0.7g, \gls{PGV}=169cm/s); the simplified structural system corresponds to a section of Hanshin Expressway which partly collapsed during the earthquake. The results of the two alternatives can be visualized in Figure \ref{conventional}.
@@ -1157,6 +1192,7 @@ A strain-controlled numerical test was performed on a one element mesh assigned 
 Despite the lack of damping parameters and coefficients that guarantee a smooth transition along the curvature, the model succeeds in generating the normalized modulus reduction curves and material damping with a decent degree of accuracy when examining in contrast with Darendeli's set of curves.  
 
 It can be concluded that the proposed material model qualifies as reasonable for the future examination and, thus, the current paper continues the research towards a one-dimensional site response analysis. 
+
 
 \input{chapter3}
 \input{chapter5}
