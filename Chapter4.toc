@@ -9,10 +9,10 @@
 \contentsline {section}{\numberline {1.3}Research objectives}{6}
 \contentsline {section}{\numberline {1.4}Research outline}{7}
 \contentsline {chapter}{\numberline {2}Literature survey}{9}
-\contentsline {section}{\numberline {2.1}A new design philosophy}{9}
+\contentsline {section}{\numberline {2.1}A unconventional design philosophy}{9}
 \contentsline {section}{\numberline {2.2}Newmark sliding block analogue}{9}
 \contentsline {section}{\numberline {2.3}Non-linear soil response - Effects}{12}
-\contentsline {section}{\numberline {2.4}Geometrical non-linearity: Uplifting}{13}
+\contentsline {section}{\numberline {2.4}Interface non-linearity: Uplifting}{13}
 \contentsline {section}{\numberline {2.5}Material non-linearity: Soil yielding}{14}
 \contentsline {section}{\numberline {2.6}Soil condition}{16}
 \contentsline {subsection}{\numberline {2.6.1}Problem statement}{16}
@@ -21,7 +21,7 @@
 \contentsline {paragraph}{Plastic models}{16}
 \contentsline {section}{\numberline {2.7}Numerical analyses}{18}
 \contentsline {subsection}{\numberline {2.7.1}General features}{18}
-\contentsline {subsection}{\numberline {2.7.2}Conventional versus new design philosophy}{19}
+\contentsline {subsection}{\numberline {2.7.2}Conventional versus unconventional design philosophy}{19}
 \contentsline {paragraph}{Medium earthquake motion}{19}
 \contentsline {paragraph}{Strong earthquake motion}{19}
 \contentsline {subsection}{\numberline {2.7.3}Relevant studies}{20}
@@ -62,11 +62,11 @@
 \contentsline {subsection}{\numberline {4.2.3}Rayleigh coefficients}{51}
 \contentsline {subsection}{\numberline {4.2.4}Integration scheme}{53}
 \contentsline {subsection}{\numberline {4.2.5}FEM stability}{53}
-\contentsline {subsection}{\numberline {4.2.6}Mesh}{53}
+\contentsline {subsection}{\numberline {4.2.6}Mesh}{54}
 \contentsline {section}{\numberline {4.3}NERA - Non-linear Earthquake Site Response}{54}
 \contentsline {section}{\numberline {4.4}Results}{55}
-\contentsline {section}{\numberline {4.5}Comparison Abaqus vs NERA}{58}
-\contentsline {subsection}{\numberline {4.5.1}Additional investigation}{58}
+\contentsline {section}{\numberline {4.5}Comparison Abaqus vs NERA}{59}
+\contentsline {subsection}{\numberline {4.5.1}Additional investigation}{60}
 \contentsline {subsection}{\numberline {4.5.2}Remarks}{62}
 \contentsline {section}{\numberline {4.6}Conclusions}{65}
 \contentsline {chapter}{\numberline {5}Soil Structure Interaction analysis}{66}
@@ -82,35 +82,34 @@
 \contentsline {paragraph}{Tied lateral boundaries}{71}
 \contentsline {paragraph}{Free-field soil column}{71}
 \contentsline {paragraph}{Main model}{73}
-\contentsline {subsection}{\numberline {5.4.4}Cyclic analyses}{73}
+\contentsline {subsection}{\numberline {5.4.4}Cyclic analyses}{74}
 \contentsline {subsection}{\numberline {5.4.5}Seismic analyses}{75}
 \contentsline {section}{\numberline {5.5}Results}{76}
 \contentsline {subsection}{\numberline {5.5.1}Effects of vertical loading}{76}
 \contentsline {paragraph}{Seismic analyses}{79}
 \contentsline {subsection}{\numberline {5.5.2}Effect of the signal frequency}{82}
-\contentsline {subsection}{\numberline {5.5.3}Effects of aspect ratio}{84}
-\contentsline {subsection}{\numberline {5.5.4}Effects of surcharge}{86}
-\contentsline {subsection}{\numberline {5.5.5}Fully Bonded Contact vs Tensionless Sliding Interface}{87}
-\contentsline {subsection}{\numberline {5.5.6}Effects of bedrock position}{88}
-\contentsline {section}{\numberline {5.6}Conclusions}{93}
-\contentsline {chapter}{\numberline {6}Discussion and conclusions}{95}
-\contentsline {section}{\numberline {6.1}Limitations and recommendations}{97}
-\contentsline {section}{Appendix}{98}
-\contentsline {part}{II\hspace {1em}Appendix}{98}
-\contentsline {xpart}{Appendix}{99}
-\contentsline {chapter}{\numberline {A}Cone penetration test results}{99}
-\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{101}
-\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{101}
-\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{102}
-\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{105}
-\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{107}
-\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{109}
-\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{112}
-\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{114}
-\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{116}
-\contentsline {chapter}{\numberline {I}Newmark integration schemes}{118}
-\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{119}
-\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{121}
-\contentsline {chapter}{\numberline {L}NERA - Input example}{126}
-\contentsline {chapter}{Bibliography}{128}
-\contentsline {chapter}{\numberline {M}Deformed mesh in Abaqus}{132}
+\contentsline {subsection}{\numberline {5.5.3}Effects of aspect ratio}{85}
+\contentsline {subsection}{\numberline {5.5.4}Effects of surcharge}{87}
+\contentsline {subsection}{\numberline {5.5.5}Fully Bonded Contact vs Tensionless Sliding Interface}{88}
+\contentsline {subsection}{\numberline {5.5.6}Effects of bedrock position}{89}
+\contentsline {section}{\numberline {5.6}Conclusions}{94}
+\contentsline {chapter}{\numberline {6}Discussion and conclusions}{96}
+\contentsline {section}{\numberline {6.1}Limitations and recommendations}{99}
+\contentsline {section}{Appendix}{100}
+\contentsline {part}{II\hspace {1em}Appendix}{100}
+\contentsline {xpart}{Appendix}{101}
+\contentsline {chapter}{\numberline {A}Cone penetration test results}{101}
+\contentsline {chapter}{\numberline {B}Constitutive model: Nonlinear kinematic hardening model with a Von Mises failure criterion}{103}
+\contentsline {section}{\numberline {B.1}Von Mises failure criterion. A definition}{103}
+\contentsline {section}{\numberline {B.2}Constitutive model according to Lemaitre and Chaboche: Nonlinear kinematic hardening rules }{104}
+\contentsline {chapter}{\numberline {C}Description of Darendeli hyperbolic model}{107}
+\contentsline {chapter}{\numberline {D}Input parameter - Stresses calculation}{109}
+\contentsline {chapter}{\numberline {E}Determination of undrained shear strength value}{111}
+\contentsline {chapter}{\numberline {F}Abaqus Input parameters - Empirical and Measurements}{114}
+\contentsline {chapter}{\numberline {G}Flow chart - Abaqus subroutines}{116}
+\contentsline {chapter}{\numberline {H}User subroutine implemented in analysis}{118}
+\contentsline {chapter}{\numberline {I}Newmark integration schemes}{120}
+\contentsline {chapter}{\numberline {J}FEM stability in dynamic calculations}{121}
+\contentsline {chapter}{\numberline {K}NERA - Iwan Mroz material model description}{123}
+\contentsline {chapter}{\numberline {L}NERA - Input example}{128}
+\contentsline {chapter}{Bibliography}{130}

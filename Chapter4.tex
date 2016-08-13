@@ -12,6 +12,10 @@
 \usepackage{color}
 \usepackage{wrapfig}
 \usepackage{afterpage}
+\usepackage{watermark}
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage[toc]{glossaries}
 \usepackage{listings}
 \lstset{language=[90]Fortran,
@@ -40,11 +44,39 @@
 	\addtocounter{page}{-1}%
 	\newpage}
 
+
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,%
+]{Cover final.jpg}%
+			\vfill
+		}}}
+\AddToShipoutPicture*{\BackgroundPic}
+
 %\makeglossaries
 \makenoidxglossaries 
 \loadglsentries{glossary}
 
 \begin{document}
+	\begin{titlepage}
+		\begin{minipage}{49em}
+			\noindent\fcolorbox{black}{black}{%
+				\parbox{\textwidth}{%
+					\color{white} \textbf{\Huge A design-oriented numerical \mbox{investigation} on seismic soil-structure interaction}\
+					\vspace*{1cm}
+					
+					
+					\color{TealBlue} \textbf{\huge Raluca - Fulguta Toma}
+				}%
+			}
+			
+		\end{minipage}
+	\end{titlepage}
+
+	
 	\begin{titlepage}
 		  \begin{center}
 		  	\vspace*{3cm}
@@ -69,7 +101,7 @@
 		  	
 			Faculty of Civil Engineering and Geosciences\\
 		  	Delft University of Technology\\
-		  	Crux Engineering BV
+		  	Crux Engineering BV\\
 		  	Netherlands\\
 		    25th of August 2016
 		  	
@@ -127,6 +159,8 @@
 		{http://repository.tudelft.nl/}.
 		
 	\end{titlepage}
+	
+\afterpage{\blankpage}
 \newenvironment{dedication}
 {\clearpage           % we want a new page
 	\thispagestyle{empty}% no header and footer
@@ -147,17 +181,18 @@
 \afterpage{\blankpage}
 \chapter*{Acknowledgements}
 
-I would like to start by offering my gratitude to my thesis advisor Dr. Federico Pisan\`{o}. Despite the moments we were not sharing the same time zone, he was always open for answering my questions and guide me through difficult times. I appreciated the short, but concise meetings that were always steering me in the right direction whenever I was in doubt.\
+\vspace{1cm}
+I would like to start by offering my gratitude to my thesis advisor Dr. Federico Pisan\`{o}. Despite the moments we were not sharing the same time zone, he was always open for answering my questions and guide me through difficult times. I appreciated the short, but concise meetings that were always steering me in the right direction whenever I was in doubt.\\
 
 
-I would also like to thank the experts who were involved in the validation survey for this research project: ir. Ekke Kaspers as well as ing. Korneel de Jong from Crux Engineering BV. Without their passionate participation and input, the validation steps could not have been successfully conducted. The talks we had made me visualize the bigger picture and understand the essence of engineering.\
+I would also like to thank the experts who were involved in the validation survey for this research project: ir. Ekke Kaspers as well as ing. Korneel de Jong from Crux Engineering BV. Without their passionate participation and input, the validation steps could not have been successfully conducted. The talks we had made me visualize the bigger picture and understand the essence of engineering.\\
 
-Many thanks to prof. dr. Michael Hicks and Dr. ir. Paul H\"{o}lscher, for guiding me towards a truly academic report. All their feedback helped me improve my report and put my thoughts into words as efficiently as possible. Knowledge is nothing if not shared properly.\
+Many thanks to prof. dr. Michael Hicks and Dr. ir. Paul H\"{o}lscher, for guiding me towards a truly academic report. All their feedback helped me improve my report and put my thoughts into words as efficiently as possible. Knowledge is nothing if not shared properly.\\
 
-I would also like to acknowledge PhD Filippo Gatti of the Civil Engineering department at Politecnico di Milano. Without his help, my numerical progress would not have been the same. I am gratefully indebted to him for all the hours he dedicated to our Sunday Skype calls and for his very valuable comments on this thesis.\
+I would also like to acknowledge PhD Filippo Gatti of the Civil Engineering department at Politecnico di Milano. Without his help, my numerical progress would not have been the same. I am gratefully indebted to him for all the hours he dedicated to our Sunday Skype calls and for his very valuable comments on this thesis.\\
 
 
-I must express my very profound gratitude to my parents for supporting me in following my dreams and for the continuous encouragement throughout my years of study, my friends for the positive attitude, Eddy and Ioana for the mutual cheering during the coffee breaks. Finally, I thank Mircea for showing me the bright side of life. This accomplishment would not have been possible without them. Thank you.\
+I must express my very profound gratitude to my parents for supporting me in following my dreams and for the continuous encouragement throughout my years of study, my friends and house mates for the positive attitude and cheering during the coffee breaks. Finally, I thank Mircea for brightening the cloudy days. This accomplishment would not have been possible without them. Thank you.\
 
 \vspace{3cm}
 Delft University of Technology \hfill Raluca Toma
@@ -167,11 +202,22 @@ Delft University of Technology \hfill Raluca Toma
 \afterpage{\blankpage}
 \chapter*{Abstract}
 
-Presented here is the numerical investigation on seismic soil-structure interaction applying features of a rather non-conventional earthquake design. The examination focuses on the Groningen site conditions which lately experienced an induced-type of earthquake. A unique situation
+\vspace{1cm}
+Presented here is the numerical investigation on seismic soil-structure interaction applying features of a rather non-conventional earthquake design. The examination focuses on the Groningen site conditions which lately experienced an induced-type of earthquake. A unique situation calls for a suitable seismic design for both existing and new buildings. Instead of adopting the conventional capacity design, the current paper explores a novel dynamic approach which gains traction within the research community. For validation and verification purposes, the thesis invokes the scientific literature findings of situations which resemble to the Groningen circumstances.\\
+
+
+A literature survey is conducted, gathering all relevant information regarding this unconventional design philosophy. The research starts highlighting the main differences between the two seismic approaches as well as the origins of the unconventional design. A research group tutored by prof. G. Gazetas and prof. I. Anastasopoulos started the pioneering work in attesting the rightness of the new concept. Several examples similar to Groningen situation are selected with emphasis on the non-linear soil response together with the elastic behaviour of the footing. The literature study offers various guidelines in opting for a direction in research.\\
+
+
+The numerical investigation commences with the calibration of the constitutive model. A Von Mises failure criterion with associative flow rule accurately incorporating the non-linear kinematic hardening is used. It is further calibrated against Darendeli's set of normalized curves regarding the stiffness properties. The research continues with the site response analysis which indicates the inelastic response at various levels throughout the soil body. Using two different PGA values, important information is gathered regarding the signal amplification and inelastic soil response. Finally, the entire soil-foundation-structure interaction is examined considering a real structure and the real accelerogram recorded in 2012 in Huizinge, Groningen. Using a special contact algorithm allowing for foundation detachment from soil surface, the energy dissipation mechanism is studied. It is shown that allowing the plastic hinging to develop underneath the foundation system acts beneficial. Moreover, the influence of key parameters is investigated highlighting the importance of the vertical (static) safety factor, eigen frequencies soil/superstructure as well as the structure aspect ratio. 
+
+
 \tableofcontents
 \printnoidxglossaries
 
 \part{Soil-structure interaction investigation}
+
+
 \afterpage{\blankpage}
 \setcounter{page}{1}
 \chapter{Introduction}
@@ -241,7 +287,7 @@ Recent researches focused on the behaviour of shallow foundations subjected to s
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{"new_phil"}
-	\caption{Comparison between conventional capacity design and the new design philosophy}
+	\caption{Comparison between conventional capacity design and the unconventional design philosophy}
 	\label{comp}
 \end{figure}
 
@@ -260,13 +306,13 @@ Recent researches focused on the behaviour of shallow foundations subjected to s
 	\end{minipage}
 \end{figure}
 
-The new design philosophy proposes to “contradict” aspects of the conventional design with emphasis on development of plastic articulations within the soil. Strong seismic motion induces large structural inertia forces which, in the case of slender buildings, means larger overturning moments compared to vertical forces. As a result, the footing experiences uplifting at one edge and, possibly, high normal stresses under the opposite edge. If this concentration of stresses is sufficiently large then bearing capacity failure mechanism materializes. In static conditions this phenomena would act detrimental causing failure. However, in dynamic circumstances the cyclic and kinematic effects of the earthquake actually improve the structural performance because:
+The unconventional design philosophy proposes to “contradict” aspects of the conventional design with emphasis on development of plastic articulations within the soil. Strong seismic motion induces large structural inertia forces which, in the case of slender buildings, means larger overturning moments compared to vertical forces. As a result, the footing experiences uplifting at one edge and, possibly, high normal stresses under the opposite edge. If this concentration of stresses is sufficiently large then bearing capacity failure mechanism materializes. In static conditions this phenomena would act detrimental causing failure. However, in dynamic circumstances the cyclic and kinematic effects of the earthquake actually improve the structural performance because:
 \begin{enumerate}
 	\item The inertial forces change the loading direction rapidly; in the end, it is a cyclic motion so the forces reverse and distress the soil; hence an under-designed foundation ($FS<1$) will experience large displacements during a limited period of time (tenths of a second) but they are reversed before the critical point is reached.
 	\item The developing inertial forces should be regarded as an vibratory displacement at the base and not as an external load on the superstructure. Excessive settlements and rotation can be generated as a function of the foundation capacity, however, failure is almost improbable. Thus, the loads transmitted to the superstructure are also restricted to the actual capacity of base or the interface separating the foundation-structure system.
 \end{enumerate}
 
-Thus, the main objectives of the new design philosophy focus on foundation response when subjected to seismic motion – a response that opposes the current codes requirements and typically is associated with failure. Thus, the fundamental features of the new method are: 
+Thus, the main objectives of the unconventional design philosophy focus on foundation response when subjected to seismic motion – a response that opposes the current codes requirements and typically is associated with failure. Thus, the fundamental features of the new method are: 
 \begin{enumerate}
 	\item Soil uplift and sliding at soil-structure interface is allowed and actually triggered;
 	\item Mobilization of bearing capacity failure mechanism due to large over-turning moments;
@@ -276,7 +322,7 @@ Thus, the main objectives of the new design philosophy focus on foundation respo
 
 The current study works with a collection of peculiar characteristics. First of all, the earthquake is defined as a triggered type, unlike the usual European tectonic one. Moreover, Netherlands national code does not incorporate chapters regarding suitable seismic design simply because it was not the case so far – organizations and companies are currently busy elaborating a proper formulation for this matter. Secondly, the soil is very soft, bedrock lacks at any meaningful depth; the multi-shear waves might amplify the acceleration response at surface, thus the whole assembly describes a unique situation. Thirdly, it would improve the economical aspect, since a reduction in the superstructure ductility demand means a cost reduction regarding the necessary reinforcement required by a conventional capacity design.
 
-Having mentioned all these characteristics, the challenge of this thesis is to apply and examine the new design philosophy effects upon this particular set of aspects. The method proved to be efficient in cases of soft soil responding to the largest earthquake motions of all time; furthermore, it addressed shallow foundations in many tests– which is also the case in this investigation. Instead of taking the standard steps to analyse the dynamic response of the shallow footing, why not adopt this new design philosophy? Why not take advantage of the soft soil prone to accumulate large stresses and use it to limit the ductility demand within the superstructure? 
+Having mentioned all these characteristics, the challenge of this thesis is to apply and examine the unconventional design philosophy effects upon this particular set of aspects. The method proved to be efficient in cases of soft soil responding to the largest earthquake motions of all time; furthermore, it addressed shallow foundations in many tests– which is also the case in this investigation. Instead of taking the standard steps to analyse the dynamic response of the shallow footing, why not adopt this unconventional design philosophy? Why not take advantage of the soft soil prone to accumulate large stresses and use it to limit the ductility demand within the superstructure? 
 
 
 \section{Research objectives}
@@ -296,7 +342,7 @@ In order to prepare the final analysis, several previous steps need to be taken:
 	\item Investigation of the influence of the vertical loading conditions, contact definition and frequency content on soil response.
 \end{enumerate}
 
-Finally, the main scope of the research is to verify whether the new design philosophy is suitable for the ground and seismic conditions specific to Groningen area. This will materialize in an investigation carried out on a soil layer supporting a simple elastic foundation and the main emphasis is on:
+Finally, the main scope of the research is to verify whether the unconventional design philosophy is suitable for the ground and seismic conditions specific to Groningen area. This will materialize in an investigation carried out on a soil layer supporting a simple elastic foundation and the main emphasis is on:
 
 \begin{enumerate}
 	\item Soil inelastic response: uplift and sliding at soil-structure interface - large settlements and rotation at foundation centre of mass. 
@@ -304,18 +350,18 @@ Finally, the main scope of the research is to verify whether the new design phil
 	\item Soil plastification: large vertical stresses beneath the footing edges.
 \end{enumerate}
 
-The effects of such analysis will be compared to the results the researchers group obtained when dealing with similar situations. In case the outcome shows a fair match, it can be speculated that the new design philosophy is successful for this particular set of conditions.
+The effects of such analysis will be compared to the results the researchers group obtained when dealing with similar situations. In case the outcome shows a fair match, it can be speculated that the unconventional design philosophy is successful for this particular set of conditions.
 
 \section{Research outline}
 A schematic outline regarding the processes conducted during the thesis project are presented below. 
 
-The study starts with an overview of the new design philosophy to be used in the analyses - a new method that promotes the idea of seismic response going beyond certain thresholds that are commonly associated with system failure. Additionally, it gains knowledge regarding the specific conditions the Northern area of Netherlands reveals, including the particular type of earthquake.
+The study starts with an overview of the unconventional design philosophy to be used in the analyses - a new method that promotes the idea of seismic response going beyond certain thresholds that are commonly associated with system failure. Additionally, it gains knowledge regarding the specific conditions the Northern area of Netherlands reveals, including the particular type of earthquake.
 
 A first step towards the main goal is taken through the calibration of the material model and it is described in Chapter \ref{ch3}. A strain-controlled shear test is simulated through one element mesh;  by applying several strain levels to the shear box it is possible to obtain the non-linear soil response and represent it using normalized stiffness degradation together with material damping curves. The validation consists in comparing the achieved results with the ones existing in the scientific literature.
 
 Chapter 4 extends the previous analysis to a one dimensional soil column subjected to both uniform harmonic as well as real acceleration time history. A site response analysis is performed with emphasis on the inelastic soil outcome in frequency domain together with the site amplification factor. A comparison is performed between Abaqus software ouput and NERA (Non-Linear Earthquake Site Response Analysis) software - in order to validate the model which will assist this investigation further.  In addition, two acceleration time history records  are examined characterised by a higher PGA value and a lower, respectively. Thus, the results can sustain a comparison with the general response assigned for Groningen area expressed in soil amplification hence the validation relates to the context.
 
-In Chapter 5, a finite-element model describes the soil-structure interaction capturing the new design philosophy features (a) soil uplift and (b) mobilization of bearing capacity type of failure. Using a chimney building as prototype, the study focuses on the assessment of the parameters which remarkably influence the non-linear soil response. A series of parameters were methodically changed in order to observe the impact on the structural response. Considering the geometrical nonlinearity associated with the out-rival of the soil-footing interface tensile strength and thus with the uplifting, parametric studies focus on the influence of vertical loading dividing the analysis between \textit{(a) lightly-loaded} and \textit{(b) heavily-loaded footings}. In addition, to accentuate the differences between the conventional and the new design philosophy together with the uplifting effect, two other distinctions in terms of soil-footing contact are formulated as (a) Fully Bonded Contact \textit{FBC} and (b) Tensionless Sliding Interface \textit{TSI}. Moreover, the significance of the frequency content was investigated accounting for both uniform and asymmetric excitation pulse injected at different base levels. 
+In Chapter 5, a finite-element model describes the soil-structure interaction capturing the unconventional design philosophy features (a) soil uplift and (b) mobilization of bearing capacity type of failure. Using a chimney building as prototype, the study focuses on the assessment of the parameters which remarkably influence the non-linear soil response. A series of parameters were methodically changed in order to observe the impact on the structural response. Considering the interfaceal nonlinearity associated with the out-rival of the soil-footing interface tensile strength and thus with the uplifting, parametric studies focus on the influence of vertical loading dividing the analysis between \textit{(a) lightly-loaded} and \textit{(b) heavily-loaded footings}. In addition, to accentuate the differences between the conventional and the unconventional design philosophy together with the uplifting effect, two other distinctions in terms of soil-footing contact are formulated as (a) Fully Bonded Contact \textit{FBC} and (b) Tensionless Sliding Interface \textit{TSI}. Moreover, the significance of the frequency content was investigated accounting for both uniform and asymmetric excitation pulse injected at different base levels. 
 
 \begin{figure}[h!]
 	\centering
@@ -325,11 +371,11 @@ In Chapter 5, a finite-element model describes the soil-structure interaction ca
 \end{figure}
 
 \chapter{Literature survey}
-\section{A new design philosophy}
+\section{A unconventional design philosophy}
 
 The current chapter presents the particularities of the new approach together with a summary of results and conclusions yielding from numerical models compared to experimental tests (centrifuge tests). The design seems appealing mainly because of current soil conditions Groningen area displays - mostly silty clay layers carrying strip foundations - if the method proves to be successful, it might mark the beginning of a new trend in seismic design research.
 
-It becomes important to understand the effects, benefits and disadvantages of the new method before carrying any analysis. The priority is to examine the inelastic soil response consequences on overall structural assembly, to follow recent research outcome and means of obtaining it. Moreover, a comparison between the two methods help defining advantages, recognize limitations and improvements one method might bring against the other. Let us begin by acknowledging the starting points of the new design philosophy.
+It becomes important to understand the effects, benefits and disadvantages of the new method before carrying any analysis. The priority is to examine the inelastic soil response consequences on overall structural assembly, to follow recent research outcome and means of obtaining it. Moreover, a comparison between the two methods help defining advantages, recognize limitations and improvements one method might bring against the other. Let us begin by acknowledging the starting points of the unconventional design philosophy.
 
 \section{Newmark sliding block analogue}
 Newmark, 1965 \cite{veletsos1965deformation} proposed a simplified model to examine the dynamic behaviour of earth dams and embankments in terms of permanent deformations, both rotation and settlement. The subject of the study is the analogue of a rigid block positioned on an inclined surface; the focus is on the deformations caused when the inertia forces acting on the sliding mass exceed the frictional resistance of the failure surface. A key parameter is represented by the critical, or yield, acceleration \gls{ac} which plays different roles depending on the application. On one example, it depicts the pseudo-static base acceleration $A_c$ generating inertia forces that enhance the \textbf{sliding failure} ($FS=1$) whereas on the other example, it describes the constant base acceleration $A_c$ leading to large over-turning moments, thus to a \textbf{bearing-capacity failure} ($FS=1$). The author showed that when the peak amplitude excitation A exceeds the critical acceleration of the system $A_c$, the underlying medium will only encounter permanent (inelastic) deformations; however, the displacement is not sufficient to provoke failure. A schematization of Newmark model is available in Figures \ref{newmark1} and \ref{newmark2}. Important to mention that these models work in pseudo-static conditions. 
@@ -407,9 +453,9 @@ Firstly, the author investigates the rocking motion of a rigid block highlightin
   
   \newpage
 \section{Non-linear soil response - Effects}
-During seismic loading, the soil responds in a non-linear fashion; studies (Gazetas, 2004 \cite{gazetas2004nonlinear}, Apostolou, 2012\cite{apostolou2011soil}) highlight three mechanisms that might occur in case of ground shaking as the figure below shows. Moreover, one can recognize two types of nonlinearities that govern the response - \textbf{geometrical} and \textbf{material}.
+During seismic loading, the soil responds in a non-linear fashion; studies (Gazetas, 2004 \cite{gazetas2004nonlinear}, Apostolou, 2012\cite{apostolou2011soil}) highlight three mechanisms that might occur in case of ground shaking as the figure below shows. Moreover, one can recognize two types of nonlinearities that govern the response - \textbf{interface} and \textbf{material}.
 
-Geometrical nonlinearity can be described as the separation at supporting soil-strip footing interface that it usually addressed as \textit{uplifting}. The material nonlinearity refers to the type of failure mechanisms governed by the bearing capacity mobilization induced by large cyclic overturning moments - also known as \textit{soil failure}. 
+Interface nonlinearity can be described as the separation at supporting soil-strip footing interface that it usually addressed as \textit{uplifting}. The material nonlinearity refers to the type of failure mechanisms governed by the bearing capacity mobilization induced by large cyclic overturning moments - also known as \textit{soil failure}. 
 
 \begin{figure}[h!]
 	\centering
@@ -418,17 +464,17 @@ Geometrical nonlinearity can be described as the separation at supporting soil-s
 	\label{types}
 \end{figure}
 
-Scientific literature (Chopra, 1985 \cite{chopra1985simplified}, Pecker, 2001 \cite{cremer2001cyclic}, Gazetas, 2013 \cite{gazetas2013can}) describes several types of possibilities of nonlinear soil-foundation response in terms of both geometric nonlinearity (uplifting and sliding) and material inelasticity (soil yielding) and it can be studied using the following methods:
+Scientific literature (Chopra, 1985 \cite{chopra1985simplified}, Pecker, 2001 \cite{cremer2001cyclic}, Gazetas, 2013 \cite{gazetas2013can}) describes several types of possibilities of nonlinear soil-foundation response in terms of both interface nonlinearity (uplifting and sliding) and material inelasticity (soil yielding) and it can be studied using the following methods:
 \begin{itemize}
 	\item 	Winkler method - comprises the settlement-rotation at the base of the foundation which is described as a series of dashpots and springs. The structure was described by a beam on an elastic medium;
 	\item 	advanced macro-element modelling - the whole soil-structure system is described by an unique element which simulates the generalized force-displacement behaviour of the foundation. It is worth noting that in the elastic range, and without uplifting, the macroelement reduces to the familiar dynamic spring and dashpot(impedance) matrix;
 	\item direct methods (finite element or finite difference methods) that successfully simulate both the soil and the foundation and the contact surface between them. This method is currently used as it proves itself efficient and accurate.
 \end{itemize}
 
-\section{Geometrical non-linearity: Uplifting}
+\section{Interface non-linearity: Uplifting}
 New philosophy not only allows one of the nonlinearity behaviour to develop within the soil but also encourages that design should apply a safety factor against uplifting and soil \mbox{failure} lower than unity. This way, the structure ductility demand will decrease \mbox{considerably}, optimizing the energy dissipation path throughout the building. Various studies focused on the rocking response simulating the soil in different manners; for example, the first models described the rigid soil via tensionless spring-dashpot elements (Chopra \& Yim 1985 \cite{chopra1985simplified}, Koh et al, 1986 \cite{koh1986harmonic}) followed by a single macro-element which includes a constitutive law that accounts for the uplift mechanism in a soil-foundation system. Ultimately, the dynamic analysis is performed in finite-element based software ( Hibbit et al, 2001 \cite{hibbett1998abaqus}, Gazetas et al, 2010 \cite{anastasopoulos2010soil}) - the model combines a rigid foundation footing, elasto-plastic soil and an advanced contact algorithm that inserts the potential sliding and uplifting.
 
-The geometrical non-linearity is generated when large overturning moments (associated with uplift) or lateral forces (inducing sliding) act on the footing. Uplifting occurs due to the incapability of the soil to withstand tensile stresses and it materializes through loss of contact at soil-foundation interface. Additionally, it dictates the moment-rotation relationship towards a softening behaviour even under elastic conditions.
+The interface non-linearity is generated when large overturning moments (associated with uplift) or lateral forces (inducing sliding) act on the footing. Uplifting occurs due to the incapability of the soil to withstand tensile stresses and it materializes through loss of contact at soil-foundation interface. Additionally, it dictates the moment-rotation relationship towards a softening behaviour even under elastic conditions.
 
 Early studies (Meek, 1975 \cite{meek1975effects}, Chopra \& Yim,1985,  \cite{chopra1985simplified}) considered a simplified rigid soil model and highlighted two states of response: (1) full-contact stage and (2) uplifting stage. A transition between the two phases relates to the bending capacity the structure displays. For a rectangular shallow foundation under static conditions, the moment capacity of the structure right before the initialization of the uplift is:
 \begin{equation}
@@ -451,7 +497,7 @@ One important aspect to keep in mind is that uplifting systems experience larger
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{"rocking"}
-	\caption{The geometrically non-linear nature of the problem is evident even under the assumption of an elastic soil. The image confirms the conclusions from both earlier and more recent models }
+	\caption{The (interface) non-linear nature of the problem is evident even under the assumption of an elastic soil. The image confirms the conclusions from both earlier and more recent models }
 	\label{rocking}
 \end{figure}
 
@@ -543,7 +589,7 @@ A more detailed description of the constitutive model can be found in Appendix \
 \newpage
 \section{Numerical analyses}
 \subsection{General features}
-Researchers (Anastasopoulos, \cite{anastasopoulos2014simplified}, Ntritsos et al, 2015 \cite{ntritsos2015static}, Panagiotidou, 2012 \cite{panagiotidou2012pushover}) \mbox{developed} various models that highlight the new design particularities - both two-dimensional and three-dimensional elements were used in order to elaborate the soil-foundation system behaviour in static, cyclic and dynamic load combinations. 
+Researchers (Anastasopoulos, \cite{anastasopoulos2014simplified}, Ntritsos et al, 2015 \cite{ntritsos2015static}, Panagiotidou, 2012 \cite{panagiotidou2012pushover}) \mbox{developed} various models that highlight the unconventional design particularities - both two-dimensional and three-dimensional elements were used in order to elaborate the soil-foundation system behaviour in static, cyclic and dynamic load combinations. 
 
 All the FE analyses performed to research this approach were formulated using the software \textit{Abaqus} \cite{manualversion}. Both the soil and the foundation are modelled as eight-noded hexahedral brick-type element, the soil being considered a non-linear element while the latter elastic. Additionally, centrifuge tests and experiments are compared with the numerical outcome for validation purposes.
 
@@ -568,12 +614,12 @@ The two main components of the structural system were separated through an inter
 \end{figure} 
 \gls{phi}
 \newpage
-\subsection{Conventional versus new design philosophy}
-The whole design research started with a comparison between the conventional and new design philosophy when subjected to various acceleration time histories. Figure \ref{conventional2} shows the results for a situation with moderate seismic input corresponding to Kalamata earthquake, 1986 whereas Figure \ref{conventional} shows the distinction between the two alternatives when considering a stronger earthquake (Kobe, 1995). All the assumptions aforementioned are valid for these analyses. The conventional design premises correspond to the ones described in section 1.2.1 whilst the later method characteristics are depicted in section 1.2.2. Moreover, the capacity design includes an overstrength factor of safety for seismic loading \gls{gamard}=1.4 dictating the position of the plastic hinge at the pier base. On the other hand, the under-designed foundation, corresponding to the new design, is assigned with an understrength factor of safety $1/\gamma_{Rd}=0.7 <1$. 
+\subsection{Conventional versus unconventional design philosophy}
+The whole design research started with a comparison between the conventional and unconventional design philosophy when subjected to various acceleration time histories. Figure \ref{conventional2} shows the results for a situation with moderate seismic input corresponding to Kalamata earthquake, 1986 whereas Figure \ref{conventional} shows the distinction between the two alternatives when considering a stronger earthquake (Kobe, 1995). All the assumptions aforementioned are valid for these analyses. The conventional design premises correspond to the ones described in section 1.2.1 whilst the later method characteristics are depicted in section 1.2.2. Moreover, the capacity design includes an overstrength factor of safety for seismic loading \gls{gamard}=1.4 dictating the position of the plastic hinge at the pier base. On the other hand, the under-designed foundation, corresponding to the unconventional design, is assigned with an understrength factor of safety $1/\gamma_{Rd}=0.7 <1$. 
 
 
 \paragraph{Medium earthquake motion}
-Few remarks can be formulated based on the observed results. The first set of plots highlight the elastic response of the footing when conventional design is considered whereas the new design shows highly inelastic response. The non-linear response comes at the cost of large settlements under the foundation as the second plot shows; on the contrary, the elastic foundation and pier yielding prevent such consequences. Furthermore, the conventionally designed pier experiences \mbox{inelasticity}, however in tolerable limits while in the new design scheme, the pier remains mainly elastic thanks to soil yielding. Finally, the deck drift, or horizontal displacement at mass, is on one hand caused by the flexural pier distortion (here, $\Delta_c$) while on the other hand is due to foundation rotation $\Delta_r$. 
+Few remarks can be formulated based on the observed results. The first set of plots highlight the elastic response of the footing when conventional design is considered whereas the unconventional design shows highly inelastic response. The non-linear response comes at the cost of large settlements under the foundation as the second plot shows; on the contrary, the elastic foundation and pier yielding prevent such consequences. Furthermore, the conventionally designed pier experiences \mbox{inelasticity}, however in tolerable limits while in the unconventional design scheme, the pier remains mainly elastic thanks to soil yielding. Finally, the deck drift, or horizontal displacement at mass, is on one hand caused by the flexural pier distortion (here, $\Delta_c$) while on the other hand is due to foundation rotation $\Delta_r$. 
 
 \paragraph{Strong earthquake motion}
 The investigation is further extended to include a stronger earthquake motion which is exceeding the design limits (the Takatori accelerogram recorded at Kobe, 1995). This acceleration time history is relevant as it represents one of the most disastrous earthquakes of the recent times (PGA=0.7g, \gls{PGV}=169cm/s); the simplified structural system corresponds to a section of Hanshin Expressway which partly collapsed during the earthquake. The results of the two alternatives can be visualized in Figure \ref{conventional}.
@@ -583,7 +629,7 @@ Similar conclusions can be drawn from this comparison; the deformed mesh plots m
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.9\linewidth]{"conven2"}
-	\caption{Distinction between capacity design and new design philosophy when subjected to a medium earthquake signal (Kalamata, 1985); (a) moment-rotation relationship at foundation level; (b) settlement-rotation response of the footings; (c) bending-moment curvature response at the pier base; (d) time history of deck drift $\Delta$}
+	\caption{Distinction between capacity design and unconventional design philosophy when subjected to a medium earthquake signal (Kalamata, 1985); (a) moment-rotation relationship at foundation level; (b) settlement-rotation response of the footings; (c) bending-moment curvature response at the pier base; (d) time history of deck drift $\Delta$}
 	\label{conventional2}
 \end{figure}
 
@@ -598,7 +644,7 @@ Similar conclusions can be drawn from this comparison; the deformed mesh plots m
 
 \newpage
 \subsection{Relevant studies}
-Now, that the main differences in response were evaluated, it is important to select \mbox{relevant} cases from the vast collection of studies performed to support the new design philosophy. Various methods of simulating dynamic response were examined for systems considering slender structures simplified as rigid oscillators standing on inelastic soil. The system response was further processed in order to obtain an approximation of the rocking \mbox{behaviour}: moment-rotation response together with settlement-rotation are of main \mbox{interest}. In addition, emphasis on the nonlinearities effects were made with respect to the fundamental period of the oscillator.
+Now, that the main differences in response were evaluated, it is important to select \mbox{relevant} cases from the vast collection of studies performed to support the unconventional design philosophy. Various methods of simulating dynamic response were examined for systems considering slender structures simplified as rigid oscillators standing on inelastic soil. The system response was further processed in order to obtain an approximation of the rocking \mbox{behaviour}: moment-rotation response together with settlement-rotation are of main \mbox{interest}. In addition, emphasis on the nonlinearities effects were made with respect to the fundamental period of the oscillator.
 
 \paragraph{Monotonic response}
 The monotonic test represents a simplified technique to estimate the dynamic response; it comes in the form of a "push-over analysis" and it gained popularity for being able to accurately estimate the seismic deformation demands and ultimate capacity. The concept consists in applying a monotonically increasing lateral displacement loading at superstructure level until failure by overturning is reached. 
@@ -720,7 +766,7 @@ Generally, the software works with a set of input options with the ability of ex
 
 \newpage
 \section{Conclusions}
-A number of relevant examples from scientific literature were selected and presented within this chapter in order to provide a theoretical background. The current paper adapts the new design philosophy to the special soil conditions found in Groningen together with the recorded earthquake ground shaking observed on August, 2012 in Huizinge. It aims to investigate similar aspects as the ones presented previously - if the response trends correspond (even qualitatively), then the new design philosophy can be regarded as a relatively trustworthy technique; of course, more insight must be gained to confidently declare that such method should be adopted. Otherwise, different alternatives must be developed to overcome the limitations the new design encounters.
+A number of relevant examples from scientific literature were selected and presented within this chapter in order to provide a theoretical background. The current paper adapts the unconventional design philosophy to the special soil conditions found in Groningen together with the recorded earthquake ground shaking observed on August, 2012 in Huizinge. It aims to investigate similar aspects as the ones presented previously - if the response trends correspond (even qualitatively), then the unconventional design philosophy can be regarded as a relatively trustworthy technique; of course, more insight must be gained to confidently declare that such method should be adopted. Otherwise, different alternatives must be developed to overcome the limitations the unconventional design encounters.
 
 Having inclusively formulated both the problem, the goal and the means for achieving it, close investigations can go on various directions regarding the outcome. The current study should decide on few aspects to emphasize on, as the time does not suffice for an extensive examination. However, for the little features subjected to investigation, parametric studies are required to be able to make statements, express limitations and recommendations. To conclude, the points of main interest which will be thoroughly examined are:
 \begin{itemize}
@@ -736,7 +782,7 @@ Having inclusively formulated both the problem, the goal and the means for achie
 This chapter presents the analysis corresponding to the simulation of a simple shear test in the interest of validating the available soil parameters, its inelastic behaviour and, in the same time, calibrating the FEM model for future and more complicated analysis. The procedure works on a one element mesh. This way, the material properties can be easily calibrated reducing the computational expenses. 
 
 \section{General}
-The new design philosophy will be studied numerically upon a model which consists in a homogeneous clay stratum and an elastic foundation.  A chimney structure located in the north of Netherlands serves as example, being represented by a rigid strip footing type of foundation connected to a lumped mass element through a rigid beam element. The assumptions of an elastic rigid structure resting on an inelastic soil medium confirms one of the new method characteristics. The underlying strata is associated with a saturated, homogeneous clay responding in an undrained manner, with linearly increasing undrained shear strength Su along its depth. The figure below briefly presents the structure introduced within the software ABAQUS.
+The unconventional design philosophy will be studied numerically upon a model which consists in a homogeneous clay stratum and an elastic foundation.  A chimney structure located in the north of Netherlands serves as example, being represented by a rigid strip footing type of foundation connected to a lumped mass element through a rigid beam element. The assumptions of an elastic rigid structure resting on an inelastic soil medium confirms one of the new method characteristics. The underlying strata is associated with a saturated, homogeneous clay responding in an undrained manner, with linearly increasing undrained shear strength Su along its depth. The figure below briefly presents the structure introduced within the software ABAQUS.
 
 \begin{figure}[h!]
 	\centering
@@ -1193,11 +1239,12 @@ Despite the lack of damping parameters and coefficients that guarantee a smooth 
 
 It can be concluded that the proposed material model qualifies as reasonable for the future examination and, thus, the current paper continues the research towards a one-dimensional site response analysis. 
 
-
+\afterpage{\blankpage}
 \input{chapter3}
 \input{chapter5}
 
 \newpage
+
 \appendix
 \addcontentsline{toc}{section}{Appendix}
 \part{Appendix}
@@ -1617,7 +1664,7 @@ The current Appendix presents the subroutine code written to introduce the undra
 \newpage
 \chapter{Newmark integration schemes} \label{App:AppendixH}
 
-For this particular analysis, an implicit direct integration scheme was selected - this means that the set of equations concerning the set of nonlinear equations of motion are solved at each time step $\Delta t$ involving both the current and the later state of the system. On the other hand, an explicit analysis finds the solution for the later state of the system starting from the current one. The method is appropriate for this specific application as it successfully solves problems involving nonlinearity, both material and geometric, contact and moderate energy dissipation. 
+For this particular analysis, an implicit direct integration scheme was selected - this means that the set of equations concerning the set of nonlinear equations of motion are solved at each time step $\Delta t$ involving both the current and the later state of the system. On the other hand, an explicit analysis finds the solution for the later state of the system starting from the current one. The method is appropriate for this specific application as it successfully solves problems involving nonlinearity, both material and interface, contact and moderate energy dissipation. 
 
 A significant aspect when performing such analyses relates to the stability of the calculation which translates into the size of the time increment. An implicit direct integration scheme is unconditionally stable; it means that there is no limitation in defining the time step size thus, the user can adjust the accuracy of the analysis according to the application. However, care must be paid when establishing the size of the time increment because it influences the energy dissipation as well as the transmission of high frequencies throughout the model.
 
@@ -1757,19 +1804,19 @@ The appendix presents a set of input parameters corresponding to the low peak gr
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}
 
-\chapter{Deformed mesh in Abaqus} \label{Abq}
+%\chapter{Deformed mesh in Abaqus} \label{Abq}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"deformat"}
-	\caption{Mobilization of bearing capacity type of failure mechanism expressed as increase of vertical stresses underneath the foundation}
-	\label{def}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{"deformat"}
+%	\caption{Mobilization of bearing capacity type of failure mechanism expressed as increase of vertical stresses underneath the foundation}
+%	\label{def}
+%\end{figure}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"FBC5+"}
-	\caption{An example of soil densification appearing underneath one edge of the footing. This might hint the possible overstrength of the ground material}
-	\label{fbc3}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{"FBC5+"}
+%	\caption{An example of soil densification appearing underneath one edge of the footing. This might hint the possible overstrength of the ground material}
+%	\label{fbc3}
+%\end{figure}
 \end{document}          

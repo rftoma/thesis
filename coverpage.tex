@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[toc,page,header]{appendix}
+\usepackage{minitoc}
+\usepackage[a4paper,width=160mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[nottoc]{tocbibind}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{afterpage}
+\usepackage{watermark}
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[toc]{glossaries}
+\usepackage{listings}
+\lstset{language=[90]Fortran,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{red},
+	commentstyle=\color{green},
+	morecomment=[l]{!\ }% Comment only with space after !
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\fancyhead[LE]{\thechapter}
+%\fancyfoot[L]{Raluca-Fulguta Toma}
+%\fancyfoot[RO, LE] {\thepage}
+\lhead{}
+\chead{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lfoot{Raluca-Fulguta Toma}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%$\theta$
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{-1}%
+	\newpage}
+
+
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,%
+			keepaspectratio]{Cover final.jpg}%
+			\vfill
+		}}}
+\AddToShipoutPicture*{\BackgroundPic}
+
+%\makeglossaries
+\makenoidxglossaries 
+\loadglsentries{glossary}
+
+\begin{document}
+	\begin{titlepage}
+		\begin{minipage}{49em}
+			\noindent\fcolorbox{black}{black}{%
+				\parbox{\textwidth}{%
+					\color{white} \textbf{\Huge A design-oriented numerical \mbox{investigation} on seismic soil-structure interaction}\
+					\vspace*{1cm}
+					
+					
+					\color{TealBlue} \textbf{\huge Raluca - Fulguta Toma}
+				}%
+			}
+			
+		\end{minipage}
+	\end{titlepage}
+\end{document}

@@ -8,7 +8,7 @@
 	\section{Model description}
 	The model represents an extrapolation of the previous analysis step; the soil properties (see Appendix \ref{App:AppendixD}) are applied to a homogeneous layer with properties increasing linearly with depth and it is subjected to two steps: \textit{the gravity} and \textit{the seismic excitation}. Given the lack of bedrock in reality and for the simplicity of calculation, the bedrock is assumed to be located at 30m below surface. In order to simulate a one dimensional analysis, the problem is analysed in a 2D space plane strain ($\epsilon_{zz}=0$) with the lateral width of the soil relatively small compared to the height; the presence of bedrock is numerically equivalent to a rigid base having translational constraints in both directions. Each pair of horizontal nodes are tied together such that will experience equal displacements. Figure \label{fig:Soilcolumn} shows the schematization of the problem, the blue numbers representing the nodes, the red numbers the elements, respectively. The 1D soil column serves as the typical model for a site response analysis as the shear wave propagation direction is assumed to be vertical - thus the main interest relates to the soil performance when experiencing vertically travelling seismic waves.
 	
-	The validation of the model will consists of results comparison between the analysis performed in Abaqus and the ones in NERA together with the SRA performed by ARUP for Groningen site - the latter only offers a rough guide. The differences between the means of analysis will be investigated, the outcome will be expressed in terms of acceleration response in frequency domain together with stiffness degradation. 
+	The verification of the model will consists of results comparison between the analysis performed in Abaqus and the ones in NERA together with the SRA performed by ARUP for Groningen site - the latter only offers a rough guide. The differences between the means of analysis will be investigated, the outcome will be expressed in terms of acceleration response in frequency domain together with stiffness degradation. 
 	
 	\subsection{Steps of analysis}
 	\paragraph{Geostatic} The first step of the analysis simulates the natural stress state within the soil using a gravity load spread all over the layer and it is declared as static, general. The self weight of the elements provide the loads, therefore no need of extra loading conditions. The definition of the gravity load involves the software in updating several parameters to account for the confining pressure. As the schematization shows, the model contains elements and nodes - the nodes will be assigned with boundary conditions reproducing the one dimensional vertical propagation of the shear waves. The base nodes are constrained in both directions in accordance with the assumption of the bedrock presence underneath the soil layer whilst each pair of nodes horizontally displayed are linked using a feature called multi-point constraint - this provides a pinned joint between the nodes making the global displacements be equal while leaving the rotations independent. 
@@ -20,12 +20,12 @@
 	\end{figure}
 	
 	\paragraph{Dynamic}
-	The second step represents the soil medium subjected to the earthquake motion; it is defined as dynamic step using an implicit integration scheme which will be explained in more detail later on. During the step, the user propagates the boundary conditions aforementioned with the exception of the horizontal base constraint; it is replaced by an acceleration type of boundary condition that is assigned with an amplitude curve - this allows the user to define an arbitrary variation in time (or frequency) of any quantity or can be defined as a mathematical function (e.g. sinusoidal), series of values in time (acceleration history) and many more. For the current study, the amplitude curve contained the acceleration-time record for a period of 10 seconds as \ref{Acceleration} shows; this period is considered as the representative duration of Groningen acceleration measured time history and it starts right before the peak acceleration \cite{dost2004scaling}. Although the acceleration record was implemented in the analysis as an amplitude and further assigned to an angular/acceleration boundary condition, Abaqus converts it into a relative force-time history acting on the model. 
+	The second step represents the soil medium subjected to the earthquake motion; it is defined as dynamic step using an implicit integration scheme which will be explained in more detail later on. During the step, the user propagates the boundary conditions aforementioned with the exception of the horizontal base constraint; it is replaced by an acceleration type of boundary condition that is assigned with an amplitude curve - this allows the user to define an arbitrary variation in time (or frequency) of any quantity or can be defined as a mathematical function (e.g. sinusoidal), series of values in time (acceleration history) and many more. For the current study, the amplitude curve contained the acceleration-time record for a period of 10 seconds as \ref{Acceleration} shows; this period is considered as the representative duration of Groningen acceleration measured time history and it starts right before the peak acceleration \cite{dost2004scaling}. 
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.8\linewidth]{"Acc input"}
-		\caption{Acceleration input (induced earthquake, WSE station, Huizige, Groningen, 16 Aug 2012)}
+		\caption{Acceleration input (induced earthquake, WSE station, Huizige, Groningen, 16 Aug 2012). Acceleration recorded at borehole depth}
 		\label{Acceleration}
 	\end{figure}
 	
@@ -111,7 +111,7 @@
 			\hline $\beta$ & 0.001736 & sec & Rayleigh $\beta$ coefficient\\
 			\hline
 		\end{tabular} 
-		\caption{Calculation of Rayleigh $\beta$ parameter}
+		\caption{Calculation of Rayleigh $\beta$ parameter as a function of the damping ratio and eigen frequency}
 		\label{beta_param}
 	\end{table}
 	
@@ -141,7 +141,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"Mroz"}
-		\caption[]{Plasticity description of Iwan and Mroz nonlinear model}
+		\caption[]{Plasticity description of Iwan and Mroz nonlinear model used as constitutive model in NERA software.}
 		\label{Mroz}
 	\end{figure}
 	
@@ -164,13 +164,13 @@
 	
 	After performing a dynamic, implicit type of analysis to the assembly described previously, the output was investigated with an initial emphasis on the stiffness degradation. To check the validity of the overall model, an uniform cyclic signal served as acceleration amplitude; a circular frequency $f=1 Hz$ was applied at the bottom of the model for a period of 10 seconds in a sinusoidal fashion. Such uniform harmonic loading represents a simplification of the signal, and helps the user better understand the non-linear soil response. A real acceleration-time history consists in many irregularities and the results may be sometimes misinterpreted. That is why the investigation starts simple towards complicated.
 	
-	The results can be visualized in figures \ref{response1}, \ref{response2} and \ref{acc1}. The same remarks can be made as for the preceding analysis (see previous analysis in Chapter \ref{ch3}); however, this model includes an additional Rayleigh damping parameter together with the subroutine that updates the values of the Young's modulus as a function of the undrained shear strength and effective stresses, respectively. The acceleration response displays a de-amplification of the bottom signal together with damping effects visible in the irregularities of the curves; the de-amplification effect can be seen as the average wave speed decreases (blue line wave travels with 0.5m/s whilst the green line with almost half the speed). The values are obtained by dividing the maximum acceleration to the time period of a complete sinusoidal cycle. The shear stress-strain plots show plasticity occurring at different stress levels - the hysteresis loops shift towards origin which means that the soil achieves plasticity gradually together with residual plasticity. Additionally, the plots show a decrease in dissipated energy as the seismic waves travels from bottom to top - the area comprised within the hysteresis loops reduces as well, which comes in conformity with the conclusions of the previous chapter (see Chapter \ref{ch3})
+	The results can be visualized in figures \ref{response1}, \ref{response2} and \ref{acc1}. The same remarks can be made as for the preceding analysis (see previous analysis in Chapter \ref{ch3}); however, this model includes an additional Rayleigh damping parameter together with the subroutine that updates the values of the Young's modulus as a function of the undrained shear strength and effective stresses, respectively. The acceleration response displays a de-amplification of the bottom signal together with damping effects visible in the irregularities of the curves; additionally, the average wave speed decreases (blue line wave travels with 0.5m/s whilst the green line with almost half the speed). The values are obtained by dividing the maximum acceleration to the time period of a complete sinusoidal cycle. The shear stress-strain plots show plasticity occurring at different stress levels - the hysteresis loops shift towards origin which means that the soil achieves plasticity gradually together with residual plasticity. Additionally, the plots show a decrease in dissipated energy as the seismic waves travels from bottom to top - the area comprised within the hysteresis loops reduces as well, which comes in conformity with the conclusions of the previous chapter (see Chapter \ref{ch3})
 	
 	%introduce the soil column picture
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"response1"}
-		\caption[]{Hysteresis loops for different elements found in the lower half of the soil layer (Element 1 - Base; Element 15 - Middle of the layer)}
+		\caption[]{Hysteresis loops for different elements situated across the lower half of the soil layer (Element 1 - Base; Element 15 - Middle of the layer)}
 		\label{response1}
 	\end{figure}
 	
@@ -184,17 +184,17 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.6\linewidth]{"acc_response1"}
-		\caption{Acceleration response for the cyclic input signal (surface and bottom)}
+		\caption{Acceleration response for the cyclic input signal (surface and bottom). The base input corresponds to an uniform harmonic signal of frequency f=1Hz lasting for t=10 seconds}
 		\label{acc1}
 	\end{figure}
 	
-	Once the validation of this simplistic model is achieved, the real acceleration-time history is applied to the boundary condition at the bottom nodes for the same period of 10 seconds. The records correspond to the measurements from WSE station, Huizinge, Groningen \cite{dost2013august}. Even though the earthquake signal lasts for 35 seconds, it was trimmed to incorporate the most unfavourable 10 seconds [with the highest acceleration peak] which, according to ARUP \cite{martellotta2015review}, are appointed as the representative duration of Groningen acceleration measured time history starting just before the peak acceleration. The obtained values in terms of shear stress and strain can be seen in Figure \ref{resp3} whilst the top and bottom acceleration outcome is represented in Figure \ref{acc_resp2}. Important to mention is that the boundary condition applied at the bottom of the model simulates the bedrock presence, therefore the waves are incident and not reflective - the discussion about the boundary conditions influence on the wave propagation shall be presented shortly after. 
+	Once the validation of this simplistic model is achieved, the real acceleration-time history is applied to the boundary condition at the bottom nodes for the same period of 10 seconds. The records correspond to the measurements from WSE station, Huizinge, Groningen \cite{dost2013august}. Even though the earthquake signal lasts for 35 seconds, it was trimmed to incorporate the most unfavourable 10 seconds [with the highest acceleration peak] which, according to ARUP \cite{martellotta2015review}, are appointed as the representative duration of Groningen acceleration measured time history starting just before the peak acceleration. The obtained values in terms of shear stress and strain can be seen in Figure \ref{resp3} whilst the top and bottom acceleration outcome is represented in Figure \ref{acc_resp2}. Important to mention is that the boundary condition applied at the bottom of the model simulates the bedrock presence, the waves being incident only - the discussion about the boundary conditions influence on the wave propagation shall be presented shortly after. 
 	
 	\textit{Note: As a sign convention, element 1 represents the bottom one whilst element 30 is the surface.}
 	\begin{figure} [h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"response3"}
-		\caption{Hysteresis loops for upper half of the layer when real acceleration is applied}
+		\caption{Hysteresis loops for upper half of the layer when real acceleration is applied. The accelerogram corresponds to the real one recorded in Huizinge and the response was extracted at various depths}
 		\label{resp3}
 	\end{figure}
 	
@@ -205,7 +205,7 @@
 		\label{acc_resp2}
 	\end{figure}
 	%introdu citat
-	Once the bottom and top acceleration outcome is extracted from the software, a Fast Fourier transform is applied with the scope of converting the current data from time domain to a \mbox{representation} in frequency domain. As Kristeková et al., 2006 \cite{kristekova2006misfit} stated "the most complete and informative characterization of a signal can be obtained by its decomposition in the time-frequency plane". However, FFT is used as a digital signal processing tool that aids other operation, rather than providing a final result itself. For example, the transfer function or a site amplification factor allows the calculation of the motion of any layer $i$ based on other motion (of any layer $j$). This transfer function relates the displacement at position $i$ to that at position $j$ as it follows:
+	The response obtained at base and surface level is then converted into frequency domain via the Fast Fourier Transform (FFT). As Kristeková et al., 2006 \cite{kristekova2006misfit} stated "the most complete and informative characterization of a signal can be obtained by its decomposition in the time-frequency plane". However, FFT is used as a digital signal processing tool that aids other operation, rather than providing a final result itself. For example, the transfer function or a site amplification factor allows the calculation of the motion of any layer $i$ based on other motion (of any layer $j$). This transfer function relates the displacement at position $i$ to that at position $j$ as it follows:
 	\begin{equation}
 	F_{ij}=\frac{|u_i|}{|u_j|}
 	\end{equation}
@@ -218,7 +218,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"Fourier"}
-		\caption{Fourier amplitude spectra - surface and bottom}
+		\caption{Fourier amplitude spectra corresponding to ABAQUS numerical analysis recorded at surface and bottom level.}
 		\label{fourier}
 	\end{figure}
 	%alta referinta Zienkiewicz
@@ -231,72 +231,74 @@
 	v_{base}=2v_{incident}
 	\end{equation} 
 	
+	\newpage
 	\section{Comparison Abaqus vs NERA}
 	The comparison refers to the inelastic response focusing on the stiffness, acceleration and spectral response. Moreover, the amplification factor in investigated. The outcome of the two different PGA levels are also presented and the plots can be visualized below. 
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"acc_comp1"}
-		\caption{Acceleration response at surface level - comparison Abaqus vs. NERA}
+		\caption{Acceleration response at surface level - comparison Abaqus vs. NERA. PGA=0.6g lasting for a period of t=10 seconds}
 		\label{comp1}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.7\linewidth]{"spectral2"}
-		\caption{Fourier amplitude spectra comparison}
+		\includegraphics[width=0.6\linewidth]{"spectral2"}
+		\caption{Fourier amplitude spectra corresponding to results extracted from ABAQUS (green) and NERA (black) at surface and base levels for PGA level of 0.6g. In general, Abaqus produces higher (plastic) strains resulting in more attenuated peaks in the frequency domain compared to NERA}
 		\label{fourier2}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.9\linewidth]{"tau_gamma1"}
-		\caption{Hysteresis loops comparison for surface level}
+		\includegraphics[width=0.6\linewidth]{"tau_gamma1"}
+		\caption{Hysteresis loops comparison between NERA (blue) and ABAQUS(red) for the response at surface level. The results show a correspondence in the computed shear modulus, both tangent ($G_{tan}$) and maximum/small strain ($G_{max}$) between the two software}
 		\label{tau_gamma1}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.85\linewidth]{"tau_gamma2"}
-		\caption{Hysteresis loops comparison for z=20m(left) and bottom level(right)}
+		\caption{Hysteresis loops comparison between the software for various sample depths: z=20m(left) and bottom level(right). Both Abaqus and NERA compute the shear modulus in similar manner (see dashed lines)}
 		\label{tau_gamma2}
 	\end{figure}
 	
+	\newpage
 	\subsection{Additional investigation}
 	An additional investigation was performed based on a lower PGA value (PGA=0.1g). This first reason relates to the soil response when closer to elastic domain. Secondly, to highlight a difference in dynamic behaviour for various levels of base acceleration. Moreover, it is speculated that lower PGA characteristics might act detrimental compared to a higher value - a rather seismic wave amplification is expected from such input. Lastly, the recorded accelerograms in Groningen showed an overall low PGA value. The results can be seen in the following figures.
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.8\linewidth]{"acc_low"}
-		\caption{Acceleration response comparison for PGA=0.1g}
+		\includegraphics[width=0.7\linewidth]{"acc_low"}
+		\caption{Acceleration response comparison (NERA vs ABAQUS) for a PGA=0.1g. The plot incorporates the cyclic signal injected at the base of the model as well as the surface response extracted from both the software.}
 		\label{acc_low}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.6\linewidth]{"hysteresis_low_bot"}
-		\caption{Hysteresis loops comparison for bottom level}
+		\caption{Hysteresis loops comparison for bottom level for a PGA level of 0.1g. The dashed lines highlight the computed shear modulus which is practically the same for both the software.}
 		\label{hyst_bot}
 	\end{figure}
 	
-	\begin{figure}[!h]
-		\centering
-		\includegraphics[width=0.6\linewidth]{"hysteresis_low_surf"}
-		\caption{Hysteresis loops comparison for surface level}
-		\label{hyst_top}
-	\end{figure}
+%	\begin{figure}[!h]
+	%	\centering
+	%	\includegraphics[width=0.6\linewidth]{"hysteresis_low_surf"}
+	%	\caption{Hysteresis loops comparison for surface level for PGA=0.1g. It is rather difficult to obtain a meaningful comparison at surface due to the non-linear nature of the problem.}
+	%	\label{hyst_top}
+%	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.7\linewidth]{"spectral_low"}
-		\caption{Fourier amplitude spectra for PGA=0.1 - logarithmic scale}
+		\includegraphics[width=0.6\linewidth]{"spectral_low"}
+		\caption{Fourier amplitude spectra for PGA=0.1. The results are ploted on the logarithmic scale as it is common practice in the literature. The results were obtained by converting the response from both base and surface levels from time into frequency domain using FFT.}
 		\label{fourier3}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.7\linewidth]{"site_ampl"}
-		\caption{Site amplification factor comparison for PGA=0.1g (black line - NERA, green - ABAQUS)}
+		\includegraphics[width=0.6\linewidth]{"site_ampl"}
+		\caption{Site amplification factor comparison for PGA=0.1g (black line - NERA, green - ABAQUS).}
 		\label{SAF}
 	\end{figure}
 	
@@ -307,7 +309,7 @@
 		\label{ARUP}
 	\end{figure}
 	
-	The results confirm the expectation regarding the amplification effect of the soil combined with the PGA level, also they are in accordance with ARUP report regarding the site response analysis performed for the specific location in discussion. The acceleration responses at surface produced in both the computational software present the same maximum value, of course, with differences that were exposed previously, the elastic response seems to match together with the stiffness degradation effect. 
+	The results confirm the expectation regarding the amplification effect of the soil combined with the PGA level, also they are in accordance with ARUP report regarding the site response analysis performed for the specific location in discussion (see figure \ref{ARUP}). The acceleration responses at surface produced in both the computational software present the same maximum value, of course, with differences that were exposed previously, the elastic response seems to match together with the stiffness degradation effect. 
 	\pagebreak
 	
 	
@@ -329,18 +331,19 @@
 			\caption{Non-linear kinematic hardening model according to Lemaitre,Chaboche [left] and Iwan,Mroz[right]}
 			\label{Yield}
 		\end{figure}
-		\item NERA computes the shear stress and strain increments according to the sliding resistance and tangent modulus of each slider that are derived from the $G_i-\gamma_i$ points introduced as input. The tangential shear modulus is related to the secant shear modulus by $H_i=G_{max}\frac{G'_{i+1}\gamma_{i+1}-G'_i\gamma_i}{\gamma_{i+1}-\gamma_i}$ where $G_i=\frac{G_i}{G_{max}}$ . The stiffness of each component of the system is related to the tangent modulus while the shear stress is associated with the sliding resistance. On the other hand, Abaqus does not work with the tangent modulus, but with maximum shear modulus Gmax and the undrained shear strength. Also, in NERA there is no option for introducing the values corresponding to the undrained shear strength or its correlation with any other parameter. Figure 14 shows the distribution of the shear modulus with depth in both the software - these values are calculated from the input parameter - Abaqus extracts it based on the Young's modulus together with Poisson's ratio whilst NERA does it based on the soil unit weight and shear wave velocity. The values are exactly the same, it can be noticed also from the slope the hysteresis loops presented in the stress-strain plots; the width also resembles as well as the unloading-reloading areas. However, the tangent shear modulus differs from one software to the other.
-		\begin{figure}[h!]
-			\centering
-			\includegraphics[width=0.5\linewidth]{"shear"}
-			\caption{Shear modulus $G_{max}$ comparison}
-			\label{shear1}
-		\end{figure}
+		\item NERA computes the shear stress and strain increments according to the sliding resistance and tangent modulus of each slider that are derived from the $G_i-\gamma_i$ points introduced as input. The tangential shear modulus is related to the secant shear modulus by $H_i=G_{max}\frac{G'_{i+1}\gamma_{i+1}-G'_i\gamma_i}{\gamma_{i+1}-\gamma_i}$ where $G_i=\frac{G_i}{G_{max}}$ . The stiffness of each component of the system is related to the tangent modulus while the shear stress is associated with the sliding resistance. On the other hand, Abaqus does not work with the tangent modulus, but with maximum shear modulus Gmax and the undrained shear strength. Also, in NERA there is no option for introducing the values corresponding to the undrained shear strength or its correlation with any other parameter. Figure 14 shows the distribution of the shear modulus with depth in both the software - these values are calculated from the input parameter - Abaqus extracts it based on the Young's modulus together with Poisson's ratio whilst NERA does it based on the soil unit weight and shear wave velocity. The values are exactly the same, it can be noticed also from the slope the hysteresis loops presented in the stress-strain plots (see fig. \ref{shear1}); the width also resembles as well as the unloading-reloading areas. However, the tangent shear modulus differs from one software to the other.
+
 		\item Abaqus results are extracted in two different locations: the stresses and strains are obtained from Gauss integration points and the accelerations are obtained at nodal positions which are situated at the interface of each two element. NERA performs the analysis according to the middle of each sub-layer, so both the top and bottom outcome are actually 0.25m below the surface or above the bottom. However, not much difference should rise from this aspect.
 		\item Another difference relates to the viscous part of the model and it is more apparent in the acceleration response in time domain, especially in the initial period. Abaqus works with the viscous term defined exclusively as a function of Rayleigh damping parameter $\beta$ meaning that the system damping depends on the stiffness, whilst NERA requires the critical damping ratio value, incorporating both $\alpha$ and $\beta$ Rayleigh factors. Moreover, the energy dissipation mechanism accounts for both viscous damping and plasticity terms which, as described previously, differ from NERA to Abaqus. When working with a high PGA value, the contribution of the non-linear model and hysteretic damping becomes greater compared to the viscous damping component.
 		\item All these mentioned points that highlight the difference between the two software derive mainly from numerical algorithms; however, a more important aspect seems to govern the outcome of each analysis - the dynamic nature of the problem itself. The two models are not identical, thus a difference in any given point might generate distinct response at unknown location and time because of the non-linear propagation fashion. 
 		\item Noise can be experienced in both the signals of the different computer programs. This can distort the final results; filtering is possible, however it is time demanding and does not represent the main interest in this study.
 	\end{enumerate}
+			\begin{figure}[h!]
+				\centering
+				\includegraphics[width=0.5\linewidth]{"shear"}
+				\caption{Shear modulus $G_{max}$ comparison between the input values used for the numerical analysis performed in ABAQUS (red) and the computed values within NERA(blue). The two software work with exactly the same values.}
+				\label{shear1}
+			\end{figure}
 	
 	\newpage
 	\section{Conclusions}
